@@ -1,3 +1,16 @@
+---
+title: SpringBoot react 디버깅 설정
+excerpt: SpringBoot랑 react를 하나의 ide에서 사용하기 위한 세팅
+categories:
+  - Categories2
+tags: 
+permalink: /categories2/post-name-here-2/
+toc: true
+toc_sticky: true
+date: 2024-09-17
+last_modified_at: 2024-09-17
+---
+
 > 어떤 문제를 해결했나?
 > 1. SpringBoot + Nextjs 환경에서의 하나의 IDE에서 복수개의 프로젝트를 실행
 > 2. Next.js 에서 서버측 렌더링에 대한 디버깅 진행

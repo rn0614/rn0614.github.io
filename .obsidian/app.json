@@ -1,10 +1,10 @@
 {
   "tabSize": 2,
   "useTab": false,
-  "attachmentFolderPath": "assets/images/posts_img",
+  "attachmentFolderPath": "_md파일",
   "newFileLocation": "folder",
   "newLinkFormat": "absolute",
-  "newFileFolderPath": "_site/assets/images/posts_img",
+  "newFileFolderPath": "_md파일",
   "useMarkdownLinks": true,
   "promptDelete": false
 }

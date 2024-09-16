@@ -1,3 +1,16 @@
+---
+title: 모바일 에뮬레이터 설정관련
+excerpt: react-native Webview 작성을 위한 에뮬레이터 가동
+categories:
+  - Categories2
+tags: 
+permalink: /categories2/post-name-here-2/
+toc: true
+toc_sticky: true
+date: 2024-09-17
+last_modified_at: 2024-09-17
+---
+
 > 어떤 문제를 해결했나?
 > 1. react-native의 expo 실행시 emulator로 컴퓨터 로컬환경의 확인
 
