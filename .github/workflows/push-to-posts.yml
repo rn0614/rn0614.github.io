@@ -13,6 +13,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      
+      - name: Set Safe Directory for _github_open
+        run: git config --global --add safe.directory /github/workspace/_github_open
+
+      - name: Set Safe Directory for _posts
+        run: git config --global --add safe.directory /github/workspace/_posts
 
       - name: Set up Git
         run: |
@@ -25,7 +31,7 @@ jobs:
           TODAY=$(date +"%Y-%m-%d")
 
           # calendar 폴더에 있는 모든 .md 파일을 _posts로 이동
-          find github_open -type f -name '*.md' | while read FILE; do
+          find _github_open -type f -name '*.md' | while read FILE; do
             FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
             
             # 파일명에서 공백을 '_'로 대체
@@ -33,7 +39,7 @@ jobs:
             
             # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
             NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
-            
+
             # _posts 폴더로 파일 이동 및 파일명 변경
             mv "$FILE" "_posts/${NEW_FILENAME}"
           done
