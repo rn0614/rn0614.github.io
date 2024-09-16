@@ -4,7 +4,7 @@ name: Move and Rename Files on Push
 on:
   push:
     branches:
-      - master # master 브랜치에 푸시할 때 실행
+      - main # master 브랜치에 푸시할 때 실행
 
 jobs:
   move_files:
