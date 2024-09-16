@@ -42,7 +42,7 @@ jobs:
           echo ""
           echo "1단계: _github_open 디렉토리 내 파일 필터링"
           # 2. _github_open 디렉토리에 속하는 파일만 필터링
-          GITHUB_OPEN_FILES=$(echo "$CHANGED_FILES" | grep '^_github_open/')
+          GITHUB_OPEN_FILES=$(echo "$CHANGED_FILES" | grep "_github_open/.*\.md$")
           echo "$GITHUB_OPEN_FILES"
 
           echo ""
