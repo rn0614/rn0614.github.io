@@ -1,5 +1,6 @@
 > react는 component의 상태를 관리하는 앱. 이게 웹상에서 돌아가기 위해 react-dom 라이브러리가 지원을 해서 웹상에서 돌아가고 있음.
 
+
 react-native 는 모바일 어플리케이션에서 돌아가기 위해 react-dom 대신이라고 볼 수 있음.
 
 react-native도 소스 자체가 실행되는 것이 아닌 해당 소스로 작성된 코드가 컴파일 시 android, IOS 기반 소스로 변환되어 사용됨.
