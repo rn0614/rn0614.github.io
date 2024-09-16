@@ -32,29 +32,8 @@ jobs:
 
           # git diff --cached로 스테이징된 파일 목록 가져오기
           echo "파일추출 시작"
-
-          # 1. 변경된 파일 목록을 git diff로 가져오기
-          # CHANGED_FILES=$(git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD)
-
-          # echo "변경된 파일 목록:"
-          # echo "$CHANGED_FILES"
-
-          echo ""
-          echo "1단계: _github_open 디렉토리 내 파일 필터링"
-          # 2. _github_open 디렉토리에 속하는 파일만 필터링
-          MD_FILES=$(grep "_github_open/.*\.md$")
-          echo "$MD_FILES"
-
-
-          # 4. 최종 대상 파일들 처리
-          echo ""
-          echo "최종 대상 파일:"
-          for FILE in $MD_FILES; do
-            echo "$FILE"
-            # 필요한 파일 처리 로직을 여기에 추가
-          done
-
-          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | grep '_github_open/.*\.md$' | while read FILE; do
+          
+          find _github_open -type f -name '*.md' | while read FILE; do
             FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
             
             echo "FILENAME : ${FILENAME}"
