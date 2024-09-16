@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/post-name-here-2/
 toc: true
 toc_sticky: true
-date: "{{date}}"
-last_modified_at: 2022-07-24
+date: 2024-09-17
+last_modified_at: 2024-09-17
 ---
 
 - 모바일 앱에서 웹뷰로 접근을 위해서는 SSL이 필수라 HTTPS를 적용해야한다.
