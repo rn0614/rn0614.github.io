@@ -16,11 +16,9 @@ jobs:
         with:
           fetch-depth: 0  # 전체 커밋 기록을 가져옴
 
-      - name: Set Safe Directory for _github_open
-        run: git config --global --add safe.directory /github/workspace/_github_open
-
-      - name: Set Safe Directory for _posts
-        run: git config --global --add safe.directory /github/workspace/_posts
+      - name: Set safe directory for Git
+        run: |
+          git config --global --add safe.directory /github/workspace
 
       - name: Set up Git
         run: |
