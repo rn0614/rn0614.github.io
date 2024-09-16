@@ -1,3 +1,21 @@
+---
+title: "Webview 관련사항"
+excerpt: "본문의 주요 내용을 여기에 입력하세요"
+
+categories:
+  - Categories2
+tags:
+  - [tag1, tag2]
+
+permalink: /categories2/post-name-here-2/
+
+toc: true
+toc_sticky: true
+
+date: 2022-07-24
+last_modified_at: 2022-07-24
+---
+
 - 모바일 앱에서 웹뷰로 접근을 위해서는 SSL이 필수라 HTTPS를 적용해야한다.
 
 

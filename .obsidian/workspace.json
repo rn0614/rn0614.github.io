@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_md파일/not-classified/React_Native_초기_설정.md",
+                "file": "_github_open/mobile/template_test.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_md파일/not-classified/React_Native_초기_설정.md",
+                "file": "_github_open/mobile/template_test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_md파일/not-classified/React_Native_초기_설정.md",
+                "file": "_github_open/mobile/template_test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_md파일/not-classified/React_Native_초기_설정.md"
+                "file": "_github_open/mobile/template_test.md"
               }
             }
           }
@@ -147,8 +147,11 @@
       "dbfolder:Create a new database table": false
     }
   },
-  "active": "b820b56879b958e4",
+  "active": "b72647969083adde",
   "lastOpenFiles": [
+    "_github_open/mobile/WebView_관련_사항.md",
+    "_md파일/not-classified/React_Native_초기_설정.md",
+    "_github_open/mobile/template_test.md",
     "_pages/categories-archive.md",
     "_github_open/mobile/NewCommit7.md",
     "_posts/2024-09-16-NewCommit6.md",
@@ -172,9 +175,6 @@
     "_posts/2024-09-16-NewCommit3.md",
     "_posts/2024-09-16-NewCommit2.md",
     "_posts/2024-09-16-NewCommit.md",
-    "_github_open/mobile/NewCommit2.md",
-    "_github_open/mobile/NewCommit.md",
-    "_github_open/mobile/WebView_관련_사항.md",
     "_github_open/mobile",
     "_github_open",
     "github_open/mobile",
