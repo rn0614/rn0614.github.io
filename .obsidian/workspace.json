@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "5f14b609eca1a30a",
+    "type": "split",
+    "children": [
+      {
+        "id": "de9ccfb0f7f55fad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b72647969083adde",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_md파일/디자인/Blender/Blender 기초.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2a484685014b9f75",
+    "type": "split",
+    "children": [
+      {
+        "id": "168b32285e87af79",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b820b56879b958e4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "386ca928b1acd08d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3ca09946e327eaf7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 222.5
+  },
+  "right": {
+    "id": "d64ebd2092026d73",
+    "type": "split",
+    "children": [
+      {
+        "id": "8cf2160821aa14a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a0447d8d93abfce1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_md파일/디자인/Blender/Blender 기초.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "82e3dc963d9d4715",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_md파일/디자인/Blender/Blender 기초.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "468c0ad93562451a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "59f3b4907aa27db7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_md파일/디자인/Blender/Blender 기초.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "dbfolder:Create a new database table": false
+    }
+  },
+  "active": "b72647969083adde",
+  "lastOpenFiles": [
+    "githubactiontest/test.md",
+    "githubactiontest",
+    "_md파일/mobile/test.md",
+    "_md파일/네트워크/네트워크 핵심이론(널널한 개발자)/TCP와 UDP.md",
+    "_md파일/네트워크/네트워크 핵심이론(널널한 개발자)/Application과 TCP간의 통신.md",
+    "_md파일/기획/웹 기획.md",
+    "_md파일/개발환경/VSCODE/모바일 Emulator 환경 설정.md",
+    "_md파일/개발환경/VSCODE/VScode 디버깅설정.md",
+    "_md파일/CICD/github Action.md",
+    "_md파일/react-native 문제 해결기.md",
+    "assets/images/posts_img/react-query 에러.png",
+    "_md파일/Software Architecture.md",
+    "_md파일/Supabase.md",
+    "_md파일/Untitled.excalidraw.md",
+    "_md파일/react key에 Index를 넣으면 안되는 이유.md",
+    "_md파일/Screenshot_1720456493.png",
+    "_md파일/React Component Design.md",
+    "_md파일/React 생명주기(update 시에만 useEffect발생).md",
+    "_md파일/Pasted image 20240717191829.png",
+    "_md파일/Pasted image 20240730234241.png",
+    "_md파일/Pasted Image 20240818151154_618.png",
+    "_site/assets/images/posts_img/토스증권.md",
+    "_md파일/CICD",
+    "screenshot-layouts.png",
+    "Pasted image 20240819002204.png",
+    "README.md",
+    "screenshot.png",
+    "_site/assets/images/posts_img/무제 파일.md",
+    "_md파일/Front/필수 유틸.md",
+    "_md파일/Front/library/Socket.io.md",
+    "_md파일/오류해결/AWS 콘솔 종료 시에도 계속 인스턴스 실행 문제.md",
+    "_md파일/디자인/Blender/Blender 기초.md",
+    "_md파일/보안/SOP와 CORS.md",
+    "_md파일/Front/library/React-Hook-Form.md",
+    "_md파일/Front/library/Threejs.md",
+    "_md파일/Front/library/axios.md",
+    "Database Folder",
+    "assets/images/posts_img/Pasted image 20240910000154.png",
+    "assets/images/posts_img/프로젝트 구상도/Pasted image 20240819004119.png",
+    "assets/images/posts_img/프로젝트 구상도",
+    "Rakefile",
+    "package.json",
+    "minimal-mistakes-jekyll.gemspec",
+    "LICENSE",
+    "index.html",
+    "Gemfile.lock",
+    "_md파일/스택 구조도.canvas"
+  ]
+}
