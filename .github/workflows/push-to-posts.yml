@@ -34,22 +34,17 @@ jobs:
           echo "파일추출 시작"
 
           # 1. 변경된 파일 목록을 git diff로 가져오기
-          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD)
+          # CHANGED_FILES=$(git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD)
 
-          echo "변경된 파일 목록:"
-          echo "$CHANGED_FILES"
+          # echo "변경된 파일 목록:"
+          # echo "$CHANGED_FILES"
 
           echo ""
           echo "1단계: _github_open 디렉토리 내 파일 필터링"
           # 2. _github_open 디렉토리에 속하는 파일만 필터링
-          GITHUB_OPEN_FILES=$(echo "$CHANGED_FILES" | grep "_github_open/.*\.md$")
-          echo "$GITHUB_OPEN_FILES"
-
-          echo ""
-          echo "2단계: .md 확장자로 끝나는 파일 필터링"
-          # 3. .md 확장자로 끝나는 파일만 필터링
-          MD_FILES=$(echo "$GITHUB_OPEN_FILES" | grep '\.md$')
+          MD_FILES=$(grep "_github_open/.*\.md$")
           echo "$MD_FILES"
+
 
           # 4. 최종 대상 파일들 처리
           echo ""
