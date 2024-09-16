@@ -11,8 +11,12 @@
             "id": "b72647969083adde",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_pages/categories-archive.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_pages/categories-archive.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_pages/categories-archive.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_pages/categories-archive.md"
+              }
             }
           }
         ]
@@ -141,14 +149,24 @@
   },
   "active": "b72647969083adde",
   "lastOpenFiles": [
+    "_github_open/mobile/NewCommit4.md",
     "_github_open/mobile/NewCommit3.md",
-    "_github_open/mobile/NewCommit2.md",
-    "_github_open/mobile/NewCommit.md",
+    "_pages/categories/category-categories4.md",
+    "_pages/categories/category-categories3.md",
+    "_pages/categories/category-categories2.md",
+    "_pages/categories/category-categories1.md",
+    "_github_open/mobile/obsidian github 블로그 생성.md",
     "_github_open/mobile/NewTest.md",
     "_posts/2024-09-16-test.md",
     "_posts/2024-09-16-reactNative.md",
     "_posts/2024-09-16-WebView_관련_사항.md",
     "_posts/2024-09-16-React_Native_초기_설정.md",
+    "_posts/2024-09-16-NewTest.md",
+    "_posts/2024-09-16-NewCommit3.md",
+    "_posts/2024-09-16-NewCommit2.md",
+    "_posts/2024-09-16-NewCommit.md",
+    "_github_open/mobile/NewCommit2.md",
+    "_github_open/mobile/NewCommit.md",
     "_github_open/mobile/WebView_관련_사항.md",
     "_github_open/mobile/test.md",
     "_github_open/mobile/React_Native_초기_설정.md",
@@ -159,18 +177,8 @@
     "github_open/mobile/WebView_관련_사항.md",
     "github_open/mobile/React_Native_초기_설정.md",
     "_posts/2024-09-16-react-native.md",
-    "_posts/2024-09-16-WebView 관련 사항.md",
-    "_posts/2024-09-16-React Native 초기 설정.md",
-    "github_open/mobile/test.md",
-    "github_open/mobile/WebView 관련 사항.md",
-    "github_open/mobile/react-native.md",
-    "github_open/mobile/React Native 초기 설정.md",
     "github_open/mobile",
     "github_open",
-    "github-open/mobile/WebView 관련 사항.md",
-    "github-open/mobile/test.md",
-    "github-open/mobile/react-native.md",
-    "github-open/mobile/React Native 초기 설정.md",
     "github-open/mobile",
     "github-open",
     "_md파일/github-open/mobile",
