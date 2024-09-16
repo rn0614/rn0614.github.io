@@ -32,7 +32,14 @@ jobs:
 
           # git diff --cached로 스테이징된 파일 목록 가져오기
           echo "파일추출 시작"
+
+          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | while read FILE; do
+            FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
+            echo "FILENAME : ${FILENAME}"
+          done
           
+          echo "test시작"
+
           find _github_open -type f -name '*.md' | while read FILE; do
             FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
             
