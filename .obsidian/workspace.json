@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/categories-archive.md",
+                "file": "_md파일/not-classified/React_Native_초기_설정.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/categories-archive.md",
+                "file": "_md파일/not-classified/React_Native_초기_설정.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/categories-archive.md",
+                "file": "_md파일/not-classified/React_Native_초기_설정.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/categories-archive.md"
+                "file": "_md파일/not-classified/React_Native_초기_설정.md"
               }
             }
           }
@@ -147,8 +147,9 @@
       "dbfolder:Create a new database table": false
     }
   },
-  "active": "b72647969083adde",
+  "active": "b820b56879b958e4",
   "lastOpenFiles": [
+    "_pages/categories-archive.md",
     "_github_open/mobile/NewCommit7.md",
     "_posts/2024-09-16-NewCommit6.md",
     "_github_open/mobile/NewCommit6.md",
@@ -174,7 +175,6 @@
     "_github_open/mobile/NewCommit2.md",
     "_github_open/mobile/NewCommit.md",
     "_github_open/mobile/WebView_관련_사항.md",
-    "_github_open/mobile/test.md",
     "_github_open/mobile",
     "_github_open",
     "github_open/mobile",
