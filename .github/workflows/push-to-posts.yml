@@ -25,7 +25,7 @@ jobs:
           TODAY=$(date +"%Y-%m-%d")
 
           # calendar 폴더에 있는 모든 .md 파일을 _posts로 이동
-          for FILE in github-open/*.md; do
+          find github_open -type f -name '*.md' | while read FILE; do
             FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
             NEW_FILENAME="${TODAY}-${FILENAME}.md"  # 새로운 파일명 생성
 
