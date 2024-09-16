@@ -27,3 +27,7 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+
+# github 파일 수정
+_md파일
