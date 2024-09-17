@@ -55,30 +55,33 @@ jobs:
           # 시작부분 로그 
           echo "변경파일 추출 시작"
 
-          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | grep '_github_open/.*\.md$' | while read FILE; do
-            FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
-            
-            # 파일명에서 공백을 '_'로 대체
-            FILENAME_WITH_UNDERSCORES=$(echo "$FILENAME" | sed 's/ /_/g')
+          # 변경된 파일 목록을 임시 파일에 저장
+          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD > changed_files.txt
 
-            # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
-            NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
+          # 임시 파일에서 파일명 추출 및 처리
+          while IFS= read -r FILE; do
+            if echo "$FILE" | grep -q '_github_open/.*\.md$'; then
+              FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
 
-            # 이름 formatting 완료된 파일이름 리스트 출력
-            echo "COPIED_FILENAME : ${NEW_FILENAME}"
+              # 파일명에서 공백을 '_'로 대체
+              FILENAME_WITH_UNDERSCORES=$(echo "$FILENAME" | sed 's/ /_/g')
 
-            # _posts 폴더로 파일 이동 및 파일명 변경
-            cp "$FILE" "_posts/${NEW_FILENAME}"
+              # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
+              NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
 
-            # 파일 복사 발생 시 플래그 변경
-            FILE_COPIED=true
-            echo "file_copied=true" >> $GITHUB_ENV
-          done
+              # 이름 formatting 완료된 파일이름 리스트 출력
+              echo "COPIED_FILENAME : ${NEW_FILENAME}"
 
-          # 환경 변수 $GITHUB_ENV와 로컬 변수 FILE_COPIED 값 출력
-          echo "GITHUB_ENV 설정 완료. 파일 복사 여부: ${FILE_COPIED}"
-          echo "현재 GITHUB_ENV 내용:"
-          cat $GITHUB_ENV
+              # _posts 폴더로 파일 이동 및 파일명 변경
+              cp "$FILE" "_posts/${NEW_FILENAME}"
+
+              # 파일 복사 발생 시 플래그 변경
+              FILE_COPIED=true
+            fi
+          done < changed_files.txt
+
+          # 환경 변수 파일에 기록
+          echo "file_copied=$FILE_COPIED" >> $GITHUB_ENV
       # 변경점 psuh
       - name: Commit and Push Changes
         run: |
