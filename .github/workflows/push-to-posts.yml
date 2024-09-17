@@ -21,8 +21,12 @@ jobs:
         with:
           fetch-depth: 0   # 전체 커밋 기록을 가져오기
                           # 디폴트가 현재 커밋이라 설정 안하면 HEAD^ 못가져옴. 
-
+                          
     # 한글 깨짐 수정
+      - name: Set Git config to handle Korean filenames
+        run: |
+          git config --global core.quotepath false
+
       - name: Set UTF-8 locale
         run: |
           sudo update-locale LANG=en_US.UTF-8
