@@ -61,6 +61,9 @@ jobs:
             # 파일 복사 발생 시 플래그 변경
             FILE_COPIED=true
           done
+          
+          # 플래그 값 출력 (커밋 단계에서 사용하기 위해 환경 변수로 설정)
+          echo "file_copied=$FILE_COPIED" >> $GITHUB_ENV
 
       # 변경점 psuh
       - name: Commit and Push Changes
