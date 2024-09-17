@@ -75,7 +75,7 @@ jobs:
           # 시작부분 로그 
           echo "변경파일 추출 시작"
 
-          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | grep '_github_open/.*\.md$' | while read FILE; do
+          git diff --name-only HEAD^ HEAD 2>/dev/null | grep '_github_open/.*\.md$' | while read FILE; do
             FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
             
             # 파일명에서 공백을 '_'로 대체
