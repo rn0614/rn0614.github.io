@@ -124,3 +124,31 @@ steps:
                      # 디폴트가 현재 커밋이라 설정 안하면 HEAD^ 못가져옴. 
 
 ```
+
+2. 단순히 블로그 수정했을 때 .md 수정이 없어서 에러 발생
+```shell
+
+
+  # 플래그 변수를 만들어서 초기화
+  FILE_COPIED=false
+  
+  
+  # 플래그 변수를 만들어서 초기화
+  grep (
+    # 여기에서 플래그 변수 변경
+  FILE_COPIED=false
+  )
+
+  # 커밋 부분 변경
+  - name: Commit and Push Changes
+  run: |
+    # 파일이 복사된 경우에만 커밋 및 푸시
+    if [ "$file_copied" = "true" ]; then
+      git add _posts/*.md
+      git commit -m "Copy and rename files on push"
+      git push origin master
+    else
+      echo "No files were copied. Skipping commit."
+    fi
+
+```
