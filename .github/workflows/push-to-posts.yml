@@ -12,6 +12,8 @@ jobs:
     # 실행시키는 환경. 대규모 프로젝트면 프로젝트환경과 맞추기도 한다.
     runs-on: ubuntu-latest
 
+
+
     # job 내 프로젝트 하나의 steps는 하나의 트랜잭션안에 있어서 하나가 실패하면 전체 취소
     steps:
       - name: Checkout repository
@@ -19,6 +21,13 @@ jobs:
         with:
           fetch-depth: 0   # 전체 커밋 기록을 가져오기
                           # 디폴트가 현재 커밋이라 설정 안하면 HEAD^ 못가져옴. 
+
+    # 한글 깨짐 수정
+      - name: Set UTF-8 locale
+        run: |
+          sudo update-locale LANG=en_US.UTF-8
+          export LC_ALL=en_US.UTF-8
+          export LANG=en_US.UTF-8
 
     # github action의 보안관련 설정
       - name: Set safe directory for Git
