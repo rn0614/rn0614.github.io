@@ -32,8 +32,11 @@ jobs:
           git config --global user.email 'rn0614@naver.com'
 
     # 파일 copy & 이름변경 로직
-      - name: Move and Rename Files
+      - name: Copy and Rename Files
         run: |
+          # 플래그 변수 초기화
+          FILE_COPIED=false
+
           # 오늘 날짜 형식 (YYYY-MM-DD)
           TODAY=$(date +"%Y-%m-%d")
 
@@ -53,18 +56,20 @@ jobs:
             echo "COPIED_FILENAME : ${NEW_FILENAME}"
 
             # _posts 폴더로 파일 이동 및 파일명 변경
-            mv "$FILE" "_posts/${NEW_FILENAME}"
+            cp "$FILE" "_posts/${NEW_FILENAME}"
+
+            # 파일 복사 발생 시 플래그 변경
+            FILE_COPIED=true
           done
 
       # 변경점 psuh
       - name: Commit and Push Changes
         run: |
-          git add _posts/*.md
-
-          # 변경 사항이 있을 때만 커밋 및 푸시
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Move and rename files on push"
+          # 파일이 복사된 경우에만 커밋 및 푸시
+          if [ "$file_copied" = "true" ]; then
+            git add _posts/*.md
+            git commit -m "Copy and rename files on push"
             git push origin master
+          else
+            echo "No files were copied. Skipping commit."
           fi
