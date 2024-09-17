@@ -24,5 +24,3 @@ last_modified_at: 2024-09-17
 2. device manager에서 원하는 기기의 emulator 설치
     ![](assets/images/posts_img/Pasted%20image%2020240910000154.png)
 3.  react-native에서 webview 실행해보기
-
-
