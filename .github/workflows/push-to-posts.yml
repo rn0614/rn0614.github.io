@@ -21,12 +21,11 @@ jobs:
         with:
           fetch-depth: 0   # 전체 커밋 기록을 가져오기
                           # 디폴트가 현재 커밋이라 설정 안하면 HEAD^ 못가져옴. 
-                          
+
     # 한글 깨짐 수정
       - name: Set Git config to handle Korean filenames
         run: |
           git config --global core.quotepath false
-
       - name: Set UTF-8 locale
         run: |
           sudo update-locale LANG=en_US.UTF-8
@@ -86,6 +85,10 @@ jobs:
           # 플래그 값 출력 (커밋 단계에서 사용하기 위해 환경 변수로 설정)
           echo "file_copied=${FILE_COPIED}" >> $GITHUB_ENV
 
+          # 환경 변수 $GITHUB_ENV와 로컬 변수 FILE_COPIED 값 출력
+          echo "GITHUB_ENV 설정 완료. 파일 복사 여부: ${FILE_COPIED}"
+          echo "현재 GITHUB_ENV 내용:"
+          cat $GITHUB_ENV
       # 변경점 psuh
       - name: Commit and Push Changes
         run: |
