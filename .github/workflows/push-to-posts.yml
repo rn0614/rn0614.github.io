@@ -43,11 +43,14 @@ jobs:
           # 시작부분 로그 
           echo "변경파일 추출 시작"
 
-          # 변경된 .md 파일을 찾아서 복사
-          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | grep '_github_open/.*\.md$' | while read FILE; do
-            # 디버깅용 파일 경로 출력
+          # 변경된 .md 파일 목록을 확인하기 위해 diff_output.txt에 저장
+          git diff --name-only HEAD^ HEAD > diff_output.txt
+          cat diff_output.txt  # 변경된 파일 목록 출력
+
+          # 파일 목록에서 한 줄씩 파일명을 읽어오기
+          cat diff_output.txt | while read FILE; do
             echo "FILE 경로: ${FILE}"
-            
+
             # 파일명을 얻음
             FILENAME=$(basename "$FILE" .md)
 
@@ -65,9 +68,6 @@ jobs:
 
             # 파일 복사 발생 시 플래그 변경
             FILE_COPIED=true
-
-            
-            echo "한개 완료"
           done
 
           # 플래그 값 출력 (커밋 단계에서 사용하기 위해 환경 변수로 설정)
