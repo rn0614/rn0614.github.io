@@ -66,6 +66,7 @@ jobs:
           while IFS= read -r FILE; do
             echo "현재 처리 중인 파일: $FILE"  # 디버깅용으로 FILE 출력
             
+            echo "$FILE" | cat -A  # 특수 문자와 공백 확인
             
             if echo "$FILE" | grep -E '_github_open/.*'; then
               echo "조건테스트1 : $FILE" 
