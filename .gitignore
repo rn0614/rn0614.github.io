@@ -30,7 +30,10 @@ _site
 
 
 # github 파일 수정
-_md파일
+_md파일/
 
 # obsidian 설정파일
-.obsidian
+.obsidian/
+
+
+.Templates/
