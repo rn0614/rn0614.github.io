@@ -108,3 +108,19 @@ jobs:
 
 
 ## 오류 해결기록
+
+1. HEAD^ 를 못찾는 현상
+```shell
+# 에러
+fatal: ambiguous argument 'HEAD^': unknown revision or path not in the working tree. Use '--' to separate paths from revisions, like this: 'git <command> [<revision>...] -- [<file>...]'
+
+
+# 개선
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v3
+    with:
+      fetch-depth: 0   # 전체 커밋 기록을 가져오기
+                     # 디폴트가 현재 커밋이라 설정 안하면 HEAD^ 못가져옴. 
+
+```
