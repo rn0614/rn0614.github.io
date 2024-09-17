@@ -65,6 +65,8 @@ jobs:
       # 변경점 psuh
       - name: Commit and Push Changes
         run: |
+
+          echo "안됨 {$file_copied}"
           # 파일이 복사된 경우에만 커밋 및 푸시
           if [ "$file_copied" = "true" ]; then
             git add _posts/*.md
