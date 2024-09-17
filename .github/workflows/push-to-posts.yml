@@ -55,42 +55,30 @@ jobs:
           # 시작부분 로그 
           echo "변경파일 추출 시작"
 
-          # 파일 변경 목록을 diff_output.txt로 저장
-          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | grep '_github_open/.*\.md$' > diff_output.txt
+          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | grep '_github_open/.*\.md$' | while read FILE; do
+            FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
+            
+            # 파일명에서 공백을 '_'로 대체
+            FILENAME_WITH_UNDERSCORES=$(echo "$FILENAME" | sed 's/ /_/g')
 
-          # 파일 목록을 읽어서 처리
-          while IFS= read -r FILE; do
-            # 파일명이 있는 경우에만 실행
-            if [ -n "$FILE" ]; then
-              FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
-              
-              # 파일명에서 공백을 '_'로 대체
-              FILENAME_WITH_UNDERSCORES=$(echo "$FILENAME" | sed 's/ /_/g')
+            # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
+            NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
 
-              # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
-              NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
+            # 이름 formatting 완료된 파일이름 리스트 출력
+            echo "COPIED_FILENAME : ${NEW_FILENAME}"
 
-              # 이름 formatting 완료된 파일이름 리스트 출력
-              echo "COPIED_FILENAME : ${NEW_FILENAME}"
+            # _posts 폴더로 파일 이동 및 파일명 변경
+            cp "$FILE" "_posts/${NEW_FILENAME}"
 
-              # _posts 폴더로 파일 이동 및 파일명 변경
-              cp "$FILE" "_posts/${NEW_FILENAME}"
-
-              # 파일 복사 발생 시 플래그 변경
-              FILE_COPIED=true
-            fi
-          done < diff_output.txt
-
-          # 파일이 복사된 경우에만 환경 변수 설정
-          if [ "$FILE_COPIED" = true ]; then
+            # 파일 복사 발생 시 플래그 변경
+            FILE_COPIED=true
             echo "file_copied=true" >> $GITHUB_ENV
-          fi
+          done
 
           # 환경 변수 $GITHUB_ENV와 로컬 변수 FILE_COPIED 값 출력
           echo "GITHUB_ENV 설정 완료. 파일 복사 여부: ${FILE_COPIED}"
           echo "현재 GITHUB_ENV 내용:"
           cat $GITHUB_ENV
-          
       # 변경점 psuh
       - name: Commit and Push Changes
         run: |
