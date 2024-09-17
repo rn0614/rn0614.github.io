@@ -59,6 +59,10 @@ jobs:
           git diff --name-only HEAD^ HEAD 2>/dev/null > changed_files.txt
 
           # 임시 파일에서 파일명 추출 및 처리
+          echo "추출된 파일 목록:"
+          cat changed_files.txt  # 추출된 파일 목록을 출력하여 확인
+
+          # 임시 파일에서 파일명 추출 및 처리
           while IFS= read -r FILE; do
             if echo "$FILE" | grep -q '_github_open/.*\.md$'; then
               FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
