@@ -1,6 +1,6 @@
 ---
 title: Webview 관련사항
-excerpt: 본문의 주요 내용을 여기에 입력하세요
+excerpt: webview설정관련
 categories:
   - Categories2
 tags: 

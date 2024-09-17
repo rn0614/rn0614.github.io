@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "de9ccfb0f7f55fad",
+        "id": "2de69279b8f341f0",
         "type": "tabs",
         "children": [
           {
-            "id": "b72647969083adde",
+            "id": "983d0a65a40b1094",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_github_open/mobile/template_test.md",
+                "file": "Templates/post_template.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "94258fd7e75dda9b",
+            "id": "8660cfad1a034f57",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_github_open/mobile/reactNative.md",
+                "file": "_github_open/CICD/github_action_obsidiain배포자동화.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_github_open/mobile/reactNative.md",
+                "file": "_github_open/CICD/github_action_obsidiain배포자동화.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_github_open/mobile/reactNative.md",
+                "file": "_github_open/CICD/github_action_obsidiain배포자동화.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_github_open/mobile/reactNative.md"
+                "file": "_github_open/CICD/github_action_obsidiain배포자동화.md"
               }
             }
           }
@@ -161,19 +161,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "94258fd7e75dda9b",
+  "active": "8660cfad1a034f57",
   "lastOpenFiles": [
-    "_github_open/개발환경/VSCODE/모바일_Emulator_환경_설정.md",
-    "_github_open/개발환경/VSCODE/VScode_디버깅설정.md",
-    "_github_open/개발환경/VSCODE/모바일 Emulator 환경 설정.md",
-    "_github_open/mobile/template_test.md",
     "_github_open/mobile/reactNative.md",
+    "_github_open/CICD/github Action.md",
+    "_github_open/CICD/github_action_default학습.md",
+    "_github_open/CICD/github_action_obsidiain배포자동화.md",
+    "_github_open/CICD/github_action_obsidiain배포자동화.ㅡㅇ",
+    "_github_open/CICD",
+    "_github_open/개발환경/VSCODE/VScode_디버깅설정.md",
+    "_github_open/개발환경/VSCODE/모바일_Emulator_환경_설정.md",
     "_md파일/무제 파일.md",
+    "Templates/post_template.md",
+    "_github_open/mobile/template_test.md",
+    "README.md",
+    "_github_open/개발환경/VSCODE/모바일 Emulator 환경 설정.md",
     "Untitled.md",
     "무제 파일.md",
     "_github_open/무제 파일.md",
     "_pages/categories/category-categories1.md",
-    "Templates/post_template.md",
     "Templates",
     "_github_open/mobile/WebView_관련_사항.md",
     "_md파일/not-classified/React_Native_초기_설정.md",
@@ -186,10 +192,6 @@
     "_github_open/mobile/NewCommit5.md",
     "_github_open/mobile/NewCommit4.md",
     "_github_open/mobile/NewCommit3.md",
-    "_pages/categories/category-categories4.md",
-    "_pages/categories/category-categories3.md",
-    "_pages/categories/category-categories2.md",
-    "_github_open/mobile/obsidian github 블로그 생성.md",
     "_github_open/mobile",
     "_github_open",
     "github_open/mobile",
@@ -197,14 +199,12 @@
     "github-open/mobile",
     "github-open",
     "_md파일/github-open/mobile",
-    "_md파일/github-open/categor",
     "_md파일/image/react-native-build-error.PNG",
     "_md파일/image/dependency 이상.PNG",
     "_md파일/not-classified/스택 구조도.canvas",
     "_md파일/not-classified/Screenshot_1720456493.png",
     "_md파일/not-classified/Pasted image 20240730234241.png",
     "_md파일/not-classified/Pasted image 20240717191829.png",
-    "_md파일/not-classified",
     "_md파일/personal/Front/react/react 상태주기.png",
     "_md파일/personal/Excalidraw/2024-08-18-14.59.57.excalidraw.png",
     "_md파일/personal/github-open/Front/react/react 상태주기.png",

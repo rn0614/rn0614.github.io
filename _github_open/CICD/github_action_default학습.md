@@ -1,4 +1,19 @@
-> 무엇
+---
+title: reactNative
+excerpt: 템플렛 테스트 github action으로 자동배포환경 작성
+categories:
+  - Categories2
+tags: 
+permalink: /categories2/post-name-here-2/
+toc: true
+toc_sticky: true
+date: 2024-09-17
+last_modified_at: 2024-09-17
+---
+
+> 어떤 문제를 해결했나?
+> 1. 단순 공부 목적(배포자동화 위주)
+
 
 ### 사용
 - githib의 자동화 도구 : 소프트웨어 개발 워크 플로우를 자동화 한다.
