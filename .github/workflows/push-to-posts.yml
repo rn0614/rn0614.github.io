@@ -1,53 +1,62 @@
-name: Move and Rename Files on Push
+name: Copy and Rename Files on Push
 
-# push 이벤트가 발생할 때 실행
+# trigger master 브랜치에 push 할 때 해당 workflows를 실행
 on:
   push:
     branches:
-      - master # master 브랜치에 푸시할 때 실행
+      - master
 
+# workflows 내부의 job들 각 job은 하나의 트랜잭션
 jobs:
-  move_files:
+  copy_files:
+    # 실행시키는 환경. 대규모 프로젝트면 프로젝트환경과 맞추기도 한다.
     runs-on: ubuntu-latest
 
+    # job 내 프로젝트 하나의 steps는 하나의 트랜잭션안에 있어서 하나가 실패하면 전체 취소
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # 전체 커밋 기록을 가져옴
+          fetch-depth: 0   # 전체 커밋 기록을 가져오기
+                          # 디폴트가 현재 커밋이라 설정 안하면 HEAD^ 못가져옴. 
 
+    # github action의 보안관련 설정
       - name: Set safe directory for Git
         run: |
           git config --global --add safe.directory /github/workspace
 
+    # 유저 적용
       - name: Set up Git
         run: |
           git config --global user.name 'rn0614'
           git config --global user.email 'rn0614@naver.com'
 
+    # 파일 copy & 이름변경 로직
       - name: Move and Rename Files
         run: |
           # 오늘 날짜 형식 (YYYY-MM-DD)
           TODAY=$(date +"%Y-%m-%d")
 
-          # git diff --cached로 스테이징된 파일 목록 가져오기
-          echo "파일추출 시작"
+          # 시작부분 로그 
+          echo "변경파일 추출 시작"
 
-          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | while read FILE; do
+          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD | grep '_github_open/.*\.md$' | while read FILE; do
             FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
             
-            echo "FILENAME : ${FILENAME}"
-
             # 파일명에서 공백을 '_'로 대체
             FILENAME_WITH_UNDERSCORES=$(echo "$FILENAME" | sed 's/ /_/g')
 
             # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
             NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
 
+            # 이름 formatting 완료된 파일이름 리스트 출력
+            echo "COPIED_FILENAME : ${NEW_FILENAME}"
+
             # _posts 폴더로 파일 이동 및 파일명 변경
             mv "$FILE" "_posts/${NEW_FILENAME}"
           done
 
+      # 변경점 psuh
       - name: Commit and Push Changes
         run: |
           git add _posts/*.md
