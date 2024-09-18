@@ -1,20 +1,35 @@
 ---
 title: reactNative
-excerpt: 템플렛 테스트 github action으로 자동배포환경 작성
+excerpt: React Native의 전반적인 설정부터 배포까지 내용
 categories:
   - Categories2
-tags: 
+tags:
+  - "#모바일"
+  - "#모바일/react-native"
 permalink: /categories2/post-name-here-2/
 toc: true
 toc_sticky: true
 date: 2024-09-17
 last_modified_at: 2024-09-17
 ---
+# React-Native
 
-## 내용
+## 개요
+> facebook 에서 만든 하이브리드 모바일 라이브러리 react 는 사실 상태관리 라이브러리인 것이고 실제 디바이스에 관련된 라이브러리는 다음과 같다.
+> web : react-dom
+> mobile : react-natvie
+> desktop-app : react-electron
 
+1. 로컬 설정
+    [모바일_Emulator_환경_설정](_github_open/개발환경/VSCODE/모바일_Emulator_환경_설정.md)
+2. 기능
+3. build
+4. 배포
+
+
+## Expo 프로젝트 생성
 ```shell
-# download
+# download- expo
 npx create-expo-app@latest
 
 # reset 작업

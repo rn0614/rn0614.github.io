@@ -3,33 +3,27 @@ title: obsidiain github blog 배포자동화
 excerpt: 템플렛 테스트 github action으로 자동배포환경 작성
 categories:
   - Categories2
-tags: 
+tags:
+  - "#obsidian"
+  - "#github_action"
+  - "#github_blog"
 permalink: /categories2/post-name-here-2/
 toc: true
 toc_sticky: true
 date: 2024-09-17
 last_modified_at: 2024-09-17
 ---
+# github Blog - obsidian 연동기
 
-> 어떤 문제를 해결했나?
-> 1. github Action으로 obsidian에 있는 md 파일 수정 및 복제하여 github블로그 배포 자동화 
-
-
-> 상황
-> obsidian으로 개발 지식을 정리해 두는 편인데 notion은 협업툴, db툴인것과 같이 공유가 쉬운데 obsidian은 공유가 상당히 어려웠다. 그래서 github blog를 파고 obsidian 의 보관소를 해당 github blog 내부 파일로 만들어서 obsidian 을 쓰면 자동으로 github blog 안에 글이 써지도록 변경하였다.
-
+## 개요
+> obsidian의 파일을 commit 하면 자동으로 githubBlog에 올리려고 하였다. 문제는 jeklly를 github으로 선택했는데 posting 파일에 대한 파일명 양식이 따로 정해져 있다는 것이다. 글 쓸 때마다 그 양식을 지키기는 너무 귀찮아서 commit 시점에 자동으로 파일명을 바꿔서 그 위치에 저장하는 workflow를 작성하기로 했다.(아마 1년 내내바꿔도 해당 workflow만드는 시간보단 덜들듯 하다.)
 
 ## github Action의 역할
 github action의 역할은 명확하다. "트리거 발생 시 -> 이미 구조화된 이벤트 실행"이다.
 
-
 ## 내 코드
-트리거 :  master 브랜치에 push 할 때 동작
-
-구조화된 이벤트(workflow) :
-하나의 단일 job으로 구성 (하나의 job은 하나의 트랜잭션)
-
-
+1. 트리거 :  master 브랜치에 push 할 때 동작
+2. 구조화된 이벤트(workflow) : 하나의 단일 job으로 구성 (하나의 job은 하나의 트랜잭션)
 
 // .github/workflows/push-to-posts.yml
 ```yml
@@ -125,7 +119,6 @@ jobs:
 
           # 환경 변수 파일에 기록
           echo "file_copied=$FILE_COPIED" >> $GITHUB_ENV
-          
       # 변경점 psuh
       - name: Commit and Push Changes
         run: |
@@ -145,7 +138,7 @@ jobs:
 
 ## 오류 해결기록
 
-1. HEAD^ 를 못찾는 현상
+### 1. HEAD^ 를 못찾는 현상
 ```yml
 # 에러
 fatal: ambiguous argument 'HEAD^': unknown revision or path not in the working tree. Use '--' to separate paths from revisions, like this: 'git <command> [<revision>...] -- [<file>...]'
@@ -161,7 +154,7 @@ steps:
 
 ```
 
-2. 한글 깨짐 수정
+### 2. 한글 깨짐 수정
 ```yml
 # 한글 깨짐 수정
   - name: Set Git config to handle Korean filenames
@@ -174,14 +167,14 @@ steps:
       export LANG=en_US.UTF-8
 ```
 
-3.  보안관련 설정
+### 3.  보안관련 설정
 ```yml
 - name: Set safe directory for Git
   run: |
     git config --global --add safe.directory /github/workspace
 ```
 
-4. 특정 위치에서 commit 된 md 파일 추출
+### 4. 특정 위치에서 commit 된 md 파일 추출
 ```yml
 # 변경된 파일 목록을 임시 파일에 저장
           git diff --name-only HEAD^ HEAD 2>/dev/null > changed_files.txt
@@ -219,9 +212,6 @@ steps:
           # 환경 변수 파일에 기록
           echo "file_copied=$FILE_COPIED" >> $GITHUB_ENV
 ```
-
-6. 환경변수 관련
-
 
 
 세팅하기 까지 너무 오래걸렸다.(힘들었다...)
