@@ -47,6 +47,8 @@ jobs:
     # 실행시키는 환경. 대규모 프로젝트면 프로젝트환경과 맞추기도 한다.
     runs-on: ubuntu-latest
 
+
+
     # job 내 프로젝트 하나의 steps는 하나의 트랜잭션안에 있어서 하나가 실패하면 전체 취소
     steps:
       - name: Checkout repository
@@ -54,6 +56,16 @@ jobs:
         with:
           fetch-depth: 0   # 전체 커밋 기록을 가져오기
                           # 디폴트가 현재 커밋이라 설정 안하면 HEAD^ 못가져옴. 
+
+    # 한글 깨짐 수정
+      - name: Set Git config to handle Korean filenames
+        run: |
+          git config --global core.quotepath false
+      - name: Set UTF-8 locale
+        run: |
+          sudo update-locale LANG=en_US.UTF-8
+          export LC_ALL=en_US.UTF-8
+          export LANG=en_US.UTF-8
 
     # github action의 보안관련 설정
       - name: Set safe directory for Git
@@ -67,41 +79,65 @@ jobs:
           git config --global user.email 'rn0614@naver.com'
 
     # 파일 copy & 이름변경 로직
-      - name: Move and Rename Files
+      - name: Copy and Rename Files
         run: |
+          # 플래그 변수 초기화
+          FILE_COPIED=false
+
           # 오늘 날짜 형식 (YYYY-MM-DD)
           TODAY=$(date +"%Y-%m-%d")
 
           # 시작부분 로그 
           echo "변경파일 추출 시작"
 
-          git diff --name-only HEAD^ HEAD 2>/dev/null | grep '_github_open/.*\.md$' | while read FILE; do
-            FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
-            
-            # 파일명에서 공백을 '_'로 대체
-            FILENAME_WITH_UNDERSCORES=$(echo "$FILENAME" | sed 's/ /_/g')
+          # 변경된 파일 목록을 임시 파일에 저장
+          git diff --name-only HEAD^ HEAD 2>/dev/null > changed_files.txt
 
-            # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
-            NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
+          # 임시 파일에서 파일명 추출 및 처리
+          echo "추출된 파일 목록:"
+          cat changed_files.txt  # 추출된 파일 목록을 출력하여 확인
 
-            # 이름 formatting 완료된 파일이름 리스트 출력
-            echo "COPIED_FILENAME : ${NEW_FILENAME}"
+          # 임시 파일에서 파일명 추출 및 처리
+          while IFS= read -r FILE; do
+            if echo "$FILE" | grep -E '.*.md$'; then
+              if echo "$FILE" | grep -E '^_github_open/.*'; then
+                echo "파일이 조건에 맞습니다: $FILE"  # 매칭된 파일 확인
 
-            # _posts 폴더로 파일 이동 및 파일명 변경
-            mv "$FILE" "_posts/${NEW_FILENAME}"
-          done
+                FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
 
+                # 파일명에서 공백을 '_'로 대체
+                FILENAME_WITH_UNDERSCORES=$(echo "$FILENAME" | sed 's/ /_/g')
+
+                # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
+                NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
+
+                # 이름 formatting 완료된 파일이름 리스트 출력
+                echo "COPIED_FILENAME : ${NEW_FILENAME}"
+
+                # _posts 폴더로 파일 이동 및 파일명 변경
+                cp "$FILE" "_posts/${NEW_FILENAME}"
+
+                # 파일 복사 발생 시 플래그 변경
+                FILE_COPIED=true
+              fi
+            fi
+          done < changed_files.txt
+
+          # 환경 변수 파일에 기록
+          echo "file_copied=$FILE_COPIED" >> $GITHUB_ENV
+          
       # 변경점 psuh
       - name: Commit and Push Changes
         run: |
-          git add _posts/*.md
-
-          # 변경 사항이 있을 때만 커밋 및 푸시
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Move and rename files on push"
+          # GitHub Actions 환경 변수 참조
+          echo "file_copied is: $file_copied"
+          # 파일이 복사된 경우에만 커밋 및 푸시
+          if [ "$file_copied" = "true" ]; then
+            git add _posts/*.md
+            git commit -m "Copy and rename files on push"
             git push origin master
+          else
+            echo "No files were copied. Skipping commit."
           fi
 ```
 
@@ -110,7 +146,7 @@ jobs:
 ## 오류 해결기록
 
 1. HEAD^ 를 못찾는 현상
-```shell
+```yml
 # 에러
 fatal: ambiguous argument 'HEAD^': unknown revision or path not in the working tree. Use '--' to separate paths from revisions, like this: 'git <command> [<revision>...] -- [<file>...]'
 
@@ -125,34 +161,67 @@ steps:
 
 ```
 
-2. 단순히 블로그 수정했을 때 .md 수정이 없어서 에러 발생
-```shell
-
-
-  # 플래그 변수를 만들어서 초기화
-  FILE_COPIED=false
-  
-  
-  # 플래그 변수를 만들어서 초기화
-  grep (
-    # 여기에서 플래그 변수 변경
-  FILE_COPIED=false
-  )
-
-  # 커밋 부분 변경
-  - name: Commit and Push Changes
-  run: |
-    # 파일이 복사된 경우에만 커밋 및 푸시
-    if [ "$file_copied" = "true" ]; then
-      git add _posts/*.md
-      git commit -m "Copy and rename files on push"
-      git push origin master
-    else
-      echo "No files were copied. Skipping commit."
-    fi
-
+2. 한글 깨짐 수정
+```yml
+# 한글 깨짐 수정
+  - name: Set Git config to handle Korean filenames
+    run: |
+      git config --global core.quotepath false
+  - name: Set UTF-8 locale
+    run: |
+      sudo update-locale LANG=en_US.UTF-8
+      export LC_ALL=en_US.UTF-8
+      export LANG=en_US.UTF-8
 ```
 
+3.  보안관련 설정
+```yml
+- name: Set safe directory for Git
+  run: |
+    git config --global --add safe.directory /github/workspace
+```
 
-왜이리 안되냐...
+4. 특정 위치에서 commit 된 md 파일 추출
+```yml
+# 변경된 파일 목록을 임시 파일에 저장
+          git diff --name-only HEAD^ HEAD 2>/dev/null > changed_files.txt
 
+          # 임시 파일에서 파일명 추출 및 처리
+          echo "추출된 파일 목록:"
+          cat changed_files.txt  # 추출된 파일 목록을 출력하여 확인
+
+          # 임시 파일에서 파일명 추출 및 처리
+          while IFS= read -r FILE; do
+            if echo "$FILE" | grep -E '.*.md$'; then
+              if echo "$FILE" | grep -E '^_github_open/.*'; then
+                echo "파일이 조건에 맞습니다: $FILE"  # 매칭된 파일 확인
+
+                FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
+
+                # 파일명에서 공백을 '_'로 대체
+                FILENAME_WITH_UNDERSCORES=$(echo "$FILENAME" | sed 's/ /_/g')
+
+                # 새로운 파일명 생성 (YYYY-MM-DD-파일명.md)
+                NEW_FILENAME="${TODAY}-${FILENAME_WITH_UNDERSCORES}.md"
+
+                # 이름 formatting 완료된 파일이름 리스트 출력
+                echo "COPIED_FILENAME : ${NEW_FILENAME}"
+
+                # _posts 폴더로 파일 이동 및 파일명 변경
+                cp "$FILE" "_posts/${NEW_FILENAME}"
+
+                # 파일 복사 발생 시 플래그 변경
+                FILE_COPIED=true
+              fi
+            fi
+          done < changed_files.txt
+
+          # 환경 변수 파일에 기록
+          echo "file_copied=$FILE_COPIED" >> $GITHUB_ENV
+```
+
+6. 환경변수 관련
+
+
+
+세팅하기 까지 너무 오래걸렸다.(힘들었다...)
