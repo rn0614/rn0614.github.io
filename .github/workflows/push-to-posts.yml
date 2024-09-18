@@ -56,7 +56,7 @@ jobs:
           echo "변경파일 추출 시작"
 
           # 변경된 파일 목록을 임시 파일에 저장
-          git diff --name-only HEAD^ HEAD 2>/dev/null || git diff --name-only HEAD > changed_files.txt
+          git diff --name-only HEAD^ HEAD 2>/dev/null > changed_files.txt
 
           # 임시 파일에서 파일명 추출 및 처리
           echo "추출된 파일 목록:"
@@ -65,7 +65,7 @@ jobs:
           # 임시 파일에서 파일명 추출 및 처리
           while IFS= read -r FILE; do
             if echo "$FILE" | grep -E '.*.md$'; then
-              if echo "$FILE" | grep -E '^/_obsidian/.*'; then
+              if echo "$FILE" | grep -E '^_obsidian/.*'; then
                 echo "파일이 조건에 맞습니다: $FILE"  # 매칭된 파일 확인
 
                 FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명

@@ -30,4 +30,3 @@ last_modified_at: 2024-09-17
 > EXPORT 하면 주로 나오는 파일은 obj, FBX, GLB(GLTF) 이다.
 
 
-
