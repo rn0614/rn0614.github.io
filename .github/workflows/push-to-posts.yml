@@ -65,7 +65,7 @@ jobs:
           # 임시 파일에서 파일명 추출 및 처리
           while IFS= read -r FILE; do
             if echo "$FILE" | grep -E '.*.md$'; then
-              if echo "$FILE" | grep -E '^_obsidian\/_github_open\/.*'; then
+              if echo "$FILE" | grep -E '^/_obsidian/.*'; then
                 echo "파일이 조건에 맞습니다: $FILE"  # 매칭된 파일 확인
 
                 FILENAME=$(basename "$FILE" .md)  # 확장자 제거한 파일명
