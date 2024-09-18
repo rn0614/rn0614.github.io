@@ -24,4 +24,3 @@ Workflow > Job > Step
 
 .github/workflow 경로에 파일이 있으면 github 측에서 자동으로 workflow 파일인지 인지한다.
 
-
