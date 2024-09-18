@@ -32,8 +32,13 @@ _site
 # github 파일 수정
 _md파일/
 
-# obsidian 설정파일
-.obsidian/
+# _obsidian 폴더 내 모든 파일과 디렉토리를 무시
+_obsidian/*
 
+# _obsidian/_git_open 폴더는 예외로 허용
+!_obsidian/_git_open/
+
+# _obsidian/_git_open 폴더 하위의 모든 파일과 디렉토리는 허용
+!_obsidian/_git_open/**
 
 Templates/

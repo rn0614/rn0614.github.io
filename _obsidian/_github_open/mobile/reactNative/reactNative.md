@@ -6,7 +6,7 @@ categories:
 tags:
   - "#모바일"
   - "#모바일/react-native"
-permalink: /categories2/post-name-here-2/
+permalink: /categories2/20240917090101reactNative/
 toc: true
 toc_sticky: true
 date: 2024-09-17

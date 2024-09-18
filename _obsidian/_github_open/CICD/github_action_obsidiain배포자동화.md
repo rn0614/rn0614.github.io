@@ -7,7 +7,7 @@ tags:
   - "#obsidian"
   - "#github_action"
   - "#github_blog"
-permalink: /categories2/post-name-here-2/
+permalink: /categories2/20240918060000배포자동화/
 toc: true
 toc_sticky: true
 date: 2024-09-17

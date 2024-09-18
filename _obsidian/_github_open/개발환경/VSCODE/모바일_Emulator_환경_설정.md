@@ -7,7 +7,7 @@ tags:
   - 환경설정
   - "#모바일/react-native"
   - "#문제해결"
-permalink: /categories2/post-name-here-2/
+permalink: /categories2/2024091710000설정관련/
 toc: true
 toc_sticky: true
 date: 2024-09-17

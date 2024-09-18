@@ -9,7 +9,7 @@ tags:
   - "#환경설정"
   - "#문제해결"
   - "#VSCode"
-permalink: /categories2/post-name-here-2/
+permalink: /categories2/202409180101설정/
 toc: true
 toc_sticky: true
 date: 2024-09-17

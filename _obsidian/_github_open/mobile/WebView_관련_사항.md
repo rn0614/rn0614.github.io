@@ -4,7 +4,7 @@ excerpt: webview설정관련
 categories:
   - Categories2
 tags: 
-permalink: /categories2/post-name-here-2/
+permalink: /categories2/2024/
 toc: true
 toc_sticky: true
 date: 2024-09-17
