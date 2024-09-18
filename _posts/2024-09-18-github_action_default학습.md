@@ -5,7 +5,7 @@ categories:
   - Categories2
 tags:
   - "#github_action"
-permalink: /categories2/post-name-here-2/
+permalink: /categories2/20240918060101reactNative/
 toc: true
 toc_sticky: true
 date: 2024-09-17
@@ -23,3 +23,4 @@ Workflow > Job > Step
 가장 작은 transaction 단위는 Job 단위 Step 실행 순서는 보장된다.
 
 .github/workflow 경로에 파일이 있으면 github 측에서 자동으로 workflow 파일인지 인지한다.
+
