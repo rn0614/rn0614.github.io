@@ -23,5 +23,3 @@ Workflow > Job > Step
 가장 작은 transaction 단위는 Job 단위 Step 실행 순서는 보장된다.
 
 .github/workflow 경로에 파일이 있으면 github 측에서 자동으로 workflow 파일인지 인지한다.
-
-
