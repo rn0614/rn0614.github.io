@@ -302,5 +302,3 @@ const { mutate, isLoading, isError, isSuccess, error } = useMutation({
 mutate(data)
 
 ```
-
-
