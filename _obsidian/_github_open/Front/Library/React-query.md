@@ -35,8 +35,6 @@ last_modified_at: 2024-09-20
 3. useInfiniteQuery로 무한스크롤로 가져오기 
 4. useMutation로 낙관적 변경
 
-
-
 ## 1. queryClient 에서 전역설정 및 캐싱데이터 관리
 ***
 ### 0 ) 설치 및 Provider설정 / 전역설정 설정
@@ -46,7 +44,6 @@ last_modified_at: 2024-09-20
 npm i @tanstack/react-query@4.7.1
 npm i @tanstack/react-query-devtools@4.7.1
 ```
-
 
 - Provider 설정 / Error나 전역 설정위치
 ```tsx
@@ -127,7 +124,6 @@ const onCancelHandler = (e)=>{
 
 ```
 
-
 ### 4 ) 강제 refresh
 ```tsx
 import {queryClient} from "@tanstack/react-query";
@@ -139,6 +135,7 @@ const onCancelHandler = (e)=>{
 }
 
 ```
+
 ### 5 ) 기본타입
 > useQuery, useMutation, useInfiniteQuery 모두 일반적으로 4개를 사용한다.
 >`<TQueryFnData, TError, TData, TQueryKey>`
@@ -278,8 +275,6 @@ function useInfiniteSongList({ limit }: any) {
 }
 
 ```
-
-
 
 ## 4. useMutation로 낙관적 변경
 ```tsx
