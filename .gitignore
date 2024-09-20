@@ -33,7 +33,7 @@ _site
 _md파일/
 
 # _obsidian 폴더 내 모든 파일과 디렉토리를 무시
-_obsidian/*
+_obsidian/.obsidian
 
 # _obsidian/_git_open 폴더는 예외로 허용
 !_obsidian/_git_open/
@@ -42,3 +42,5 @@ _obsidian/*
 !_obsidian/_git_open/**
 
 Templates/
+
+_obsidian.7z
