@@ -21,12 +21,15 @@ last_modified_at: 2024-09-17
 > 편리한 사용을 위한 컴퓨터 환경에서 가상 emulator 세팅 과정
 1. android 스튜디오 설치
 2. device manager에서 원하는 기기의 emulator 설치
-    ![](assets/images/posts_img/Pasted%20image%2020240910000154.png)
-3.  react-native에서 webview 실행해보기
+3. react-native에서 webview 실행해보기
 
-### 2. emulator 에서 일부 css 미지원
-> 문제 상황 : emulator 내부의 일부 화면이 이상 감지. inline-block 등의 css 미지원
-1.  chrome 업데이트
+### 2. emulator 에서 일부 CSS 미지원 현상
+> 문제 상황 : emulator 내부의 일부 화면이 이상 감지. inline-block 등의 css 가 미동작 되는 현상
+> 원인 : chrome default 버전이 너무 낮아서 일부 css 미지원으로 발생
+1. 에뮬레이터 자체 chrome 버전 상승
+
+
+
 
 
 ## 한계점
