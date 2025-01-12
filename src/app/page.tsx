@@ -5,16 +5,7 @@ import Link from "next/link";
 //import { getSortedPostsData } from "../../lib/posts";
 
 export default function Home() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const posts = getAllPostsList();
-
-  const blogPages = posts.map((post) => {
-    return {
-      url: `${baseUrl}/${post.slug}`,
-      latestModified: new Date(),
-    };
-  });
-  console.log(blogPages);
 
   //const posts = getSortedPostsData();
   return (
