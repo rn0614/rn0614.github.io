@@ -16,9 +16,10 @@ export async function generateStaticParams() {
 export default async function PostPage({
   params,
 }: {
-  params: { slug: string[] };
+  params: { slugs: string[] };
 }) {
-  const postPath = "posts/" + params.slug.map(decodeURIComponent).join("/");
+  const postPath = `posts1/${[...params.slugs].join("/")}`;
+  console.log(postPath);
   const postInfo = parsePost(postPath);
   if (postInfo === undefined) return <div>no data</div>;
   const mdx = await serializeMdx(postInfo.content);

@@ -1,5 +1,4 @@
 import { getAllPostsList } from "@/lib/posts";
-import path from "path";
 
 export default async function sitemap() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
