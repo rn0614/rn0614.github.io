@@ -1,13 +1,14 @@
 import { getAllPostsList } from "@/lib/posts";
+import path from "path";
 
 export default async function sitemap() {
-  const baseUrl = process.env.NEXT_P_BASE_URL;
+  const baseUrl = process.env.NEXT_P_BASE_URL as string;
 
   const posts = getAllPostsList();
 
   const blogPages = posts.map((post) => {
     return {
-      url: `${baseUrl}/${post.slug.replace(/\\/g, "/")}`,
+      url: `${path.join( baseUrl, ...post.slug.split('\\'))}`,
       latestModified: new Date(),
     };
   });
