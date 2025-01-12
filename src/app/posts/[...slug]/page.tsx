@@ -1,7 +1,6 @@
 import { serializeMdx } from "../../../lib/mdx";
 import { POST_BASE_PATH, getAllPostsList, parsePost } from "../../../lib/posts";
 import MdxRenderer from "../../../components/MdxRemoteComp";
-import path from "path";
 
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
@@ -19,7 +18,7 @@ export default async function PostPage({
 }: {
   params: { slug: string[] };
 }) {
-  const postPath = "posts"+(params.slug.join("/"));
+  const postPath = "posts\\"+(params.slug.join("\\"));
   const postInfo = parsePost(postPath);
   if (postInfo === undefined) return <div>no data</div>;
   const mdx = await serializeMdx(postInfo.content);
