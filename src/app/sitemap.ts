@@ -8,7 +8,7 @@ export default async function sitemap() {
 
   const blogPages = posts.map((post) => {
     return {
-      url: `${path.join( baseUrl, ...post.slug.split('\\'))}`,
+      url: `${baseUrl + "/" + post.slug}`,
       latestModified: new Date(),
     };
   });
