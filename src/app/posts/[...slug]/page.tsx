@@ -18,7 +18,7 @@ export default async function PostPage({
 }: {
   params: { slug: string[] };
 }) {
-  const postPath = "posts\\"+(params.slug.join("\\"));
+  const postPath = "posts/"+(params.slug.join("/"));
   const postInfo = parsePost(postPath);
   if (postInfo === undefined) return <div>no data</div>;
   const mdx = await serializeMdx(postInfo.content);

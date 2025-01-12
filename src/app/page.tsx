@@ -10,7 +10,7 @@ export default function Home() {
 
   const blogPages = posts.map((post) => {
     return {
-      url: `${baseUrl}/${post.slug.replace(/\\/g, "/")}`,
+      url: `${baseUrl}/${post.slug}`,
       latestModified: new Date(),
     };
   });
