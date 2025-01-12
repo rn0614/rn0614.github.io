@@ -7,7 +7,7 @@ export async function generateStaticParams() {
   const posts = getAllPostsList();
   return posts.map((path) => {
     return {
-      slug: path.slug.slice(POST_BASE_PATH.length + 1).split("\\"),
+      slugs: path.slug.slice(POST_BASE_PATH.length + 1).split("\\"),
     };
   });
 }
