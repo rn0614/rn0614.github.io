@@ -7,7 +7,7 @@ export async function generateStaticParams() {
   const posts = getAllPostsList();
   return posts.map((path) => {
     return {
-      slugs: path.slug.slice(POST_BASE_PATH.length + 1).split("/"),
+      slugs: path.slug.slice(POST_BASE_PATH.length + 1).split("\\").map((slug) => encodeURIComponent(slug)),
     };
   });
 }
@@ -16,10 +16,14 @@ export async function generateStaticParams() {
 export default async function PostPage({
   params,
 }: {
-  params: { slugs: string[] };
+  params: { slugs: string[] };  // slugs는 [ 'posts','dev','title1','%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.md']
 }) {
-  const postPath = "posts/"+ params.slugs.join("/");
-  console.log(postPath);
+  const decodedSlugs = params.slugs.map((slug) => decodeURIComponent(slug));
+  
+  // 파일 시스템 경로 생성
+  const postPath = `posts/${decodedSlugs.join("/")}`;
+  console.log("Decoded Post Path:", postPath);
+  
   const postInfo = parsePost(postPath);
   if (postInfo === undefined) return <div>no data</div>;
   const mdx = await serializeMdx(postInfo.content);
