@@ -7,7 +7,7 @@ export async function generateStaticParams() {
   const posts = getAllPostsList();
   return posts.map((path) => {
     return {
-      slugs: path.slug.slice(POST_BASE_PATH.length + 1).split("\\").map((slug) => encodeURIComponent(slug)),
+      slugs: path.slug.slice(POST_BASE_PATH.length + 1).split("/").map((slug) => encodeURIComponent(slug)),
     };
   });
 }
