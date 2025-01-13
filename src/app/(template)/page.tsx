@@ -1,5 +1,5 @@
 import React from "react";
-import { getAllPostsList } from "../lib/posts";
+import { getAllPostsList } from "../../lib/posts";
 import Link from "next/link";
 
 export default function Home() {
