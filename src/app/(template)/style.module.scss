@@ -6,7 +6,7 @@
 
 .header {
   display: flex;
-  height: 5rem;
+  min-height: 5rem;
   width: 100%;
   background-color: rgb(187, 187, 187);
   justify-content: center;
@@ -17,8 +17,13 @@
   display: flex;
   flex-direction: row;
   flex: 1;
-  gap: 4px;
-  
+  .content {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    overflow-y: scroll;
+  }
 }
 
 .footer {

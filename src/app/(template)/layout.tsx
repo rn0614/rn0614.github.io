@@ -8,9 +8,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className={styles.body}>
         <div>
           <Aside />
-          <div>hi</div>
         </div>
-        <div>{children}</div>
+        <div className={styles.content}>{children}</div>
       </div>
       <footer className={styles.footer}>FOOTER영역</footer>
     </div>

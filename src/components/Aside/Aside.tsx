@@ -7,9 +7,11 @@ import { FaCode } from "react-icons/fa6";
 import { FaNoteSticky } from "react-icons/fa6";
 import { FaRegCalendarDays } from "react-icons/fa6";
 import AsideIcon from "../AsideIcon/AsideIcon";
+import { useRouter } from "next/navigation";
 
 export default function Aside() {
   const { isOpen, open, close, toggle } = useAside();
+  const router = useRouter();
   return (
     <div
       className={classNames(styles.aside, {
@@ -18,7 +20,14 @@ export default function Aside() {
     >
       <div className={styles.asideContent}>
         <div className={styles.asideIconWrapper}>
-          <AsideIcon Icon={FaHome} title={"홈"} />
+          <AsideIcon
+            Icon={FaHome}
+            title={"홈"}
+            onClick={() => {
+              close();
+              router.push("/");
+            }}
+          />
           <AsideIcon
             Icon={FaCode}
             title={"코드"}
@@ -28,11 +37,34 @@ export default function Aside() {
           <AsideIcon Icon={FaNoteSticky} title={"일과"} />
           <AsideIcon Icon={FaRegCalendarDays} title={"일정"} />
         </div>
-        {isOpen ? (
-          <div className={styles.asideIconDetail}>hi</div>
-        ) : (
-          <div></div>
-        )}
+      </div>
+
+      <div
+        className={classNames(styles.asideIconDetail, {
+          [styles.open]: isOpen,
+        })}
+      >
+        <div
+          className={classNames(styles.detailMenu, {
+            [styles.open]: isOpen,
+          })}
+        >
+          추가상세메뉴1
+        </div>
+        <div
+          className={classNames(styles.detailMenu, {
+            [styles.open]: isOpen,
+          })}
+        >
+          추가상세메뉴2
+        </div>
+        <div
+          className={classNames(styles.detailMenu, {
+            [styles.open]: isOpen,
+          })}
+        >
+          추가상세메뉴3
+        </div>
       </div>
     </div>
   );
