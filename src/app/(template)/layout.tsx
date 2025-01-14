@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className={styles.body}>
         <div>
           <Aside />
-          <div></div>
+          <div>hi</div>
         </div>
         <div>{children}</div>
       </div>

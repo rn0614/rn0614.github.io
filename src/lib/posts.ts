@@ -33,7 +33,7 @@ export const getAllPosts = () => {
 
 export const parsePost = (postPath: string): Post | undefined => {
   try {
-    const file = fs.readFileSync(postPath, { encoding: "utf8" });
+    const file = fs.readFileSync(postPath, {encoding:'utf-8'});
     const { content, data } = matter(file);
     const grayMatter = data as PostMatter;
 

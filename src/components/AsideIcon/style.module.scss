@@ -1,0 +1,17 @@
+.asideIconWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding-top: 6px;
+
+  .asideIconTitle {
+    font-size: small;
+    font-weight: 200;
+  }
+
+  &:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+  }
+}

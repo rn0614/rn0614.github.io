@@ -2,6 +2,11 @@
 import styles from "./style.module.scss";
 import classNames from "classnames";
 import { useAside } from "@/hook/useAside";
+import { FaHome } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
+import { FaNoteSticky } from "react-icons/fa6";
+import { FaRegCalendarDays } from "react-icons/fa6";
+import AsideIcon from "../AsideIcon/AsideIcon";
 
 export default function Aside() {
   const { isOpen, open, close, toggle } = useAside();
@@ -11,9 +16,24 @@ export default function Aside() {
         [styles.open]: isOpen,
       })}
     >
-      <button onClick={open}>열기</button>
-      <button onClick={close}>닫기</button>
-      <button onClick={toggle}>토글</button>
+      <div className={styles.asideContent}>
+        <div className={styles.asideIconWrapper}>
+          <AsideIcon Icon={FaHome} title={"홈"} />
+          <AsideIcon
+            Icon={FaCode}
+            title={"코드"}
+            onClick={toggle}
+            isOpen={isOpen}
+          />
+          <AsideIcon Icon={FaNoteSticky} title={"일과"} />
+          <AsideIcon Icon={FaRegCalendarDays} title={"일정"} />
+        </div>
+        {isOpen ? (
+          <div className={styles.asideIconDetail}>hi</div>
+        ) : (
+          <div></div>
+        )}
+      </div>
     </div>
   );
 }
