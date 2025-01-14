@@ -48,7 +48,7 @@ export const parsePost = (postPath: string): Post | undefined => {
       content,
       slug: postPath
         .slice(postPath.indexOf(POST_BASE_PATH))
-        .replace(".mdx", ""),
+        .replace(".md", ""),
       readingMinutes: Math.ceil(readingTime(content).minutes),
       wordCount: content.split(/\s+/gu).length,
     };

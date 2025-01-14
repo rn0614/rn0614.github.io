@@ -15,13 +15,13 @@ export async function generateStaticParams() {
       post.slug
         .slice(POST_BASE_PATH.length + 1)
         .split(path.sep)
-        .map((item) => encodeURI(item))
+        .map((item) => (item))
     );
     return {
       slugs: post.slug
         .slice(POST_BASE_PATH.length + 1)
         .split(path.sep)
-        .map((item) => encodeURI(item)),
+        .map((item) => (item)),
     };
   });
 }
@@ -30,17 +30,21 @@ export async function generateStaticParams() {
 export default async function PostPage({
   params,
 }: {
-  params: { slugs: string[] }; // slugs는 [ 'posts','dev','title1','%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.md']
+  params: { slugs: string[] }; // slugs는 [ 'dev','title1','%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.md']
 }) {
+  console.log('params',params)
+
   const decodedSlugs = params.slugs.map((slug) =>
-    decodeURIComponent(decodeURIComponent(slug))
+    decodeURIComponent(slug)
   );
 
   // 파일 시스템 경로 생성
   const postPath = `posts${path.sep}${decodedSlugs.join(path.sep)}`;
-  console.log("Decoded Post Path:", postPath);
+  console.log("Decoded Post Path:", decodedSlugs);
 
-  const postInfo = parsePost(postPath);
+  const postInfo = parsePost((postPath));
+
+  console.log(postInfo,postInfo)
   if (postInfo === undefined) return <div>no data</div>;
   const mdx = await serializeMdx(postInfo.content);
   if (!mdx) return <div>no data</div>;
