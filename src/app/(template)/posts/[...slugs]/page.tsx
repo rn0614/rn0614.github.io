@@ -35,7 +35,8 @@ export default async function PostPage({
   const mdx = await serializeMdx(postInfo.content);
   if (!mdx) return <div>no data</div>;
   return (
-    <div>
+    <div className="markdown-body">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css" rel="stylesheet"></link>
       <MdxRenderer mdx={mdx} />
     </div>
   );

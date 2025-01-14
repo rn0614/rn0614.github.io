@@ -33,7 +33,7 @@
     }
     .detailMenu{
       opacity: 0;
-      transition: 1s;
+      transition: 0.5s;
       &.open {
         opacity: 1;
         transition: 0s;
