@@ -8,3 +8,4 @@ export function deiv(){
 }
 
 ```
+![](/image/img-ewewqe-m0fbj2gh.webp)

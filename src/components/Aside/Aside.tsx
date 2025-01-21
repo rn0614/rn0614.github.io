@@ -8,6 +8,7 @@ import { FaNoteSticky } from "react-icons/fa6";
 import { FaRegCalendarDays } from "react-icons/fa6";
 import AsideIcon from "../AsideIcon/AsideIcon";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Aside() {
   const { isOpen, open, close, toggle } = useAside();
@@ -44,27 +45,30 @@ export default function Aside() {
           [styles.open]: isOpen,
         })}
       >
-        <div
+        <Link
           className={classNames(styles.detailMenu, {
             [styles.open]: isOpen,
           })}
+          href={'/category1'}
         >
           추가상세메뉴1
-        </div>
-        <div
+        </Link>
+        <Link
           className={classNames(styles.detailMenu, {
             [styles.open]: isOpen,
           })}
+          href={'/category2'}
         >
           추가상세메뉴2
-        </div>
-        <div
+        </Link>
+        <Link
           className={classNames(styles.detailMenu, {
             [styles.open]: isOpen,
           })}
+          href={'/category3'}
         >
           추가상세메뉴3
-        </div>
+        </Link>
       </div>
     </div>
   );
