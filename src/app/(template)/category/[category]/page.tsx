@@ -19,7 +19,7 @@ export default function Category1Page({
         {posts.map((post, i) => {
           return (
             <li key={i}>
-              <Link href={post.slug}>{post.slug}</Link>
+              <Link href={'/'+post.slug}>{post.slug}</Link>
             </li>
           );
         })}
