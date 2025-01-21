@@ -49,25 +49,17 @@ export default function Aside() {
           className={classNames(styles.detailMenu, {
             [styles.open]: isOpen,
           })}
-          href={'/category1'}
+          href={'/category/dev'}
         >
-          추가상세메뉴1
+          개발사항
         </Link>
         <Link
           className={classNames(styles.detailMenu, {
             [styles.open]: isOpen,
           })}
-          href={'/category2'}
+          href={'/category/etc'}
         >
-          추가상세메뉴2
-        </Link>
-        <Link
-          className={classNames(styles.detailMenu, {
-            [styles.open]: isOpen,
-          })}
-          href={'/category3'}
-        >
-          추가상세메뉴3
+          기타
         </Link>
       </div>
     </div>
