@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { asideState } from "@/store/recoilState";
+import { useRecoilState } from "recoil";
 
 type AsideState = {
   isOpen: boolean;
@@ -8,7 +9,7 @@ type AsideState = {
 };
 
 export function useAside(): AsideState {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useRecoilState(asideState);
 
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
