@@ -9,8 +9,9 @@ import { FaRegCalendarDays } from "react-icons/fa6";
 import AsideIcon from "../AsideIcon/AsideIcon";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import withMobileVisibility from "../MobileDisplay/MobileDisplay";
 
-export default function Aside() {
+function Aside() {
   const { isOpen, open, close, toggle } = useAside();
   const router = useRouter();
   return (
@@ -65,3 +66,5 @@ export default function Aside() {
     </div>
   );
 }
+
+export default withMobileVisibility(Aside);

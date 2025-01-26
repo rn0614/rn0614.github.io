@@ -38,3 +38,6 @@ next-env.d.ts
 
 # obsidian
 .obsidian
+
+# 비공유 파일
+/private
