@@ -7,7 +7,7 @@ const nextConfig = {
     removeConsole:
       process.env.API_DOC_ENV === "prod"
         ? { exclude: ["error", "warn"] }
-        : null,
+        : {},
   },
 };
 
