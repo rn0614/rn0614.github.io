@@ -7,6 +7,8 @@ import {
 import MdxRenderer from "../../../../components/MdxRemoteComp/MdxRemoteComp";
 import path from "path";
 import Heading from "@/components/Heading/Heading";
+import { PostDetailType } from "@/types/types";
+import { Metadata } from "next";
 
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
@@ -18,12 +20,39 @@ export async function generateStaticParams() {
   });
 }
 
-// 페이지 컴포넌트
-export default async function PostPage({
+// 여기에 동적 metatag 생성
+export async function generateMetadata({
   params,
 }: {
-  params: { slugs: string[] }; // slugs는 [ 'dev','title1','%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94.md']
-}) {
+  params: PostDetailType;
+}): Promise<Metadata> {
+  const pathSlugs = params.slugs.map((slug) => decodeURIComponent(slug));
+  const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;
+
+  const postInfo = parsePost(postPath);
+  if (!postInfo) {
+    return {
+      title: "Post Not Found",
+      description: "This post does not exist.",
+    };
+  }
+
+  return {
+    title: postInfo?.title,
+    description: postInfo?.excerpt,
+    keywords: postInfo?.tags,
+    openGraph: {
+      title: postInfo?.title,
+      description: postInfo?.excerpt,
+      type: "article",
+      publishedTime: postInfo?.date,
+      modifiedTime: postInfo?.last_modified_at?.toISOString(),
+    },
+  };
+}
+
+// 페이지 컴포넌트
+export default async function PostPage({ params }: { params: PostDetailType }) {
   const pathSlugs = params.slugs.map((slug) => decodeURIComponent(slug));
 
   // 파일 시스템 경로 생성
@@ -42,7 +71,9 @@ export default async function PostPage({
         href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css"
         rel="stylesheet"
       ></link>
-      <Heading level={1}>{pathSlugs[pathSlugs.length-1].replace(".md","")}</Heading>
+      <Heading level={1}>
+        {pathSlugs[pathSlugs.length - 1].replace(".md", "")}
+      </Heading>
       <MdxRenderer mdx={mdx} />
     </div>
   );

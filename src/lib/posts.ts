@@ -13,10 +13,12 @@ const POSTS_PATH = path.join(process.cwd(), POST_BASE_PATH);
 // 포스트 위치 찾기 
 // return [ { slug: 'posts\\dev\\title1\\content.md' } ]
 export const getAllPostsList = (category?:string) => {
+  console.debug('getAllPostsList start');
   const postPaths: string[] = sync(`${POSTS_PATH}/${category?category:"**"}/**/*.md`);
   return postPaths.map((path) => {
     return {
       slug: path.slice(path.indexOf(POST_BASE_PATH)),
+      metadata: parsePost(path)
     };
   });
 };

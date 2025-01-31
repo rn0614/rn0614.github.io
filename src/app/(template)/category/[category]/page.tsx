@@ -1,10 +1,10 @@
 import React from "react";
 import { getAllPostsList } from "@/lib/posts";
-import Link from "next/link";
+import { PostList } from "@/components/Posts/Post";
 
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
-  return ['dev','etc'].map((item)=>({category:item}));
+  return ["dev", "etc"].map((item) => ({ category: item }));
 }
 
 export default function Category1Page({
@@ -15,15 +15,7 @@ export default function Category1Page({
   const posts = getAllPostsList(params.category);
   return (
     <div>
-      <ul>
-        {posts.map((post, i) => {
-          return (
-            <li key={i}>
-              <Link href={'/'+post.slug}>{post.slug}</Link>
-            </li>
-          );
-        })}
-      </ul>
+      <PostList posts={posts} />
     </div>
   );
 }

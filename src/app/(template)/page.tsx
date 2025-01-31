@@ -1,24 +1,19 @@
 import React from "react";
 import { getAllPostsList } from "../../lib/posts";
-import Link from "next/link";
 import Heading from "@/components/Heading/Heading";
+import { PostList } from "@/components/Posts/Post";
+import Pagination from "@/components/Pagination/Pagination";
+import styles from "./page.module.scss";
 
 export default function Home() {
   const posts = getAllPostsList();
   return (
-    <>
-      <Heading level={1}>글 목록 리스트</Heading>
-      <div>
-        <ul>
-          {posts.map((post, i) => {
-            return (
-              <li key={i}>
-                <Link href={post.slug}>{post.slug}</Link>
-              </li>
-            );
-          })}
-        </ul>
+    <main>
+      <Heading level={1}>글 목록 리스트\</Heading>
+      <PostList posts={posts} />
+      <div className={styles.paginationWrapper}>
+        <Pagination currentPage={1} totalPages={2} />
       </div>
-    </>
+    </main>
   );
 }

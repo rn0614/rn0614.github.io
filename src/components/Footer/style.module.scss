@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.githubUrl {
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

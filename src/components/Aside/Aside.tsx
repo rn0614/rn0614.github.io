@@ -9,7 +9,7 @@ import { FaRegCalendarDays } from "react-icons/fa6";
 import AsideIcon from "../AsideIcon/AsideIcon";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import withMobileVisibility from "../MobileDisplay/MobileDisplay";
+import withMobileVisibility from "../hoc/withMobileVisibility/withMobileVisibility";
 
 function Aside() {
   const { isOpen, open, close, toggle } = useAside();
@@ -50,7 +50,7 @@ function Aside() {
           className={classNames(styles.detailMenu, {
             [styles.open]: isOpen,
           })}
-          href={'/category/dev'}
+          href={"/category/dev"}
         >
           개발사항
         </Link>
@@ -58,7 +58,7 @@ function Aside() {
           className={classNames(styles.detailMenu, {
             [styles.open]: isOpen,
           })}
-          href={'/category/etc'}
+          href={"/category/etc"}
         >
           기타
         </Link>
@@ -67,4 +67,4 @@ function Aside() {
   );
 }
 
-export default withMobileVisibility(Aside);
+export default withMobileVisibility(null, Aside);

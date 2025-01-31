@@ -1,0 +1,33 @@
+.postList {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding:20px;
+}
+.postItemContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #a0a0a0;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  cursor: pointer;
+  &:hover{
+    transform: scaleY(1.1) scaleX(1.02);
+    transition: 600ms;
+
+  }
+
+  .title {      
+    font-size: 1.2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .body {
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

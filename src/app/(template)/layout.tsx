@@ -1,17 +1,22 @@
 import Aside from "@/components/Aside/Aside";
 import styles from "./layout.module.scss";
-
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div lang="en" className={styles.layout}>
-      <header className={styles.header}>개발자 구상모 블로그입니다</header>
+      <Header />
       <div className={styles.body}>
         <div className={styles.asideWrapper}>
           <Aside />
         </div>
-        <div className={styles.content}>{children}</div>
+        <div className={styles.main}>
+          <div className={styles.content}>{children}</div>
+          <footer className={styles.footer}>
+            <Footer />
+          </footer>
+        </div>
       </div>
-      <footer className={styles.footer}>FOOTER영역</footer>
     </div>
   );
 }
