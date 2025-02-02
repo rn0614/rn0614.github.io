@@ -9,7 +9,7 @@ export default async function sitemap() {
   const blogPages = posts.map((post) => {
     return {
       url: `${baseUrl + "/" + post.slug}`,
-      lastModified: dayjs(post.metadata?.last_modified_at,'YYYY/MM/DD HH:mm:ss'),
+      lastModified: dayjs(post.metadata?.last_modified_at,'YYYY/MM/DD HH:mm:ss').format('YYYY-MM-DD'),
       changeFrequency: 'monthly',
       priority:0.8,
     };
