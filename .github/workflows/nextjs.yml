@@ -27,10 +27,11 @@ concurrency:
 jobs:
   # Build job
   build:
+    environment: github-pages
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_URL: ${{secrets.NEXT_PUBLIC_BASE_URL}}
-      API_DOC_ENV: ${{secrets.API_DOC_ENV}}
+      NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
+      API_DOC_ENV: ${{ secrets.API_DOC_ENV }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
