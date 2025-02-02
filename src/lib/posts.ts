@@ -20,7 +20,7 @@ export const getAllPostsList = (category?:string) => {
       slug: path.slice(path.indexOf(POST_BASE_PATH)),
       metadata: parsePost(path)
     };
-  });
+  }).sort((a,b)=> dayjs(b.metadata?.date).valueOf()-dayjs(a.metadata?.date).valueOf());;
 };
 
 export const getAllPosts = () => {

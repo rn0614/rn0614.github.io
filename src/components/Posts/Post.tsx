@@ -18,7 +18,7 @@ function PostList({
       {posts.map((post, i) => {
         return (
           <li key={i} className={styles.Li}>
-            <Post slug={post.slug} />
+            <Post slug={post.slug} metadata={post.metadata} />
           </li>
         );
       })}
@@ -26,10 +26,11 @@ function PostList({
   );
 }
 
-function Post({ slug }: { slug: string }) {
+function Post({ slug, metadata }: { slug: string, metadata:any }) {
   const { close } = useAside();
   const router = useRouter();
   const movePageHandler = async () => {
+    console.log(metadata)
     close();
     router.push('/'+slug);
   };
@@ -39,6 +40,7 @@ function Post({ slug }: { slug: string }) {
       <Heading level={3} className={styles.title}>
         {slug}
       </Heading>
+      <div>{metadata?.date}</div>
       <div className={styles.body}>{slug}</div>
     </div>
   );
