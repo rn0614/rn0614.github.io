@@ -67,10 +67,6 @@ export default async function PostPage({ params }: { params: PostDetailType }) {
       className="markdown-body"
       style={{ flex: "1", display: "flex", flexDirection: "column" }}
     >
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css"
-        rel="stylesheet"
-      ></link>
       <Heading level={1}>
         {pathSlugs[pathSlugs.length - 1].replace(".md", "")}
       </Heading>
