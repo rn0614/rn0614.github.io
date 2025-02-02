@@ -32,10 +32,19 @@ function templaterFn(tp, name) {
     return String(Math.ceil(wordCount / 200)); // 문자열로 변환
   }
 
-  if(name==="get_reading_time"){
-    return get_reading_time();
-  }else if(name==="get_slug"){
-    return get_slug();
+  switch (name) {
+    case "get_tags":
+      return get_tags();
+    case "get_category":
+      return get_category();
+    case "get_last_modified":
+      return get_last_modified();
+    case "get_slug":
+      return get_slug();
+    case "get_reading_time":
+      return get_reading_time();
+    default:
+      return null;
   }
 }
 

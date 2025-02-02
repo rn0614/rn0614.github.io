@@ -15,16 +15,10 @@ export const metadata: Metadata = {
   },
   description: "개발노트를 정리하는 공간입니다",
   openGraph: {
-    siteName: "구상모 블로그",
-    images: {
-      url: "/image/HappyFace.jpg",
-    },
+    siteName: "구상모 블로그"
   },
   twitter: {
-    title: "구상모 블로그",
-    images: {
-      url: "/image/HappyFace.jpg",
-    },
+    title: "구상모 블로그"
   },
 };
 

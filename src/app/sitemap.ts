@@ -1,4 +1,5 @@
 import { getAllPostsList } from "@/lib/posts";
+import dayjs from "dayjs";
 
 export default async function sitemap() {
   const baseUrl = "https://rn0614.github.io";
@@ -8,7 +9,7 @@ export default async function sitemap() {
   const blogPages = posts.map((post) => {
     return {
       url: `${baseUrl + "/" + post.slug}`,
-      lastModified: new Date(),
+      lastModified: dayjs(post.metadata?.last_modified_at,'YYYY/MM/DD HH:mm:ss'),
       changeFrequency: 'monthly',
       priority:0.8,
     };

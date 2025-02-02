@@ -2,13 +2,10 @@
 title: <% tp.file.title %>
 excerpt: <% tp.user.templaterFn(tp,'get_slug') %>
 categories:
-  - Categories2
-tags: 
-permalink: /categories2/<% tp.file.creation_date("YYYYMMDDHHmm") %><% tp.file.title.split(" ")[1] %>/
-toc: true
-toc_sticky: true
-date: <% tp.date.now("YYYY-MM-DD") %>
-last_modified_at: <% tp.date.now("YYYY-MM-DD") %>
+  <% tp.user.templaterFn(tp, 'get_category')%>
+tags: <% tp.user.templaterFn(tp, 'get_tags')%>
+date: <% tp.file.creation_date("YYYY/MM/DD HH:mm:ss") %>
+last_modified_at: <% tp.file.last_modified_date("YYYY/MM/DD HH:mm:ss") %>
 ---
 > Set a goal, make a plan and just do it.
 

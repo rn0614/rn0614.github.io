@@ -44,9 +44,15 @@ export async function generateMetadata({
     openGraph: {
       title: postInfo?.title,
       description: postInfo?.excerpt,
+      url:`https://rn0614.github.io/${postPath}`,
       type: "article",
       publishedTime: postInfo?.date,
-      modifiedTime: postInfo?.last_modified_at?.toISOString(),
+      modifiedTime: postInfo?.last_modified_at
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: postInfo?.title,
+      description: postInfo?.excerpt,
     },
   };
 }
