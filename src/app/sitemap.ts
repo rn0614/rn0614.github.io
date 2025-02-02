@@ -22,6 +22,12 @@ export default async function sitemap() {
       changeFrequency: "monthly",
       priority: 1,
     },
-    ...blogPages,
+    {
+      url: baseUrl+"/posts/dev/title1/content2.md",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+    //...blogPages,
   ];
 }
