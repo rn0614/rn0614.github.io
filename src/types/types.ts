@@ -24,5 +24,5 @@ export type Post = PostMatter & {
   readingMinutes: number;
   wordCount: number;
   excerpt?: string;
-  last_modified_at?: Date;
+  last_modified_at?: string;
 };
