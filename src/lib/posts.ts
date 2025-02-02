@@ -1,27 +1,34 @@
-import { sync } from 'glob';
-import path from 'path';
-import fs from 'fs';
-import matter from 'gray-matter';
-import { Post, PostMatter } from '../types/types';
-import dayjs from 'dayjs';
-import readingTime from 'reading-time';
+import { sync } from "glob";
+import path from "path";
+import fs from "fs";
+import matter from "gray-matter";
+import { Post, PostMatter } from "../types/types";
+import dayjs from "dayjs";
+import readingTime from "reading-time";
+import { wrapWithDebug } from "./util/wrapWithDebug";
 
-
-export const POST_BASE_PATH = 'posts';
+export const POST_BASE_PATH = "posts";
 const POSTS_PATH = path.join(process.cwd(), POST_BASE_PATH);
 
-// 포스트 위치 찾기 
+// 포스트 위치 찾기
 // return [ { slug: 'posts\\dev\\title1\\content.md' } ]
-export const getAllPostsList = (category?:string) => {
-  console.debug('getAllPostsList start');
-  const postPaths: string[] = sync(`${POSTS_PATH}/${category?category:"**"}/**/*.md`);
-  return postPaths.map((path) => {
-    return {
-      slug: path.slice(path.indexOf(POST_BASE_PATH)),
-      metadata: parsePost(path)
-    };
-  }).sort((a,b)=> dayjs(b.metadata?.date).valueOf()-dayjs(a.metadata?.date).valueOf());;
-};
+export const getAllPostsList = wrapWithDebug((category?: string) => {
+  const postPaths: string[] = sync(
+    `${POSTS_PATH}/${category ? category : "**"}/**/*.md`
+  );
+  return postPaths
+    .map((path) => {
+      return {
+        slug: path.slice(path.indexOf(POST_BASE_PATH)),
+        metadata: parsePost(path),
+      };
+    })
+    .sort(
+      (a, b) =>
+        dayjs(b.metadata?.last_modified_at).valueOf() -
+        dayjs(a.metadata?.last_modified_at).valueOf()
+    );
+}, "getAllPostsList");
 
 export const getAllPosts = () => {
   const postPaths: string[] = sync(`${POSTS_PATH}/**/*.md`);
@@ -34,7 +41,7 @@ export const getAllPosts = () => {
 
 export const parsePost = (postPath: string): Post | undefined => {
   try {
-    const file = fs.readFileSync(postPath, {encoding:'utf-8'});
+    const file = fs.readFileSync(postPath, { encoding: "utf-8" });
     const { content, data } = matter(file);
     const grayMatter = data as PostMatter;
 
@@ -44,12 +51,10 @@ export const parsePost = (postPath: string): Post | undefined => {
 
     return {
       ...grayMatter,
-      tags: ['test'],//grayMatter.tags.filter(Boolean),
-      date: dayjs(grayMatter.date).format("YYYY-MM-DD"),
+      tags: ["test"], //grayMatter.tags.filter(Boolean),
+      date: dayjs(grayMatter.date).format("YYYY/MM/DD HH:mm:ss"),
       content,
-      slug: postPath
-        .slice(postPath.indexOf(POST_BASE_PATH))
-        .replace(".md", ""),
+      slug: postPath.slice(postPath.indexOf(POST_BASE_PATH)).replace(".md", ""),
       readingMinutes: Math.ceil(readingTime(content).minutes),
       wordCount: content.split(/\s+/gu).length,
     };
