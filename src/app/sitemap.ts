@@ -2,7 +2,7 @@ import { getAllPostsList } from "@/lib/posts";
 import dayjs from "dayjs";
 
 export default async function sitemap() {
-  const baseUrl = "https://rn0614.github.io";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
 
   const posts = getAllPostsList();
 

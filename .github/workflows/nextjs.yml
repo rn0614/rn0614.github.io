@@ -29,7 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_URL: ${{vars.NEXT_PUBLIC_BASE_URL}}
+      NEXT_PUBLIC_BASE_URL: "${{secrets.NEXT_PUBLIC_BASE_URL}}"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -75,6 +75,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Create .env
+        run: |
+          echo "NEXT_PUBLIC_BASE_URL=${{ secrets.NEXT_PUBLIC_BASE_URL }}" >> .env
+          echo "API_DOC_ENV=${{ secrets.API_DOC_ENV }}" >> .env
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
