@@ -10,8 +10,8 @@ tags:
 permalink: /categories2/2024091710000설정관련/
 toc: true
 toc_sticky: true
-date: 2024-09-17
-last_modified_at: 2024-09-17
+date: 2024-09-17 00:00:00
+last_modified_at: 2024-09-17 00:00:00
 ---
 # 어떤 문제를 해결했나?
 ## 1. 디버깅 환경내에서 직접적으로 실행

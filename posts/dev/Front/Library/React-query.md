@@ -9,8 +9,8 @@ tags:
 permalink: /categories2/20240919084801reactQuery/
 toc: true
 toc_sticky: true
-date: 2024-09-20
-last_modified_at: 2024-09-20
+date: 2024/09/20 00:00:00
+last_modified_at: 2024/09/20 00:00:00
 ---
 # React-Query
 

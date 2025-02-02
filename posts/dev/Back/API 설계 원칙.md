@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202501062319설계/
 toc: true
 toc_sticky: true
-date: 2025-01-06
-last_modified_at: 2025-01-06
+date: 2025/01/06 00:00:00
+last_modified_at: 2025/01/06 00:00:00
 ---
 > Set a goal, make a plan and just do it.
 

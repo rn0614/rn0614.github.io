@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202410060221Next/
 toc: true
 toc_sticky: true
-date: 2024-10-06
-last_modified_at: 2024-10-06
+date: 2024-10-06 00:00:00
+last_modified_at: 2024-10-06 00:00:00
 ---
 토스 next 챌린지  코딩테스트를 봤다. 부끄럽게도 거의 풀지 못했다. 집에 와서도 주말에도 공부를 열심히 했다고 느꼈었는데 방향이 이게 아닌거 같다. 
 

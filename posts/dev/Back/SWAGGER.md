@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202501051515api-doc/
 toc: true
 toc_sticky: true
-date: 2025-01-05
-last_modified_at: 2025-01-05
+date: 2025/01/05 00:00:00
+last_modified_at: 2025/01/05 00:00:00
 ---
 > Set a goal, make a plan and just do it.
 

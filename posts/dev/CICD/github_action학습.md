@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/20240920github/
 toc: true
 toc_sticky: true
-date: 2024-09-17
-last_modified_at: 2024-09-17
+date: 2024/09/17
+last_modified_at: 2024/09/17 00:00:00
 ---
 # 개요
 > 인프런 기반의 내용 작성입니다.

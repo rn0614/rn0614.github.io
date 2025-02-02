@@ -10,8 +10,8 @@ tags:
 permalink: /categories2/202411262040문제/
 toc: true
 toc_sticky: true
-date: 2024-11-26
-last_modified_at: 2024-11-26
+date: 2024-11-26 00:00:00
+last_modified_at: 2024-11-26 00:00:00
 ---
 > Set a goal, make a plan and just do it.
 

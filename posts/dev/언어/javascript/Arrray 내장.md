@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/202409290620내장/
 toc: true
 toc_sticky: true
-date: 2024-09-29
-last_modified_at: 2024-09-29
+date: 2024-09-29 00:00:00
+last_modified_at: 2024-09-29 00:00:00
 ---
 # javascript에서 배열은
 > 실제 배열이 아니고 배열의 동작을 흉내낸 특수한 객체

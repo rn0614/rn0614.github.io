@@ -9,8 +9,8 @@ tags:
 permalink: /categories2/202410111720Prevent/
 toc: true
 toc_sticky: true
-date: 2024-10-11
-last_modified_at: 2024-10-11
+date: 2024/10/11 00:00:00
+last_modified_at: 2024/10/11 00:00:00
 ---
 # 어떤 문제를 해결했나?
 > react는 특정 컴포넌트가 리렌더링되면 하위 컴포넌트도 리렌더링된다. 그 과정에서 의도치 않은 리렌더링을 통해 성능이 저하되곤 한다. 이를 방지하기 위해서 React.memo를 사용하지만 해당 방식을 사용하는 것 보다 컴포넌트의 구조를 잘 설계하면 memo가 아니더라도 성능을 최적화 할 수 있다.

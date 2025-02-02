@@ -9,8 +9,8 @@ tags:
 permalink: /categories2/202409291441관련/
 toc: true
 toc_sticky: true
-date: 2024-09-29
-last_modified_at: 2024-09-29
+date: 2024-09-29 00:00:00
+last_modified_at: 2024-09-29 00:00:00
 ---
 # 용도에 맞는 콘솔사용
 ```ts

@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/202409281359lazy/
 toc: true
 toc_sticky: true
-date: 2024-09-28
-last_modified_at: 2024-09-28
+date: 2024/09/28 00:00:00
+last_modified_at: 2024/09/28 00:00:00
 ---
 # useState
 ##  Array, Object 객체를 update할 때

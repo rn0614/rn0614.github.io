@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202411052036undefined/
 toc: true
 toc_sticky: true
-date: 2024-11-05
-last_modified_at: 2024-11-05
+date: 2024-11-05 00:00:00
+last_modified_at: 2024-11-05 00:00:00
 ---
 # Dataview란?
 > 특정 폴더 내부 혹은 특정 태그를 포함하는 파일을 추려서 table형태로 표현할 수 있는 기능

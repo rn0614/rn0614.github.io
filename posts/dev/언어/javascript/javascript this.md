@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/202409290422undefined/
 toc: true
 toc_sticky: true
-date: 2024-09-29
-last_modified_at: 2024-09-29
+date: 2024-09-29 00:00:00
+last_modified_at: 2024-09-29 00:00:00
 ---
 # 개념
 > this는 함수를 호출한 객체

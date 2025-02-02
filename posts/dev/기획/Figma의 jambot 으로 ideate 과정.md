@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202412292027jambot/
 toc: true
 toc_sticky: true
-date: 2024-12-29
-last_modified_at: 2024-12-29
+date: 2024-12-29 00:00:00
+last_modified_at: 2024-12-29 00:00:00
 ---
 > Set a goal, make a plan and just do it.
 

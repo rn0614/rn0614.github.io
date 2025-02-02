@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202411032254Tag/
 toc: true
 toc_sticky: true
-date: 2024-11-03
-last_modified_at: 2024-11-03
+date: 2024/11/03 00:00:00
+last_modified_at: 2024/11/03 00:00:00
 ---
 # 기본 메타태그들
 - title:

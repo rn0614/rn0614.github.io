@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202410062151백엔드를/
 toc: true
 toc_sticky: true
-date: 2024-10-06
-last_modified_at: 2024-10-06
+date: 2024-10-06 00:00:00
+last_modified_at: 2024-10-06 00:00:00
 ---
 # Nextjs 백엔드
 > nextjs 에서 api/ route.ts 를 이용해 주소를 받는 백엔드 동작을 하는 위치

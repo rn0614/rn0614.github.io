@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/2024/
 toc: true
 toc_sticky: true
-date: 2024-09-17
-last_modified_at: 2024-09-17
+date: 2024-09-17 00:00:00
+last_modified_at: 2024-09-17 00:00:00
 ---
 
 - 모바일 앱에서 웹뷰로 접근을 위해서는 SSL이 필수라 HTTPS를 적용해야한다.

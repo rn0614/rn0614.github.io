@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202410012125null/
 toc: true
 toc_sticky: true
-date: 2024-10-01
-last_modified_at: 2024-10-01
+date: 2024-10-01 00:00:00
+last_modified_at: 2024-10-01 00:00:00
 ---
 
 || 와 ?? 을 혼용해서 사용했었는데

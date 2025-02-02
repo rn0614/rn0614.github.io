@@ -9,8 +9,8 @@ tags:
 permalink: /categories2/202408120012에/
 toc: true
 toc_sticky: true
-date: 2024-09-22
-last_modified_at: 2024-09-22
+date: 2024/09/22 00:00:00
+last_modified_at: 2024/09/22 00:00:00
 ---
 # dependencies 에 내 프로젝트 명 계속 생성됨
 

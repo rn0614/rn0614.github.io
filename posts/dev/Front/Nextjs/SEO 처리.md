@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202411031853처리/
 toc: true
 toc_sticky: true
-date: 2024-11-03
-last_modified_at: 2024-11-03
+date: 2024/11/03 00:00:00
+last_modified_at: 2024/11/03 00:00:00
 ---
 # SEO란?
 > 검색엔진 최적화

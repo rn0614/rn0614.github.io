@@ -9,8 +9,8 @@ tags:
 permalink: /categories2/202406172342환경/
 toc: true
 toc_sticky: true
-date: 2024-09-22
-last_modified_at: 2024-09-22
+date: 2024-09-22 00:00:00
+last_modified_at: 2024-09-22 00:00:00
 ---
 # Ubuntu 환경 자바 설치
 ## 어떤 문제를 해결했나?

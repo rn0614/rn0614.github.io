@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/202409290139가상돔/
 toc: true
 toc_sticky: true
-date: 2024-09-29
-last_modified_at: 2024-09-29
+date: 2024/09/29 00:00:00
+last_modified_at: 2024/09/29 00:00:00
 ---
 # 배경
 > 브라우저의 렌더링 부분을 가상돔을 통해 시간을 줄일 수 있다.

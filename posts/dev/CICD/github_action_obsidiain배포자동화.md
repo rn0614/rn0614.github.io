@@ -10,8 +10,8 @@ tags:
 permalink: /categories2/20240918060000배포자동화/
 toc: true
 toc_sticky: true
-date: 2024-09-17
-last_modified_at: 2024-09-17
+date: 2024/09/17 00:00:00
+last_modified_at: 2024/09/17 00:00:00
 ---
 # github Blog - obsidian 연동기
 

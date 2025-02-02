@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202410011416+/
 toc: true
 toc_sticky: true
-date: 2024-10-01
-last_modified_at: 2024-10-01
+date: 2024-10-01 00:00:00
+last_modified_at: 2024-10-01 00:00:00
 ---
 # 무엇을 해결했나?
 1. dev 모드에서 mocking한 데이터 출력

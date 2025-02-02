@@ -9,8 +9,8 @@ tags:
 permalink: /categories2/202410191648단축키/
 toc: true
 toc_sticky: true
-date: 2024-10-19
-last_modified_at: 2024-10-19
+date: 2024-10-19 00:00:00
+last_modified_at: 2024-10-19 00:00:00
 ---
 # Dbeaver
 > 데이터 베이스 관리도구로 오픈소스이며 무료(community버전)이다.
