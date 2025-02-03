@@ -1,3 +1,4 @@
+"use client"
 import combineHandlers from "@/lib/util/combineEventHandler";
 import React, { useState, useRef, useEffect, ChangeEventHandler } from "react";
 
