@@ -9,7 +9,7 @@ import { FaRegCalendarDays } from "react-icons/fa6";
 import AsideIcon from "../AsideIcon/AsideIcon";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import withMobileVisibility from "../hoc/withMobileVisibility/withMobileVisibility";
+import withMobileVisibility from "../hoc/withMobileVisibility";
 
 function Aside() {
   const { isOpen, open, close, toggle } = useAside();
