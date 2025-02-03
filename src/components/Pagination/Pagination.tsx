@@ -1,4 +1,5 @@
 import Link from "next/link"
+import styles from './styles.module.scss';
 
 interface PaginationProps {
   currentPage: number
@@ -7,9 +8,9 @@ interface PaginationProps {
 
 export default function Pagination({ currentPage, totalPages }: PaginationProps) {
   return (
-    <div className="pagination">
+    <div className={styles.paginationContent}>
       {currentPage > 1 && (
-        <Link href={`/page/${currentPage - 1}`} className="pagination__link">
+        <Link href={`/page/${currentPage - 1}`} className={styles.pagination}>
           Previous
         </Link>
       )}

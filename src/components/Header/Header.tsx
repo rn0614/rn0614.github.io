@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import withMobileVisibility from "../hoc/withMobileVisibility/withMobileVisibility";
+import withMobileVisibility from "../hoc/withMobileVisibility";
 import styles from './style.module.scss';
 
 function Header() {
