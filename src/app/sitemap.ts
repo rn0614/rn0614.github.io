@@ -8,7 +8,7 @@ export default async function sitemap() {
 
   const blogPages = posts.map((post) => {
     return {
-      url: `${baseUrl + "/" + post.slug}`,
+      url: encodeURI(`${baseUrl}/${post.slug.replace(/\\/g, "/")}`),
       lastModified: dayjs(post.metadata?.last_modified_at||'2020/01/01 00:00:00','YYYY/MM/DD HH:mm:ss').format('YYYY-MM-DD'),
       changeFrequency: 'monthly',
       priority:0.8,
