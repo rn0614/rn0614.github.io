@@ -1,19 +1,24 @@
 import React from "react";
-import { getAllPostsList } from "../../lib/posts";
 import Heading from "@/components/Heading/Heading";
-import { PostList } from "@/components/Posts/Post";
-import Pagination from "@/components/Pagination/Pagination";
-import styles from "./page.module.scss";
+import { Box, Flex, Text } from "@radix-ui/themes";
 
 export default function Home() {
-  const posts = getAllPostsList();
   return (
     <main>
-      <Heading level={1}>글 목록 리스트\</Heading>
-      <PostList posts={posts} />
-      <div className={styles.paginationWrapper}>
-        <Pagination currentPage={1} totalPages={2} />
-      </div>
+      <Heading level={1}>About me</Heading>
+      <Flex justify={"between"}>
+        <Box>개발자 구상모</Box>
+        <Box>사진자리</Box>
+      </Flex>
+      <Flex>
+        <Box>
+          <Heading level={3}>1.AboutMe</Heading>
+          <Flex direction={"column"}>
+            <Text>안녕하세요, 3년차 엔지니어 구상모입니다</Text>
+          </Flex>
+        </Box>
+        <Box></Box>
+      </Flex>
     </main>
   );
 }

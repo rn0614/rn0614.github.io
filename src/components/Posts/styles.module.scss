@@ -1,24 +1,21 @@
 .postList {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  padding:20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
 }
 .postItemContent {
-  display: flex;
-  flex-direction: column;
-  background-color: #a0a0a0;
-  border-radius: 4px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  overflow: hidden;
   cursor: pointer;
-  &:hover{
-    transform: scaleY(1.1) scaleX(1.02);
-    transition: 600ms;
 
+  &:hover {
+    img {
+      transform: scaleY(1.1) scaleX(1.1);
+      transition: 300ms;
+    }
   }
 
-  .title {      
+  .title {
+    padding-top: var(--space-4);
     font-size: 1.2rem;
     overflow: hidden;
     white-space: nowrap;

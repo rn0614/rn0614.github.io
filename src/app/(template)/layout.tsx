@@ -2,26 +2,25 @@ import Aside from "@/components/Aside/Aside";
 import styles from "./layout.module.scss";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { Box, Flex, ScrollArea } from "@radix-ui/themes";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div lang="en" className={styles.layout}>
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css"
-        rel="stylesheet"
-      ></link>
+    <Flex className={styles.layout}>
       <Header />
-      <div className={styles.body}>
-        <div className={styles.asideWrapper}>
+      <Flex className={styles.body}>
+        <Box className={styles.asideWrapper}>
           <Aside />
-        </div>
-        <div className={styles.main}>
-          <div className={styles.content}>{children}</div>
+        </Box>
+        <ScrollArea asChild type="always" scrollbars="vertical" className={styles.main}>
+        <Box content="main" >
+          <Flex className={styles.content}>{children}</Flex>
           <footer className={styles.footer}>
             <Footer />
           </footer>
-        </div>
-      </div>
-    </div>
+        </Box>
+        </ScrollArea>
+      </Flex>
+    </Flex>
   );
 }
