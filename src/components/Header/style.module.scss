@@ -1,8 +1,22 @@
 .header {
   display: flex;
-  min-height: 5rem;
-  width: 100%;
+  max-height: 5rem;
   background-color: rgb(187, 187, 187);
-  justify-content: center;
   align-items: center;
+  padding-inline: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dropdownMenu__button{
+  &:hover{
+    transition: 0.3s;
+    color:blue;
+  }
+}
+
+.dropdownMenu__item {
+  height: 3rem;
+  width: 15rem;
+  font-size:1.5rem
 }
