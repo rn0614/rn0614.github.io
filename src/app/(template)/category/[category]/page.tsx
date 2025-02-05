@@ -13,9 +13,5 @@ export default function Category1Page({
   params: { category: string };
 }) {
   const posts = getAllPostsList(params.category);
-  return (
-    <div>
-      <PostList posts={posts} />
-    </div>
-  );
+  return <PostList posts={posts} />;
 }

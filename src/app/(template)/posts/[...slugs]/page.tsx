@@ -26,7 +26,7 @@ export async function generateMetadata({
 }: {
   params: PostDetailType;
 }): Promise<Metadata> {
-  const pathSlugs = params.slugs.map((slug) => decodeURIComponent(slug));
+  const pathSlugs = (params.slugs as string[]).map((slug) => decodeURIComponent(slug));
   const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;
 
   const postInfo = parsePost(postPath);
@@ -59,7 +59,7 @@ export async function generateMetadata({
 
 // 페이지 컴포넌트
 export default async function PostPage({ params }: { params: PostDetailType }) {
-  const pathSlugs = params.slugs.map((slug) => decodeURIComponent(slug));
+  const pathSlugs = (params.slugs as string[]).map((slug) => decodeURIComponent(slug));
 
   // 파일 시스템 경로 생성
   const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;

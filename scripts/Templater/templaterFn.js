@@ -32,6 +32,17 @@ function templaterFn(tp, name) {
     return String(Math.ceil(wordCount / 200)); // 문자열로 변환
   }
 
+  function getThumnail() {
+    const content = tp.file.content; // 현재 파일의 내용 가져오기
+    const regex = /!\[.*?\]\((.*?)\)/; // 첫 번째 이미지 찾는 정규식
+    const match = content.match(regex);
+
+    if (match) {
+      return imagePath = (match[1]).replace('public',''); // 첫 번째 이미지 경로
+    }
+    return ''
+  }
+
   switch (name) {
     case "get_tags":
       return get_tags();
@@ -43,6 +54,8 @@ function templaterFn(tp, name) {
       return get_slug();
     case "get_reading_time":
       return get_reading_time();
+    case "getThumnail":
+      return getThumnail();
     default:
       return null;
   }

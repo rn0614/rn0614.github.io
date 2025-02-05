@@ -1,28 +1,17 @@
-export type PostDetailType = {
-  slugs: string[];
-  metadata: {
-    title: string;
-    excerpt: string;
-    categories: string[];
-    tags: string[];
-    date: string;
-    last_modified_at: Date;
-  };
-};
-
-export type PostMatter = {
+export type PostMetadata = {
   title: string;
-  description: string;
+  excerpt: string;
+  thumnail?: string;
+  categories: string[];
   tags: string[];
-  draft?: boolean;
   date: string;
+  last_modified_at: string;
+  content:string;
+  draft?:boolean
 };
 
-export type Post = PostMatter & {
-  slug: string;
-  content: string;
-  readingMinutes: number;
-  wordCount: number;
-  excerpt?: string;
-  last_modified_at?: string;
+export type PostDetailType = {
+  slugs: string[] | string;
+  metadata: PostMetadata;
 };
+

@@ -1,17 +1,16 @@
 ---
-title: Console을 효율적으로 사용하기
-excerpt: 설명란
-categories:
-  - Categories2
-tags:
-  - Front/React
-  - javascript
-permalink: /categories2/202409291441관련/
-toc: true
-toc_sticky: true
-date: 2024-09-29 00:00:00
-last_modified_at: 2025-02-05 00:00:00
+title: Console 관련
+excerpt: console-
+thumnail: /image/Pasted%20image%2020250205214550.png
+categories: posts/dev/언어/javascript
+tags: 
+date: 2025/02/05 01:23:31
+last_modified_at: 2025/02/06 00:09:29
 ---
+> Set a goal, make a plan and just do it.
+
+
+
 # 브라우저의 콘솔을 이용해보자
 
 

@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 import React from "react";
 import Heading from "../Heading/Heading";
 import { Box, Card, Flex, Inset, Text } from "@radix-ui/themes";
+import { PostMetadata } from "@/types/types";
 
 function PostList({
   posts,
@@ -27,7 +28,7 @@ function PostList({
   );
 }
 
-function Post({ slug, metadata }: { slug: string; metadata: any }) {
+function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   const { close } = useAside();
   const router = useRouter();
   const movePageHandler = async () => {
@@ -41,7 +42,11 @@ function Post({ slug, metadata }: { slug: string; metadata: any }) {
       <Card className={styles.postItemContent} onClick={movePageHandler}>
         <Inset>
           <img
-            src="https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
+              !!!(metadata?.thumnail)
+                ? "image/no-image-found.png"
+                : metadata.thumnail
+            }`}
             alt="Bold typography"
             style={{
               display: "block",

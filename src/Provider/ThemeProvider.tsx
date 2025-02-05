@@ -10,7 +10,7 @@ export default function ThemeProvider({
   return (
     <Theme>
       {children}
-      <ThemePanel />
+      {/* <ThemePanel /> */}
     </Theme>
   );
 }

@@ -2,7 +2,7 @@ import { sync } from "glob";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import { Post, PostMatter } from "../types/types";
+import { PostMetadata } from "../types/types";
 import dayjs from "dayjs";
 import readingTime from "reading-time";
 import { wrapWithDebug } from "./util/wrapWithDebug";
@@ -32,18 +32,18 @@ export const getAllPostsList = wrapWithDebug((category?: string) => {
 
 export const getAllPosts = () => {
   const postPaths: string[] = sync(`${POSTS_PATH}/**/*.md`);
-  return postPaths.reduce<Post[]>((acc, curPath) => {
+  return postPaths.reduce<PostMetadata[]>((acc, curPath) => {
     const post = parsePost(curPath);
     if (!post) return acc;
     return [...acc, post];
   }, []);
 };
 
-export const parsePost = (postPath: string): Post | undefined => {
+export const parsePost = (postPath: string): PostMetadata | undefined => {
   try {
     const file = fs.readFileSync(postPath, { encoding: "utf-8" });
     const { content, data } = matter(file);
-    const grayMatter = data as PostMatter;
+    const grayMatter = data as PostMetadata;
 
     if (grayMatter.draft) {
       return;
@@ -54,9 +54,6 @@ export const parsePost = (postPath: string): Post | undefined => {
       tags: ["test"], //grayMatter.tags.filter(Boolean),
       date: dayjs(grayMatter.date).format("YYYY/MM/DD HH:mm:ss"),
       content,
-      slug: postPath.slice(postPath.indexOf(POST_BASE_PATH)).replace(".md", ""),
-      readingMinutes: Math.ceil(readingTime(content).minutes),
-      wordCount: content.split(/\s+/gu).length,
     };
   } catch (e) {
     console.error(e);
