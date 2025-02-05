@@ -22,7 +22,8 @@ console.error();
 console.warn();
 ```
 #### =>결과
-![[public/image/Pasted image 20250205013803.png]]
+![](public/image/Pasted%20image%2020250205214550.png)
+
 
 # 실행 경로 추정
 ```ts
@@ -34,9 +35,8 @@ function outerFn(){
 }
 outerFn();
 ```
-
 #### =>결과
-![[public/image/Pasted image 20250205013755.png]]
+![](public/image/Pasted%20image%2020250205214614.png)
 
 # 걸린시간 측정1
 ```ts
@@ -48,16 +48,16 @@ console.timeEnd("인덱스1"); // console.time으로부터 시간/ 더이상 집
 ```
 
 #### =>결과
-![[public/image/Pasted image 20250205013746.png]]
+![](public/image/Pasted%20image%2020250205214627.png)
 
 
 # 의도치 않은 경우만 출력
 ```ts
-console.assert( true==false, "출력 true")
+console.assert( true!=false, "출력 true")
 console.assert( true==false, "출력 false")
 ```
 #### =>결과
-![[public/image/Pasted image 20250205014019.png]]
+![](public/image/Pasted%20image%2020250205214643.png)
 
 
 # 정리된 테이블로 리스트 index확인
@@ -66,7 +66,7 @@ console.assert( true==false, "출력 false")
 console.table([{key:1,value:"예시값1"},{key:2,value:"예시값2"},{key:3,value:"예시값3"}])
 ```
 #### =>결과
-![[public/image/Pasted image 20250205013917.png]]
+![](public/image/Pasted%20image%2020250205214658.png)
 
 
 # 특정로그 시각적 강조
@@ -78,7 +78,7 @@ console.log("%c원래콘솔로그", "color:yellow;")
 
 ```
 #### =>결과
-![[public/image/Pasted image 20250205013858.png]]
+![](public/image/Pasted%20image%2020250205214717.png)
 
 
 # 그룹핑
@@ -94,21 +94,22 @@ console.groupEnd();
 console.groupEnd();
 
 ```
-![[public/image/Pasted image 20250205013835.png]]
 #### =>결과
+![](public/image/Pasted%20image%2020250205214749.png)
 
 # 객체나 배열을 뽑을 때 좀더 깔끔하게 보이는 방식
+> 요새는 chrome에서는 log나 dir
 ```ts
 console.dir({key:1, value:"예시값1"})
 
 ```
 #### =>결과
-![[public/image/Pasted image 20250205013845.png]]
+![](public/image/Pasted%20image%2020250205214805.png)
 
 
 
 # 이런 콘솔로그를 꼭 지워야만하는 것일까?
-[[posts/dev/Front/Nextjs 로그남기기|Nextjs 로그남기기]]
+[Nextjs 로그남기기](posts/dev/Front/Nextjs%20로그남기기.md)
 ```js
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
@@ -122,4 +123,4 @@ const nextConfig = {
 };
 ```
 
-[[posts/dev/Front/Nextjs/디버그로 감싸기|디버그로 감싸기]]
+[디버그로 감싸기](posts/dev/Front/Nextjs/디버그로%20감싸기.md)

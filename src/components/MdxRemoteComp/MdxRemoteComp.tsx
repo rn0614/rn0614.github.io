@@ -4,6 +4,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 
 const components = {
   img: (props: any) => <img {...props} src={props.src.replace("public", "")} />, //public 주소만 제외
+  a:(props:any) => <a {...props} href={`/${props.href}`}/>
 };
 
 export default function MdxRenderer({

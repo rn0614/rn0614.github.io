@@ -25,4 +25,4 @@ https://40chungi.tistory.com/177
 
 
 # 에뮬레이터 재기동 
-![[public/image/Pasted image 20250127224512.png]]
+![](public/image/Pasted%20image%2020250127224512.png)

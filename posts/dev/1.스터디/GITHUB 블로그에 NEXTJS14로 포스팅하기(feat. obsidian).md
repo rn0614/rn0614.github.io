@@ -38,7 +38,7 @@ npm i @types/glob dayjs gray-matter next-mdx-remote remark-html glob @mdx-js/mdx
 > 프로젝트 workspace와 obsidian의 workspace를 겹쳐서 놓는다. 이를 통해 이 프로젝트는 obsidian에서 수정하면 project에서 github에 올릴 준비가 완료된다.
 
 ### 2-0)  전체 폴더구조
-![[public/image/Pasted image 20250128171421.png]]
+![](public/image/Pasted%20image%2020250128171421.png)
 
 1. posts 는 md 파일을 저장하는 공간
 	1. 아직 글이 많지도 않고 어차피 obsidian 기능으로 연관 글을 찾기 쉬우므로 개발적인 내용은 dev에 다 넣고 나머지 글은 etc에 저장
@@ -47,7 +47,7 @@ npm i @types/glob dayjs gray-matter next-mdx-remote remark-html glob @mdx-js/mdx
 4. Template 부분에 블로그 글에 쓸 properties 에 대한 template 를 저장해서 자동으로 쓴 날짜, 제목등을 설정하도록함.
 
 ### 2-1 프로젝트 폴더구조
-![[public/image/Pasted image 20250128172844.png]]
+![](public/image/Pasted%20image%2020250128172844.png)
 
 1. 가장 중요하게 생각한 부분이 내가 md 파일을 올렸을 때 그 md파일이 별도의 설정 없이 웹에 그대로 올라가는 부분이다. 이를 위해서 동적으로 화면을 구성하였다. posts 뒷부분을 폴더구조에서 그대로 들고와서 md 파일을 mdx파일로 여는 방식을 택했다.
 2. 폴더 구조는 블로그 자체는 크게 바꾸지 않으려고 components 로 ui 적 구성, hooks 부분으로 내부 로직을 구성했으며 나중에 프로젝트가 커지면 나눠서 구성하려고 진행중.

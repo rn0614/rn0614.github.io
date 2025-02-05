@@ -5,14 +5,14 @@
 이 내용을 통해 SEO를 적용하려고 한다.
 
 우선 plugIn으로 Templater를 설치한다.
-![[public/image/Pasted image 20250131013636.png]]
+![](public/image/Pasted%20image%2020250131013636.png)
 
 
 이후로는 Template가 모여있는 Template folder location의 위치를 특정하고 script가 있는 부분도 위치를 정해준다.
 
-![[public/image/Pasted image 20250131013700.png]]
+![](public/image/Pasted%20image%2020250131013700.png)
 
-![[public/image/Pasted image 20250131013154.png]]
+![](public/image/Pasted%20image%2020250131013154.png)
 
 
 
@@ -20,7 +20,7 @@ template는 해당 template.md 파일에
 
 `<% tp.~ %>`  방식으로 사용할 수 있다.
 tp 객체는 다음과 같다. 
-![[public/image/Pasted image 20250131013855.png]]
+![](public/image/Pasted%20image%2020250131013855.png)
 
 
 내가 폴더에 넣은 js 코드는 tp.user.js파일명() 형태로 사용할 수 있다.
