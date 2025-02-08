@@ -1,18 +1,13 @@
-import { serializeMdx } from "../../../../lib/mdx";
 import {
   POST_BASE_PATH,
   getAllPostsList,
   parsePost,
 } from "../../../../lib/posts";
-import MdxRenderer from "../../../../components/MdxRemoteComp/MdxRemoteComp";
 import path from "path";
 import Heading from "@/components/Heading/Heading";
 import { PostDetailType } from "@/types/types";
 import { Metadata } from "next";
-import { MDXRemote } from "next-mdx-remote/rsc";
-
-
-export const dynamicParams = false
+import MdxRenderer from "@/components/MdxRemoteComp/MdxRemoteComp";
 
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
@@ -64,7 +59,11 @@ export async function generateMetadata({
 }
 
 // 페이지 컴포넌트
-export default async function PostPage({ params }: { params: Promise<{slugs:string[]}> }) {
+export default async function PostPage({
+  params,
+}: {
+  params: Promise<{ slugs: string[] }>;
+}) {
   const pathSlugs = ((await params).slugs as string[]).map((slug) =>
     decodeURIComponent(slug)
   );
@@ -72,7 +71,6 @@ export default async function PostPage({ params }: { params: Promise<{slugs:stri
   const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;
   const postInfo = parsePost(postPath); // 이미 인코딩 상태로 path에 들어감
   if (postInfo === undefined) return <div>no data</div>;
-  //const mdx = await serializeMdx(postInfo.content);
   return (
     <main
       className="markdown-body"
@@ -81,7 +79,7 @@ export default async function PostPage({ params }: { params: Promise<{slugs:stri
       <Heading level={1}>
         {pathSlugs[pathSlugs.length - 1].replace(".md", "")}
       </Heading>
-      <MDXRemote source={postInfo.content} />
+      <MdxRenderer source={postInfo.content} />
     </main>
   );
 }
