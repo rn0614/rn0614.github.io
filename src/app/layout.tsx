@@ -7,10 +7,17 @@ import ThemeProvider from "@/Provider/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
+type IncludeNaverVerification = Metadata["verification"] & {
+  naver: string;
+};
+
+
+// verification : naver 인지 못해서 any로 변경
 export const metadata: Metadata = {
   verification: {
     google: "d_Oq6NGoTjXRSukPoXsP2mS99QkvowHLHE3zwyhBo4E",
-  },
+    naver: 'd27fe64e58ddf04f1bedd7d1e5d3a58219630465'
+  } as IncludeNaverVerification,
   title: {
     template: `%s | 개발자 구상모 blog`,
     default: `개발자 구상모 blog`,
