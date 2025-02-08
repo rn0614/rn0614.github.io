@@ -11,7 +11,6 @@ export default function MdxRenderer({
 }: {
   source: string|undefined;
 }) {
-  console.log('mdx',source)
   if (source === undefined) return <div>no</div>;
   return (
     <div className={styles.mdxWrapper}>
