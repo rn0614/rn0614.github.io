@@ -26,7 +26,9 @@ export async function generateMetadata({
 }: {
   params: PostDetailType;
 }): Promise<Metadata> {
-  const pathSlugs = (params.slugs as string[]).map((slug) => decodeURIComponent(slug));
+  const pathSlugs = (params.slugs as string[]).map((slug) =>
+    decodeURIComponent(slug)
+  );
   const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;
 
   const postInfo = parsePost(postPath);
@@ -44,10 +46,10 @@ export async function generateMetadata({
     openGraph: {
       title: postInfo?.title,
       description: postInfo?.excerpt,
-      url:`https://rn0614.github.io/${postPath}`,
+      url: `https://rn0614.github.io/${postPath}`,
       type: "article",
       publishedTime: postInfo?.date,
-      modifiedTime: postInfo?.last_modified_at
+      modifiedTime: postInfo?.last_modified_at,
     },
     twitter: {
       card: "summary_large_image",
@@ -59,7 +61,9 @@ export async function generateMetadata({
 
 // 페이지 컴포넌트
 export default async function PostPage({ params }: { params: PostDetailType }) {
-  const pathSlugs = (params.slugs as string[]).map((slug) => decodeURIComponent(slug));
+  const pathSlugs = (params.slugs as string[]).map((slug) =>
+    decodeURIComponent(slug)
+  );
 
   // 파일 시스템 경로 생성
   const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;
@@ -69,7 +73,7 @@ export default async function PostPage({ params }: { params: PostDetailType }) {
   const mdx = await serializeMdx(postInfo.content);
   if (!mdx) return <div>no data</div>;
   return (
-    <div
+    <main
       className="markdown-body"
       style={{ flex: "1", display: "flex", flexDirection: "column" }}
     >
@@ -77,6 +81,6 @@ export default async function PostPage({ params }: { params: PostDetailType }) {
         {pathSlugs[pathSlugs.length - 1].replace(".md", "")}
       </Heading>
       <MdxRenderer mdx={mdx} />
-    </div>
+    </main>
   );
 }
