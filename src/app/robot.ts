@@ -4,9 +4,8 @@ export default function robots(): MetadataRoute.Robots{
   return {
     rules: {
       userAgent: "*",
-      allow: ["/", "/post"],
-      disallow:[]
+      allow: "/"
     },
-    sitemap:`${process.env.NEXT_PUBLIC_BASE_URL}/sitemap`
+    sitemap:`${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`
   }
 }

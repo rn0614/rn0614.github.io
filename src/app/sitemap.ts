@@ -18,7 +18,7 @@ export default async function sitemap() {
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: dayjs().format('YYYY-MM-DD'),
       changeFrequency: "monthly",
       priority: 1,
     },
