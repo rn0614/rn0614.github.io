@@ -1,7 +1,8 @@
 import { getAllPostsList } from "@/lib/posts";
 import dayjs from "dayjs";
+import { MetadataRoute } from "next";
 
-export default async function sitemap() {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
 
   const posts = getAllPostsList();
@@ -10,7 +11,6 @@ export default async function sitemap() {
     return {
       url: encodeURI(`${baseUrl}/${post.slug.replace(/\\/g, "/")}`),
       lastModified: dayjs(post.metadata?.last_modified_at||'2020/01/01 00:00:00','YYYY/MM/DD HH:mm:ss').format('YYYY-MM-DD'),
-      changeFrequency: 'monthly',
       priority:0.8,
     };
   });
@@ -19,7 +19,6 @@ export default async function sitemap() {
     {
       url: baseUrl,
       lastModified: dayjs().format('YYYY-MM-DD'),
-      changeFrequency: "monthly",
       priority: 1,
     },
     ...blogPages,
