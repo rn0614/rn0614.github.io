@@ -9,6 +9,10 @@ import path from "path";
 import Heading from "@/components/Heading/Heading";
 import { PostDetailType } from "@/types/types";
 import { Metadata } from "next";
+import { MDXRemote } from "next-mdx-remote/rsc";
+
+
+export const dynamicParams = false
 
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
@@ -60,18 +64,15 @@ export async function generateMetadata({
 }
 
 // 페이지 컴포넌트
-export default async function PostPage({ params }: { params: PostDetailType }) {
-  const pathSlugs = (params.slugs as string[]).map((slug) =>
+export default async function PostPage({ params }: { params: Promise<{slugs:string[]}> }) {
+  const pathSlugs = ((await params).slugs as string[]).map((slug) =>
     decodeURIComponent(slug)
   );
-
   // 파일 시스템 경로 생성
   const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;
   const postInfo = parsePost(postPath); // 이미 인코딩 상태로 path에 들어감
-
   if (postInfo === undefined) return <div>no data</div>;
-  const mdx = await serializeMdx(postInfo.content);
-  if (!mdx) return <div>no data</div>;
+  //const mdx = await serializeMdx(postInfo.content);
   return (
     <main
       className="markdown-body"
@@ -80,7 +81,7 @@ export default async function PostPage({ params }: { params: PostDetailType }) {
       <Heading level={1}>
         {pathSlugs[pathSlugs.length - 1].replace(".md", "")}
       </Heading>
-      <MdxRenderer mdx={mdx} />
+      <MDXRemote source={postInfo.content} />
     </main>
   );
 }

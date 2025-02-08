@@ -13,6 +13,7 @@ toc_sticky: true
 date: 2024/09/23 00:00:00
 last_modified_at: 2024/09/23 00:00:00
 ---
+
 # 무슨 문제를 해결했나?
 > react-native의 webview에서 화면을 전환하게 되면 webview 상에서는 화면이 이동되지만 실제 모바일상에서는 동일주소를 보게된다. 문제는 이렇게 되면 기존 모방일에서 이용하는 뒤로가기나 모바일 history를 통해 처리했던 기능들을 처리 못하게 된다. 그래서 이를 해결하기 위해 모바일의 history를 조정해 주는 기능을 만들어야한다.
 
@@ -183,7 +184,8 @@ export default useRequestOnMessage;
 
 
 ## 3. react-native webview ( 이벤트 수신 화면 )
-// router.push({params})의 params를 useLocalSearchParams() 로 가져올 수 있다.
+// router.push(\{params\})의 params를 useLocalSearchParams() 로 가져올 수 있다.
+
 ```tsx
 import Colors from "@/constants/Colors";
 import useRequestOnMessage from "@/hooks/useRequestOnMessage";
@@ -249,7 +251,5 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
-
-
 
 ```

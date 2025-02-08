@@ -5,10 +5,7 @@ categories:
   - Categories2
 tags:
   - "#github_action"
-permalink: /categories2/20240920github/
-toc: true
-toc_sticky: true
-date: 2024/09/17
+date: 2024/09/17 00:00:00
 last_modified_at: 2024/09/17 00:00:00
 ---
 # 개요
@@ -75,7 +72,7 @@ jobs:
 ### jobs: 실행하는 환경(필수) 
 #### job명칭(필수) 
 #### if: 조건(선택)
-- ${{ github.event.issue.pull_request }} : 이벤트가 pull_request인지 확인
+- $\{\{ github.event.issue.pull_request \}\} : 이벤트가 pull_request인지 확인
 #### runs-on: ubuntu-latest(필수)
 #### needs(선택)
 - `[선행job]` : 선행 job이 성공했을 때만 실행하기
