@@ -5,22 +5,32 @@ import styles from "./style.module.scss";
 import { FaAlignJustify } from "react-icons/fa";
 import { Button, Container, DropdownMenu, Flex } from "@radix-ui/themes";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 function Header() {
   const router = useRouter();
   return (
     <Container asChild className={styles.header}>
       <header>
-        <Flex justify={"between"}>
-          <a onClick={()=>router.push("/")}>log</a>
+        <Flex justify={"between"} align={"center"}>
+          <Link href={"/"}>
+            <img src="/logo_koo_sm.png" height={"60px"} />
+          </Link>
           <DropdownMenu.Root>
             <DropdownMenu.Trigger>
-              <Button color="gray" variant="ghost" className={styles.dropdownMenu__button}>
+              <Button
+                color="gray"
+                variant="ghost"
+                className={styles.dropdownMenu__button}
+              >
                 <FaAlignJustify size={30} />
               </Button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Content>
-              <DropdownMenu.Item className={styles.dropdownMenu__item} onClick={()=>router.push("/")}>
+              <DropdownMenu.Item
+                className={styles.dropdownMenu__item}
+                onClick={() => router.push("/")}
+              >
                 Home
               </DropdownMenu.Item>
               <DropdownMenu.Sub>
@@ -28,10 +38,16 @@ function Header() {
                   Code
                 </DropdownMenu.SubTrigger>
                 <DropdownMenu.SubContent>
-                  <DropdownMenu.Item className={styles.dropdownMenu__item} onClick={()=>router.push("/category/dev")}>
+                  <DropdownMenu.Item
+                    className={styles.dropdownMenu__item}
+                    onClick={() => router.push("/category/dev")}
+                  >
                     개발사항
                   </DropdownMenu.Item>
-                  <DropdownMenu.Item className={styles.dropdownMenu__item} onClick={()=>router.push("/category/etc")}>
+                  <DropdownMenu.Item
+                    className={styles.dropdownMenu__item}
+                    onClick={() => router.push("/category/etc")}
+                  >
                     기타
                   </DropdownMenu.Item>
                 </DropdownMenu.SubContent>

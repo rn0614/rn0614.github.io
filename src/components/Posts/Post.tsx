@@ -31,6 +31,8 @@ function PostList({
 function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   const { close } = useAside();
   const router = useRouter();
+  const match = slug.match(/\\([^\\]+)\.md$/);
+
   const movePageHandler = async () => {
     console.log(metadata);
     close();
@@ -43,7 +45,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
         <Inset clip="padding-box" className={styles.cardInset}>
           <img
             src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
-              !!!(metadata?.thumnail)
+              !!!metadata?.thumnail
                 ? "image/no-image-found.png"
                 : metadata.thumnail
             }`}
@@ -51,12 +53,12 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
             className={styles.insetImage}
           />
         </Inset>
-        <Flex direction={"column"}  className={styles.cardDescription}>
+        <Flex direction={"column"} className={styles.cardDescription}>
           <Heading level={3} className={styles.title}>
-            {slug}
+            {match ? match[1] : metadata.title}
           </Heading>
           <Text>{metadata?.date}</Text>
-          <Text className={styles.body}>{slug}</Text>
+          <Text className={styles.body}>{metadata.excerpt}</Text>
         </Flex>
       </Card>
     </>

@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   twitter: {
     title: "구상모 블로그",
   },
+  icons:{
+    icon:"/logo_koo_sm.png"
+  }
 };
 
 export default function RootLayout({
