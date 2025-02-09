@@ -18,7 +18,7 @@ function PostList({
 }) {
   const [currentPage, setCurrentPage] = useState(1);
   const filteredPost = posts.filter((post, idx) => {
-    return idx > (currentPage - 1) * 10 && idx <= currentPage * 10;
+    return idx >= (currentPage) * 10 && idx < currentPage+1 * 10;
   });
   const totalPages = Math.ceil(posts.length / 10);
 
