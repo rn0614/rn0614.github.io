@@ -49,7 +49,7 @@ function PostList({
 function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   const { close } = useAside();
   const router = useRouter();
-  const filename = slug.replace(/\.md$/, "").split(/\\/).pop();
+  const filename = slug.replace(/\.md$/, "").split(/[\\/]/).pop();
 
   const movePageHandler = async () => {
     console.log(metadata);
