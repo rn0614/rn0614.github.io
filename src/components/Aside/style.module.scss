@@ -27,16 +27,20 @@
     gap:1rem;
     flex:1;
     opacity: 0;
-    transition: 1s;
+    visibility: hidden;
     &.open {
+      visibility: visible;
+      transition: 1s;
       opacity: 1;
     }
     .detailMenu{
-      opacity: 0;
-      transition: 0.5s;
+      visibility: hidden;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
       &.open {
-        opacity: 1;
-        transition: 0s;
+        overflow: hidden;
+        visibility: visible;
       }
     }
   }

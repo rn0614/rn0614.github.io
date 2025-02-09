@@ -1,5 +1,5 @@
 import "@radix-ui/themes/styles.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import RecoilProvider from "@/Provider/RecoilProvider";
@@ -11,6 +11,13 @@ type IncludeNaverVerification = Metadata["verification"] & {
   naver: string;
 };
 
+ 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
 
 // verification : naver 인지 못해서 any로 변경
 export const metadata: Metadata = {

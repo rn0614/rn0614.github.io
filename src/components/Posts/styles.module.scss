@@ -1,11 +1,33 @@
 .postList {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+
+  .Li{
+    display:flex;
+    @media (max-width: 768px) {
+      width:100%
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
+
+
+
 .postItemContent {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+  width:100%;
   cursor: pointer;
+  gap:20px;
 
   &:hover {
     img {
@@ -13,18 +35,54 @@
       transition: 300ms;
     }
   }
+  .cardInset{
+    overflow: hidden;
+  }
 
   .title {
-    padding-top: var(--space-4);
     font-size: 1.2rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+  .insetImage {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    background-color: var(--gray-5);
+  }
+
   .body {
     font-size: 1rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+  .cardInset{
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    gap:20px;
+
+    .cardInset{
+      width: 140px;
+      flex-shrink: 0;
+    }
+    .insetImage {
+      display: block;
+      object-fit: cover;
+      width: 140px;
+      max-height: 100px;
+      background-color: var(--gray-5);
+    }
+    .cardDescription{
+      width:300px;
+      flex:1;
+    }
   }
 }

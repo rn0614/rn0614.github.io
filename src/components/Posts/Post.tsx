@@ -40,7 +40,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   return (
     <>
       <Card className={styles.postItemContent} onClick={movePageHandler}>
-        <Inset>
+        <Inset clip="padding-box" className={styles.cardInset}>
           <img
             src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
               !!!(metadata?.thumnail)
@@ -48,16 +48,10 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
                 : metadata.thumnail
             }`}
             alt="Bold typography"
-            style={{
-              display: "block",
-              objectFit: "cover",
-              width: "100%",
-              height: 100,
-              backgroundColor: "var(--gray-5)",
-            }}
+            className={styles.insetImage}
           />
         </Inset>
-        <Flex direction={"column"}>
+        <Flex direction={"column"}  className={styles.cardDescription}>
           <Heading level={3} className={styles.title}>
             {slug}
           </Heading>
