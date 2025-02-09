@@ -51,9 +51,7 @@ function PostList({
 function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   const { close } = useAside();
   const router = useRouter();
-  const withoutExt = slug.replace(/\.md$/, "");
-  const title =
-    withoutExt.split(/[\\/]/).pop() ?? metadata?.title ?? "제목없음";
+  const match = slug.match(/\\([^\\]+)\.md$/);
 
   const movePageHandler = async () => {
     console.log(metadata);
@@ -77,7 +75,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
         </Inset>
         <Flex direction={"column"} className={styles.cardDescription}>
           <Heading level={3} className={styles.title}>
-            {title}
+            {match ? match[1] : metadata.title}
           </Heading>
           <Text>{metadata?.date}</Text>
           <Text className={styles.body}>{metadata.excerpt}</Text>
