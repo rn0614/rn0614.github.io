@@ -2,10 +2,11 @@
 import { useAside } from "@/hook/useAside";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.scss";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "../Heading/Heading";
 import { Box, Card, Flex, Inset, Text } from "@radix-ui/themes";
 import { PostMetadata } from "@/types/types";
+import Pagination from "../Pagination/Pagination";
 
 function PostList({
   posts,
@@ -15,16 +16,35 @@ function PostList({
     metadata: any;
   }[];
 }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const filteredPost = posts.filter((post, idx) => {
+    return idx > (currentPage - 1) * 10 && idx <= currentPage * 10;
+  });
+  const totalPages = Math.ceil(posts.length / 10);
+
+  const goPage = (num: number) => {
+    setCurrentPage(num);
+  };
+
+  useEffect(() => {}, [currentPage]);
+
   return (
-    <ul className={styles.postList}>
-      {posts.map((post, i) => {
-        return (
-          <li key={i} className={styles.Li}>
-            <Post slug={post.slug} metadata={post.metadata} />
-          </li>
-        );
-      })}
-    </ul>
+    <div>
+      <ul className={styles.postList}>
+        {filteredPost.map((post, i) => {
+          return (
+            <li key={i} className={styles.Li}>
+              <Post slug={post.slug} metadata={post.metadata} />
+            </li>
+          );
+        })}
+      </ul>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        goPage={goPage}
+      />
+    </div>
   );
 }
 

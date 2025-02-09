@@ -1,33 +1,47 @@
-import Link from "next/link"
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
+import { Button } from "@radix-ui/themes";
 
 interface PaginationProps {
-  currentPage: number
-  totalPages: number
+  currentPage: number;
+  totalPages: number;
+  goPage: (num: number) => void;
 }
 
-export default function Pagination({ currentPage, totalPages }: PaginationProps) {
+export default function Pagination({
+  currentPage,
+  totalPages,
+  goPage,
+}: PaginationProps) {
   return (
     <div className={styles.paginationContent}>
       {currentPage > 1 && (
-        <Link href={`/page/${currentPage - 1}`} className={styles.pagination}>
+        <Button
+          color="gray"
+          variant="surface"
+          onClick={() => goPage(Math.max(1, currentPage - 1))}
+        >
           Previous
-        </Link>
+        </Button>
       )}
       {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-        <Link
+        <Button
           key={page}
-          href={`/page/${page}`}
-          className={`pagination__link ${currentPage === page ? "pagination__link--active" : ""}`}
+          color={`${currentPage === page ? "indigo" : "gray"}`}
+          variant={`${currentPage === page ? "solid" : "surface"}`}
+          onClick={() => goPage(page)}
         >
           {page}
-        </Link>
+        </Button>
       ))}
       {currentPage < totalPages && (
-        <Link href={`/page/${currentPage + 1}`} className="pagination__link">
+        <Button
+          color="gray"
+          variant="surface"
+          onClick={() => goPage(Math.min(totalPages, currentPage + 1))}
+        >
           Next
-        </Link>
+        </Button>
       )}
     </div>
-  )
+  );
 }
