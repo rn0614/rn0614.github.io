@@ -10,17 +10,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPages = posts.map((post) => {
     return {
       url: encodeURI(`${baseUrl}/${post.slug.replace(/\\/g, "/")}`),
-      lastModified: dayjs(post.metadata?.last_modified_at||'2020/01/01 00:00:00','YYYY/MM/DD HH:mm:ss').format('YYYY-MM-DD'),
-      priority:0.8,
+      lastModified: dayjs(
+        post.metadata?.last_modified_at || "2020/01/01 00:00:00",
+        "YYYY/MM/DD HH:mm:ss"
+      ).format("YYYY-MM-DD"),
+      changeFrequency: "weekly" as "weekly",
+      priority: 0.8,
     };
   });
 
   return [
     {
       url: baseUrl,
-      lastModified: dayjs().format('YYYY-MM-DD'),
-      priority: 1,
+      lastModified: dayjs().format("YYYY-MM-DD"),
+      changeFrequency: "weekly",
+      priority: 1
     },
-    ...blogPages,
+    {
+      url: encodeURI(`${baseUrl}/${'category/etc'}`),
+      lastModified: dayjs().format("YYYY-MM-DD"),
+      changeFrequency: "weekly",
+      priority: 1
+    },
+    // ...blogPages,
   ];
 }
