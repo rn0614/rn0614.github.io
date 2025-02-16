@@ -1,7 +1,7 @@
 import React from "react";
 import { getAllPostsList } from "@/lib/posts";
 import { PostList } from "@/components/Posts/Post";
-import Heading from "@/components/Heading/Heading";
+import { Heading } from "@radix-ui/themes";
 
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
@@ -16,7 +16,7 @@ export default function Category1Page({
   const posts = getAllPostsList(params.category);
   return (
     <main>
-      <Heading level={1}>{params.category}</Heading>
+      <Heading as="h1">{params.category}</Heading>
       <PostList posts={posts} />
     </main>
   );

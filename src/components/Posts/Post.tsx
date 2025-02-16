@@ -3,8 +3,7 @@ import { useAside } from "@/hook/useAside";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.scss";
 import React, { useState } from "react";
-import Heading from "../Heading/Heading";
-import {  Card, Flex, Inset, Text } from "@radix-ui/themes";
+import {  Card, Flex, Inset, Text, Heading } from "@radix-ui/themes";
 import { PostMetadata } from "@/types/types";
 import Pagination from "../Pagination/Pagination";
 
@@ -72,7 +71,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
           />
         </Inset>
         <Flex direction={"column"} className={styles.cardDescription}>
-          <Heading level={3} className={styles.title}>
+          <Heading as={"h3"} className={styles.title}>
             {filename ?? metadata?.title ??'제목없음'}
           </Heading>
           <Text>{metadata?.date}</Text>
