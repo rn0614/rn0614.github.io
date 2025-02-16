@@ -4,10 +4,10 @@ import {
   parsePost,
 } from "../../../../lib/posts";
 import path from "path";
-import Heading from "@/components/Heading/Heading";
 import { PostDetailType } from "@/types/types";
 import { Metadata } from "next";
 import MdxRenderer from "@/components/MdxRemoteComp/MdxRemoteComp";
+import { Heading } from "@radix-ui/themes";
 
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
@@ -76,7 +76,7 @@ export default async function PostPage({
       className="markdown-body"
       style={{ flex: "1", display: "flex", flexDirection: "column" }}
     >
-      <Heading level={1}>
+      <Heading as="h1">
         {pathSlugs[pathSlugs.length - 1].replace(".md", "")}
       </Heading>
       <MdxRenderer source={postInfo.content} />

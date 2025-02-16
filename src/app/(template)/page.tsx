@@ -4,6 +4,7 @@ import Hr from "@/components/Hr/Hr";
 import SelfRecomandation from "@/components/RecommandationComp/SelfRecomandation";
 import MyProflie from "@/components/RecommandationComp/MyProflie";
 import WorkProject from "@/components/RecommandationComp/WorkProject";
+import StudyProject from "@/components/RecommandationComp/StudyProject";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
         <SelfRecomandation />
         <Hr />
         <WorkProject />
+        <Hr />
+        <StudyProject />
         <Hr />
       </Container>
     </main>

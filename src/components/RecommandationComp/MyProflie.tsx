@@ -63,7 +63,7 @@ export default function MyProflie() {
               <Flex direction={"column"} pb="4" pl="3">
                 <Text>React, Nextjs</Text>
                 <Text>Sass, styled-component</Text>
-                <Text>vanilla js(실무사용)</Text>
+                <Text>js, jquery</Text>
               </Flex>
               <Heading as="h4">2. BackEnd</Heading>
               <Flex direction={"column"} pb="4" pl="3">
