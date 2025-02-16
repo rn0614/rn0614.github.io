@@ -1,22 +1,26 @@
 import styles from "./styles.module.scss";
-import { Button } from "@radix-ui/themes";
+import { Button, Select } from "@radix-ui/themes";
 
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
   goPage: (num: number) => void;
+  limitPage: number;
+  setLimitPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function Pagination({
   currentPage,
   totalPages,
   goPage,
+  limitPage,
+  setLimitPage,
 }: PaginationProps) {
   const getPageNumbers = () => {
     const pages: (number | string)[] = [];
 
-    if (totalPages <= 9) {
-      // 페이지 수가 9 이하일 경우 모든 페이지 표시
+    if (totalPages <= limitPage - 1) {
+      // 페이지 수가 9 이하일 경우 단일 페이지 표시
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
@@ -52,41 +56,58 @@ export default function Pagination({
   const pageNumbers = getPageNumbers();
 
   return (
-    <div className={styles.paginationContent}>
-      {currentPage > 1 && (
-        <Button
-          color="gray"
-          variant="surface"
-          onClick={() => goPage(currentPage - 1)}
-        >
-          Prev
-        </Button>
-      )}
-      {pageNumbers.map((page, index) =>
-        typeof page === "number" ? (
+    <div className={styles.paginationWrapper}>
+      <div className={styles.paginationContent}>
+        {currentPage > 1 && (
           <Button
-            key={index}
-            color={`${currentPage === page ? "indigo" : "gray"}`}
-            variant={`${currentPage === page ? "solid" : "surface"}`}
-            onClick={() => goPage(page)}
+            color="gray"
+            variant="surface"
+            onClick={() => goPage(currentPage - 1)}
           >
-            {page}
+            Prev
           </Button>
-        ) : (
-          <span key={index} className={styles.ellipsis}>
-            {page}
-          </span>
-        )
-      )}
-      {currentPage < totalPages && (
-        <Button
-          color="gray"
-          variant="surface"
-          onClick={() => goPage(currentPage + 1)}
-        >
-          Next
-        </Button>
-      )}
+        )}
+        {pageNumbers.map((page, index) =>
+          typeof page === "number" ? (
+            <Button
+              key={index}
+              color={`${currentPage === page ? "indigo" : "gray"}`}
+              variant={`${currentPage === page ? "solid" : "surface"}`}
+              onClick={() => goPage(page)}
+            >
+              {page}
+            </Button>
+          ) : (
+            <span key={index} className={styles.ellipsis}>
+              {page}
+            </span>
+          )
+        )}
+        {currentPage < totalPages && (
+          <Button
+            color="gray"
+            variant="surface"
+            onClick={() => goPage(currentPage + 1)}
+          >
+            Next
+          </Button>
+        )}
+      </div>
+      <Select.Root
+        value={String(limitPage)}
+        onValueChange={(value) => setLimitPage(+value)}
+      >
+        <Select.Trigger placeholder="page limit" />
+        <Select.Content>
+          <Select.Group>
+            <Select.Label></Select.Label>
+            <Select.Item value="10">10</Select.Item>
+            <Select.Item value="40">40</Select.Item>
+            <Select.Item value="100">100</Select.Item>
+            <Select.Item value="1000">1000</Select.Item>
+          </Select.Group>
+        </Select.Content>
+      </Select.Root>
     </div>
   );
 }

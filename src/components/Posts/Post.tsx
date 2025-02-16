@@ -16,10 +16,11 @@ function PostList({
   }[];
 }) {
   const [currentPage, setCurrentPage] = useState(1);
+  const [limitPage, setLimitPage] = useState<number>(10);
   const filteredPost = posts.filter((_, idx) => {
-    return idx >= (currentPage-1) * 10 && idx < currentPage * 10;
+    return idx >= (currentPage-1) * limitPage && idx < currentPage * limitPage;
   });
-  const totalPages = Math.ceil(posts.length / 10);
+  const totalPages = Math.ceil(posts.length / limitPage);
 
   const goPage = (num: number) => {
     setCurrentPage(num);
@@ -40,6 +41,8 @@ function PostList({
         currentPage={currentPage}
         totalPages={totalPages}
         goPage={goPage}
+        limitPage={limitPage}
+        setLimitPage={setLimitPage}
       />
     </div>
   );
