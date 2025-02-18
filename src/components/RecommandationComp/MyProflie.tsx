@@ -5,7 +5,7 @@ import Hr from "../Hr/Hr";
 export default function MyProflie() {
   return (
     <Section py="3">
-      <Flex justify={"between"} gap="7">
+      <Flex direction={{ initial:"column", sm: "row" }} justify={"between"} gap="7" >
         <Container
           style={{ display: "flex", flexDirection: "column", flex: 1 }}
         >
