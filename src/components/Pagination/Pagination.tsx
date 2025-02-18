@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import { Button, Select } from "@radix-ui/themes";
+import { Box, Button, Select, Text } from "@radix-ui/themes";
 
 interface PaginationProps {
   currentPage: number;
@@ -55,9 +55,14 @@ export default function Pagination({
 
   const pageNumbers = getPageNumbers();
 
+  const limitChangeHandler = (value: string) => {
+    setLimitPage(+value);
+    goPage(1);
+  };
+
   return (
-    <div className={styles.paginationWrapper}>
-      <div className={styles.paginationContent}>
+    <Box className={styles.paginationWrapper}>
+      <Box className={styles.paginationContent}>
         {currentPage > 1 && (
           <Button
             color="gray"
@@ -78,9 +83,9 @@ export default function Pagination({
               {page}
             </Button>
           ) : (
-            <span key={index} className={styles.ellipsis}>
+            <Text as="p" key={index} className={styles.ellipsis}>
               {page}
-            </span>
+            </Text>
           )
         )}
         {currentPage < totalPages && (
@@ -92,22 +97,24 @@ export default function Pagination({
             Next
           </Button>
         )}
-      </div>
-      <Select.Root
-        value={String(limitPage)}
-        onValueChange={(value) => setLimitPage(+value)}
-      >
-        <Select.Trigger placeholder="page limit" />
-        <Select.Content>
-          <Select.Group>
-            <Select.Label></Select.Label>
-            <Select.Item value="10">10</Select.Item>
-            <Select.Item value="40">40</Select.Item>
-            <Select.Item value="100">100</Select.Item>
-            <Select.Item value="1000">1000</Select.Item>
-          </Select.Group>
-        </Select.Content>
-      </Select.Root>
-    </div>
+      </Box>
+      <Box className={styles.pageLimitSlector}>
+        <Select.Root
+          value={String(limitPage)}
+          onValueChange={(value) => limitChangeHandler(value)}
+        >
+          <Select.Trigger placeholder="page limit" />
+          <Select.Content>
+            <Select.Group>
+              <Select.Label></Select.Label>
+              <Select.Item value="10">10</Select.Item>
+              <Select.Item value="40">40</Select.Item>
+              <Select.Item value="100">100</Select.Item>
+              <Select.Item value="1000">1000</Select.Item>
+            </Select.Group>
+          </Select.Content>
+        </Select.Root>
+      </Box>
+    </Box>
   );
 }

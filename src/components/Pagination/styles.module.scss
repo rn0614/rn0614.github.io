@@ -1,10 +1,20 @@
 .paginationWrapper {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   margin-top: 2rem;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 
   .paginationContent {
     display: flex;
     justify-content: center;
+  }
+  .pageLimitSlector {
+    max-width: 4rem;
   }
 }
