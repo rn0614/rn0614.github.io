@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return {
       url: encodeURI(`${baseUrl}/${post.slug.replace(/\\/g, "/")}`),
       lastModified: dayjs(
-        post.metadata?.last_modified_at || "2020/01/01 00:00:00",
+        post.metadata?.last_modified_at || "2025/01/01 00:00:00",
         "YYYY/MM/DD HH:mm:ss"
       ).format("YYYY-MM-DD"),
       changeFrequency: "weekly" as "weekly",
@@ -26,12 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1
     },
-    {
-      url: encodeURI(`${baseUrl}/${'category/etc'}`),
-      lastModified: dayjs().format("YYYY-MM-DD"),
-      changeFrequency: "weekly",
-      priority: 1
-    },
-    // ...blogPages,
+    ...blogPages,
   ];
 }
