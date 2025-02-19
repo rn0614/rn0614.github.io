@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: dayjs(
         post.metadata?.last_modified_at || "2025/01/01 00:00:00",
         "YYYY/MM/DD HH:mm:ss"
-      ).format("YYYY-MM-DD"),
+      ).toDate(),
       changeFrequency: "weekly" as "weekly",
       priority: 0.8,
     };
