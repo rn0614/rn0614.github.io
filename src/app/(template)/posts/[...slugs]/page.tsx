@@ -74,7 +74,7 @@ export default async function PostPage({
   return (
     <main
       className="markdown-body"
-      style={{ flex: "1", display: "flex", flexDirection: "column" }}
+      style={{ flex: "1", display: "flex", flexDirection: "column", paddingInline:"20px" }}
     >
       <Heading as="h1">
         {pathSlugs[pathSlugs.length - 1].replace(".md", "")}

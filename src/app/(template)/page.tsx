@@ -8,8 +8,8 @@ import StudyProject from "@/components/RecommandationComp/StudyProject";
 
 export default function Home() {
   return (
-    <main>
-      <Container px="5">
+    <main style={{paddingInline:"20px"}}>
+      <Container >
         <Heading as="h1">구상모 개발블로그</Heading>
         <MyProflie />
         <Hr />
