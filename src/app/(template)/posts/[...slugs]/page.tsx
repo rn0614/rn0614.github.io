@@ -12,7 +12,7 @@ import { Heading } from "@radix-ui/themes";
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
   const posts = getAllPostsList();
-  return posts.map((post) => {
+  return posts.map((post:any) => {
     return {
       slugs: post.slug.slice(POST_BASE_PATH.length + 1).split(path.sep), // slug는 ['dev','title1','안녕하세요.md']
     };

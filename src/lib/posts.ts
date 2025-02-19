@@ -2,7 +2,7 @@ import { sync } from "glob";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import { PostMetadata } from "../types/types";
+import { PostDetailType, PostMetadata } from "../types/types";
 import dayjs from "dayjs";
 import readingTime from "reading-time";
 import { wrapWithDebug } from "./util/wrapWithDebug";
@@ -10,13 +10,25 @@ import { wrapWithDebug } from "./util/wrapWithDebug";
 export const POST_BASE_PATH = "posts";
 const POSTS_PATH = path.join(process.cwd(), POST_BASE_PATH);
 
+// 캐시 객체를 선언합니다.
+const postsCache: any = {};
+
 // 포스트 위치 찾기
-// return [ { slug: 'posts\\dev\\title1\\content.md' } ]
+// return [ { slug: 'posts\\dev\\title1\\content.md', metadata: {...} } ]
 export const getAllPostsList = wrapWithDebug((category?: string) => {
+  // 캐시 키 생성 (카테고리가 없으면 'all' 사용)
+  const cacheKey = category || "all";
+
+  // 이미 캐싱된 결과가 있다면 바로 반환
+  if (postsCache[cacheKey]) {
+    return postsCache[cacheKey];
+  }
+
   const postPaths: string[] = sync(
     `${POSTS_PATH}/${category ? category : "**"}/**/*.md`
   );
-  return postPaths
+
+  const posts = postPaths
     .map((path) => {
       return {
         slug: path.slice(path.indexOf(POST_BASE_PATH)),
@@ -28,6 +40,11 @@ export const getAllPostsList = wrapWithDebug((category?: string) => {
         dayjs(b.metadata?.last_modified_at).valueOf() -
         dayjs(a.metadata?.last_modified_at).valueOf()
     );
+
+  // 캐시에 결과 저장
+  postsCache[cacheKey] = posts;
+
+  return posts;
 }, "getAllPostsList");
 
 export const getAllPosts = () => {

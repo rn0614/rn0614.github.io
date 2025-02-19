@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const posts = getAllPostsList();
 
-  const blogPages = posts.map((post) => {
+  const blogPages = posts.map((post:any) => {
     return {
       url: encodeURI(`${baseUrl}/${post.slug.replace(/\\/g, "/")}`),
       lastModified: dayjs(
