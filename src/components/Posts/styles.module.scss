@@ -70,18 +70,18 @@
     gap:20px;
 
     .cardInset{
-      width: 140px;
+      width: 120px;
       flex-shrink: 0;
     }
     .insetImage {
       display: block;
       object-fit: cover;
-      width: 140px;
+      width: 120px;
       max-height: 100px;
       background-color: var(--gray-5);
     }
     .cardDescription{
-      width:300px;
+      width:30px;
       flex:1;
     }
   }
