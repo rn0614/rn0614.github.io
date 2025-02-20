@@ -5,6 +5,7 @@
   margin-top: 2rem;
   flex-direction: column;
   gap: 0.5rem;
+  position:relative;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -16,5 +17,10 @@
   }
   .pageLimitSlector {
     max-width: 4rem;
+
+    @media (min-width: 768px) {
+      right:20px;
+      position:absolute;
+    }
   }
 }
