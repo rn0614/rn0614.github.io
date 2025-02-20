@@ -12,7 +12,7 @@ import { Heading } from "@radix-ui/themes";
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
   const posts = getAllPostsList();
-  return posts.map((post:any) => {
+  return posts.map((post: any) => {
     return {
       slugs: post.slug.slice(POST_BASE_PATH.length + 1).split(path.sep), // slug는 ['dev','title1','안녕하세요.md']
     };
@@ -74,7 +74,13 @@ export default async function PostPage({
   return (
     <main
       className="markdown-body"
-      style={{ flex: "1", display: "flex", flexDirection: "column", paddingInline:"20px" }}
+      style={{
+        flex: "1",
+        display: "flex",
+        flexDirection: "column",
+        paddingInline: "20px",
+        minWidth: "0",
+      }}
     >
       <Heading as="h1">
         {pathSlugs[pathSlugs.length - 1].replace(".md", "")}

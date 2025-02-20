@@ -8,7 +8,8 @@ const components = {
   h3:(props:any) => <h3 {...props}/>,
   h4:(props:any) => <h4 {...props}/>,
   h5:(props:any) => <h5 {...props}/>,
-  h6:(props:any) => <h6 {...props}/>
+  h6:(props:any) => <h6 {...props}/>,
+  pre:(props:any) => <pre {...props} className={styles.mdPre}/>
 };
 
 export default function MdxRenderer({

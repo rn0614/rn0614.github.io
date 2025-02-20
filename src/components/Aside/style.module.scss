@@ -2,14 +2,14 @@
   height: 100%;
   display: flex;
   flex-direction: row;
-  background-color: rgb(223, 223, 223);
+  background-color: var(--gray-4); 
   min-width: 60px;
   width: 4rem;
   transition: 0.4s;
 
   &.open {
     width: 16rem;
-    background-color: rgb(109, 92, 92);
+    background-color: var(--gray-8);
     transition: 0.4s;
   }
 
@@ -22,8 +22,7 @@
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(222, 215, 215);
-    gap:1rem;
+    background-color: var(--gray-8);
     flex:1;
     opacity: 0;
     visibility: hidden;
@@ -42,6 +41,9 @@
         visibility: visible;
       }
     }
+  }
+  .detailMenuItem{
+    cursor:pointer;
   }
 
   .asideContent{

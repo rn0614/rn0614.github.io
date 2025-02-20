@@ -2,7 +2,8 @@ import Aside from "@/components/Aside/Aside";
 import styles from "./layout.module.scss";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { Box, Flex, ScrollArea } from "@radix-ui/themes";
+import { ScrollArea } from "radix-ui";
+import { Box, Flex } from "@radix-ui/themes";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,14 +13,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Box className={styles.asideWrapper}>
           <Aside />
         </Box>
-        <ScrollArea asChild type="always" scrollbars="vertical" className={styles.main}>
-        <Box content="main" >
-          <Flex className={styles.content}>{children}</Flex>
-          <footer className={styles.footer}>
-            <Footer />
-          </footer>
-        </Box>
-        </ScrollArea>
+        <ScrollArea.Root type="always" className={styles.main}>
+          <ScrollArea.Viewport className={styles.viewport}>
+            <Flex className={styles.content}>{children}</Flex>
+            <footer className={styles.footer}>
+              <Footer />
+            </footer>
+          </ScrollArea.Viewport>
+          <ScrollArea.Scrollbar
+            orientation="vertical"
+          ></ScrollArea.Scrollbar>
+        </ScrollArea.Root>
       </Flex>
     </Flex>
   );

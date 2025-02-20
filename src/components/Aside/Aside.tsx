@@ -10,6 +10,7 @@ import AsideIcon from "../AsideIcon/AsideIcon";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import withMobileVisibility from "../hoc/withMobileVisibility";
+import { Button } from "@radix-ui/themes";
 
 function Aside() {
   const { isOpen, open, close, toggle } = useAside();
@@ -41,28 +42,30 @@ function Aside() {
         </div>
       </div>
 
-      <div
+      <ul
         className={classNames(styles.asideIconDetail, {
           [styles.open]: isOpen,
         })}
       >
-        <Link
-          className={classNames(styles.detailMenu, {
-            [styles.open]: isOpen,
-          })}
-          href={"/category/dev"}
+        <Button
+          className={styles.detailMenuItem}
+          onClick={() => {
+            close();
+            router.push("/category/dev");
+          }}
         >
           개발사항
-        </Link>
-        <Link
-          className={classNames(styles.detailMenu, {
-            [styles.open]: isOpen,
-          })}
-          href={"/category/etc"}
+        </Button>
+        <Button
+          className={styles.detailMenuItem}
+          onClick={() => {
+            close();
+            router.push("/category/etc");
+          }}
         >
           기타
-        </Link>
-      </div>
+        </Button>
+      </ul>
     </div>
   );
 }
