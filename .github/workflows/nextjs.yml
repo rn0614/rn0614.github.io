@@ -38,7 +38,7 @@ jobs:
 
       # (여기) Front Matter 업데이트 스크립트 실행
       - name: Install gray-matter (for front matter parsing)
-        run: npm install gray-matter
+        run: npm install gray-matter dayjs
 
       - name: Update front matter
         run: node scripts/update-frontmatter.js

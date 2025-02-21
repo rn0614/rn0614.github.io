@@ -13,6 +13,14 @@ const fs = require('fs');
 const path = require('path');
 const childProcess = require('child_process');
 const matter = require('gray-matter'); // npm install gray-matter
+const dayjs = require('dayjs');
+
+const utc = require('dayjs/plugin/utc');
+const timezone = require('dayjs/plugin/timezone');
+
+// Day.js에 플러그인 등록
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 function getAllMarkdownFiles(dirPath) {
   let results = [];
@@ -45,7 +53,7 @@ allPostFiles.forEach((fileName) => {
   const filePath = path.join(POSTS_DIR, fileName);
   
   // 2. 해당 파일의 마지막 커밋 시점 가져오기
-  const lastCommitDate = getLastCommitDate(filePath); // 아래 함수 참고
+  const lastCommitDate = getLastCommitDateKST(filePath); // 아래 함수 참고
   if (!lastCommitDate) {
     console.warn(`No last commit date found for ${filePath}`);
     return;
@@ -69,18 +77,29 @@ allPostFiles.forEach((fileName) => {
 });
 
 /** 
- * 해당 파일의 마지막 커밋 ISO 날짜 문자열을 반환 
- * ex) 2023-02-21 10:33:45 +0900
+ * 해당 파일의 마지막 커밋 날짜 한국시간으로 변경
+ * ex) 2025/02/22 00:00:00
 */
-function getLastCommitDate(targetPath) {
+function getLastCommitDateKST(targetPath) {
   try {
-    // Git 명령어를 통해 마지막 커밋 date를 가져옴
-    const result = childProcess.execSync(
-      `git log -1 --format="%cd" --date=iso-strict ${targetPath}`
-    ).toString().trim();
-    return result; // 예: "2023-02-21T10:33:45+09:00"
+    // 1) Git 명령어로 마지막 커밋 date (ISO-8601) 가져오기
+    const isoDateString = childProcess
+      .execSync(`git log -1 --format="%cd" --date=iso-strict ${targetPath}`)
+      .toString()
+      .trim();
+
+    if (!isoDateString) {
+      return null;
+    }
+
+    // 2) Day.js로 파싱 후, 한국시간(Asia/Seoul)으로 변환
+    const dateKST = dayjs(isoDateString)
+      .tz("Asia/Seoul")                     // 타임존 설정
+      .format("YYYY/MM/DD HH:mm:ss");       // 원하는 포맷
+
+    return dateKST;
   } catch (error) {
-    // 만약 git log가 실패하면(새 파일 등)
+    console.error("Error getting last commit date:", error);
     return null;
   }
 }
