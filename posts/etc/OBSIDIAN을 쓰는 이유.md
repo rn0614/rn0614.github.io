@@ -26,5 +26,3 @@ last_modified_at: 2025/02/03 00:38:51
 하는김에 내가 할 수 있는 것을 코드로 직접 보여주는 차원에서 blog를 직접 만들기로 했다. 올릴 내용을 정리해서 올릴 수도 있고 코드로 내가 할 수 있는걸 보여주는 차원에서 좋은 선택이었다. 아래는 내가 블로그와 obsidian 의 worksplace를 겹치면서 발생했던 문제들을 하나하나 해결해 나가는 과정이다.
 
  [[posts/dev/1.스터디/GITHUB 블로그에 NEXTJS14로 포스팅하기(feat. obsidian)|GITHUB 블로그에 NEXTJS14로 포스팅하기(feat. obsidian)]]
-
-
