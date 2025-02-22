@@ -3,12 +3,12 @@ title: test
 excerpt: test
 categories:
   - Categories2
-tags: 
+tags: null
 permalink: /categories2/202501220113undefined/
 toc: true
 toc_sticky: true
-date: 2025/01/22 01:13:44
-last_modified_at: 2025/02/02 16:33:52
+date: '2025/01/22 01:13:44'
+last_modified_at: '2025/02/22 16:18:12'
 ---
 > Set a goal, make a plan and just do it.
 > Set a goal, make a plan and just do it.
