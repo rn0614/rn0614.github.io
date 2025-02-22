@@ -35,6 +35,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      #  with: 
+      #    fetch-depth: 1
 
       # (여기) Front Matter 업데이트 스크립트 실행
       - name: Install gray-matter (for front matter parsing)
