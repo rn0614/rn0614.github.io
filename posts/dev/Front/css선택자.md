@@ -4,8 +4,8 @@ excerpt: querySelector란 무엇인가 쓸 때 주의점
 thumnail: 
 categories: posts/dev/Front
 tags: 
-date: 2025/02/08 16:37:32
-last_modified_at: 2025/02/09 19:40:38
+date: "2025/02/08 16:37:32"
+last_modified_at: "2025/02/09 19:40:38"
 ---
 > Set a goal, make a plan and just do it.
 

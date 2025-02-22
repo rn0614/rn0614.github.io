@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/202410212351Debugging/
 toc: true
 toc_sticky: true
-date: 2024/10/21 00:00:00
-last_modified_at: 2024/10/21 00:00:00
+date: "2024/10/21 00:00:00"
+last_modified_at: "2024/10/21 00:00:00"
 ---
 # Chrome Debugging
 > 크롬브라우저는 실질적으로 내가 만든 앱이 돌아가는 공간으로 개발자 도구를 통해서 깊게 앱의 과정을 분석할 수 있다.

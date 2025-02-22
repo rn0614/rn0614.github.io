@@ -10,8 +10,8 @@ tags:
 permalink: /categories2/202409232155Message/
 toc: true
 toc_sticky: true
-date: 2024/09/23 00:00:00
-last_modified_at: 2024/09/23 00:00:00
+date: "2024/09/23 00:00:00"
+last_modified_at: "2024/09/23 00:00:00"
 ---
 
 # 무슨 문제를 해결했나?

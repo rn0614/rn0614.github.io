@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202411102027통한/
 toc: true
 toc_sticky: true
-date: 2024/11/10 00:00:00
-last_modified_at: 2024/11/10 00:00:00
+date: "2024/11/10 00:00:00"
+last_modified_at: "2024/11/10 00:00:00"
 ---
 # 문제상황
 1. MERGE를 통해서만 GITHUB에 배포할 수 있도록 해야함.

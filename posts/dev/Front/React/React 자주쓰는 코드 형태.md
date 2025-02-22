@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202409282241기법/
 toc: true
 toc_sticky: true
-date: 2024/09/28 00:00:00
-last_modified_at: 2024/09/28 00:00:00
+date: "2024/09/28 00:00:00"
+last_modified_at: "2024/09/28 00:00:00"
 ---
 # 리스트 삭제 기법
 > 보통 list의 id를 받아서 filter로 삭제

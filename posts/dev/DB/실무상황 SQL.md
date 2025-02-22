@@ -4,8 +4,8 @@ excerpt: 실무상황에서 볼 수 있는 SQL 모음
 thumnail: 
 categories: posts/dev/DB
 tags: 
-date: 2025/02/18 20:32:09
-last_modified_at: 2025/02/18 21:33:45
+date: "2025/02/18 20:32:09"
+last_modified_at: "2025/02/18 21:33:45"
 ---
 > Set a goal, make a plan and just do it.
 

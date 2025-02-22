@@ -9,8 +9,8 @@ tags:
 permalink: /categories2/post-name-here-2/
 toc: true
 toc_sticky: true
-date: 2024-09-17 00:00:00
-last_modified_at: 2024-09-17 00:00:00
+date: "2024/09/17 00:00:00"
+last_modified_at: "2024/09/17 00:00:00"
 ---
 # 개요
 > AI에서 가장 힘든 일이라고 하면 데이터 전처리인듯이. 3D 모델링을 위해서는 성능, 방식 관련해서 전처리 할 부분이 있다.

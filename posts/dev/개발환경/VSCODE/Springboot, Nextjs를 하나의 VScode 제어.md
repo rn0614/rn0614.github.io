@@ -12,8 +12,8 @@ tags:
 permalink: /categories2/202409180101설정/
 toc: true
 toc_sticky: true
-date: 2024-09-17 00:00:00
-last_modified_at: 2024-09-17 00:00:00
+date: "2024/09/17 00:00:00"
+last_modified_at: "2024/09/17 00:00:00"
 ---
 # 개요
 > 문제의 본질은 하나의 IDE에서 BACK, FRONT를 동시에 DEBUGGING해야 편하다는 점이다. 물로 NEXTJS 의 경우 크롬창에서 디버깅이 가능하지만 BACK단 로직은 직접적으로 VSCODE에서 디버깅하기가 편하다는 장점이 있다.

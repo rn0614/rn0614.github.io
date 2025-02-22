@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/20240918060101reactNative/
 toc: true
 toc_sticky: true
-date: 2024/09/17 00:00:00
-last_modified_at: 2024/09/17 00:00:00
+date: "2024/09/17 00:00:00"
+last_modified_at: "2024/09/17 00:00:00"
 ---
 # Github Action
 

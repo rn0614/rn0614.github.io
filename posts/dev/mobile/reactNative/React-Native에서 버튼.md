@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202410080119버튼/
 toc: true
 toc_sticky: true
-date: 2024/10/08 00:00:00
-last_modified_at: 2024/10/08 00:00:00
+date: "2024/10/08 00:00:00"
+last_modified_at: "2024/10/08 00:00:00"
 ---
 # 버튼 역할 태그
 1. Pressable

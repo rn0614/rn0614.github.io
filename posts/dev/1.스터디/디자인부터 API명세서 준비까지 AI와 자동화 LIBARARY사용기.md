@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202501011703생성/
 toc: true
 toc_sticky: true
-date: 2025/01/01 00:00:00
-last_modified_at: 2025/01/01 00:00:00
+date: "2025/01/01 00:00:00"
+last_modified_at: "2025/01/01 00:00:00"
 ---
 > Set a goal, make a plan and just do it.
 

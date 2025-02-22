@@ -5,8 +5,8 @@ categories:
   - Categories2
 tags:
   - "#github_action"
-date: 2024/09/17 00:00:00
-last_modified_at: 2024/09/17 00:00:00
+date: "2024/09/17 00:00:00"
+last_modified_at: "2024/09/17 00:00:00"
 ---
 # 개요
 > 인프런 기반의 내용 작성입니다.

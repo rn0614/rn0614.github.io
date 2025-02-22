@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202409291406throttle/
 toc: true
 toc_sticky: true
-date: 2024/09/29 00:00:00
-last_modified_at: 2024/09/29 00:00:00
+date: "2024/09/29 00:00:00"
+last_modified_at: "2024/09/29 00:00:00"
 ---
 # Debounce
 > 연속적인 이벤트 시 제일 마지막 이벤트 이후 일정시간 이후 함수실행하는 로직

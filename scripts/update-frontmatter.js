@@ -95,7 +95,7 @@ function getChangedMdFiles() {
 
 /** 
  * 해당 파일의 마지막 커밋 날짜 한국시간으로 변경
- * ex) 2025/02/22 00:00:00
+ * ex)"2025/02/22 00:00:00"
 */
 function getLastCommitDateKST(targetPath) {
   try {
@@ -117,7 +117,7 @@ function getLastCommitDateKST(targetPath) {
 
     return dateKST;
   } catch (error) {
-    console.error("Error getting last commit date:", error);
+    console.error("Error getting last commit date: ", error);
     return null;
   }
 }

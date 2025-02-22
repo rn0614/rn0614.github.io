@@ -4,8 +4,8 @@ excerpt: nextjs, MDXRemote, remarkGfm
 thumnail: /image/Pasted%20image%2020250209025453.png
 categories: posts/dev/Front
 tags: 
-date: 2025/02/09 02:48:16
-last_modified_at: 2025/02/09 03:12:20
+date: "2025/02/09 02:48:16"
+last_modified_at: "2025/02/09 03:12:20"
 ---
 > Set a goal, make a plan and just do it.
 

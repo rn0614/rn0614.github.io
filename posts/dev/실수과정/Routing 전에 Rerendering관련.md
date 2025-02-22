@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202410140021전에/
 toc: true
 toc_sticky: true
-date: 2024-10-14 00:00:00
-last_modified_at: 2024-10-14 00:00:00
+date: "2024/10/14 00:00:00"
+last_modified_at: "2024/10/14 00:00:00"
 ---
 # 개요
 > 모바일 Tab화면에서 Stack화면으로 이동시 화면이 전환되게 되는데 이때 Menu를 통해서 이동하게 되면 Stack이 쌓이고 전 화면에서는 그대로 Sidebar가 살아있는 문제가 있었다.

@@ -13,8 +13,8 @@ tags:
 permalink: /categories2/202409180101설정/
 toc: true
 toc_sticky: true
-date: 2024-09-17 00:00:00
-last_modified_at: 2024-09-17 00:00:00
+date: "2024/09/17 00:00:00"
+last_modified_at: "2024/09/17 00:00:00"
 ---
 # Springboot, Nextjs를 하나의 VScode 제어
 

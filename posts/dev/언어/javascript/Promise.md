@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/202409290518undefined/
 toc: true
 toc_sticky: true
-date: 2024-09-29 00:00:00
-last_modified_at: 2024-09-29 00:00:00
+date: "2024/09/29 00:00:00"
+last_modified_at: "2024/09/29 00:00:00"
 ---
 # 상태
 - pending

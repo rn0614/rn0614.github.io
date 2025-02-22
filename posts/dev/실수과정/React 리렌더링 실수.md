@@ -7,8 +7,8 @@ tags:
 permalink: /categories2/202410112152리렌더링/
 toc: true
 toc_sticky: true
-date: 2024-10-11 00:00:00
-last_modified_at: 2024-10-11 00:00:00
+date: "2024/10/11 00:00:00"
+last_modified_at: "2024/10/11 00:00:00"
 ---
 # 실수 코드
 > 아래와 같은 코드로 해당 화면이 리액트 네이티브인지 확인했다 무엇이 문제였을까?

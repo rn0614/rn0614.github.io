@@ -9,8 +9,8 @@ tags:
 permalink: /categories2/202410152043패턴/
 toc: true
 toc_sticky: true
-date: 2024/10/15 00:00:00
-last_modified_at: 2024/10/15 00:00:00
+date: "2024/10/15 00:00:00"
+last_modified_at: "2024/10/15 00:00:00"
 ---
 # 개요
 > Composition 패턴은 컴포넌트간에 구조를 계층적으로 표현하는 패턴이다.

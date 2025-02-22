@@ -8,8 +8,8 @@ tags:
 permalink: /categories2/202410212036Delegation)/
 toc: true
 toc_sticky: true
-date: 2024/10/21 00:00:00
-last_modified_at: 2024/10/21 00:00:00
+date: "2024/10/21 00:00:00"
+last_modified_at: "2024/10/21 00:00:00"
 ---
 # 개념
 > 자식요소의 이벤트를 부모요소로부터 물려받을 때 이것을 이벤트 위임이라고 한다.

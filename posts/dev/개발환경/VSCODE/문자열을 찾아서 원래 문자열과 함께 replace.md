@@ -3,8 +3,8 @@ title: 문자열을 찾아서 원래 문자열과 함께 replace
 excerpt: vscode 문자열을 찾아서 원래 문자열과 함께 replace 하는법
 categories: posts/dev/개발환경/VSCODE
 tags: 
-date: 2025/02/02 23:39:46
-last_modified_at: 2025/02/02 23:48:09
+date: "2025/02/02 23:39:46"
+last_modified_at: "2025/02/02 23:48:09"
 ---
 > Set a goal, make a plan and just do it.
 

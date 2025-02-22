@@ -4,8 +4,8 @@ excerpt: console-
 thumnail: /image/Pasted%20image%2020250205214550.png
 categories: posts/dev/언어/javascript
 tags: 
-date: 2025/02/05 01:23:31
-last_modified_at: 2025/02/06 00:09:29
+date: "2025/02/05 01:23:31"
+last_modified_at: "2025/02/06 00:09:29"
 ---
 > Set a goal, make a plan and just do it.
 
