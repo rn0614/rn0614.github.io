@@ -65,7 +65,7 @@ function getChangedMdFiles() {
     // 1) 최근 1개의 커밋 범위에서 변경된 파일 목록
     //    (상황에 따라 HEAD~1이 아니라 HEAD~n 등으로 바꿀 수 있음)
     const diffOutput = childProcess.execSync(
-      'git diff --name-only HEAD~1 HEAD',
+      'git -c core.quotepath=false diff --name-only HEAD~1 HEAD',
       { encoding: 'utf8' }
     );
 
@@ -81,10 +81,13 @@ function getChangedMdFiles() {
       return relPath.endsWith('.md') && relPath.startsWith('posts/');
     });
 
+
     // 4) 절대 경로로 변환
     const changedMdAbsolute = changedMd.map((relPath) =>
       path.join(process.cwd(), relPath)
     );
+
+    console.log('changedMdAbsolute',changedMdAbsolute)
 
     return changedMdAbsolute;
   } catch (error) {
