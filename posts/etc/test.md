@@ -8,7 +8,7 @@ permalink: /categories2/202501220113undefined/
 toc: true
 toc_sticky: true
 date: '2025/01/22 01:13:44'
-last_modified_at: '2025/02/22 16:29:10'
+last_modified_at: '2025/02/22 16:53:42'
 ---
 > Set a goal, make a plan and just do it.
 > Set a goal, make a plan and just do it.

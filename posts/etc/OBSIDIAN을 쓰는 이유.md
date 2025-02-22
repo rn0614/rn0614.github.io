@@ -5,7 +5,7 @@ thumnail: null
 categories: posts/etc
 tags: null
 date: '2025/02/05 01:23:31'
-last_modified_at: '2025/02/22 16:29:10'
+last_modified_at: '2025/02/22 16:53:42'
 ---
 > Set a goal, make a plan and just do it.
 
