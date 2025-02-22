@@ -89,7 +89,7 @@ function getLastCommitDateKST(targetPath) {
   try {
     // 1) Git 명령어로 마지막 커밋 date (ISO-8601) 가져오기
     const isoDateString = childProcess
-      .execSync(`git log -1 --format="%cd" --date=iso-strict ${targetPath}`)
+      .execSync(`git log -1 --format="%cd" --date=iso-strict -- "${targetPath}"`)
       .toString()
       .trim();
 
