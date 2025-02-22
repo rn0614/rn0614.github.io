@@ -37,17 +37,17 @@ export async function generateMetadata({
       description: "This post does not exist.",
     };
   }
-
-  // title 속성이 없으면 제목이 title
-  const showTitle =  postInfo?.title||`${pathSlugs[-1].replace(".md","")}`
+  // title 속성이 없으면 제목이 title, title도 없다면 default 로 제목 미정
+  const showTitle =
+    postInfo?.title || pathSlugs[pathSlugs.length - 1].replace(".md", "") || "제목 미정";
 
   return {
     title: showTitle,
-    description: postInfo?.excerpt||showTitle,
+    description: postInfo?.excerpt || showTitle,
     keywords: postInfo?.tags,
     openGraph: {
       title: showTitle,
-      description: postInfo?.excerpt||showTitle,
+      description: postInfo?.excerpt || showTitle,
       url: `https://rn0614.github.io/${postPath}`,
       type: "article",
       publishedTime: postInfo?.date,
@@ -56,7 +56,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: showTitle,
-      description: postInfo?.excerpt||showTitle,
+      description: postInfo?.excerpt || showTitle,
     },
   };
 }
