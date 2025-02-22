@@ -92,6 +92,7 @@ function getLastCommitDateKST(targetPath) {
       .execSync(`git log -1 --format="%cd" --date=iso-strict -- "${targetPath}"`)
       .toString()
       .trim();
+      
 
     if (!isoDateString) {
       return null;
