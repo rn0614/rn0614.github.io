@@ -1,8 +1,7 @@
 ---
 title: GITHUB 블로그에 NEXTJS14로 포스팅하기
-excerpt: 설명란
-categories:
-  - Categories2
+excerpt: github블로그에 nextjs로 포스팅하면서 겪은 일, MDX, SEO 등의 적용 문제에 대해서 개선점을 찾아보자
+categories: 
 tags: 
 permalink: /categories2/202501130047블로그에/
 toc: true

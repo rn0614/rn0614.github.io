@@ -22,37 +22,17 @@ const timezone = require('dayjs/plugin/timezone');
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-function getAllMarkdownFiles(dirPath) {
-  let results = [];
 
-  // readdirSync 시, 폴더 내 파일·디렉토리 목록을 가져옴
-  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
 
-  for (const entry of entries) {
-    const fullPath = path.join(dirPath, entry.name);
-
-    if (entry.isDirectory()) {
-      // 하위 폴더라면 재귀적으로 들어가서 .md 파일 수집
-      results = results.concat(getAllMarkdownFiles(fullPath));
-    } else if (entry.isFile() && entry.name.endsWith('.md')) {
-      // .md 파일이라면 결과에 추가
-      results.push(fullPath);
-    }
-  }
-
-  return results;
-}
-
-// Markdown 파일들이 들어있는 폴더 경로
+// 0. root에서 posts 파일로 접근
 const POSTS_DIR = path.join(__dirname, '..', 'posts'); 
 
-// 1. /post 폴더 내 모든 .md 파일 찾기
+// 1. /post 폴더의 파일경로 찾기
 const allPostFiles = getAllMarkdownFiles(POSTS_DIR);
 
-allPostFiles.forEach((fileName) => {
-  const filePath = path.join(POSTS_DIR, fileName);
+allPostFiles.forEach((filePath) => {
   
-  // 2. 해당 파일의 마지막 커밋 시점 가져오기
+  // 1.해당 파일의 모든 commit 시점가져오기
   const lastCommitDate = getLastCommitDateKST(filePath); // 아래 함수 참고
   if (!lastCommitDate) {
     console.warn(`No last commit date found for ${filePath}`);
@@ -75,6 +55,31 @@ allPostFiles.forEach((fileName) => {
 
   console.log(`[update-frontmatter] Updated: ${filePath} -> updated: ${lastCommitDate}`);
 });
+
+
+/**
+ *  posts 폴더 내부의 모든 markdown 폴더 경로 수집
+ */
+function getAllMarkdownFiles(dirPath) {
+  let results = [];
+
+  // readdirSync 시, 폴더 내 파일·디렉토리 목록을 가져옴
+  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = path.join(dirPath, entry.name);
+
+    if (entry.isDirectory()) {
+      // 하위 폴더라면 재귀적으로 들어가서 .md 파일 수집
+      results = results.concat(getAllMarkdownFiles(fullPath));
+    } else if (entry.isFile() && entry.name.endsWith('.md')) {
+      // .md 파일이라면 결과에 추가
+      results.push(fullPath);
+    }
+  }
+
+  return results;
+}
 
 /** 
  * 해당 파일의 마지막 커밋 날짜 한국시간으로 변경
