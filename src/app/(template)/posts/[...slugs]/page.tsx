@@ -38,13 +38,16 @@ export async function generateMetadata({
     };
   }
 
+  // title 속성이 없으면 제목이 title
+  const showTitle =  postInfo?.title||`${pathSlugs[-1].replace(".md","")}`
+
   return {
-    title: postInfo?.title,
-    description: postInfo?.excerpt,
+    title: showTitle,
+    description: postInfo?.excerpt||showTitle,
     keywords: postInfo?.tags,
     openGraph: {
-      title: postInfo?.title,
-      description: postInfo?.excerpt,
+      title: showTitle,
+      description: postInfo?.excerpt||showTitle,
       url: `https://rn0614.github.io/${postPath}`,
       type: "article",
       publishedTime: postInfo?.date,
@@ -52,8 +55,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: postInfo?.title,
-      description: postInfo?.excerpt,
+      title: showTitle,
+      description: postInfo?.excerpt||showTitle,
     },
   };
 }

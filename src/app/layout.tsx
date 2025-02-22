@@ -6,11 +6,6 @@ import RecoilProvider from "@/Provider/RecoilProvider";
 import ThemeProvider from "@/Provider/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
-
-type IncludeNaverVerification = Metadata["verification"] & {
-  naver: string;
-};
-
  
 export const viewport: Viewport = {
   width: 'device-width',
@@ -22,16 +17,18 @@ export const viewport: Viewport = {
 // verification : naver 인지 못해서 any로 변경
 export const metadata: Metadata = {
   verification: {
-    google: "d_Oq6NGoTjXRSukPoXsP2mS99QkvowHLHE3zwyhBo4E",
-    naver: 'd27fe64e58ddf04f1bedd7d1e5d3a58219630465'
-  } as IncludeNaverVerification,
+    google: "d_Oq6NGoTjXRSukPoXsP2mS99QkvowHLHE3zwyhBo4E"
+  },
+  keywords:"front end , front , blog , portfolio, 구상모",
   title: {
     template: `%s | 개발자 구상모 blog`,
     default: `개발자 구상모 blog`,
   },
   description: "개발노트를 정리하는 공간입니다",
   openGraph: {
-    siteName: "구상모 블로그",
+    title:"구상모 블로그",
+    description:"엔지니어 구상모의 블로그 , 프론트 위주의 학습, 문제를 해결하는 개발자",
+    url:"https://rn0614.github.io"
   },
   twitter: {
     title: "구상모 블로그",
