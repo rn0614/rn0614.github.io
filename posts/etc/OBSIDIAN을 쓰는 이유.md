@@ -1,11 +1,11 @@
 ---
 title: OBSIDIAN을 쓰는 이유
 excerpt: 글을 잘쓰지 않아도 되는 환경에서 글 쓰기
-thumnail: 
+thumnail: null
 categories: posts/etc
-tags: 
-date: 2025/02/05 01:23:31
-last_modified_at: 2025/02/03 00:38:51
+tags: null
+date: '2025/02/05 01:23:31'
+last_modified_at: '2025/02/22 16:29:10'
 ---
 > Set a goal, make a plan and just do it.
 
