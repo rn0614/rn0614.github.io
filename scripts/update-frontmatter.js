@@ -28,7 +28,7 @@ dayjs.extend(timezone);
 const POSTS_DIR = path.join(__dirname, '..', 'posts'); 
 
 // 1. /post 폴더의 파일경로 찾기
-const allPostFiles = getAllMarkdownFiles(POSTS_DIR);
+const allPostFiles = getChangedMdFiles(POSTS_DIR);
 
 allPostFiles.forEach((filePath) => {
   
@@ -60,25 +60,37 @@ allPostFiles.forEach((filePath) => {
 /**
  *  posts 폴더 내부의 모든 markdown 폴더 경로 수집
  */
-function getAllMarkdownFiles(dirPath) {
-  let results = [];
+function getChangedMdFiles() {
+  try {
+    // 1) 최근 1개의 커밋 범위에서 변경된 파일 목록
+    //    (상황에 따라 HEAD~1이 아니라 HEAD~n 등으로 바꿀 수 있음)
+    const diffOutput = childProcess.execSync(
+      'git diff --name-only HEAD~1 HEAD',
+      { encoding: 'utf8' }
+    );
 
-  // readdirSync 시, 폴더 내 파일·디렉토리 목록을 가져옴
-  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+    // 2) 개행 기준으로 나누어 배열화
+    const changedPaths = diffOutput
+      .split('\n')
+      .map((p) => p.trim())
+      .filter(Boolean); // 빈 줄 제거
 
-  for (const entry of entries) {
-    const fullPath = path.join(dirPath, entry.name);
+    // 3) .md 파일 & posts/ 아래 파일만 필터링
+    const changedMd = changedPaths.filter((relPath) => {
+      // 주의: relPath가 'posts/...' 형태인지, 혹은 다른 경로인지 확인
+      return relPath.endsWith('.md') && relPath.startsWith('posts/');
+    });
 
-    if (entry.isDirectory()) {
-      // 하위 폴더라면 재귀적으로 들어가서 .md 파일 수집
-      results = results.concat(getAllMarkdownFiles(fullPath));
-    } else if (entry.isFile() && entry.name.endsWith('.md')) {
-      // .md 파일이라면 결과에 추가
-      results.push(fullPath);
-    }
+    // 4) 절대 경로로 변환
+    const changedMdAbsolute = changedMd.map((relPath) =>
+      path.join(process.cwd(), relPath)
+    );
+
+    return changedMdAbsolute;
+  } catch (error) {
+    console.error("Failed to get changed MD files:", error);
+    return [];
   }
-
-  return results;
 }
 
 /** 
