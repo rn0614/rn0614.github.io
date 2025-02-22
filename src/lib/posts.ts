@@ -37,8 +37,8 @@ export const getAllPostsList = wrapWithDebug((category?: string) => {
     })
     .sort(
       (a, b) =>
-        dayjs(b.metadata?.date||'2020/01/01 00:00:00').valueOf() -
-        dayjs(a.metadata?.date||'2020/01/01 00:00:00').valueOf()
+        dayjs(b.metadata?.last_modified_at||'2020/01/01 00:00:00').valueOf() -
+        dayjs(a.metadata?.last_modified_at||'2020/01/01 00:00:00').valueOf()
     );
 
   // 캐시에 결과 저장
@@ -65,15 +65,9 @@ export const parsePost = (postPath: string): PostMetadata | undefined => {
     if (grayMatter.draft) {
       return;
     }
-
-    // 파일 상태 정보에서 최종 수정일 가져오기
-    const stat = fs.statSync(postPath);
-    const modifiedDate = stat.mtime;
-
     return {
       ...grayMatter,
       tags: ["test"], //grayMatter.tags.filter(Boolean),
-      date: dayjs(modifiedDate).format("YYYY/MM/DD HH:mm:ss"),
       content,
     };
   } catch (e) {

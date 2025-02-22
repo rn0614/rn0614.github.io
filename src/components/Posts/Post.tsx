@@ -77,7 +77,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
           <Heading as={"h3"} className={styles.title}>
             {filename ?? metadata?.title ??'제목없음'}
           </Heading>
-          <Text>{metadata?.date}</Text>
+          <Text>{metadata?.last_modified_at}</Text>
           <Text className={styles.body}>{metadata.excerpt}</Text>
         </Flex>
       </Card>
