@@ -2,7 +2,7 @@ import styles from "./style.module.scss";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from 'remark-gfm'
 const components = {
-  img: (props: any) => <img {...props} src={props.src.replace("public", "")} />, //public 주소만 제외
+  img: (props: any) => <img {...props} src={props.src.replace("public", "")} loading="lazy"/>, //public 주소만 제외
   a:(props:any) => <a {...props} href={`/${props.href}`}/>,
   h1:(props:any) => <h2 {...props}/>,
   h3:(props:any) => <h3 {...props}/>,

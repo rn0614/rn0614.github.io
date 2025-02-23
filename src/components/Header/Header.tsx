@@ -14,7 +14,7 @@ function Header() {
       <header>
         <Flex justify={"between"} align={"center"}>
           <Link href={"/"}>
-            <img src="/logo_koo_sm.png" height={"60px"} />
+            <img src="/logo_koo_sm.png" height={"60px"} alt="구상모 홈페이지 logo" loading="lazy"/>
           </Link>
           <DropdownMenu.Root>
             <DropdownMenu.Trigger>
