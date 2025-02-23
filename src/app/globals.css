@@ -59,3 +59,16 @@ a{
 	text-decoration: none;
 	color:black
 }
+
+h1,h2,h3 {
+	margin-top: var(--space-4);
+	margin-bottom: var(--space-2);
+}
+
+h4,h5,h6{
+	margin-top: var(--space-2);
+}
+
+p {
+	line-height: 1.2;
+}
