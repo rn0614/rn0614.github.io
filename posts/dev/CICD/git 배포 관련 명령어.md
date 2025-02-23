@@ -1,3 +1,15 @@
+---
+title: git 배포 관련 명령어
+excerpt: git---
+thumnail: 
+categories: posts/dev/CICD
+tags: 
+date: '2025/02/05 01:23:31'
+last_modified_at: '2025/02/02 16:03:29'
+---
+> Set a goal, make a plan and just do it.
+
+
 git을 사용하다보면 하는 루틴에 따라서 몇가지 동작을 한다.
 
 1. 남이 한거 땡기기
@@ -19,11 +31,9 @@ git을 사용하다보면 하는 루틴에 따라서 몇가지 동작을 한다.
 ```bash
 git stash         # 변경 사항을 임시 저장
 git pull          # 최신 변경 사항 가져오기
-git stash pop     # 내 변경 사항을 다시 적용
+git stash pop     # 내 변경 사항을 다시 적용 , merege 충돌이 나는 것 정리
 
-
-
-git pull --rebase
+git pull --rebase  # 
 ```
 
 
