@@ -3,7 +3,7 @@ import { useAside } from "@/hook/useAside";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.scss";
 import React, { useState } from "react";
-import {  Card, Flex, Inset, Text, Heading } from "@radix-ui/themes";
+import { Card, Flex, Inset, Text, Heading } from "@radix-ui/themes";
 import { PostMetadata } from "@/types/types";
 import Pagination from "../Pagination/Pagination";
 
@@ -18,7 +18,9 @@ function PostList({
   const [currentPage, setCurrentPage] = useState(1);
   const [limitPage, setLimitPage] = useState<number>(10);
   const filteredPost = posts.filter((_, idx) => {
-    return idx >= (currentPage-1) * limitPage && idx < currentPage * limitPage;
+    return (
+      idx >= (currentPage - 1) * limitPage && idx < currentPage * limitPage
+    );
   });
   const totalPages = Math.ceil(posts.length / limitPage);
 
@@ -75,7 +77,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
         </Inset>
         <Flex direction={"column"} className={styles.cardDescription}>
           <Heading as={"h3"} className={styles.title}>
-            {filename ?? metadata?.title ??'제목없음'}
+            {filename ?? metadata?.title ?? "제목없음"}
           </Heading>
           <Text>{metadata?.last_modified_at}</Text>
           <Text className={styles.body}>{metadata.excerpt}</Text>
