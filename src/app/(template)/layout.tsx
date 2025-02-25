@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Header />
       <Flex className={styles.body}>
         <Box className={styles.asideWrapper}>
-          {/* <Aside /> */}
+          <Aside />
         </Box>
         <ScrollArea.Root type="always" className={styles.main}>
           <ScrollArea.Viewport className={styles.viewport}>
