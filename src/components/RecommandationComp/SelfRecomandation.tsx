@@ -7,7 +7,7 @@ export default function SelfRecomandation() {
         자기소개글
       </Heading>
       <Box mt="10px">
-        <Text as="p">안녕하세요, 3년차 엔지니어 구상모입니다</Text>
+        <Text as="p">안녕하세요, SW엔지니어 구상모입니다</Text>
         <Text as="p">
           모든 코드는 문제를 해결하기 위한 수단이라고 생각하고 내가 작성하는
           코드가 어떤문제를 해결하는지에 관심을 갖습니다.
