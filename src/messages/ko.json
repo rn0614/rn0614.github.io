@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "SW엔지니어 구상모",
+    "description": "개발자 구상모의 블로그입니다"
+  },
+  "categoryMenu":{
+    "home":"홈",
+    "posting":"포스팅",
+    "routine":"일과",
+    "schedule":"일정"
+  },
+  "category": {
+    "dev": "개발기록",
+    "etc": "기타"
+  }
+}

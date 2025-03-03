@@ -26,6 +26,7 @@
     flex:1;
     opacity: 0;
     visibility: hidden;
+    gap: 6px;
     &.open {
       visibility: visible;
       transition: 1s;
@@ -44,6 +45,7 @@
   }
   .detailMenuItem{
     cursor:pointer;
+    color:black
   }
 
   .asideContent{

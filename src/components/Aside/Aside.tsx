@@ -1,18 +1,16 @@
 "use client";
 import styles from "./style.module.scss";
 import classNames from "classnames";
-import { useAside } from "@/hook/useAside";
+import { useAside } from "@/hooks/useAside";
 import { FaHome } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
-import { FaNoteSticky } from "react-icons/fa6";
-import { FaRegCalendarDays } from "react-icons/fa6";
 import AsideIcon from "../AsideIcon/AsideIcon";
 import { useRouter } from "next/navigation";
 import withMobileVisibility from "../hoc/withMobileVisibility";
 import { Button } from "@radix-ui/themes";
 
 function Aside() {
-  const { isOpen, open, close, toggle } = useAside();
+  const { isOpen, close, toggle } = useAside();
   const router = useRouter();
   return (
     <div
@@ -36,8 +34,6 @@ function Aside() {
             onClick={toggle}
             isOpen={isOpen}
           />
-          <AsideIcon Icon={FaNoteSticky} title={"일과"} />
-          <AsideIcon Icon={FaRegCalendarDays} title={"일정"} />
         </div>
       </div>
 
@@ -47,6 +43,7 @@ function Aside() {
         })}
       >
         <Button
+          variant="soft"
           className={styles.detailMenuItem}
           onClick={() => {
             close();
@@ -56,6 +53,7 @@ function Aside() {
           개발사항
         </Button>
         <Button
+          variant="soft"
           className={styles.detailMenuItem}
           onClick={() => {
             close();

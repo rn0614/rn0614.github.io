@@ -6,9 +6,11 @@ import { FaAlignJustify } from "react-icons/fa";
 import { Button, Container, DropdownMenu, Flex } from "@radix-ui/themes";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 function Header() {
   const router = useRouter();
+  const t = useTranslations();
   return (
     <Container asChild className={styles.header}>
       <header>
@@ -42,13 +44,13 @@ function Header() {
                     className={styles.dropdownMenu__item}
                     onClick={() => router.push("/category/dev")}
                   >
-                    개발사항
+                    {t('category.dev')}
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
                     className={styles.dropdownMenu__item}
                     onClick={() => router.push("/category/etc")}
                   >
-                    기타
+                    {t('category.etc')}
                   </DropdownMenu.Item>
                 </DropdownMenu.SubContent>
               </DropdownMenu.Sub>

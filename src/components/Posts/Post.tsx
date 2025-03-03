@@ -1,5 +1,5 @@
 "use client";
-import { useAside } from "@/hook/useAside";
+import { useAside } from "@/hooks/useAside";
 import { useRouter } from "next/navigation";
 import styles from "./styles.module.scss";
 import React, { useState } from "react";

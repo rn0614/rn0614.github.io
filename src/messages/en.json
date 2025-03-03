@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "SW Engineer dev Koo",
+    "description": "SW Engineer sangmo koo's blog."
+  },
+  "categoryMenu":{
+    "home":"home",
+    "posting":"posting",
+    "routine":"routine",
+    "schedule":"schedule"
+  },
+  "category": {
+    "dev": "develop log",
+    "etc": "etc"
+  }
+}
