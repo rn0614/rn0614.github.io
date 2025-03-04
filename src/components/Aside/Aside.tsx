@@ -8,6 +8,7 @@ import AsideIcon from "../AsideIcon/AsideIcon";
 import { useRouter } from "next/navigation";
 import withMobileVisibility from "../hoc/withMobileVisibility";
 import { Button } from "@radix-ui/themes";
+import { FaRegStickyNote } from "react-icons/fa";
 
 function Aside() {
   const { isOpen, close, toggle } = useAside();
@@ -32,6 +33,15 @@ function Aside() {
             Icon={FaCode}
             title={"코드"}
             onClick={toggle}
+            isOpen={isOpen}
+          />
+          <AsideIcon
+            Icon={FaRegStickyNote}
+            title={"GPT히스토리"}
+            onClick={()=>{
+              close();
+              router.push("/chagptHistory")
+            }}
             isOpen={isOpen}
           />
         </div>
