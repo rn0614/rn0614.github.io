@@ -36,15 +36,15 @@ export default function MyProflie() {
                 프로필
               </Heading>
               <Text>Tel : 010-9502-8766</Text>
-              <Text>Mail : 010-9502-8766</Text>
+              <br />
+              <Text>Mail : green0614@gmail.com</Text>
               <Hr />
             </li>
             <li>
               <Heading as="h3" size="6">
                 학력
               </Heading>
-              <Text>2014.02 ~ 2020.02</Text>
-              <Text>인하대학교 기계공학과</Text>
+              <Text>2014.02 ~ 2020.02 인하대학교 기계공학과</Text>
               <Hr />
             </li>
             <li>

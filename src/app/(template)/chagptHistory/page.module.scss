@@ -1,0 +1,12 @@
+.jsonInput::file-selector-button {
+  width: 150px;
+  height: 30px;
+  background:var(--accent-9);
+  border: 1px solid var(--accent-10);
+  border-radius: 10px;
+  color: var(--accent-contrast);
+  cursor: pointer;
+  &:hover {
+    background: var(--accent-10);
+  }
+}
