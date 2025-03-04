@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import RecoilProvider from "@/Provider/RecoilProvider";
 import ThemeProvider from "@/Provider/ThemeProvider";
-import { useLocale } from "next-intl";
-import NextIntlProvider from "@/Provider/NextIntlProvider";
+//import { useLocale } from "next-intl";
+//import NextIntlProvider from "@/Provider/NextIntlProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,22 +46,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const locale = useLocale();
+  //const locale = useLocale();
   return (
-    <html lang={locale}>
+    <html lang={'ko'}>
       <head>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css"
           rel="stylesheet"
         ></link>
       </head>
-      <NextIntlProvider>
+      {/* <NextIntlProvider> */}
         <RecoilProvider>
           <body className={inter.className}>
             <ThemeProvider>{children}</ThemeProvider>
           </body>
         </RecoilProvider>
-      </NextIntlProvider>
+      {/* </NextIntlProvider> */}
     </html>
   );
 }

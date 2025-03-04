@@ -1,8 +1,6 @@
-const createNextIntlPlugin = require('next-intl/plugin');
-const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 
-const nextConfig = withNextIntl({
+const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "export",
   compiler: {
@@ -11,6 +9,6 @@ const nextConfig = withNextIntl({
         ? { exclude: ["error", "warn"] }
         : false,
   },
-});
+};
 
 module.exports = nextConfig;
