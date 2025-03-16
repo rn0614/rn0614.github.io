@@ -6,17 +6,20 @@
   padding-inline: 20px;
   flex-direction: row;
   justify-content: space-between;
+  .headerContent {
+    flex: 1;
+  }
 }
 
-.dropdownMenu__button{
-  &:hover{
+.dropdownMenu__button {
+  &:hover {
     transition: 0.3s;
-    color:blue;
+    color: blue;
   }
 }
 
 .dropdownMenu__item {
   height: 3rem;
   width: 12rem;
-  font-size:1.5rem
+  font-size: 1.5rem;
 }

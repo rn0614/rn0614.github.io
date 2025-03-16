@@ -6,13 +6,28 @@ import { FaHome } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
 import AsideIcon from "../AsideIcon/AsideIcon";
 import { useRouter } from "next/navigation";
-import withMobileVisibility from "../hoc/withMobileVisibility";
 import { Button } from "@radix-ui/themes";
 import { FaRegStickyNote } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 function Aside() {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const { isOpen, close, toggle } = useAside();
   const router = useRouter();
+
+  // 클라이언트에서 화면 크기를 감지하여 모바일 여부 설정
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    // 최초 한 번 체크
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  
+  if (isMobile) return null;
   return (
     <div
       className={classNames(styles.aside, {
@@ -77,4 +92,4 @@ function Aside() {
   );
 }
 
-export default withMobileVisibility(null, Aside);
+export default Aside;
