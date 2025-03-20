@@ -40,8 +40,16 @@ next-env.d.ts
 .obsidian
 
 # 비공유 파일
-/private
+/posts/100 Resources/101 Temp
+/posts/200 Thought
+/posts/300 Life
+/posts/500 Dataview
+/posts/800 Achaive
+/posts/900 Settings
 
+/privates
+
+private_*
 
 
 # Ignore Smart Environment folder

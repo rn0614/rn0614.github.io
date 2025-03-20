@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "private/900 Settings/903 Scripts/postTemplaterFn.js", "private/900 Settings/903 Scripts/postTemplaterFn.js"],
   "exclude": ["node_modules"]
 }
