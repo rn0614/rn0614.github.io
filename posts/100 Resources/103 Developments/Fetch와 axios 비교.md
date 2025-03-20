@@ -12,7 +12,7 @@ last_modified_at: 2025/03/18 22:00:58
 ## DOM(Document Object Model)
 > 마크업 언어로 작성된 문서를 프로그래밍 언어가 조작할 수 있도록 하는 객체.  계층적 구조로 이루어짐. 
 
-[css선택자](posts/100%20Resources/103%20Developments/css선택자.md)
+[css선택자](posts/100-Resources/103%20Developments/css선택자.md)
 [DOM이벤트종류](posts/dev/Front/DOM이벤트종류.md)
 ```js
 document.querySelector('.className').addEventHandler("click",()=>{

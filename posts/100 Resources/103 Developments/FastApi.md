@@ -19,7 +19,7 @@ Flask, django에 이은 python web api 라이브러리이다.
 
 ## API 명세서(Swagger)
 기본적으로 fastapi 는 Swagger를 내장한다. 따라서 `{root}/docs` 위치로 가면 자동으로 fastAPI 내용을 볼 수 있다.
-[SWAGGER관련 포스팅](posts/100%20Resources/103%20Developments/SWAGGER.md)
+[SWAGGER관련 포스팅](posts/100-Resources/103%20Developments/SWAGGER.md)
 
 
 ## 코드

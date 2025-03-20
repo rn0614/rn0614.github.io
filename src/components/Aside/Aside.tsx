@@ -72,7 +72,7 @@ function Aside() {
           className={styles.detailMenuItem}
           onClick={() => {
             close();
-            router.push("/category/dev");
+            router.push("/category/100 Resources");
           }}
         >
           개발사항
@@ -82,7 +82,7 @@ function Aside() {
           className={styles.detailMenuItem}
           onClick={() => {
             close();
-            router.push("/category/etc");
+            router.push("/category/dev");
           }}
         >
           기타

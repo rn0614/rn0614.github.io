@@ -5,7 +5,7 @@ import { Heading } from "@radix-ui/themes";
 
 // 동적 경로를 사전 정의
 export async function generateStaticParams() {
-  return ["dev", "etc"].map((item) => ({ category: item }));
+  return ["100%20Resources",'dev'].map((item) => ({ category: item }));
 }
 
 export default function Category1Page({

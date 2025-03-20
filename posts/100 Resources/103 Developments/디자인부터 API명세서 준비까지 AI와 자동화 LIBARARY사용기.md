@@ -12,7 +12,7 @@ last_modified_at: 2025/01/01 00:00:00
 ## 0. 가정
 1. 프로젝트 idea 수립완료 (figjam)[[private/100 Resources/103 Developments/Figma의 jambot 으로 ideate 과정]]
 2. 프로젝트 기획 완료 (figjam,  github) 
-3. 프로젝트 design 수립완료 (v0.dev) https://v0.dev/    (figma) [[posts/100 Resources/106 Side Assistant/FIGMA로 디자인하기]]
+3. 프로젝트 design 수립완료 (v0.dev) https://v0.dev/    (figma) [[posts/100-Resources/106 Side Assistant/FIGMA로 디자인하기]]
 
 ## 1. 기술스택 선택
 ### 1) 웹만을 고려했을 때

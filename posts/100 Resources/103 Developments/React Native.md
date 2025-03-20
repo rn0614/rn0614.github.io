@@ -16,7 +16,7 @@ last_modified_at: 2024/09/17 00:00:00
 > desktop-app : react-electron
 
 1. 로컬 설정
-    [모바일_Emulator_환경_설정](posts/100%20Resources/103%20Developments/모바일_Emulator_환경_설정.md)
+    [모바일_Emulator_환경_설정](posts/100-Resources/103%20Developments/모바일_Emulator_환경_설정.md)
 2. 기능
 3. build
 4. 배포

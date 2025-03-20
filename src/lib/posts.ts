@@ -2,9 +2,8 @@ import { sync } from "glob";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import { PostDetailType, PostMetadata } from "../types/types";
+import { PostMetadata } from "../types/types";
 import dayjs from "dayjs";
-import readingTime from "reading-time";
 import { wrapWithDebug } from "./util/wrapWithDebug";
 
 export const POST_BASE_PATH = "posts";
@@ -23,10 +22,16 @@ export const getAllPostsList = wrapWithDebug((category?: string) => {
   if (postsCache[cacheKey]) {
     return postsCache[cacheKey];
   }
+  const categoryPattern = category ? category : "100 Resources";
+  // 모든 경로를 path.join으로 구성하여 glob 패턴 생성
+  const globPattern = path.join(POSTS_PATH, categoryPattern, "**", "*.md");
+  // 운영체제에 따라 다르게 생성된 경로 구분자를 forward slash로 변환
+  const normalizedPattern = globPattern.split(path.sep).join("/").replaceAll('%20',' ');
+  
+  const ignorePatterns = ['**/private_*','**/101 Temp/**'];
 
-  const postPaths: string[] = sync(
-    `${POSTS_PATH}/${category ? category : "**"}/**/*.md`
-  );
+
+  const postPaths: string[] = sync(normalizedPattern,{ignore:ignorePatterns});
 
   const posts = postPaths
     .map((path) => {
@@ -37,8 +42,8 @@ export const getAllPostsList = wrapWithDebug((category?: string) => {
     })
     .sort(
       (a, b) =>
-        dayjs(b.metadata?.last_modified_at||'2020/01/01 00:00:00').valueOf() -
-        dayjs(a.metadata?.last_modified_at||'2020/01/01 00:00:00').valueOf()
+        dayjs(b.metadata?.last_modified_at || "2020/01/01 00:00:00").valueOf() -
+        dayjs(a.metadata?.last_modified_at || "2020/01/01 00:00:00").valueOf()
     );
 
   // 캐시에 결과 저장

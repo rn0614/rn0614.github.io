@@ -62,7 +62,7 @@ mvn clean install
 ```
 
 ### front 프로젝트와 같이실행
-[PM2를 통한 무중단 배포](posts/100%20Resources/103%20Developments/PM2를%20통한%20무중단%20배포.md)
+[PM2를 통한 무중단 배포](posts/100-Resources/103%20Developments/PM2를%20통한%20무중단%20배포.md)
 
 ```shell
 # pm2 설치 (pm2: process manager / 백그라운드에서 실행되는 프로세스를 관리)

@@ -105,7 +105,7 @@ console.dir({key:1, value:"예시값1"})
 
 
 ## 이런 콘솔로그를 꼭 지워야만하는 것일까?
-[PRODUCT에서 로그제거](posts/100%20Resources/103%20Developments/PRODUCT에서%20로그제거.md)
+[PRODUCT에서 로그제거](posts/100-Resources/103%20Developments/PRODUCT에서%20로그제거.md)
 ```js
 const nextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
@@ -119,4 +119,4 @@ const nextConfig = {
 };
 ```
 
-[디버그로 감싸기](posts/100%20Resources/103%20Developments/디버그로%20감싸기.md)
+[디버그로 감싸기](posts/100-Resources/103%20Developments/디버그로%20감싸기.md)
