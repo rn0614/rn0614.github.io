@@ -41,3 +41,11 @@ next-env.d.ts
 
 # 비공유 파일
 /private
+
+
+
+# Ignore Smart Environment folder
+.smart-env
+.smtcmp_vector_db.tar.gz
+.smtcmp_chat_histories
+.swc

@@ -13,5 +13,7 @@ ci:	CI/CD 관련 설정 변경
 build:	빌드 관련 파일 수정 (예: package.json, webpack 설정 변경)
 revert:	이전 커밋을 되돌림
 infra:	인프라 관련 수정 (서버, 배포 설정 등)
+rename: 파일 및 폴더명 수정
+post: posting
 
 Resolves: #123
