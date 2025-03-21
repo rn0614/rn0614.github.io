@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPages = posts.map((post:any) => {
     return {
-      url: encodeURI(`${baseUrl}/${post.slug.replace(/\\/g, "/")}`),
+      url: encodeURI(`${baseUrl}/${post.slug.replace(/\\/g, "/").replace(/\.md$/, "")}`),
       lastModified: dayjs(
         post.metadata?.last_modified_at || "2025/01/01 00:00:00",
         "YYYY/MM/DD HH:mm:ss"
