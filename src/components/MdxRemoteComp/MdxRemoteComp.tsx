@@ -4,11 +4,11 @@ import remarkGfm from 'remark-gfm'
 const components = {
   img: (props: any) => <img {...props} src={props.src.replace("public", "")} loading="lazy"/>, //public 주소만 제외
   a:(props:any) => <a {...props} href={`/${props.href}`}/>,
-  h1:(props:any) => <h2 {...props}/>,
-  h2:(props:any) => <h3 {...props}/>,
-  h3:(props:any) => <h4 {...props}/>,
-  h4:(props:any) => <h5 {...props}/>,
-  h5:(props:any) => <h6 {...props}/>,
+  h1:(props:any) => <h1 {...props}/>,
+  h2:(props:any) => <h2 {...props}/>,
+  h3:(props:any) => <h3 {...props}/>,
+  h4:(props:any) => <h4 {...props}/>,
+  h5:(props:any) => <h5 {...props}/>,
   h6:(props:any) => <h6 {...props}/>,
   pre:(props:any) => <pre {...props} className={styles.mdPre}/>
 };
