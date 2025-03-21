@@ -58,7 +58,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   const movePageHandler = async () => {
     console.log(metadata);
     close();
-    router.push("/" + slug);
+    router.push("/" + slug.replace(/\.md$/, ""));
   };
 
   return (

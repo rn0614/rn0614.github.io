@@ -27,12 +27,15 @@ export const getAllPostsList = wrapWithDebug((category?: string) => {
   const globPattern = path.join(POSTS_PATH, categoryPattern, "**", "*.md");
   // 운영체제에 따라 다르게 생성된 경로 구분자를 forward slash로 변환
   const normalizedPattern = globPattern.split(path.sep).join("/");
-  
-  const ignorePatterns = ['**/private_*','**/101 Temp/**'];
 
-  const postPaths: string[] = sync(normalizedPattern,{ignore:ignorePatterns});
+  const ignorePatterns = ["**/private_*", "**/101 Temp/**"];
 
-  const posts = postPaths.map((path)=>path)
+  const postPaths: string[] = sync(normalizedPattern, {
+    ignore: ignorePatterns,
+  });
+
+  const posts = postPaths
+    .map((path) => path)
     .map((path) => {
       return {
         slug: path.slice(path.indexOf(POST_BASE_PATH)),

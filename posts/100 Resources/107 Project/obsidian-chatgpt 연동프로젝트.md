@@ -21,6 +21,7 @@ last_modified_at: 2025/03/16 21:22:18
 
 
 chatgpt의 설정에서 데이터 내보내기를 클릭하면 내 메일로 데이터를 보내준다.(zip 파일)
+
 ![](public/image/Pasted%20image%2020250304012442.png)
 
 해당파일을 풀면 다음과 같이 나오는데 다른건 빼고 우리가 볼건 conversations.json이다. chat.html에도 대화내역이 들어있지만 json을 파싱해서 사용하도록 하자.

@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   const posts = getAllPostsList();
   return posts.map((post: any) => {
     return {
-      slugs: post.slug.slice(POST_BASE_PATH.length + 1).split(path.sep), // slug는 ['dev','title1','안녕하세요.md']
+      slugs: post.slug.replace(/\.md(?!.*\.md)/, '').slice(POST_BASE_PATH.length + 1).split(path.sep), // slug는 ['dev','title1','안녕하세요.md']
     };
   });
 }
@@ -28,7 +28,7 @@ export async function generateMetadata({
   const pathSlugs = (params.slugs as string[]).map((slug) =>
     decodeURIComponent(slug)
   );
-  const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;
+  const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}.md`;
 
   const postInfo = parsePost(postPath);
   if (!postInfo) {
@@ -71,7 +71,7 @@ export default async function PostPage({
     decodeURIComponent(slug)
   );
   // 파일 시스템 경로 생성
-  const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}`;
+  const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}.md`;
   const postInfo = parsePost(postPath); // 이미 인코딩 상태로 path에 들어감
   if (postInfo === undefined) return <div>no data</div>;
   return (
