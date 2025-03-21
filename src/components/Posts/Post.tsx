@@ -52,8 +52,6 @@ function PostList({
 }
 
 function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
-  const { close } = useAside();
-  const router = useRouter();
   const filename = slug.replace(/\.md$/, "").split(/[\\/]/).pop();
 
   return (
@@ -70,6 +68,8 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
             className={styles.insetImage}
           />
         </Inset>
+      </Link>
+      <Link href={"/" + slug.replace(/\.md$/, "")} className={styles.flexDetailLink}>
         <Flex direction={"column"} className={styles.cardDescription}>
           <Heading as={"h3"} className={styles.title}>
             {filename ?? metadata?.title ?? "제목없음"}
