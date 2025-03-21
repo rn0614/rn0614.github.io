@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { Card, Flex, Inset, Text, Heading } from "@radix-ui/themes";
 import { PostMetadata } from "@/types/types";
 import Pagination from "../Pagination/Pagination";
+import Link from "next/link";
 
 function PostList({
   posts,
@@ -55,15 +56,9 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   const router = useRouter();
   const filename = slug.replace(/\.md$/, "").split(/[\\/]/).pop();
 
-  const movePageHandler = async () => {
-    console.log(metadata);
-    close();
-    router.push("/" + slug.replace(/\.md$/, ""));
-  };
-
   return (
-    <>
-      <Card className={styles.postItemContent} onClick={movePageHandler}>
+    <Card className={styles.postItemContent}>
+      <Link href={"/" + slug.replace(/\.md$/, "")}>
         <Inset clip="padding-box" className={styles.cardInset}>
           <img
             src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
@@ -82,8 +77,8 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
           <Text>{metadata?.last_modified_at}</Text>
           <Text className={styles.body}>{metadata.excerpt}</Text>
         </Flex>
-      </Card>
-    </>
+      </Link>
+    </Card>
   );
 }
 

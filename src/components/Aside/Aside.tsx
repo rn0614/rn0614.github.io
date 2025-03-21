@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@radix-ui/themes";
 import { FaRegStickyNote } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 function Aside() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -26,7 +27,6 @@ function Aside() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  
   if (isMobile) return null;
   return (
     <div
@@ -53,9 +53,9 @@ function Aside() {
           <AsideIcon
             Icon={FaRegStickyNote}
             title={"GPT히스토리"}
-            onClick={()=>{
+            onClick={() => {
               close();
-              router.push("/chagptHistory")
+              router.push("/chagptHistory");
             }}
             isOpen={isOpen}
           />
@@ -67,26 +67,18 @@ function Aside() {
           [styles.open]: isOpen,
         })}
       >
-        <Button
-          variant="soft"
+        <Link
+          href="/category/100 Resources"
           className={styles.detailMenuItem}
-          onClick={() => {
-            close();
-            router.push("/category/100 Resources");
-          }}
         >
           개발사항
-        </Button>
-        <Button
-          variant="soft"
+        </Link>
+        <Link
+          href="/category/100 Resources"
           className={styles.detailMenuItem}
-          onClick={() => {
-            close();
-            router.push("/category/dev");
-          }}
         >
           기타
-        </Button>
+        </Link>
       </ul>
     </div>
   );
