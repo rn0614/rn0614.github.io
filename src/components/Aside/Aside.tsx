@@ -74,7 +74,7 @@ function Aside() {
           개발사항
         </Link>
         <Link
-          href="/category/100 Resources"
+          href="/category/dev"
           className={styles.detailMenuItem}
         >
           기타

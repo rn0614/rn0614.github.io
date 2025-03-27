@@ -56,7 +56,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
 
   return (
     <Card className={styles.postItemContent}>
-      <Link href={"/" + slug.replace(/\.md$/, "")}>
+      <Link href={"/" + encodeURIComponent(slug.replace(/\.md$/, ""))}>
         <Inset clip="padding-box" className={styles.cardInset}>
           <img
             src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
@@ -69,7 +69,7 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
           />
         </Inset>
       </Link>
-      <Link href={"/" + slug.replace(/\.md$/, "")} className={styles.flexDetailLink}>
+      <Link href={"/" + encodeURIComponent(slug.replace(/\.md$/, ""))} className={styles.flexDetailLink}>
         <Flex direction={"column"} className={styles.cardDescription}>
           <Heading as={"h3"} className={styles.title}>
             {filename ?? metadata?.title ?? "제목없음"}
