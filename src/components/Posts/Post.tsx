@@ -55,11 +55,19 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   const filename = slug.replace(/\.md$/, "").split(/[\\/]/).pop();
   
   const createUrl = (path: string) => {
-    return "/" + path
-      .replace(/\.md$/, "")
-      .split(/[\\/]/)
-      .map(part => encodeURIComponent(part))
-      .join("/");
+    const cleanPath = path.replace(/\.md$/, "");
+    const pathParts = cleanPath.split(/[\\/]/);
+    
+    const encodedParts = pathParts.map((part: string) => {
+      try {
+        const decoded = decodeURIComponent(part);
+        return part;
+      } catch (e) {
+        return encodeURIComponent(part);
+      }
+    });
+    
+    return "/" + encodedParts.join("/");
   };
 
   return (

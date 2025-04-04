@@ -22,8 +22,22 @@ export async function generateStaticParams() {
     // 경로를 슬래시로 분리
     const pathParts = relativePath.split(path.sep);
     
+    // 각 경로 부분을 인코딩 (이중 인코딩 방지)
+    const encodedParts = pathParts.map((part: string) => {
+      // 이미 인코딩된 부분이 있는지 확인
+      try {
+        // 디코딩 시도
+        const decoded = decodeURIComponent(part);
+        // 디코딩 성공 시 원본 값 사용
+        return part;
+      } catch (e) {
+        // 디코딩 실패 시 인코딩
+        return encodeURIComponent(part);
+      }
+    });
+    
     return {
-      slugs: pathParts,
+      slugs: encodedParts,
     };
   });
 }
