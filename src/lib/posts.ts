@@ -48,11 +48,9 @@ export const getAllPostsList = wrapWithDebug((category?: string) => {
       // 파일 시스템 경로에서 상대 경로 추출
       const relativePath = filePath.slice(filePath.indexOf(POST_BASE_PATH));
       
-      // 상대 경로를 인코딩하여 URL용 경로 생성
-      const encodedPath = relativePath.split(path.sep).map(part => encodeURIComponent(part)).join(path.sep);
-      
+      // 인코딩하지 않고 원본 경로 그대로 사용
       return {
-        slug: encodedPath,
+        slug: relativePath,
         metadata: parsePost(filePath),
       };
     })
