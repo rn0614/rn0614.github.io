@@ -13,8 +13,17 @@ import { Heading } from "@radix-ui/themes";
 export async function generateStaticParams() {
   const posts = getAllPostsList();
   return posts.map((post: any) => {
+    // 경로에서 .md 확장자 제거
+    const cleanSlug = post.slug.replace(/\.md$/, '');
+    
+    // POST_BASE_PATH 이후의 경로만 추출
+    const relativePath = cleanSlug.slice(POST_BASE_PATH.length + 1);
+    
+    // 경로를 슬래시로 분리
+    const pathParts = relativePath.split(path.sep);
+    
     return {
-      slugs: post.slug.replace(/\.md(?!.*\.md)/, '').slice(POST_BASE_PATH.length + 1).split(path.sep), // slug는 ['dev','title1','안녕하세요.md']
+      slugs: pathParts,
     };
   });
 }
@@ -86,7 +95,7 @@ export default async function PostPage({
       }}
     >
       <Heading as="h1">
-        {pathSlugs[pathSlugs.length - 1].replace(".md", "")}
+        {decodeURIComponent(pathSlugs[pathSlugs.length - 1].replace(".md", ""))}
       </Heading>
       <MdxRenderer source={postInfo.content} />
     </main>

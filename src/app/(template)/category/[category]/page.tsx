@@ -16,7 +16,7 @@ export default function Category1Page({
   const posts = getAllPostsList(decodeURIComponent(params.category));
   return (
     <main style={{paddingInline:"20px"}}>
-      <Heading as="h1">{params.category}</Heading>
+      <Heading as="h1">{decodeURIComponent(params.category)}</Heading>
       <PostList posts={posts} />
     </main>
   );

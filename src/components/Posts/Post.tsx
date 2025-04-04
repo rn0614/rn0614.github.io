@@ -53,10 +53,18 @@ function PostList({
 
 function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
   const filename = slug.replace(/\.md$/, "").split(/[\\/]/).pop();
+  
+  const createUrl = (path: string) => {
+    return "/" + path
+      .replace(/\.md$/, "")
+      .split(/[\\/]/)
+      .map(part => encodeURIComponent(part))
+      .join("/");
+  };
 
   return (
     <Card className={styles.postItemContent}>
-      <Link href={"/" + encodeURIComponent(slug.replace(/\.md$/, ""))}>
+      <Link href={createUrl(slug)}>
         <Inset clip="padding-box" className={styles.cardInset}>
           <img
             src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
@@ -69,10 +77,10 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
           />
         </Inset>
       </Link>
-      <Link href={"/" + encodeURIComponent(slug.replace(/\.md$/, ""))} className={styles.flexDetailLink}>
+      <Link href={createUrl(slug)} className={styles.flexDetailLink}>
         <Flex direction={"column"} className={styles.cardDescription}>
           <Heading as={"h3"} className={styles.title}>
-            {filename ?? metadata?.title ?? "제목없음"}
+            {decodeURIComponent(filename ?? metadata?.title ?? "제목없음")}
           </Heading>
           <Text>{metadata?.last_modified_at}</Text>
           <Text className={styles.body}>{metadata.excerpt}</Text>
