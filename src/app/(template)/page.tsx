@@ -5,6 +5,7 @@ import SelfRecomandation from "@/components/RecommandationComp/SelfRecomandation
 import MyProflie from "@/components/RecommandationComp/MyProflie";
 import WorkProject from "@/components/RecommandationComp/WorkProject";
 import StudyProject from "@/components/RecommandationComp/StudyProject";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -22,6 +23,7 @@ export default function Home() {
         <Hr />
         <StudyProject />
         <Hr />
+        <Link href="/posts/100 Resources/103 Developments/Fetch와 axios 비교">테스트링크</Link>
       </Container>
     </main>
   );
