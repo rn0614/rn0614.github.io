@@ -2,7 +2,7 @@ import "@radix-ui/themes/styles.css";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import RecoilProvider from "@/Provider/RecoilProvider";
+//import RecoilProvider from "@/Provider/RecoilProvider";
 import ThemeProvider from "@/Provider/ThemeProvider";
 //import { useLocale } from "next-intl";
 //import NextIntlProvider from "@/Provider/NextIntlProvider";
@@ -56,11 +56,11 @@ export default function RootLayout({
         ></link>
       </head>
       {/* <NextIntlProvider> */}
-        <RecoilProvider>
+        {/* <RecoilProvider> */}
           <body className={inter.className}>
             <ThemeProvider>{children}</ThemeProvider>
           </body>
-        </RecoilProvider>
+        {/* </RecoilProvider> */}
       {/* </NextIntlProvider> */}
     </html>
   );

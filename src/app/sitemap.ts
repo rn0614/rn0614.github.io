@@ -3,6 +3,9 @@ import dayjs from "dayjs";
 import { MetadataRoute } from "next";
 import path from "path";
 
+// 정적 내보내기를 위한 설정 추가
+export const dynamic = "force-static";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://rn0614.github.io';
 
@@ -18,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 경로를 슬래시로 분리
     const pathParts = relativePath.split(path.sep);
     
-    // 각 경로 부분을 인코딩 (이중 인코딩 방지)
+    // 각 경로 부분을 인코딩
     const encodedParts = pathParts.map((part: string) => {
       // 이미 인코딩된 부분이 있는지 확인
       try {

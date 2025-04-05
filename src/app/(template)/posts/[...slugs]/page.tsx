@@ -22,7 +22,7 @@ export async function generateStaticParams() {
     // 경로를 슬래시로 분리
     const pathParts = relativePath.split(path.sep);
     
-    // 각 경로 부분을 인코딩 (이중 인코딩 방지)
+    // 각 경로 부분을 인코딩
     const encodedParts = pathParts.map((part: string) => {
       // 이미 인코딩된 부분이 있는지 확인
       try {
@@ -43,11 +43,12 @@ export async function generateStaticParams() {
 }
 
 // 여기에 동적 metatag 생성
-export async function generateMetadata({
-  params,
-}: {
-  params: PostDetailType;
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<PostDetailType>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const pathSlugs = (params.slugs as string[]).map((slug) =>
     decodeURIComponent(slug)
   );
