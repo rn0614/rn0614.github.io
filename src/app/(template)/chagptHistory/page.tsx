@@ -5,6 +5,9 @@ import { Box, Button, Text } from "@radix-ui/themes";
 import styles from "./page.module.scss";
 import { useRouter } from "next/navigation";
 
+// 정적 내보내기 과정에서 Recoil 관련 오류를 방지하기 위한 설정
+export const dynamic = "force-dynamic";
+
 export default function FileUploaderPage() {
   const [file, setFile] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);

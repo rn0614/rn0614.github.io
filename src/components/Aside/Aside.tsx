@@ -11,6 +11,9 @@ import { FaRegStickyNote } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+// 정적 내보내기 과정에서 Recoil 관련 오류를 방지하기 위한 설정
+export const dynamic = "force-dynamic";
+
 function Aside() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const { isOpen, close, toggle } = useAside();
