@@ -78,8 +78,6 @@ export async function generateMetadata({
       description: postInfo?.excerpt || showTitle,
       url: `https://rn0614.github.io/posts/${urlPath}`,
       type: "article",
-      publishedTime: postInfo?.date,
-      modifiedTime: postInfo?.last_modified_at,
     },
     twitter: {
       card: "summary_large_image",
