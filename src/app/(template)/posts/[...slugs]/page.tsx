@@ -64,6 +64,11 @@ export async function generateMetadata({
   const showTitle =
     postInfo?.title || pathSlugs[pathSlugs.length - 1].replace(".md", "") || "제목 미정";
 
+  // URL 생성을 위한 경로 처리
+  const urlPath = pathSlugs
+    .map(slug => encodeURIComponent(slug))
+    .join('/');
+
   return {
     title: showTitle,
     description: postInfo?.excerpt || showTitle,
@@ -71,7 +76,7 @@ export async function generateMetadata({
     openGraph: {
       title: showTitle,
       description: postInfo?.excerpt || showTitle,
-      url: `https://rn0614.github.io/${postPath}`,
+      url: `https://rn0614.github.io/posts/${urlPath}`,
       type: "article",
       publishedTime: postInfo?.date,
       modifiedTime: postInfo?.last_modified_at,
