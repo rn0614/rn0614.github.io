@@ -45,7 +45,7 @@ function Header() {
               <DropdownMenu.SubContent>
                 <DropdownMenu.Item
                   className={styles.dropdownMenu__item}
-                  onClick={() => router.push("/category/dev")}
+                  onClick={() => router.push("/category/100%20Resources")}
                 >
                   dev
                 </DropdownMenu.Item>

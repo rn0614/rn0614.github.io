@@ -70,12 +70,14 @@ function Aside() {
         <Link
           href="/category/100 Resources"
           className={styles.detailMenuItem}
+          onClick={close}
         >
           개발사항
         </Link>
         <Link
           href="/category/dev"
           className={styles.detailMenuItem}
+          onClick={close}
         >
           기타
         </Link>

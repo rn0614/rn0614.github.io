@@ -52,12 +52,13 @@ function PostList({
 }
 
 function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
+  const { close } = useAside();
   const filename = slug.replace(/\.md$/, "").split(/[\\/]/).pop();
-  
+
   const createUrl = (path: string) => {
     const cleanPath = path.replace(/\.md$/, "");
     const pathParts = cleanPath.split(/[\\/]/);
-    
+
     const encodedParts = pathParts.map((part: string) => {
       try {
         const decoded = decodeURIComponent(part);
@@ -66,26 +67,25 @@ function Post({ slug, metadata }: { slug: string; metadata: PostMetadata }) {
         return encodeURIComponent(part);
       }
     });
-    
+
     return "/" + encodedParts.join("/");
   };
 
   return (
     <Card className={styles.postItemContent}>
-      <Link href={createUrl(slug)}>
+      <Link href={createUrl(slug)} onClick={close}>
         <Inset clip="padding-box" className={styles.cardInset}>
           <img
-            src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
-              !!!metadata?.thumnail
+            src={`${process.env.NEXT_PUBLIC_BASE_URL}/${!!!metadata?.thumnail
                 ? "image/no-image-found.png"
                 : metadata.thumnail
-            }`}
+              }`}
             alt="Bold typography"
             className={styles.insetImage}
           />
         </Inset>
       </Link>
-      <Link href={createUrl(slug)} className={styles.flexDetailLink}>
+      <Link href={createUrl(slug)} className={styles.flexDetailLink} onClick={close}>
         <Flex direction={"column"} className={styles.cardDescription}>
           <Heading as={"h3"} className={styles.title}>
             {decodeURIComponent(filename ?? metadata?.title ?? "제목없음")}
