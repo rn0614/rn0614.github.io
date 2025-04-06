@@ -66,6 +66,7 @@
     flex: 1;
     padding-inline: 12px;
     padding-bottom: 12px;
+    min-width: 0px;
   }
   @media (max-width: 768px) {
     display: flex;
