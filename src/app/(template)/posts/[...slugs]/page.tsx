@@ -64,23 +64,10 @@ export async function generateMetadata({
   const showTitle =
     postInfo?.title || pathSlugs[pathSlugs.length - 1].replace(".md", "") || "제목 미정";
 
-  // URL 생성을 위한 경로 처리
-  const urlPath = pathSlugs
-    .map(slug => encodeURIComponent(slug))
-    .join('/');
-
   return {
     title: showTitle,
     description: postInfo?.excerpt || showTitle,
-    keywords: postInfo?.tags,
     openGraph: {
-      title: showTitle,
-      description: postInfo?.excerpt || showTitle,
-      url: `https://rn0614.github.io/posts/${urlPath}`,
-      type: "article",
-    },
-    twitter: {
-      card: "summary_large_image",
       title: showTitle,
       description: postInfo?.excerpt || showTitle,
     },
@@ -99,7 +86,6 @@ export default async function PostPage({
   // 파일 시스템 경로 생성
   const postPath = `posts${path.sep}${pathSlugs.join(path.sep)}.md`;
   const postInfo = parsePost(postPath); // 이미 인코딩 상태로 path에 들어감
-  if (postInfo === undefined) return <div>no data</div>;
   return (
     <main
       className="markdown-body"
@@ -114,7 +100,7 @@ export default async function PostPage({
       <Heading as="h1">
         {decodeURIComponent(pathSlugs[pathSlugs.length - 1].replace(".md", ""))}
       </Heading>
-      <MdxRenderer source={postInfo.content} />
+      <MdxRenderer source={postInfo!.content} />
     </main>
   );
 }
