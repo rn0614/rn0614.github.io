@@ -76,13 +76,6 @@ export async function generateMetadata({
     openGraph: {
       title: showTitle,
       description: postInfo?.excerpt || showTitle,
-      url: `https://rn0614.github.io/test/${urlPath}`,
-      type: "article",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: showTitle,
-      description: postInfo?.excerpt || showTitle,
     },
   };
 }
