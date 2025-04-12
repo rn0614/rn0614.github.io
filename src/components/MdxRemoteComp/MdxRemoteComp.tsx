@@ -2,7 +2,7 @@ import styles from "./style.module.scss";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from 'remark-gfm'
 const components = {
-  img: (props: any) => <img {...props} src={props.src.replace("public", "")} loading="lazy"/>, //public 주소만 제외
+  img: (props: any) => <img {...props} src={props.src.replace("public", "")} loading="lazy" alt={props.alt || ""}/>, //public 주소만 제외
   a: (props: any) => {
     // href가 없는 경우 처리
     if (!props.href) {
@@ -11,7 +11,7 @@ const components = {
     
     // 절대 경로인 경우 (http:// 또는 https://로 시작)
     if (props.href.startsWith('http://') || props.href.startsWith('https://')) {
-      return <a {...props} />;
+      return <a {...props} rel={props.href.startsWith('http') ? "noopener noreferrer" : undefined} />;
     }
     
     // 상대 경로인 경우
