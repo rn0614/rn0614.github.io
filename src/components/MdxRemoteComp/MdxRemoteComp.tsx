@@ -43,8 +43,6 @@ export default function MdxRenderer({
 }) {
   if (source === undefined) return <div>no</div>;
   return (
-    <div className={styles.mdxWrapper}>
-      <MDXRemote source={source} components={components} options={{mdxOptions:{remarkPlugins:[remarkGfm]}}}/>
-    </div>
+    <MDXRemote source={source} components={components} options={{mdxOptions:{remarkPlugins:[remarkGfm]}}}/>
   );
 }

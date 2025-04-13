@@ -96,6 +96,7 @@ export default async function PostPage({
         flexDirection: "column",
         paddingInline: "20px",
         minWidth: "0",
+        paddingBlock: "4px",
       }}
     >
       <Heading as="h1">
