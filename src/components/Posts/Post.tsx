@@ -1,6 +1,6 @@
 "use client";
 import { useAside } from "@/hooks/useAside";
-import { useRouter } from "next/navigation";
+import { useRouter,useSearchParams } from "next/navigation";
 import styles from "./styles.module.scss";
 import React, { useState } from "react";
 import { Card, Flex, Inset, Text, Heading } from "@radix-ui/themes";
@@ -10,23 +10,28 @@ import Link from "next/link";
 
 function PostList({
   posts,
+  category,
 }: {
   posts: {
     slug: string;
     metadata: any;
   }[];
+  category?: string;
 }) {
-  const [currentPage, setCurrentPage] = useState(1);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pageParam = Number(searchParams.get("page")) || 1;
   const [limitPage, setLimitPage] = useState<number>(10);
   const filteredPost = posts.filter((_, idx) => {
     return (
-      idx >= (currentPage - 1) * limitPage && idx < currentPage * limitPage
+      idx >= (pageParam - 1) * limitPage && idx < pageParam * limitPage
     );
   });
   const totalPages = Math.ceil(posts.length / limitPage);
 
   const goPage = (num: number) => {
-    setCurrentPage(num);
+    console.log('here')
+    router.push(`/category/${encodeURIComponent(category ?? "")}?page=${num}`);
   };
 
   return (
@@ -41,7 +46,7 @@ function PostList({
         })}
       </ul>
       <Pagination
-        currentPage={currentPage}
+        currentPage={pageParam||1}
         totalPages={totalPages}
         goPage={goPage}
         limitPage={limitPage}
