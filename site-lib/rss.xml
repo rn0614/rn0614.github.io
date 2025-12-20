@@ -1,4 +1,378 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[posting]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>posting</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 20 Dec 2025 16:37:36 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 20 Dec 2025 16:37:14 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[웹서비스 기획하기 템플릿]]></title><description><![CDATA[
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[posting]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>posting</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 20 Dec 2025 16:52:28 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 20 Dec 2025 16:52:23 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[01 블로그 개편하기]]></title><description><![CDATA[AI시대가 도래하면서 학습의 많은 부분이 쓸모없게 되는지 고민하는 부분이 있음.
+학습에서 가장 중요한 것은 기록이라고 생각합. 이 기록을 잘 하고자 OBSIDIAN을 도입해서 사용하고 있음.
+Obsidian은 개인 메모앱으로 나를 외부로 알리는 과정에서 한계가 생겼음.
+이 한계를 극복하기 위한 외부로 공개할 수 있는 창구가 필요하고 그게 바로 블로깅임.내 메모수정을 최소화 : 나는 내 메모중 일부를 공개하면서 정리를 하지만 많은 시간의 할애를 원치 않음메모를 쓰다보면 안쓰게되거나 관리가 되지 않는 경우가 생김. 그 이유가 내가 집중할 것이 퍼져있으면 사용에 힘이들고 일정수준이 넘어가면 사용하지 않게 되는 것을 깨달았음. 따라서 내 메모의 규칙중 가장 중요한 것은 나의 관심도임. 그래서 PARA체계를 도입. 바로 PARA체계를 적용하면 부족한 부분이 있어서 Inbox에서 내용을 정돈하고 PARA체계에 편입하는 방식으로 관리함.
+폴더별 명확한 일 Inbox에 있는 파일들은 추출해서 PARA 정보처리체계에 넣어야할 대상
+Projects는 현재 책임을 갖고 기간내에 진행해야할 프로젝트
+Areas는 매일매일 관심을 갖고 처리해야할 내용
+Resources는 내 관심사에 대한 내용
+Archives는 신경을 안써도 되는 모든 내용 블로그와 연동하기 쉬운 형태 내 정돈방식 그대로 외부로 전달.
+이 과정에서 특정 blogging 하기로 한 대상에 대해 properties 적용 <a class="internal-link data-link-icon data-link-icon-after data-link-text" data-href="300 Resources/320 지식관리/지식관리 방법론.md" href="300-resources/320-지식관리/지식관리-방법론.html" target="_self" rel="noopener nofollow" data-link-tags="#지식관리 #PARA #CODE #Obsidian #생산성 #정보정리 #제텔카스텐" data-link-path="300 Resources/320 지식관리/지식관리 방법론.md" style="--data-link-tags: #지식관리 #PARA #CODE #Obsidian #생산성 #정보정리 #제텔카스텐; --data-link-path: 300 Resources/320 지식관리/지식관리 방법론.md;">지식관리 방법론</a>2의 CODE 방법에 따라서 정리되는데 여기서 정리되는 항목은 Capture, Organize, Distill, Express 형태이다. 여기서 Distill 부분은 항상 적용되야하는 내용이므로 빼고 처리한다.데이터를 처음 들어왔을 때는 InBox(Capture)에 존재하므로 따로 구분 필요없음.
+이후 Organize와 Distill 이 동시에 동작하는데 이때, 완성된 글이 아니라면 상태, 완료해서 쓸 수 있는 형태는 Express까지 이동한다.초기 상태 : x
+중간 상태 : properties: [[Distill]], [[Express]] 무조건 한번정리 아니면 Inbox에서 다른 곳으로 옮기지 말것
+완료 상태 : properties: [[Express]] 여기서 Distill 까지만 가고 완료를 못한 문서에 대해서는 계속 dataview로 확인하고 완료시켜준다.]]></description><link>100-projects/101-블로그-개편하기/01-블로그-개편하기.html</link><guid isPermaLink="false">100 Projects/101 블로그 개편하기/01 블로그 개편하기.md</guid><pubDate>Sat, 20 Dec 2025 14:13:47 GMT</pubDate></item><item><title><![CDATA[02]]></title><link>100-projects/101-블로그-개편하기/02.html</link><guid isPermaLink="false">100 Projects/101 블로그 개편하기/02.md</guid><pubDate>Sat, 20 Dec 2025 14:03:30 GMT</pubDate></item><item><title><![CDATA[koosang]]></title><description><![CDATA[이 블로그는 외부에 나를 알리기 위한 용도이다.나는 obsidian을 좋아한다. md파일로 내가 데이터의 근원을 들고 있으며 로컬에서 데이터 활용, 데이터끼리의 연동, 오픈된 plugin으로 이 노트앱만한 건 없다고 생각한다. LLM이 아무리 성장해도 나에대한 많은 기반 데이터를 기반으로 하고 이를 위해서는 나의 데이터를 쌓는 것이 중요하다.AI 서비스를 만드는 사람들은 공감할 것이다. 무엇을 만들던지간에 만드는 대상에 대한 도메인 지식의 POOL이 필요하다. 나는 옵시디언이 나 라는 POOL의 지식을 저장할 수 있다고 생각한다.다만 vault, 제2의 뇌와 같이 개인용 메모앱이고 외부로의 공유는 제한적인 형태이다. 그렇기에 나의 생각, 흔적을 남에게 보여줄 때는 제한이 될 수 밖에 없다.예전에는 방향성이 하나에 대한 스페셜리스트라고 생각했다. AI시대가 도래하고 보니 하나에 대해서 깊게 생각하고 더 나은 답을 도출하는 것은 AI가 더 잘했다. 나는 이 상황에서 내가 무엇을 해야하는지 고민하게 됐다.
+결론은 다 하면 됐다. 그리고 특정 시점, 나의 재능을 폭발시켜야했다. 대부분의 일반인은 못하지만 나는 할 수 있는 시점. 그 시점이 나에게 유일한 기회일 것이다.주식에서 좋은 주식을 갖고 있는게 중요한가? 아니다. 좋은 주식을 오르기 전에 갖는 것이 중요하다. 내가 AI보다 못났다고 하더라도 한순간은 나의 생산성이 폭발하는 시기 그 시기가 얼마 남지 않았다고 생각한다.나는 오케스트라가 된다.<img src="800-references/801-image/2025/12/20251218140123xxvp-index.png" target="_self">1<br><img style="max-width:400px; " class="excalidraw-svg-Drawing-2025-12-17-00.54.00.excalidraw excalidraw-embedded-img excalidraw-canvas-immersive excalidraw-embed-pending" filesource="800 References/802 Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.md" w="400" draggable="false" oncanvas="false" data-excalidraw-source="800 References/802 Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.md">1]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sat, 20 Dec 2025 13:48:07 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[프로젝트 중요 개발문서]]></title><description><![CDATA[이 문서는 프로젝트 내에서 사용되는 고유한 용어들을 명확히 정의하는 사전 역할을 합니다. 동영상은 특히 팀원 간의 소통 오류를 방지하는 데 이 문서가 필수적이라고 설명합니다.
+소통 오류 방지: 기획자, 퍼블리셔, 개발자 등 각기 다른 직군에 있는 팀원들은 같은 용어에 대해 다른 의미를 부여할 수 있습니다. 예를 들어, "프론트엔드"가 고객 대상(B2C)을 의미할 수도 있고, 직원 대상(B2E)을 의미할 수도 있습니다. 이러한 혼란을 막기 위해 용어사전을 통해 용어를 통일하는 것이 중요합니다.
+비생산적인 논쟁 방지: 용어에 대한 명확한 정의가 없으면 팀원 간에 불필요하고 비생산적인 논쟁이 발생할 수 있습니다. 용어사전은 이러한 시간 낭비를 막고, 본질적인 문제 해결에 집중할 수 있게 돕습니다.
+이 문서는 프로젝트의 전반적인 기술적 규칙과 표준을 명시합니다. 코드가 일관성을 갖도록 하여 개발 효율성을 높이는 것이 목적입니다.
+코드 일관성: 이 문서에는 클래스명에 PascalCase를, 변수명에 camelCase를 사용하는 등의 명명 규칙이 포함됩니다. 또한, SQL 쿼리 작성 규칙과 같은 코딩 표준도 명시하여 모든 개발자가 통일된 방식으로 코드를 작성하게 합니다.
+유지보수 용이성: 모든 코드가 일관된 규칙에 따라 작성되면, 새로운 팀원이 프로젝트에 합류하거나 기존 코드를 수정할 때 훨씬 수월해집니다. 이 문서는 마치 코딩을 위한 '헌법'과 같아서, 개발자들이 스스로 참고할 수 있는 지침이 됩니다.
+네, 맞습니다. 표준 개발 정의서는 단일 문서가 아니라 여러 문서를 아우르는 광범위한 개념입니다. 동영상에서 언급된 '표준 개발 정의서'는 프로젝트의 코딩 표준이나 기술적 규칙을 포괄적으로 일컫는 용어로 이해하는 것이 좋습니다.실제 프로젝트에서는 말씀하신 것처럼 코딩 스타일 가이드, 개발 스펙, 라이브러리 사용 방식, 심지어는 파일 및 디렉토리 구조까지도 문서화하여 표준을 만듭니다. 이러한 문서들은 하나로 통합되기보다는 각자의 목적에 맞게 분리되어 관리되는 경우가 많습니다.이 문서는 개발팀이 무엇을 만들 것인지에 대한 청사진을 제시하는 핵심 문서입니다. 개발자나 디자이너의 관점보다는 비즈니스와 사용자 관점에서 제품의 목표와 기능, 그리고 '왜' 이 기능이 필요한지를 설명하는 데 중점을 둡니다.
+제품의 비전과 목표: 이 제품(또는 기능)을 통해 어떤 문제를 해결하고 어떤 목표를 달성할 것인지 명시합니다. (예: "사용자 이탈률 감소", "신규 가입자 수 증대")
+사용자 페르소나: 제품을 사용할 대표적인 사용자의 특징과 행동을 상세히 기술하여, 팀원들이 사용자를 명확히 이해하도록 돕습니다.
+기능 목록: 개발해야 할 기능들을 목록으로 정리하고, 각 기능의 우선순위를 정합니다.
+사용자 시나리오: 사용자가 제품을 어떻게 이용하게 될지 스토리 형태로 풀어냅니다. (예: "로그인한 사용자가 마이페이지에서 주문 내역을 확인한다.")
+성공 지표: 프로젝트의 성공 여부를 측정할 수 있는 지표(KPI)를 정의합니다. (예: "특정 기능의 주간 사용률 10% 달성")
+나는 바이브 코딩을 하려고 하는데 미리 LLM이 이해하기 쉽도록 내 프로젝트에 대한 사항을 cursor rule로 정의하려고 해. 각각의 문서를 만든다고 할 때 종류가 용어사전 코딩컨벤션 개발스펙 기술스택 및 라이브러리 가이드라인 파일 및 디렉토리 구조 규칙 ]]></description><link>100-projects/커서-룰관련-개편/프로젝트-중요-개발문서.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/프로젝트 중요 개발문서.md</guid><pubDate>Sat, 20 Dec 2025 13:48:06 GMT</pubDate></item><item><title><![CDATA[Drawing 2025-12-20 16.50.09]]></title><description><![CDATA[<img src="800-references/802-excalidraw/drawing-2025-12-20-16.50.09.excalidraw.svg" target="_self">]]></description><link>800-references/802-excalidraw/drawing-2025-12-20-16.50.09.excalidraw.html</link><guid isPermaLink="false">800 References/802 Excalidraw/Drawing 2025-12-20 16.50.09.excalidraw.svg</guid><pubDate>Sat, 20 Dec 2025 07:51:50 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Drawing 2025-12-20 16.50.09]]></title><link>800-references/802-excalidraw/drawing-2025-12-20-16.50.09.excalidraw.html</link><guid isPermaLink="false">800 References/802 Excalidraw/Drawing 2025-12-20 16.50.09.excalidraw.md</guid><pubDate>Sat, 20 Dec 2025 07:51:50 GMT</pubDate></item><item><title><![CDATA[Drawing 2025-12-17 00.54.00]]></title><description><![CDATA[<img src="800-references/802-excalidraw/drawing-2025-12-17-00.54.00.excalidraw.svg" target="_self">]]></description><link>800-references/802-excalidraw/drawing-2025-12-17-00.54.00.excalidraw.html</link><guid isPermaLink="false">800 References/802 Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.svg</guid><pubDate>Thu, 18 Dec 2025 23:26:57 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Drawing 2025-12-17 00.54.00]]></title><link>800-references/802-excalidraw/drawing-2025-12-17-00.54.00.excalidraw.html</link><guid isPermaLink="false">800 References/802 Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.md</guid><pubDate>Thu, 18 Dec 2025 23:26:57 GMT</pubDate></item><item><title><![CDATA[00.프로젝트 초기 구성]]></title><description><![CDATA[소설관계도를 시각화 할 수 있는 Saas 구성, 여기서 개인이 스토리를 작성하면 같이 스토리가 작성되는 ]]></description><link>100-projects/사이드프로젝트(story)/00.프로젝트-초기-구성.html</link><guid isPermaLink="false">100 Projects/사이드프로젝트(Story)/00.프로젝트 초기 구성.md</guid><pubDate>Thu, 13 Nov 2025 14:02:06 GMT</pubDate></item><item><title><![CDATA[2. 현재있는 flow를 과연 llm이 mermaid로 작성할 수 있을까]]></title><description><![CDATA[내가 현재 개발하고 있는 내용을 mermaid.js 로 작성해달라고 말해봤다.
+아래와 같이 작성이 되었는데. 기본 모델을 사용했음에도 생각보다 깔끔하고 구체적이어서 놀랐다.
+내가 쓴 prompt (cursor의 auto모드)
+: system tray에서 카테고리의 항목을 변경했을 때 발생하는 코드들에 대해서 mermaid.js로 변경하는 작업을 진행해줘
+]]></description><link>100-projects/mermaid를-통한-prd/2.-현재있는-flow를-과연-llm이-mermaid로-작성할-수-있을까.html</link><guid isPermaLink="false">100 Projects/mermaid를 통한 prd/2. 현재있는 flow를 과연 llm이 mermaid로 작성할 수 있을까.md</guid><pubDate>Tue, 16 Sep 2025 19:31:48 GMT</pubDate></item><item><title><![CDATA[4. 확인사항]]></title><description><![CDATA[출분히 비지니스나 업무관련 workflow는 mermaid.js 로 그리는 것이 가능하다.특히 claude 4.0 sonnet 부터는 claude-desktop에 mermaid 탑재기능을 넣으면서 workflow 해석능력이 타 언어모델보다 나아보임.업무를 수행하면서 해당 업무가 어떤 기능에 대한 것을 명시 혹은 진입점의 component 상단에 넣어놓으면 해당 업무를 수행하면서 workflow 수정 혹은 완료 시 표기하여 이후 해당 workflow 에 대한 이해도를 대폭 늘릴 수 있을 것으로 보인다.추가적으로 작업이후에 해당기능에 대해서 평가를 해보겠다.]]></description><link>100-projects/mermaid를-통한-prd/4.-확인사항.html</link><guid isPermaLink="false">100 Projects/mermaid를 통한 prd/4. 확인사항.md</guid><pubDate>Tue, 16 Sep 2025 19:11:00 GMT</pubDate></item><item><title><![CDATA[3. mermaid관련된 내용 작업 진행(템플릿)]]></title><description><![CDATA[Create documentation focused on business logic and workflows rather than technical implementation details, making it easy for future developers to understand how features work.
+Data Branching Criteria: When and how logic branches
+Function Names: Which functions are called (excluding technical implementation)
+External API Integration: Points of integration with external systems
+User Actions: What actions users perform
+Results/State: What results occur at each step
+Business Rules: Why the system behaves this way Code implementation details
+Variable names, type definitions, interface structures
+Technical architecture explanations
+Error handling details
+Performance optimization content
+# [Feature Name] Workflow ## Overview
+- Brief description of what this feature does
+- What problem it solves for users ## User Scenario
+- User performs [specific action]
+- [Condition] determines [result] ## Branching Criteria
+1. **[Condition A]** → Execute [Path 1]
+2. **[Condition B]** → Execute [Path 2]
+3. **[Condition C]** → Execute [Path 3] ## Execution Flow
+1. **[Function Name]** Call - Purpose: [Why it's called] - Result: [What state changes] 2. **[External API]** Integration - Purpose: [What data is retrieved] - Result: [What information is obtained] 3. **[State Change]** Occurs - Purpose: [Why state is changed] - Result: [What UI updates] ## Data Flow
+- Input: [Data user inputs]
+- Processing: [How it's transformed]
+- Output: [Final result] ## Exception Handling
+- **[Exception 1]**: [How it's handled]
+- **[Exception 2]**: [How it's handled] ## Related Functions
+- `[Function1]`: [Role description]
+- `[Function2]`: [Role description]
+- `[Function3]`: [Role description] Start with "When user clicks..." format
+Use common terms rather than technical jargon Explain if/else conditions as business logic
+Use expressions like "if data exists", "if user has permission" switchToCategory() → "Category switching function"
+updateMCPConfig() → "Configuration file update function" API calls, file saves, database connections
+Include reasons for external integration Specify "what changes" at each step
+UI changes, data changes, state changes
+# System Tray Category Change Workflow ## Overview
+When users select a different category from the system tray, the server settings for that category are reflected in the actual Claude/Cursor configuration files. ## User Scenario
+- User right-clicks system tray icon
+- Selects desired category from "Claude Category" or "Cursor Category" submenu
+- Servers in selected category become available in the respective application ## Branching Criteria
+1. **Claude Category Selected** → Update Claude configuration file
+2. **Cursor Category Selected** → Update Cursor configuration file
+3. **Category Has No Servers** → Create empty configuration file ## Execution Flow
+1. **Category Switch Function** Call - Purpose: Change selected category to active state - Result: Store active category information 2. **Configuration File Update Function** Call - Purpose: Reflect selected category's servers in actual configuration file - Result: Claude/Cursor recognizes new servers 3. **Renderer Process Notification** - Purpose: Display changed category information in UI - Result: New active category shown in app interface ## Data Flow
+- Input: Category ID selected by user
+- Processing: Convert servers in category to configuration file format
+- Output: Save as JSON in Claude/Cursor configuration file ## Related Functions
+- `switchToCategory()`: Category switching processing
+- `updateMCPConfig()`: Configuration file update
+- `updateTrayMenu()`: Tray menu state synchronization Written from user perspective?
+Branching criteria clear?
+Function names match their roles?
+External integration points specified?
+Results clear at each step?
+Technical details excluded?
+]]></description><link>100-projects/mermaid를-통한-prd/3.-mermaid관련된-내용-작업-진행(템플릿).html</link><guid isPermaLink="false">100 Projects/mermaid를 통한 prd/3. mermaid관련된 내용 작업 진행(템플릿).md</guid><pubDate>Tue, 16 Sep 2025 19:06:20 GMT</pubDate></item><item><title><![CDATA[1. LLM과 협업하기]]></title><description><![CDATA[현재 바이브코딩에서는 LLM과 협업하는 형태로 다시 개발문서 작성을 통한 개발로 돌아가고 있다.
+해당 방식이 가능해진 이유는 다음과 같다.
+개발문서 작업공수 감소 : 개발문서를 작성할 수 있는 방식이 기존에는 사람이 모든 문서내용을 작성해야했다면, 현재는 LLM이 대략적인 플로우를 작성해주기 때문이다.
+사람이라면 내재화된 지식들을 llm은 일관성을 유지하기 어려움으로 컨텍스트로 쓸 문서를 작성하는 개념 하지만 복잡한 업무 플로우에 대해서 작성하지 못하는 문제가 발생한다.
+이런 문제 방식을 좀더 효율적으로 개선하기 위해서는 어떤방식을 사용할까 고민해봤다.LLM이 사람이라면 어떤 방식을 이해하기 쉬울까 고민해봤을 때 가장 잘 이해하는 방식은 WORKFLOW 방식이다. 알고리즘 FLOW CHART를 그려서 판단하는 것이다.
+하지만 줄글을 통해서는 해당 WORKFLOW를 판단하는데 어려움이 있다.코딩으로는 이미 WORKFLOW가 있는거나 다름없지만 코드로 존재하는 것이기 때문에 전체적인 윤곽을 잡기가 어렵다.그렇다면 현재 Claude에서 밀고있는 mermaid.js로부터 시작해보면 어떨까라는 아이디어를 갖게 되었다.]]></description><link>100-projects/mermaid를-통한-prd/1.-llm과-협업하기.html</link><guid isPermaLink="false">100 Projects/mermaid를 통한 prd/1. LLM과 협업하기.md</guid><pubDate>Tue, 16 Sep 2025 18:35:33 GMT</pubDate></item><item><title><![CDATA[반복적인 엑셀 작성업무 자동화]]></title><description><![CDATA[반복적인 엑셀의 데이터를 입력해야하는 일이 발생하였다. 이를 간편하게 해결하고 차후 추가적으로 기능을 개선할 수 있도록 하기위한 electron으로 만든 프로그램이다.예를들어 A,B,C 의 데이터가 있는데 이 데이터를 통해서 엑셀에 있는 값을 바꿔야하는 상황이다. 문제는 B의 데이터가 엑셀 내부에서 하나의 셀에서만 사용하지 않고 사용하는 곳이 10군데 이상이다.
+실제 사용자 입장에서 해야하는 행동프로세스는 다음과 같았다.
+엑셀템플릿을 복사
+해당 템플릿 내부에 데이터를 일일히 변경
+수식을 사용하려고 하였으나 데이터상으로 고정값이 들어가야하고 기록용 시트 및 실 사용자들의 요구로는 데이터 값이 들어가야하는 요구
+기록하는 데이터가 외부 웹에 있는 데이터, 차후 api수신을 통해서 사용자가 직접 복붙이 아닌 한번에 동작할 수 있는 기능으로 적용
+]]></description><link>100-projects/엑셀-데이터-변경-프로젝트/반복적인-엑셀-작성업무-자동화.html</link><guid isPermaLink="false">100 Projects/엑셀 데이터 변경 프로젝트/반복적인 엑셀 작성업무 자동화.md</guid><pubDate>Sun, 31 Aug 2025 16:35:37 GMT</pubDate></item><item><title><![CDATA[08. FSD 관련 cursor rule]]></title><description><![CDATA[app → pages → widgets → features → entities → shared
+Dependency Rule: Upper layers can import from lower layers, but NOT vice versa.
+app: Global setup, routing, providers, root store
+pages: Route components, layout composition
+widgets: Independent UI blocks combining features+entities
+features: Business functionality with user interactions
+entities: Domain models, data-centric components
+shared: Reusable, domain-agnostic components &amp; utilities
+[domain]/
+├── ui/ # UI components
+├── model/ # Business logic, state management
+├── api/ # Server communication
+├── lib/ # Helper functions
+├── config/ # Configuration files
+└── index.ts # Public API exports
+Is it domain-agnostic? ├── YES → shared/ui
+└── NO → Is it pure data display? ├── YES → entities/[domain]/ui └── NO → features/[feature]/ui shared/ui: "Can this be used in any project without domain knowledge?"
+entities: "Does this only display domain data without business logic?"
+features: "Does this perform a specific business function?"
+widgets: "Does this combine multiple features/entities into an independent block?"
+// shared/ui/Button.tsx - Pure UI component
+const Button = ({ variant, onClick, children }) =&gt; ( &lt;button className={`btn-${variant}`} onClick={onClick}&gt; {children} &lt;/button&gt;
+) // entities/user/ui/UserCard.tsx - Pure data display
+const UserCard = ({ user }) =&gt; ( &lt;Card&gt; &lt;Avatar src={user.avatar} /&gt; &lt;Text&gt;{user.name}&lt;/Text&gt; &lt;Text&gt;{user.email}&lt;/Text&gt; &lt;/Card&gt;
+) // features/auth/ui/LoginForm.tsx - Business function
+const LoginForm = () =&gt; { const { login, isLoading } = useAuth() return ( &lt;form onSubmit={handleLogin}&gt; &lt;Input name="email" /&gt; &lt;Input name="password" type="password" /&gt; &lt;Button loading={isLoading}&gt;Login&lt;/Button&gt; &lt;/form&gt; )
+} // widgets/header/ui/Header.tsx - Combined block
+const Header = () =&gt; ( &lt;header&gt; &lt;Logo /&gt; &lt;SearchInput /&gt; &lt;UserProfile /&gt; &lt;LogoutButton /&gt; &lt;/header&gt;
+)
+// Always use index.ts for public exports
+export { UserCard, UserProfile } from './ui'
+export { useUserStore } from './model'
+export { fetchUser } from './api'
+export type { User } from './model/types'
+// pages can import from all lower layers
+import { Header } from 'widgets/header'
+import { LoginForm } from 'features/auth'
+import { UserCard } from 'entities/user'
+import { Button } from 'shared/ui' // widgets can import features, entities, shared
+import { SearchForm } from 'features/search'
+import { ProductCard } from 'entities/product'
+import { Card } from 'shared/ui' // features can import entities, shared
+import { UserAvatar } from 'entities/user'
+import { validateEmail } from 'shared/lib'
+// Lower layers importing from upper layers
+import { LoginForm } from 'features/auth' // in entities
+import { UserCard } from 'entities/user' // in shared // Cross-layer imports at same level
+import { AuthFeature } from 'features/auth' // in features/profile // Direct internal imports (bypass index.ts)
+import { UserCard } from 'entities/user/ui/UserCard' // Use 'entities/user' instead
+// entities/user/model/store.ts
+export const useUserStore = create((set) =&gt; ({ users: [], currentUser: null, setCurrentUser: (user) =&gt; set({ currentUser: user })
+})) // features/auth/model/store.ts
+export const useAuthStore = create((set) =&gt; ({ isAuthenticated: false, login: async (credentials) =&gt; { const user = await authApi.login(credentials) useUserStore.getState().setCurrentUser(user) // OK to call entities }
+}))
+user-management/
+product-search/
+order-history/
+UserCard.tsx
+userApi.ts
+userStore.ts
+types.ts
+// Domain-specific component in shared
+shared/ui/UserSpecificButton/ // Should be in entities/user // Pure UI component in domain layer entities/user/ui/Button/ // Should be in shared/ui // Business logic in entities
+entities/user/model/loginUser() // Should be in features/auth
+// Circular dependencies
+// entities/user imports features/auth AND
+// features/auth imports entities/user // Skipping layers inappropriately // pages directly using entities when features exist
+src/
+├── app/
+│ ├── providers/
+│ ├── store/
+│ └── styles/
+├── pages/
+│ └── [route]/
+│ ├── ui/
+│ └── index.ts
+├── widgets/
+│ └── [widget-name]/
+│ ├── ui/
+│ ├── model/
+│ └── index.ts
+├── features/
+│ └── [feature-name]/
+│ ├── ui/
+│ ├── model/
+│ ├── api/
+│ └── index.ts
+├── entities/
+│ └── [entity-name]/
+│ ├── ui/
+│ ├── model/
+│ ├── api/
+│ └── index.ts
+└── shared/ ├── ui/ ├── lib/ ├── api/ └── config/
+When creating a new component, ask:
+Domain-agnostic? → shared/ui
+Just displaying entity data? → entities/[domain]/ui
+Performing business action? → features/[feature]/ui
+Combining multiple features/entities? → widgets/[widget]/ui
+Route-level composition? → pages/[route]/ui
+]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/08.-fsd-관련-cursor-rule.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/08. FSD 관련 cursor rule.md</guid><pubDate>Sat, 30 Aug 2025 05:33:02 GMT</pubDate></item><item><title><![CDATA[07.디자인 스타일 가이드]]></title><link>100-projects/커서-룰관련-개편/각-요소-템플릿/07.디자인-스타일-가이드.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/07.디자인 스타일 가이드.md</guid><pubDate>Tue, 26 Aug 2025 15:50:11 GMT</pubDate></item><item><title><![CDATA[05.DB 가이드]]></title><description><![CDATA[supabase 이용시 테이블 가이드 관련database.ts 파일만으로는 부분적으로만 충분해요. 더 효과적으로 만들려면 추가 정보가 필요합니다.// Supabase에서 자동 생성되는 타입들
+export interface Database { public: { Tables: { users: { Row: { id: number email: string created_at: string } Insert: { id?: number email: string created_at?: string } Update: { id?: number email?: string created_at?: string } } } }
+}
+✅ 타입 정보는 완벽하게 제공
+✅ CRUD 인터페이스 명확❌ 관계 정보 (FK, 1:N, M:N)
+❌ 비즈니스 규칙
+❌ 인덱스/제약조건
+❌ RLS 정책# Supabase Database Schema ## Types (자동생성)
+[database.ts 내용 포함] ## Relationships
+```sql
+-- Foreign Key Relationships
+users (1) ---&gt; (N) orders (user_id)
+orders (1) ---&gt; (N) order_items (order_id)
+products (1) ---&gt; (N) order_items (product_id) users: 본인 데이터만 읽기/수정 가능
+orders: 본인 주문만 접근 가능
+profiles: public 읽기, 본인만 수정
+// 관계 데이터 조회
+const { data } = await supabase .from('users') .select(` *, orders ( *, order_items ( *, products (name, price) ) ) `) .eq('id', userId); 주문 생성시 재고 확인 필수
+사용자는 본인 데이터만 접근 가능 (RLS)
+soft delete 사용 (deleted_at 컬럼) ## 결론
+`database.ts` + **관계 정보** + **비즈니스 규칙** + **RLS 정책**을 함께 제공하면 LLM이 Supabase 특성을 고려한 최적의 코드를 생성할 수 있어요. 특히 Supabase의 `.select()` 문법이나 RLS 고려사항 등은 별도로 명시해주는 것이 좋습니다.
+]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/05.db-가이드.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/05.DB 가이드.md</guid><pubDate>Tue, 26 Aug 2025 15:45:48 GMT</pubDate></item><item><title><![CDATA[06.Clean code 룰]]></title><description><![CDATA[You are an expert software engineer focused on writing clean, maintainable code. Follow these principles rigorously:
+DRY - Eliminate duplication ruthlessly
+KISS - Simplest solution that works
+YAGNI - Build only what's needed now
+SOLID - Apply all five principles consistently
+Boy Scout Rule - Leave code cleaner than found Use intention-revealing names
+Avoid abbreviations except well-known ones (e.g., URL, API)
+Classes: nouns, Methods: verbs, Booleans: is/has/can prefix
+Constants: UPPER_SNAKE_CASE
+No magic numbers - use named constants Single Responsibility - one reason to change
+Maximum 20 lines (prefer under 10)
+Maximum 3 parameters (use objects for more)
+No side effects in pure functions
+Early returns over nested conditions Cyclomatic complexity &lt; 10
+Maximum nesting depth: 3 levels
+Organize by feature, not by type
+Dependencies point inward (Clean Architecture)
+Interfaces over implementations Code should be self-documenting
+Comments explain why, not what
+Update comments with code changes
+Delete commented-out code immediately
+Document public APIs thoroughly Fail fast with clear messages
+Use exceptions over error codes
+Handle errors at appropriate levels
+Never catch generic exceptions
+Log errors with context TDD when possible
+Test behavior, not implementation
+One assertion per test
+Descriptive test names: should_X_when_Y
+AAA pattern: Arrange, Act, Assert
+Maintain test coverage &gt; 80% Profile before optimizing
+Optimize algorithms before micro-optimizations
+Cache expensive operations
+Lazy load when appropriate
+Avoid premature optimization Never trust user input
+Sanitize all inputs
+Use parameterized queries
+Follow principle of least privilege
+Keep dependencies updated
+No secrets in code Atomic commits - one logical change
+Imperative mood commit messages
+Reference issue numbers
+Branch names: type/description
+Rebase feature branches before merging Review for correctness first
+Check edge cases
+Verify naming clarity
+Ensure consistent style
+Suggest improvements constructively Duplicate code (Rule of Three)
+Long methods/classes
+Feature envy
+Data clumps
+Divergent change
+Shotgun surgery
+Before committing, ensure:
+All tests pass
+No linting errors
+No console logs
+No commented code
+No TODOs without tickets
+Performance acceptable
+Security considered
+Documentation updated
+Remember: Clean code reads like well-written prose. Optimize for readability and maintainability over cleverness.]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/06.clean-code-룰.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/06.Clean code 룰.md</guid><pubDate>Tue, 26 Aug 2025 15:42:57 GMT</pubDate></item><item><title><![CDATA[04.기술스택 및 라이브러리 가이드라인]]></title><description><![CDATA[
+always use promise for page.tsx params props.
+use valid picsum.photos stock image for placeholder image use following libraries for specific functionalities:
+date-fns: For efficient date and time handling.
+ts-pattern: For clean and type-safe branching logic.
+@tanstack/react-query: For server state management.
+zustand: For lightweight global state management.
+react-use: For commonly needed React hooks.
+es-toolkit: For robust utility functions.
+lucide-react: For customizable icons.
+zod: For schema validation and data integrity.
+shadcn-ui: For pre-built accessible UI components.
+tailwindcss: For utility-first CSS styling.
+supabase: For a backend-as-a-service solution.
+react-hook-form: For form validation and state management. src
+src/app: Next.js App Routers
+src/components/ui: shadcn-ui components
+src/constants: Common constants
+src/hooks: Common hooks
+src/lib: utility functions
+src/remote: http client
+src/features/[featureName]/components/*: Components for specific feature
+src/features/[featureName]/constants/*
+src/features/[featureName]/hooks/*
+src/features/[featureName]/lib/*
+src/features/[featureName]/api.ts: api fetch functions Rephrase Input: Transform to clear, professional prompt.
+Analyze &amp; Strategize: Identify issues, outline solutions, define output format.
+Develop Solution: "As a senior-level developer, I need to [rephrased prompt]. To accomplish this, I need to:"
+List steps numerically.
+"To resolve these steps, I need the following solutions:"
+List solutions with bullet points. Validate Solution: Review, refine, test against edge cases.
+Evaluate Progress: If incomplete: Pause, inform user, await input.
+If satisfactory: Proceed to final output. Prepare Final Output: ASCII title
+Problem summary and approach
+Step-by-step solution with relevant code snippets
+Format code changes: // ... existing code ... function exampleFunction() { // Modified or new code here } // ... existing code ... Use appropriate formatting
+Describe modifications
+Conclude with potential improvements Simplicity
+Readability
+Maintainability
+Testability
+Reusability
+Functional Paradigm
+Pragmatism Early Returns
+Conditional Classes over ternary
+Descriptive Names
+Constants &gt; Functions
+DRY
+Functional &amp; Immutable
+Minimal Changes
+Pure Functions
+Composition over inheritance Avoid Mutation
+Use Map, Filter, Reduce
+Currying and Partial Application
+Immutability Use TypeScript for type safety.
+Follow the coding standards defined in the ESLint configuration.
+Ensure all components are responsive and accessible.
+Use Tailwind CSS for styling, adhering to the defined color palette.
+When generating code, prioritize TypeScript and React best practices.
+Ensure that any new components are reusable and follow the existing design patterns.
+Minimize the use of AI generated comments, instead use clearly named variables and functions.
+Always validate user inputs and handle errors gracefully.
+Use the existing components and pages as a reference for the new components and pages. Avoid Premature Optimization
+Profile Before Optimizing
+Optimize Judiciously
+Document Optimizations Comment function purpose
+Use JSDoc for JS
+Document "why" not "what" Higher-order functionality first
+Group related functions Use TODO: and FIXME: comments Use appropriate techniques
+Prefer returning errors over exceptions Unit tests for core functionality
+Consider integration and end-to-end tests you must use promise for page.tsx params props. if you need to add new component, please show me the installation instructions. I'll paste it into terminal.
+example
+$ npx shadcn@latest add card
+$ npx shadcn@latest add textarea
+$ npx shadcn@latest add dialog if you need to add new table, please create migration. I'll paste it into supabase.
+do not run supabase locally
+store migration query for .sql file. in /supabase/migrations/ use npm as package manager. 코드를 생성한 후에 utf-8 기준으로 깨지는 한글이 있는지 확인해주세요. 만약 있다면 수정해주세요. You are a senior full-stack developer, one of those rare 10x devs. Your focus: clean, maintainable, high-quality code.
+Apply these principles judiciously, considering project and team needs.]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/04.기술스택-및-라이브러리-가이드라인.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/04.기술스택 및 라이브러리 가이드라인.md</guid><pubDate>Tue, 26 Aug 2025 15:39:53 GMT</pubDate></item><item><title><![CDATA[03.개발스펙]]></title><description><![CDATA[개발 스펙은 개발팀이 기능을 구현하는 데 필요한 모든 기술적 세부 사항을 담은 문서입니다. 이는 단순히 기능 목록을 나열하는 것을 넘어, '어떻게' 구현할지에 대한 명확한 지침을 제공하여 불확실성을 없애고 개발 효율성을 높입니다.
+기능 요약: 구현하려는 기능이 무엇인지 한두 문장으로 간결하게 설명합니다. (예: "사용자가 파일을 업로드하고 관리할 수 있는 기능")
+개발 배경: 왜 이 기능을 개발해야 하는지, 비즈니스적 목표와 사용자 니즈를 명시합니다. (예: "고객 문의 시 첨부 파일이 필요한 경우가 많아 고객센터 운영 효율성 증대를 위함") 세부 기능 목록: 기능의 모든 하위 기능과 동작을 구체적으로 나열합니다. (예: 파일 업로드 버튼, 업로드 상태 표시, 파일 삭제 기능)
+사용자 인터페이스 (UI) 스펙: UI/UX 디자인에 따라 각 화면의 구성 요소, 레이아웃, 버튼의 동작 방식 등을 설명합니다.
+데이터 모델: 기능 구현에 필요한 데이터 구조를 정의합니다. 어떤 데이터를 어떤 형식으로 저장하고 관리할지 명시합니다. 예: User 테이블에 profile_image_url 컬럼 추가 비즈니스 로직: 기능의 핵심적인 로직과 규칙을 설명합니다. (예: "상품 할인율은 최대 50%를 넘지 못한다", "결제 완료 후 재고 수량을 감소시킨다") API 명세: 프론트엔드와 백엔드 간의 통신을 위해 필요한 API 엔드포인트, 요청/응답 데이터 구조, HTTP 메서드 등을 구체적으로 명시합니다. 예: POST /api/v1/products (상품 등록 API) 기술적 제약사항 및 의존성: 기능 구현에 필요한 외부 라이브러리, API, 또는 기술적 제약사항을 기록합니다.
+데이터베이스 스키마 설계: 기능과 관련된 데이터베이스 테이블의 구조, 컬럼, 관계 등을 정의합니다.
+오류 및 예외 처리: 발생 가능한 모든 오류 상황(예: 입력값 유효성 검사 실패, 네트워크 오류)에 대한 처리 방안을 상세히 기술합니다. 성능 요구사항: 응답 시간(Latency), 처리량(Throughput) 등 기능이 만족해야 할 성능 지표를 정의합니다. (예: "결제 요청에 대한 응답 시간은 2초 이내여야 한다")
+보안 스펙: 기능에 필요한 보안 관련 요구사항을 명시합니다. (예: "사용자 비밀번호는 단방향 암호화하여 저장해야 한다", "모든 API 통신은 HTTPS를 사용한다") playground, jest 기반을 이용하여 테스트를 진행합니다.
+테스트 케이스: 기능의 정상 작동 여부를 확인하기 위한 테스트 시나리오를 작성합니다. (예: "유효한 값으로 회원가입 시 정상적으로 가입이 완료되는지 확인", "중복된 아이디로 회원가입 시 오류 메시지가 출력되는지 확인")
+성능 테스트: 정의된 성능 요구사항을 만족하는지 확인하기 위한 테스트 시나리오를 포함할 수 있습니다.
+]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/03.개발스펙.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/03.개발스펙.md</guid><pubDate>Tue, 26 Aug 2025 15:29:09 GMT</pubDate></item><item><title><![CDATA[02.코딩 컨벤션 템플릿]]></title><description><![CDATA[코드의 품질과 유지보수성을 높이고 가독성을 높이기 위해서 아래의 규칙을 따른다.명명 규칙은 코드의 각 요소(변수, 함수, 클래스 등)가 어떤 역할을 하는지 이름을 통해 명확히 전달하는 것을 목표로 합니다.
+공통: 기본적으로 명명규칙 시 용어사전 내 용어로 작성하며 없을 시 보편적인 용어로 작성한다.(우선순위: 용어사전내 용어 &gt; 보편적인용어) 변수(Variable): camelCase 사용이 일반적입니다. (예: userName, totalCount)
+의미를 명확히 담아, 주석 없이도 변수의 역할을 짐작할 수 있도록 해야 합니다.
+Bad Example: const a = 10; (무엇을 의미하는지 알 수 없음)
+Good Example: const userAge = 25; (변수 역할이 명확함) 함수(Function): camelCase 사용이 일반적입니다.
+동사+명사 조합으로 함수의 동작을 표현합니다. (예: getUserProfile, calculateTotalPrice) 클래스(Class): PascalCase 사용이 일반적입니다. (예: UserProfile, ShoppingCart)
+클래스가 나타내는 '객체'나 '개념'을 명사로 표현합니다. 상수(Constant): 모두 대문자로 작성하고 단어 사이를 언더스코어(_)로 연결하는 SNAKE_CASE를 사용합니다. (예: API_KEY, MAX_ITEM_COUNT) 주석은 코드 자체로는 설명하기 어려운 맥락, 복잡한 로직의 이유, 기술적 결정의 배경 등을 기록하는 데 사용됩니다.
+필요한 경우에만 작성: 코드가 스스로 설명하도록 작성하는 것이 최우선입니다.
+파일/모듈 단위 주석: 파일의 최상단에 작성하여 해당 파일의 전반적인 역할과 의존성 등을 설명합니다.
+함수/클래스 단위 주석: JSDoc과 같은 표준화된 포맷을 사용해 함수의 기능, 매개변수, 반환 값 등을 명확히 기록합니다. 이는 자동 문서화 도구와 연동하여 효과적으로 문서를 생성하는 데 도움을 줍니다.
+코드 포맷팅은 개발 환경을 통일시켜 코드의 시각적인 일관성을 유지하는 것입니다. 이를 위해 Prettier 형식을 사용합니다. 탭은 2칸입니다.]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/02.코딩-컨벤션-템플릿.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/02.코딩 컨벤션 템플릿.md</guid><pubDate>Tue, 26 Aug 2025 15:27:16 GMT</pubDate></item><item><title><![CDATA[01.용어사전 템플릿]]></title><description><![CDATA[프로젝트에서 사용되는 용어들을 명확히 정의하여 팀원 간의 소통 오류를 방지하고, 프로젝트에 대한 이해를 돕습니다.
+PRD (Product Requirements Document) 설명: 제품의 비전, 목표, 기능 등 사용자와 비즈니스 관점의 요구사항을 정의하는 문서입니다. 개발팀이 '무엇을 만들지' 명확히 이해하기 위한 핵심 가이드 역할을 합니다. API (Application Programming Interface) 설명: 소프트웨어 간의 통신을 위한 인터페이스입니다. 주로 프론트엔드와 백엔드가 서로 데이터를 주고받는 규칙을 정의하는 데 사용됩니다. Frontend 설명: 사용자가 직접 보고 상호작용하는 웹 또는 애플리케이션의 영역을 의미합니다. 주로 HTML, CSS, JavaScript 등으로 개발됩니다. Backend 설명: 서버, 데이터베이스 등 사용자의 눈에 보이지 않는 영역입니다. 비즈니스 로직을 처리하고 데이터를 관리하는 역할을 합니다. Git 설명: 소스 코드의 변경 이력을 관리하는 분산형 버전 관리 시스템입니다. 협업하는 개발자들이 코드 병합 및 관리를 효율적으로 할 수 있도록 돕습니다. CI/CD (Continuous Integration/Continuous Deployment) 설명: 개발자가 작성한 코드를 지속적으로 통합하고 배포하는 자동화 프로세스입니다. 개발 생산성과 안정성을 높이는 데 기여합니다. Scrum 설명: 애자일(Agile) 개발 방법론 중 하나로, 스프린트(Sprint)라는 짧은 주기를 반복하여 프로젝트를 진행하는 방식입니다. Jira/Confluence 설명: 프로젝트 관리 및 문서화를 위한 협업 도구입니다. 작업 추적, 이슈 관리, 회의록 작성 등에 활용됩니다. ]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/01.용어사전-템플릿.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/01.용어사전 템플릿.md</guid><pubDate>Tue, 26 Aug 2025 15:17:02 GMT</pubDate></item><item><title><![CDATA[CURSOR RULE 작성가이드]]></title><link>100-projects/커서-룰관련-개편/cursor-rule-작성가이드.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/CURSOR RULE 작성가이드.md</guid><pubDate>Tue, 26 Aug 2025 15:05:38 GMT</pubDate></item><item><title><![CDATA[20251216180906UqWQ-obsidian plugin 배포 BRAT]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251216180906uqwq-obsidian-plugin-배포-brat.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251216180906uqwq-obsidian-plugin-배포-brat.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251216180906UqWQ-obsidian plugin 배포 BRAT.png</guid><pubDate>Tue, 16 Dec 2025 18:08:57 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251216180906LlbA-obsidian plugin 배포 BRAT]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251216180906llba-obsidian-plugin-배포-brat.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251216180906llba-obsidian-plugin-배포-brat.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251216180906LlbA-obsidian plugin 배포 BRAT.png</guid><pubDate>Tue, 16 Dec 2025 18:07:24 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251130121401TepG-Git전략 실무관련 GITHUB FLOW와 GIT FLOW의 변형]]></title><description><![CDATA[<img src="800-references/801-image/2025/11/20251130121401tepg-git전략-실무관련-github-flow와-git-flow의-변형.png" target="_self">]]></description><link>800-references/801-image/2025/11/20251130121401tepg-git전략-실무관련-github-flow와-git-flow의-변형.html</link><guid isPermaLink="false">800 References/801 Image/2025/11/20251130121401TepG-Git전략 실무관련 GITHUB FLOW와 GIT FLOW의 변형.png</guid><pubDate>Sun, 30 Nov 2025 12:13:49 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251123123349RzGF-01.IOT 시스템의 구조 및 설계]]></title><description><![CDATA[<img src="800-references/801-image/2025/11/20251123123349rzgf-01.iot-시스템의-구조-및-설계.png" target="_self">]]></description><link>800-references/801-image/2025/11/20251123123349rzgf-01.iot-시스템의-구조-및-설계.html</link><guid isPermaLink="false">800 References/801 Image/2025/11/20251123123349RzGF-01.IOT 시스템의 구조 및 설계.png</guid><pubDate>Sat, 15 Nov 2025 11:58:29 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251123123349VZoh-01.IOT 시스템의 구조 및 설계]]></title><description><![CDATA[<img src="800-references/801-image/2025/11/20251123123349vzoh-01.iot-시스템의-구조-및-설계.png" target="_self">]]></description><link>800-references/801-image/2025/11/20251123123349vzoh-01.iot-시스템의-구조-및-설계.html</link><guid isPermaLink="false">800 References/801 Image/2025/11/20251123123349VZoh-01.IOT 시스템의 구조 및 설계.png</guid><pubDate>Sat, 15 Nov 2025 11:51:29 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130927HcZI-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130927hczi-mcp-관리-툴-프로그램.gif" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130927hczi-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130927HcZI-MCP 관리 툴 프로그램.gif</guid><pubDate>Mon, 15 Sep 2025 13:08:19 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130927GKcK-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130927gkck-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130927gkck-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130927GKcK-MCP 관리 툴 프로그램.png</guid><pubDate>Mon, 15 Sep 2025 12:19:19 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926yUKf-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926yukf-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926yukf-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926yUKf-MCP 관리 툴 프로그램.png</guid><pubDate>Mon, 15 Sep 2025 12:13:36 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926kmNJ-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926kmnj-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926kmnj-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926kmNJ-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:06:44 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926CSmm-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926csmm-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926csmm-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926CSmm-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:06:11 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926SDeU-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926sdeu-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926sdeu-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926SDeU-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:04:36 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926RkMN-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926rkmn-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926rkmn-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926RkMN-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:02:42 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926EVZE-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926evze-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926evze-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926EVZE-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:01:08 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926sFgd-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926sfgd-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926sfgd-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926sFgd-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 15:59:14 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251130115012LGOo-FSD에 Shcadn 적용시키기]]></title><description><![CDATA[<img src="800-references/801-image/2025/11/20251130115012lgoo-fsd에-shcadn-적용시키기.png" target="_self">]]></description><link>800-references/801-image/2025/11/20251130115012lgoo-fsd에-shcadn-적용시키기.html</link><guid isPermaLink="false">800 References/801 Image/2025/11/20251130115012LGOo-FSD에 Shcadn 적용시키기.png</guid><pubDate>Sat, 13 Sep 2025 03:21:08 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250911131404xlVB-Untitled]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250911131404xlvb-untitled.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250911131404xlvb-untitled.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250911131404xlVB-Untitled.png</guid><pubDate>Thu, 11 Sep 2025 13:14:00 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250911131507Ecsm-js 번들 분석 및 최적화하기]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250911131507ecsm-js-번들-분석-및-최적화하기.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250911131507ecsm-js-번들-분석-및-최적화하기.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250911131507Ecsm-js 번들 분석 및 최적화하기.png</guid><pubDate>Sun, 07 Sep 2025 09:16:26 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250911131507iJCR-js 번들 분석 및 최적화하기]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250911131507ijcr-js-번들-분석-및-최적화하기.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250911131507ijcr-js-번들-분석-및-최적화하기.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250911131507iJCR-js 번들 분석 및 최적화하기.png</guid><pubDate>Sun, 07 Sep 2025 08:26:32 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251130163330YCFo-백엔드의 3요소]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251130163330ycfo-백엔드의-3요소.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251130163330ycfo-백엔드의-3요소.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251130163330YCFo-백엔드의 3요소.png</guid><pubDate>Tue, 02 Sep 2025 12:34:29 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251130163330NwvL-백엔드의 3요소]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251130163330nwvl-백엔드의-3요소.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251130163330nwvl-백엔드의-3요소.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251130163330NwvL-백엔드의 3요소.png</guid><pubDate>Tue, 02 Sep 2025 12:25:06 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian 폴더구조 가이드-225418]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-폴더구조-가이드-225418.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-폴더구조-가이드-225418.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian 폴더구조 가이드-225418.png</guid><pubDate>Mon, 25 Aug 2025 13:51:57 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[SUPBASE GOOGLE OAUTH VERCEL 인증 환경설정-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/supbase-google-oauth-vercel-인증-환경설정-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/supbase-google-oauth-vercel-인증-환경설정-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/SUPBASE GOOGLE OAUTH VERCEL 인증 환경설정-2.png</guid><pubDate>Thu, 14 Aug 2025 08:02:51 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[SUPBASE GOOGLE OAUTH VERCEL 인증 환경설정-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/supbase-google-oauth-vercel-인증-환경설정-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/supbase-google-oauth-vercel-인증-환경설정-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/SUPBASE GOOGLE OAUTH VERCEL 인증 환경설정-1.png</guid><pubDate>Thu, 14 Aug 2025 08:01:40 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[MDXRemote 테이블 깨짐 문제-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/mdxremote-테이블-깨짐-문제-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/mdxremote-테이블-깨짐-문제-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/MDXRemote 테이블 깨짐 문제-1.png</guid><pubDate>Wed, 23 Jul 2025 10:57:41 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-4]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-4.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-4.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-4.png</guid><pubDate>Tue, 15 Jul 2025 15:44:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-3]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-3.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-3.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-3.png</guid><pubDate>Tue, 15 Jul 2025 15:42:52 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-5]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-5.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-5.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-5.png</guid><pubDate>Tue, 15 Jul 2025 15:41:25 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-2.png</guid><pubDate>Tue, 15 Jul 2025 15:38:36 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-1.png</guid><pubDate>Tue, 15 Jul 2025 15:31:44 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Cursor rule 관련-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/cursor-rule-관련-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/cursor-rule-관련-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Cursor rule 관련-2.png</guid><pubDate>Tue, 17 Jun 2025 18:51:43 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Cursor rule 관련-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/cursor-rule-관련-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/cursor-rule-관련-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Cursor rule 관련-1.png</guid><pubDate>Tue, 17 Jun 2025 18:47:20 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[REACT에서 자주 업데이트되는 데이터리스트 관리방식-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/react에서-자주-업데이트되는-데이터리스트-관리방식-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/react에서-자주-업데이트되는-데이터리스트-관리방식-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/REACT에서 자주 업데이트되는 데이터리스트 관리방식-1.png</guid><pubDate>Sun, 08 Jun 2025 10:51:06 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[한 화면에서 일부 내용만 좌우 스크롤-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/한-화면에서-일부-내용만-좌우-스크롤-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/한-화면에서-일부-내용만-좌우-스크롤-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/한 화면에서 일부 내용만 좌우 스크롤-1.png</guid><pubDate>Sat, 17 May 2025 05:56:37 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[멀티 스레딩-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/멀티-스레딩-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/멀티-스레딩-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/멀티 스레딩-1.png</guid><pubDate>Wed, 14 May 2025 11:35:45 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[자동화 n8n-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/자동화-n8n-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/자동화-n8n-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/자동화 n8n-1.png</guid><pubDate>Tue, 15 Apr 2025 16:35:09 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[COMMIT MESSAGE규칙-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/commit-message규칙-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/commit-message규칙-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/COMMIT MESSAGE규칙-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:18 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[WEB HOOK 관련-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/web-hook-관련-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/web-hook-관련-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/WEB HOOK 관련-2.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[WEB HOOK 관련-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/web-hook-관련-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/web-hook-관련-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/WEB HOOK 관련-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[VSCODE 문자열을 원래 문자열과 함께 특정형태 replace-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/vscode-문자열을-원래-문자열과-함께-특정형태-replace-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/vscode-문자열을-원래-문자열과-함께-특정형태-replace-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/VSCODE 문자열을 원래 문자열과 함께 특정형태 replace-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian Templater에서 js로 값  실행-4]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-4.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-4.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian Templater에서 js로 값  실행-4.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian Templater에서 js로 값  실행-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian Templater에서 js로 값  실행-2.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian Templater에서 js로 값  실행-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian Templater에서 js로 값  실행-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian Templater에서 js로 값  실행-3]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-3.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-3.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian Templater에서 js로 값  실행-3.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Android Studio 삭제 후 재설치 관련-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/android-studio-삭제-후-재설치-관련-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/android-studio-삭제-후-재설치-관련-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Android Studio 삭제 후 재설치 관련-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[웹서비스 기획하기 템플릿]]></title><description><![CDATA[
 프로젝트명: [프로젝트 이름]
 시작일: [YYYY-MM-DD]
 MVP 목표일: [YYYY-MM-DD] (2-4주) 작성 완료
@@ -2215,378 +2589,4 @@ PostgreSQL, OracleSQL 목적 : RAG 시스템 도입, 시스템에서 발생하�
 얻은 것 : 테스트 시간 평균 30분 남짓 -&gt; 2분
 문제상황 : 레거시 환경에서 Backend 테스트 툴인 junit을 도입하기 힘든 상태. flow 가 있어서 flow 대로 테스트가 진행되지 않으면 데이터 세팅이 안되는 테스트 환경, 해당 환경에서 한번 flow가 지나면 해당 데이터는 더이상 쓰지 못하고 앞단에서 만들거나 혹은 직접적으로 데이터를 가져오는 방식으로 개발 필요.
 해당 문제를 해결하기 위해 데이터 세팅 스냅샷을 준비. 해당 데이터의 스
-고객사에서 프린터 관련해서 아예 세팅을 못 해서 제가 세팅을 하면서 결국 모든건 사용자 위주라는 것을 깨닫게 된 계기가 있었습니다. 프린터 업무의 경우 제 업무가 아니어서 처음에는 기분이 좋지 않았지만 직접 가서 현장에서 근무하시던 매니저분들과 얘기를 나누면서 그동안 통화나 메신저로만 나눈 것이 아닌, 직접적으로 어려운 점을 듣고 현장도 견학 시켜주었습니다. 프린터 설정 관련해서도 네트워크에 대해 공부하는 계기가 되었고, 매니저와 직접적으로 얘기 나누면서 불편한 사항에 관해서도 듣고 개선하는 작업을 했습니다. (일부 화면 프로세스 스텝 관련 문제, 관련 데이터가 흩어진 사항 하나의 화면의 탭 화면 개선)그 뒤로 프로젝트를 진행하면서 한 번씩은 찾아뵙게 됐고 그 과정에서 도메인에 대해서도 깊게 이해하게 됐습니다. 이를 통해 개발만이 아니라 실질적으로 도메인을 알아야 개발을 할 수 있다는 것을 알았고 도메인 지식에 관해서도 재밌거나 불편했던 실 사용자의 의견을 듣고 해결하는 과정에서 결국 가장 도메인에 대해서 잘 아는 사람은 자주 사용하는 사용자라는 걸 알게 되었습니다.]]></description><link>300-resources/330-hr/토스-자소서작성/01.-토스플레이스-자소서.html</link><guid isPermaLink="false">300 Resources/330 HR/토스 자소서작성/01. 토스플레이스 자소서.md</guid><pubDate>Sun, 31 Aug 2025 12:11:48 GMT</pubDate></item><item><title><![CDATA[00. 토스플레이스 JD]]></title><description><![CDATA[ 토스플레이스 Frontend Developer는 초기 멤버 오프라인 결제산업, 결제 생태계의 변화를 기획 Product Owner, Product Designer, Hardware Engineer 등 여러 동료들과 함께 일함 프론트엔드 챕터의 규모적 성장 업무 : 오프라인 결제 시장에서 디지털 혁신을 만들기 위해 매장 운영에 필요한 다양한 문제를 해결 B2B 오프라인 결제 시장에서 마주하는 도전적인 문제들을 처음부터 고민 Point of Sale(POS)는&nbsp;고객이 상품이나 서비스를 구매하고 결제를 완료하는 '판매 시점'을 의미하며, 이 판매 시점의 정보를 관리하는 시스템(POS 시스템)을 통칭합니다.&nbsp;POS 시스템은 매장의 매출, 재고, 고객 데이터 등을 관리하여 효율적인 매장 운영을 돕는 역할을 합니다 사장님 대시보드, 홈페이지 등 데스크탑 웹페이지 및 테이블오더, 픽업오더 등 모바일 웹페이지도 개발 다양한 환경을 모두 대응하는 만큼 독특하고 도전적인 프론트엔드 개발을 경험 주도적으로 문제를 발견하고 분석해 해결할 수 있는 분 고객예약, 포인트 관리, 유지보수하기 쉬운 코드를 작성하고, 견고한 결제로직을 작성하는 것 ]]></description><link>300-resources/330-hr/토스-자소서작성/00.-토스플레이스-jd.html</link><guid isPermaLink="false">300 Resources/330 HR/토스 자소서작성/00. 토스플레이스 JD.md</guid><pubDate>Sun, 31 Aug 2025 09:17:49 GMT</pubDate></item><item><title><![CDATA[01 블로그 개편하기]]></title><description><![CDATA[AI시대가 도래하면서 학습의 많은 부분이 쓸모없게 되는지 고민하는 부분이 있음.
-학습에서 가장 중요한 것은 기록이라고 생각합. 이 기록을 잘 하고자 OBSIDIAN을 도입해서 사용하고 있음.
-Obsidian은 개인 메모앱으로 나를 외부로 알리는 과정에서 한계가 생겼음.
-이 한계를 극복하기 위한 외부로 공개할 수 있는 창구가 필요하고 그게 바로 블로깅임.내 메모수정을 최소화 : 나는 내 메모중 일부를 공개하면서 정리를 하지만 많은 시간의 할애를 원치 않음메모를 쓰다보면 안쓰게되거나 관리가 되지 않는 경우가 생김. 그 이유가 내가 집중할 것이 퍼져있으면 사용에 힘이들고 일정수준이 넘어가면 사용하지 않게 되는 것을 깨달았음. 따라서 내 메모의 규칙중 가장 중요한 것은 나의 관심도임. 그래서 PARA체계를 도입. 바로 PARA체계를 적용하면 부족한 부분이 있어서 Inbox에서 내용을 정돈하고 PARA체계에 편입하는 방식으로 관리함.
-폴더별 명확한 일 Inbox에 있는 파일들은 추출해서 PARA 정보처리체계에 넣어야할 대상
-Projects는 현재 책임을 갖고 기간내에 진행해야할 프로젝트
-Areas는 매일매일 관심을 갖고 처리해야할 내용
-Resources는 내 관심사에 대한 내용
-Archives는 신경을 안써도 되는 모든 내용 블로그와 연동하기 쉬운 형태 내 정돈방식 그대로 외부로 전달.
-이 과정에서 특정 blogging 하기로 한 대상에 대해 properties 적용 <a class="internal-link data-link-icon data-link-icon-after data-link-text" data-href="300 Resources/320 지식관리/지식관리 방법론.md" href="300-resources/320-지식관리/지식관리-방법론.html" target="_self" rel="noopener nofollow" data-link-tags="#지식관리 #PARA #CODE #Obsidian #생산성 #정보정리 #제텔카스텐" data-link-path="300 Resources/320 지식관리/지식관리 방법론.md" style="--data-link-tags: #지식관리 #PARA #CODE #Obsidian #생산성 #정보정리 #제텔카스텐; --data-link-path: 300 Resources/320 지식관리/지식관리 방법론.md;">지식관리 방법론</a>2의 CODE 방법에 따라서 정리되는데 여기서 정리되는 항목은 Capture, Organize, Distill, Express 형태이다. 여기서 Distill 부분은 항상 적용되야하는 내용이므로 빼고 처리한다.데이터를 처음 들어왔을 때는 InBox(Capture)에 존재하므로 따로 구분 필요없음.
-이후 Organize와 Distill 이 동시에 동작하는데 이때, 완성된 글이 아니라면 상태, 완료해서 쓸 수 있는 형태는 Express까지 이동한다.초기 상태 : x
-중간 상태 : properties: [[Distill]], [[Express]] 무조건 한번정리 아니면 Inbox에서 다른 곳으로 옮기지 말것
-완료 상태 : properties: [[Express]] 여기서 Distill 까지만 가고 완료를 못한 문서에 대해서는 계속 dataview로 확인하고 완료시켜준다.]]></description><link>100-projects/101-블로그-개편하기/01-블로그-개편하기.html</link><guid isPermaLink="false">100 Projects/101 블로그 개편하기/01 블로그 개편하기.md</guid><pubDate>Sat, 20 Dec 2025 14:13:47 GMT</pubDate></item><item><title><![CDATA[02]]></title><link>100-projects/101-블로그-개편하기/02.html</link><guid isPermaLink="false">100 Projects/101 블로그 개편하기/02.md</guid><pubDate>Sat, 20 Dec 2025 14:03:30 GMT</pubDate></item><item><title><![CDATA[koosang]]></title><description><![CDATA[이 블로그는 외부에 나를 알리기 위한 용도이다.나는 obsidian을 좋아한다. md파일로 내가 데이터의 근원을 들고 있으며 로컬에서 데이터 활용, 데이터끼리의 연동, 오픈된 plugin으로 이 노트앱만한 건 없다고 생각한다. LLM이 아무리 성장해도 나에대한 많은 기반 데이터를 기반으로 하고 이를 위해서는 나의 데이터를 쌓는 것이 중요하다.AI 서비스를 만드는 사람들은 공감할 것이다. 무엇을 만들던지간에 만드는 대상에 대한 도메인 지식의 POOL이 필요하다. 나는 옵시디언이 나 라는 POOL의 지식을 저장할 수 있다고 생각한다.다만 vault, 제2의 뇌와 같이 개인용 메모앱이고 외부로의 공유는 제한적인 형태이다. 그렇기에 나의 생각, 흔적을 남에게 보여줄 때는 제한이 될 수 밖에 없다.예전에는 방향성이 하나에 대한 스페셜리스트라고 생각했다. AI시대가 도래하고 보니 하나에 대해서 깊게 생각하고 더 나은 답을 도출하는 것은 AI가 더 잘했다. 나는 이 상황에서 내가 무엇을 해야하는지 고민하게 됐다.
-결론은 다 하면 됐다. 그리고 특정 시점, 나의 재능을 폭발시켜야했다. 대부분의 일반인은 못하지만 나는 할 수 있는 시점. 그 시점이 나에게 유일한 기회일 것이다.주식에서 좋은 주식을 갖고 있는게 중요한가? 아니다. 좋은 주식을 오르기 전에 갖는 것이 중요하다. 내가 AI보다 못났다고 하더라도 한순간은 나의 생산성이 폭발하는 시기 그 시기가 얼마 남지 않았다고 생각한다.나는 오케스트라가 된다.<img src="800-references/801-image/2025/12/20251218140123xxvp-index.png" target="_self">1<br><img style="max-width:400px; " class="excalidraw-svg-Drawing-2025-12-17-00.54.00.excalidraw excalidraw-embedded-img excalidraw-canvas-immersive excalidraw-embed-pending" filesource="800 References/802 Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.md" w="400" draggable="false" oncanvas="false" data-excalidraw-source="800 References/802 Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.md">1]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sat, 20 Dec 2025 13:48:07 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[프로젝트 중요 개발문서]]></title><description><![CDATA[이 문서는 프로젝트 내에서 사용되는 고유한 용어들을 명확히 정의하는 사전 역할을 합니다. 동영상은 특히 팀원 간의 소통 오류를 방지하는 데 이 문서가 필수적이라고 설명합니다.
-소통 오류 방지: 기획자, 퍼블리셔, 개발자 등 각기 다른 직군에 있는 팀원들은 같은 용어에 대해 다른 의미를 부여할 수 있습니다. 예를 들어, "프론트엔드"가 고객 대상(B2C)을 의미할 수도 있고, 직원 대상(B2E)을 의미할 수도 있습니다. 이러한 혼란을 막기 위해 용어사전을 통해 용어를 통일하는 것이 중요합니다.
-비생산적인 논쟁 방지: 용어에 대한 명확한 정의가 없으면 팀원 간에 불필요하고 비생산적인 논쟁이 발생할 수 있습니다. 용어사전은 이러한 시간 낭비를 막고, 본질적인 문제 해결에 집중할 수 있게 돕습니다.
-이 문서는 프로젝트의 전반적인 기술적 규칙과 표준을 명시합니다. 코드가 일관성을 갖도록 하여 개발 효율성을 높이는 것이 목적입니다.
-코드 일관성: 이 문서에는 클래스명에 PascalCase를, 변수명에 camelCase를 사용하는 등의 명명 규칙이 포함됩니다. 또한, SQL 쿼리 작성 규칙과 같은 코딩 표준도 명시하여 모든 개발자가 통일된 방식으로 코드를 작성하게 합니다.
-유지보수 용이성: 모든 코드가 일관된 규칙에 따라 작성되면, 새로운 팀원이 프로젝트에 합류하거나 기존 코드를 수정할 때 훨씬 수월해집니다. 이 문서는 마치 코딩을 위한 '헌법'과 같아서, 개발자들이 스스로 참고할 수 있는 지침이 됩니다.
-네, 맞습니다. 표준 개발 정의서는 단일 문서가 아니라 여러 문서를 아우르는 광범위한 개념입니다. 동영상에서 언급된 '표준 개발 정의서'는 프로젝트의 코딩 표준이나 기술적 규칙을 포괄적으로 일컫는 용어로 이해하는 것이 좋습니다.실제 프로젝트에서는 말씀하신 것처럼 코딩 스타일 가이드, 개발 스펙, 라이브러리 사용 방식, 심지어는 파일 및 디렉토리 구조까지도 문서화하여 표준을 만듭니다. 이러한 문서들은 하나로 통합되기보다는 각자의 목적에 맞게 분리되어 관리되는 경우가 많습니다.이 문서는 개발팀이 무엇을 만들 것인지에 대한 청사진을 제시하는 핵심 문서입니다. 개발자나 디자이너의 관점보다는 비즈니스와 사용자 관점에서 제품의 목표와 기능, 그리고 '왜' 이 기능이 필요한지를 설명하는 데 중점을 둡니다.
-제품의 비전과 목표: 이 제품(또는 기능)을 통해 어떤 문제를 해결하고 어떤 목표를 달성할 것인지 명시합니다. (예: "사용자 이탈률 감소", "신규 가입자 수 증대")
-사용자 페르소나: 제품을 사용할 대표적인 사용자의 특징과 행동을 상세히 기술하여, 팀원들이 사용자를 명확히 이해하도록 돕습니다.
-기능 목록: 개발해야 할 기능들을 목록으로 정리하고, 각 기능의 우선순위를 정합니다.
-사용자 시나리오: 사용자가 제품을 어떻게 이용하게 될지 스토리 형태로 풀어냅니다. (예: "로그인한 사용자가 마이페이지에서 주문 내역을 확인한다.")
-성공 지표: 프로젝트의 성공 여부를 측정할 수 있는 지표(KPI)를 정의합니다. (예: "특정 기능의 주간 사용률 10% 달성")
-나는 바이브 코딩을 하려고 하는데 미리 LLM이 이해하기 쉽도록 내 프로젝트에 대한 사항을 cursor rule로 정의하려고 해. 각각의 문서를 만든다고 할 때 종류가 용어사전 코딩컨벤션 개발스펙 기술스택 및 라이브러리 가이드라인 파일 및 디렉토리 구조 규칙 ]]></description><link>100-projects/커서-룰관련-개편/프로젝트-중요-개발문서.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/프로젝트 중요 개발문서.md</guid><pubDate>Sat, 20 Dec 2025 13:48:06 GMT</pubDate></item><item><title><![CDATA[Drawing 2025-12-20 16.50.09]]></title><description><![CDATA[<img src="800-references/802-excalidraw/drawing-2025-12-20-16.50.09.excalidraw.svg" target="_self">]]></description><link>800-references/802-excalidraw/drawing-2025-12-20-16.50.09.excalidraw.html</link><guid isPermaLink="false">800 References/802 Excalidraw/Drawing 2025-12-20 16.50.09.excalidraw.svg</guid><pubDate>Sat, 20 Dec 2025 07:51:50 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Drawing 2025-12-20 16.50.09]]></title><link>800-references/802-excalidraw/drawing-2025-12-20-16.50.09.excalidraw.html</link><guid isPermaLink="false">800 References/802 Excalidraw/Drawing 2025-12-20 16.50.09.excalidraw.md</guid><pubDate>Sat, 20 Dec 2025 07:51:50 GMT</pubDate></item><item><title><![CDATA[Drawing 2025-12-17 00.54.00]]></title><description><![CDATA[<img src="800-references/802-excalidraw/drawing-2025-12-17-00.54.00.excalidraw.svg" target="_self">]]></description><link>800-references/802-excalidraw/drawing-2025-12-17-00.54.00.excalidraw.html</link><guid isPermaLink="false">800 References/802 Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.svg</guid><pubDate>Thu, 18 Dec 2025 23:26:57 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Drawing 2025-12-17 00.54.00]]></title><link>800-references/802-excalidraw/drawing-2025-12-17-00.54.00.excalidraw.html</link><guid isPermaLink="false">800 References/802 Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.md</guid><pubDate>Thu, 18 Dec 2025 23:26:57 GMT</pubDate></item><item><title><![CDATA[20251218140123XXvP-index]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251218140123xxvp-index.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251218140123xxvp-index.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251218140123XXvP-index.png</guid><pubDate>Thu, 18 Dec 2025 13:57:58 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251216180906UqWQ-obsidian plugin 배포 BRAT]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251216180906uqwq-obsidian-plugin-배포-brat.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251216180906uqwq-obsidian-plugin-배포-brat.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251216180906UqWQ-obsidian plugin 배포 BRAT.png</guid><pubDate>Tue, 16 Dec 2025 18:08:57 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251216180906LlbA-obsidian plugin 배포 BRAT]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251216180906llba-obsidian-plugin-배포-brat.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251216180906llba-obsidian-plugin-배포-brat.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251216180906LlbA-obsidian plugin 배포 BRAT.png</guid><pubDate>Tue, 16 Dec 2025 18:07:24 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251130121401TepG-Git전략 실무관련 GITHUB FLOW와 GIT FLOW의 변형]]></title><description><![CDATA[<img src="800-references/801-image/2025/11/20251130121401tepg-git전략-실무관련-github-flow와-git-flow의-변형.png" target="_self">]]></description><link>800-references/801-image/2025/11/20251130121401tepg-git전략-실무관련-github-flow와-git-flow의-변형.html</link><guid isPermaLink="false">800 References/801 Image/2025/11/20251130121401TepG-Git전략 실무관련 GITHUB FLOW와 GIT FLOW의 변형.png</guid><pubDate>Sun, 30 Nov 2025 12:13:49 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251123123349RzGF-01.IOT 시스템의 구조 및 설계]]></title><description><![CDATA[<img src="800-references/801-image/2025/11/20251123123349rzgf-01.iot-시스템의-구조-및-설계.png" target="_self">]]></description><link>800-references/801-image/2025/11/20251123123349rzgf-01.iot-시스템의-구조-및-설계.html</link><guid isPermaLink="false">800 References/801 Image/2025/11/20251123123349RzGF-01.IOT 시스템의 구조 및 설계.png</guid><pubDate>Sat, 15 Nov 2025 11:58:29 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251123123349VZoh-01.IOT 시스템의 구조 및 설계]]></title><description><![CDATA[<img src="800-references/801-image/2025/11/20251123123349vzoh-01.iot-시스템의-구조-및-설계.png" target="_self">]]></description><link>800-references/801-image/2025/11/20251123123349vzoh-01.iot-시스템의-구조-및-설계.html</link><guid isPermaLink="false">800 References/801 Image/2025/11/20251123123349VZoh-01.IOT 시스템의 구조 및 설계.png</guid><pubDate>Sat, 15 Nov 2025 11:51:29 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130927HcZI-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130927hczi-mcp-관리-툴-프로그램.gif" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130927hczi-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130927HcZI-MCP 관리 툴 프로그램.gif</guid><pubDate>Mon, 15 Sep 2025 13:08:19 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130927GKcK-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130927gkck-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130927gkck-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130927GKcK-MCP 관리 툴 프로그램.png</guid><pubDate>Mon, 15 Sep 2025 12:19:19 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926yUKf-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926yukf-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926yukf-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926yUKf-MCP 관리 툴 프로그램.png</guid><pubDate>Mon, 15 Sep 2025 12:13:36 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926kmNJ-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926kmnj-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926kmnj-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926kmNJ-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:06:44 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926CSmm-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926csmm-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926csmm-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926CSmm-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:06:11 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926SDeU-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926sdeu-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926sdeu-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926SDeU-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:04:36 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926RkMN-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926rkmn-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926rkmn-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926RkMN-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:02:42 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926EVZE-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926evze-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926evze-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926EVZE-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 16:01:08 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250915130926sFgd-MCP 관리 툴 프로그램]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250915130926sfgd-mcp-관리-툴-프로그램.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250915130926sfgd-mcp-관리-툴-프로그램.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250915130926sFgd-MCP 관리 툴 프로그램.png</guid><pubDate>Sun, 14 Sep 2025 15:59:14 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251130115012LGOo-FSD에 Shcadn 적용시키기]]></title><description><![CDATA[<img src="800-references/801-image/2025/11/20251130115012lgoo-fsd에-shcadn-적용시키기.png" target="_self">]]></description><link>800-references/801-image/2025/11/20251130115012lgoo-fsd에-shcadn-적용시키기.html</link><guid isPermaLink="false">800 References/801 Image/2025/11/20251130115012LGOo-FSD에 Shcadn 적용시키기.png</guid><pubDate>Sat, 13 Sep 2025 03:21:08 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250911131404xlVB-Untitled]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250911131404xlvb-untitled.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250911131404xlvb-untitled.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250911131404xlVB-Untitled.png</guid><pubDate>Thu, 11 Sep 2025 13:14:00 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250911131507Ecsm-js 번들 분석 및 최적화하기]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250911131507ecsm-js-번들-분석-및-최적화하기.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250911131507ecsm-js-번들-분석-및-최적화하기.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250911131507Ecsm-js 번들 분석 및 최적화하기.png</guid><pubDate>Sun, 07 Sep 2025 09:16:26 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20250911131507iJCR-js 번들 분석 및 최적화하기]]></title><description><![CDATA[<img src="800-references/801-image/2025/09/20250911131507ijcr-js-번들-분석-및-최적화하기.png" target="_self">]]></description><link>800-references/801-image/2025/09/20250911131507ijcr-js-번들-분석-및-최적화하기.html</link><guid isPermaLink="false">800 References/801 Image/2025/09/20250911131507iJCR-js 번들 분석 및 최적화하기.png</guid><pubDate>Sun, 07 Sep 2025 08:26:32 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251130163330YCFo-백엔드의 3요소]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251130163330ycfo-백엔드의-3요소.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251130163330ycfo-백엔드의-3요소.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251130163330YCFo-백엔드의 3요소.png</guid><pubDate>Tue, 02 Sep 2025 12:34:29 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20251130163330NwvL-백엔드의 3요소]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251130163330nwvl-백엔드의-3요소.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251130163330nwvl-백엔드의-3요소.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251130163330NwvL-백엔드의 3요소.png</guid><pubDate>Tue, 02 Sep 2025 12:25:06 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian 폴더구조 가이드-225418]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-폴더구조-가이드-225418.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-폴더구조-가이드-225418.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian 폴더구조 가이드-225418.png</guid><pubDate>Mon, 25 Aug 2025 13:51:57 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[SUPBASE GOOGLE OAUTH VERCEL 인증 환경설정-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/supbase-google-oauth-vercel-인증-환경설정-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/supbase-google-oauth-vercel-인증-환경설정-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/SUPBASE GOOGLE OAUTH VERCEL 인증 환경설정-2.png</guid><pubDate>Thu, 14 Aug 2025 08:02:51 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[SUPBASE GOOGLE OAUTH VERCEL 인증 환경설정-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/supbase-google-oauth-vercel-인증-환경설정-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/supbase-google-oauth-vercel-인증-환경설정-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/SUPBASE GOOGLE OAUTH VERCEL 인증 환경설정-1.png</guid><pubDate>Thu, 14 Aug 2025 08:01:40 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[MDXRemote 테이블 깨짐 문제-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/mdxremote-테이블-깨짐-문제-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/mdxremote-테이블-깨짐-문제-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/MDXRemote 테이블 깨짐 문제-1.png</guid><pubDate>Wed, 23 Jul 2025 10:57:41 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-4]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-4.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-4.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-4.png</guid><pubDate>Tue, 15 Jul 2025 15:44:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-3]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-3.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-3.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-3.png</guid><pubDate>Tue, 15 Jul 2025 15:42:52 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-5]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-5.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-5.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-5.png</guid><pubDate>Tue, 15 Jul 2025 15:41:25 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-2.png</guid><pubDate>Tue, 15 Jul 2025 15:38:36 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[공유기 원격데스크톱 접속-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/공유기-원격데스크톱-접속-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/공유기-원격데스크톱-접속-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/공유기 원격데스크톱 접속-1.png</guid><pubDate>Tue, 15 Jul 2025 15:31:44 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Cursor rule 관련-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/cursor-rule-관련-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/cursor-rule-관련-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Cursor rule 관련-2.png</guid><pubDate>Tue, 17 Jun 2025 18:51:43 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Cursor rule 관련-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/cursor-rule-관련-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/cursor-rule-관련-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Cursor rule 관련-1.png</guid><pubDate>Tue, 17 Jun 2025 18:47:20 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[REACT에서 자주 업데이트되는 데이터리스트 관리방식-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/react에서-자주-업데이트되는-데이터리스트-관리방식-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/react에서-자주-업데이트되는-데이터리스트-관리방식-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/REACT에서 자주 업데이트되는 데이터리스트 관리방식-1.png</guid><pubDate>Sun, 08 Jun 2025 10:51:06 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[한 화면에서 일부 내용만 좌우 스크롤-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/한-화면에서-일부-내용만-좌우-스크롤-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/한-화면에서-일부-내용만-좌우-스크롤-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/한 화면에서 일부 내용만 좌우 스크롤-1.png</guid><pubDate>Sat, 17 May 2025 05:56:37 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[멀티 스레딩-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/멀티-스레딩-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/멀티-스레딩-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/멀티 스레딩-1.png</guid><pubDate>Wed, 14 May 2025 11:35:45 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[자동화 n8n-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/자동화-n8n-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/자동화-n8n-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/자동화 n8n-1.png</guid><pubDate>Tue, 15 Apr 2025 16:35:09 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[COMMIT MESSAGE규칙-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/commit-message규칙-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/commit-message규칙-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/COMMIT MESSAGE규칙-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:18 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[WEB HOOK 관련-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/web-hook-관련-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/web-hook-관련-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/WEB HOOK 관련-2.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[WEB HOOK 관련-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/web-hook-관련-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/web-hook-관련-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/WEB HOOK 관련-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[VSCODE 문자열을 원래 문자열과 함께 특정형태 replace-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/vscode-문자열을-원래-문자열과-함께-특정형태-replace-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/vscode-문자열을-원래-문자열과-함께-특정형태-replace-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/VSCODE 문자열을 원래 문자열과 함께 특정형태 replace-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian Templater에서 js로 값  실행-4]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-4.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-4.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian Templater에서 js로 값  실행-4.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian Templater에서 js로 값  실행-2]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-2.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-2.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian Templater에서 js로 값  실행-2.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian Templater에서 js로 값  실행-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian Templater에서 js로 값  실행-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Obsidian Templater에서 js로 값  실행-3]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-3.png" target="_self">]]></description><link>800-references/801-image/2025/08/obsidian-templater에서-js로-값-실행-3.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Obsidian Templater에서 js로 값  실행-3.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Android Studio 삭제 후 재설치 관련-1]]></title><description><![CDATA[<img src="800-references/801-image/2025/08/android-studio-삭제-후-재설치-관련-1.png" target="_self">]]></description><link>800-references/801-image/2025/08/android-studio-삭제-후-재설치-관련-1.html</link><guid isPermaLink="false">800 References/801 Image/2025/08/Android Studio 삭제 후 재설치 관련-1.png</guid><pubDate>Wed, 02 Apr 2025 12:12:17 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Drawing 2025-12-17 00.54.00]]></title><link>excalidraw/drawing-2025-12-17-00.54.00.excalidraw.html</link><guid isPermaLink="false">Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.md</guid><pubDate>Tue, 16 Dec 2025 15:54:20 GMT</pubDate></item><item><title><![CDATA[00.프로젝트 초기 구성]]></title><description><![CDATA[소설관계도를 시각화 할 수 있는 Saas 구성, 여기서 개인이 스토리를 작성하면 같이 스토리가 작성되는 ]]></description><link>100-projects/사이드프로젝트(story)/00.프로젝트-초기-구성.html</link><guid isPermaLink="false">100 Projects/사이드프로젝트(Story)/00.프로젝트 초기 구성.md</guid><pubDate>Thu, 13 Nov 2025 14:02:06 GMT</pubDate></item><item><title><![CDATA[2. 현재있는 flow를 과연 llm이 mermaid로 작성할 수 있을까]]></title><description><![CDATA[내가 현재 개발하고 있는 내용을 mermaid.js 로 작성해달라고 말해봤다.
-아래와 같이 작성이 되었는데. 기본 모델을 사용했음에도 생각보다 깔끔하고 구체적이어서 놀랐다.
-내가 쓴 prompt (cursor의 auto모드)
-: system tray에서 카테고리의 항목을 변경했을 때 발생하는 코드들에 대해서 mermaid.js로 변경하는 작업을 진행해줘
-]]></description><link>100-projects/mermaid를-통한-prd/2.-현재있는-flow를-과연-llm이-mermaid로-작성할-수-있을까.html</link><guid isPermaLink="false">100 Projects/mermaid를 통한 prd/2. 현재있는 flow를 과연 llm이 mermaid로 작성할 수 있을까.md</guid><pubDate>Tue, 16 Sep 2025 19:31:48 GMT</pubDate></item><item><title><![CDATA[4. 확인사항]]></title><description><![CDATA[출분히 비지니스나 업무관련 workflow는 mermaid.js 로 그리는 것이 가능하다.특히 claude 4.0 sonnet 부터는 claude-desktop에 mermaid 탑재기능을 넣으면서 workflow 해석능력이 타 언어모델보다 나아보임.업무를 수행하면서 해당 업무가 어떤 기능에 대한 것을 명시 혹은 진입점의 component 상단에 넣어놓으면 해당 업무를 수행하면서 workflow 수정 혹은 완료 시 표기하여 이후 해당 workflow 에 대한 이해도를 대폭 늘릴 수 있을 것으로 보인다.추가적으로 작업이후에 해당기능에 대해서 평가를 해보겠다.]]></description><link>100-projects/mermaid를-통한-prd/4.-확인사항.html</link><guid isPermaLink="false">100 Projects/mermaid를 통한 prd/4. 확인사항.md</guid><pubDate>Tue, 16 Sep 2025 19:11:00 GMT</pubDate></item><item><title><![CDATA[3. mermaid관련된 내용 작업 진행(템플릿)]]></title><description><![CDATA[Create documentation focused on business logic and workflows rather than technical implementation details, making it easy for future developers to understand how features work.
-Data Branching Criteria: When and how logic branches
-Function Names: Which functions are called (excluding technical implementation)
-External API Integration: Points of integration with external systems
-User Actions: What actions users perform
-Results/State: What results occur at each step
-Business Rules: Why the system behaves this way Code implementation details
-Variable names, type definitions, interface structures
-Technical architecture explanations
-Error handling details
-Performance optimization content
-# [Feature Name] Workflow ## Overview
-- Brief description of what this feature does
-- What problem it solves for users ## User Scenario
-- User performs [specific action]
-- [Condition] determines [result] ## Branching Criteria
-1. **[Condition A]** → Execute [Path 1]
-2. **[Condition B]** → Execute [Path 2]
-3. **[Condition C]** → Execute [Path 3] ## Execution Flow
-1. **[Function Name]** Call - Purpose: [Why it's called] - Result: [What state changes] 2. **[External API]** Integration - Purpose: [What data is retrieved] - Result: [What information is obtained] 3. **[State Change]** Occurs - Purpose: [Why state is changed] - Result: [What UI updates] ## Data Flow
-- Input: [Data user inputs]
-- Processing: [How it's transformed]
-- Output: [Final result] ## Exception Handling
-- **[Exception 1]**: [How it's handled]
-- **[Exception 2]**: [How it's handled] ## Related Functions
-- `[Function1]`: [Role description]
-- `[Function2]`: [Role description]
-- `[Function3]`: [Role description] Start with "When user clicks..." format
-Use common terms rather than technical jargon Explain if/else conditions as business logic
-Use expressions like "if data exists", "if user has permission" switchToCategory() → "Category switching function"
-updateMCPConfig() → "Configuration file update function" API calls, file saves, database connections
-Include reasons for external integration Specify "what changes" at each step
-UI changes, data changes, state changes
-# System Tray Category Change Workflow ## Overview
-When users select a different category from the system tray, the server settings for that category are reflected in the actual Claude/Cursor configuration files. ## User Scenario
-- User right-clicks system tray icon
-- Selects desired category from "Claude Category" or "Cursor Category" submenu
-- Servers in selected category become available in the respective application ## Branching Criteria
-1. **Claude Category Selected** → Update Claude configuration file
-2. **Cursor Category Selected** → Update Cursor configuration file
-3. **Category Has No Servers** → Create empty configuration file ## Execution Flow
-1. **Category Switch Function** Call - Purpose: Change selected category to active state - Result: Store active category information 2. **Configuration File Update Function** Call - Purpose: Reflect selected category's servers in actual configuration file - Result: Claude/Cursor recognizes new servers 3. **Renderer Process Notification** - Purpose: Display changed category information in UI - Result: New active category shown in app interface ## Data Flow
-- Input: Category ID selected by user
-- Processing: Convert servers in category to configuration file format
-- Output: Save as JSON in Claude/Cursor configuration file ## Related Functions
-- `switchToCategory()`: Category switching processing
-- `updateMCPConfig()`: Configuration file update
-- `updateTrayMenu()`: Tray menu state synchronization Written from user perspective?
-Branching criteria clear?
-Function names match their roles?
-External integration points specified?
-Results clear at each step?
-Technical details excluded?
-]]></description><link>100-projects/mermaid를-통한-prd/3.-mermaid관련된-내용-작업-진행(템플릿).html</link><guid isPermaLink="false">100 Projects/mermaid를 통한 prd/3. mermaid관련된 내용 작업 진행(템플릿).md</guid><pubDate>Tue, 16 Sep 2025 19:06:20 GMT</pubDate></item><item><title><![CDATA[1. LLM과 협업하기]]></title><description><![CDATA[현재 바이브코딩에서는 LLM과 협업하는 형태로 다시 개발문서 작성을 통한 개발로 돌아가고 있다.
-해당 방식이 가능해진 이유는 다음과 같다.
-개발문서 작업공수 감소 : 개발문서를 작성할 수 있는 방식이 기존에는 사람이 모든 문서내용을 작성해야했다면, 현재는 LLM이 대략적인 플로우를 작성해주기 때문이다.
-사람이라면 내재화된 지식들을 llm은 일관성을 유지하기 어려움으로 컨텍스트로 쓸 문서를 작성하는 개념 하지만 복잡한 업무 플로우에 대해서 작성하지 못하는 문제가 발생한다.
-이런 문제 방식을 좀더 효율적으로 개선하기 위해서는 어떤방식을 사용할까 고민해봤다.LLM이 사람이라면 어떤 방식을 이해하기 쉬울까 고민해봤을 때 가장 잘 이해하는 방식은 WORKFLOW 방식이다. 알고리즘 FLOW CHART를 그려서 판단하는 것이다.
-하지만 줄글을 통해서는 해당 WORKFLOW를 판단하는데 어려움이 있다.코딩으로는 이미 WORKFLOW가 있는거나 다름없지만 코드로 존재하는 것이기 때문에 전체적인 윤곽을 잡기가 어렵다.그렇다면 현재 Claude에서 밀고있는 mermaid.js로부터 시작해보면 어떨까라는 아이디어를 갖게 되었다.]]></description><link>100-projects/mermaid를-통한-prd/1.-llm과-협업하기.html</link><guid isPermaLink="false">100 Projects/mermaid를 통한 prd/1. LLM과 협업하기.md</guid><pubDate>Tue, 16 Sep 2025 18:35:33 GMT</pubDate></item><item><title><![CDATA[반복적인 엑셀 작성업무 자동화]]></title><description><![CDATA[반복적인 엑셀의 데이터를 입력해야하는 일이 발생하였다. 이를 간편하게 해결하고 차후 추가적으로 기능을 개선할 수 있도록 하기위한 electron으로 만든 프로그램이다.예를들어 A,B,C 의 데이터가 있는데 이 데이터를 통해서 엑셀에 있는 값을 바꿔야하는 상황이다. 문제는 B의 데이터가 엑셀 내부에서 하나의 셀에서만 사용하지 않고 사용하는 곳이 10군데 이상이다.
-실제 사용자 입장에서 해야하는 행동프로세스는 다음과 같았다.
-엑셀템플릿을 복사
-해당 템플릿 내부에 데이터를 일일히 변경
-수식을 사용하려고 하였으나 데이터상으로 고정값이 들어가야하고 기록용 시트 및 실 사용자들의 요구로는 데이터 값이 들어가야하는 요구
-기록하는 데이터가 외부 웹에 있는 데이터, 차후 api수신을 통해서 사용자가 직접 복붙이 아닌 한번에 동작할 수 있는 기능으로 적용
-]]></description><link>100-projects/엑셀-데이터-변경-프로젝트/반복적인-엑셀-작성업무-자동화.html</link><guid isPermaLink="false">100 Projects/엑셀 데이터 변경 프로젝트/반복적인 엑셀 작성업무 자동화.md</guid><pubDate>Sun, 31 Aug 2025 16:35:37 GMT</pubDate></item><item><title><![CDATA[08. FSD 관련 cursor rule]]></title><description><![CDATA[app → pages → widgets → features → entities → shared
-Dependency Rule: Upper layers can import from lower layers, but NOT vice versa.
-app: Global setup, routing, providers, root store
-pages: Route components, layout composition
-widgets: Independent UI blocks combining features+entities
-features: Business functionality with user interactions
-entities: Domain models, data-centric components
-shared: Reusable, domain-agnostic components &amp; utilities
-[domain]/
-├── ui/ # UI components
-├── model/ # Business logic, state management
-├── api/ # Server communication
-├── lib/ # Helper functions
-├── config/ # Configuration files
-└── index.ts # Public API exports
-Is it domain-agnostic? ├── YES → shared/ui
-└── NO → Is it pure data display? ├── YES → entities/[domain]/ui └── NO → features/[feature]/ui shared/ui: "Can this be used in any project without domain knowledge?"
-entities: "Does this only display domain data without business logic?"
-features: "Does this perform a specific business function?"
-widgets: "Does this combine multiple features/entities into an independent block?"
-// shared/ui/Button.tsx - Pure UI component
-const Button = ({ variant, onClick, children }) =&gt; ( &lt;button className={`btn-${variant}`} onClick={onClick}&gt; {children} &lt;/button&gt;
-) // entities/user/ui/UserCard.tsx - Pure data display
-const UserCard = ({ user }) =&gt; ( &lt;Card&gt; &lt;Avatar src={user.avatar} /&gt; &lt;Text&gt;{user.name}&lt;/Text&gt; &lt;Text&gt;{user.email}&lt;/Text&gt; &lt;/Card&gt;
-) // features/auth/ui/LoginForm.tsx - Business function
-const LoginForm = () =&gt; { const { login, isLoading } = useAuth() return ( &lt;form onSubmit={handleLogin}&gt; &lt;Input name="email" /&gt; &lt;Input name="password" type="password" /&gt; &lt;Button loading={isLoading}&gt;Login&lt;/Button&gt; &lt;/form&gt; )
-} // widgets/header/ui/Header.tsx - Combined block
-const Header = () =&gt; ( &lt;header&gt; &lt;Logo /&gt; &lt;SearchInput /&gt; &lt;UserProfile /&gt; &lt;LogoutButton /&gt; &lt;/header&gt;
-)
-// Always use index.ts for public exports
-export { UserCard, UserProfile } from './ui'
-export { useUserStore } from './model'
-export { fetchUser } from './api'
-export type { User } from './model/types'
-// pages can import from all lower layers
-import { Header } from 'widgets/header'
-import { LoginForm } from 'features/auth'
-import { UserCard } from 'entities/user'
-import { Button } from 'shared/ui' // widgets can import features, entities, shared
-import { SearchForm } from 'features/search'
-import { ProductCard } from 'entities/product'
-import { Card } from 'shared/ui' // features can import entities, shared
-import { UserAvatar } from 'entities/user'
-import { validateEmail } from 'shared/lib'
-// Lower layers importing from upper layers
-import { LoginForm } from 'features/auth' // in entities
-import { UserCard } from 'entities/user' // in shared // Cross-layer imports at same level
-import { AuthFeature } from 'features/auth' // in features/profile // Direct internal imports (bypass index.ts)
-import { UserCard } from 'entities/user/ui/UserCard' // Use 'entities/user' instead
-// entities/user/model/store.ts
-export const useUserStore = create((set) =&gt; ({ users: [], currentUser: null, setCurrentUser: (user) =&gt; set({ currentUser: user })
-})) // features/auth/model/store.ts
-export const useAuthStore = create((set) =&gt; ({ isAuthenticated: false, login: async (credentials) =&gt; { const user = await authApi.login(credentials) useUserStore.getState().setCurrentUser(user) // OK to call entities }
-}))
-user-management/
-product-search/
-order-history/
-UserCard.tsx
-userApi.ts
-userStore.ts
-types.ts
-// Domain-specific component in shared
-shared/ui/UserSpecificButton/ // Should be in entities/user // Pure UI component in domain layer entities/user/ui/Button/ // Should be in shared/ui // Business logic in entities
-entities/user/model/loginUser() // Should be in features/auth
-// Circular dependencies
-// entities/user imports features/auth AND
-// features/auth imports entities/user // Skipping layers inappropriately // pages directly using entities when features exist
-src/
-├── app/
-│ ├── providers/
-│ ├── store/
-│ └── styles/
-├── pages/
-│ └── [route]/
-│ ├── ui/
-│ └── index.ts
-├── widgets/
-│ └── [widget-name]/
-│ ├── ui/
-│ ├── model/
-│ └── index.ts
-├── features/
-│ └── [feature-name]/
-│ ├── ui/
-│ ├── model/
-│ ├── api/
-│ └── index.ts
-├── entities/
-│ └── [entity-name]/
-│ ├── ui/
-│ ├── model/
-│ ├── api/
-│ └── index.ts
-└── shared/ ├── ui/ ├── lib/ ├── api/ └── config/
-When creating a new component, ask:
-Domain-agnostic? → shared/ui
-Just displaying entity data? → entities/[domain]/ui
-Performing business action? → features/[feature]/ui
-Combining multiple features/entities? → widgets/[widget]/ui
-Route-level composition? → pages/[route]/ui
-]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/08.-fsd-관련-cursor-rule.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/08. FSD 관련 cursor rule.md</guid><pubDate>Sat, 30 Aug 2025 05:33:02 GMT</pubDate></item><item><title><![CDATA[07.디자인 스타일 가이드]]></title><link>100-projects/커서-룰관련-개편/각-요소-템플릿/07.디자인-스타일-가이드.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/07.디자인 스타일 가이드.md</guid><pubDate>Tue, 26 Aug 2025 15:50:11 GMT</pubDate></item><item><title><![CDATA[05.DB 가이드]]></title><description><![CDATA[supabase 이용시 테이블 가이드 관련database.ts 파일만으로는 부분적으로만 충분해요. 더 효과적으로 만들려면 추가 정보가 필요합니다.// Supabase에서 자동 생성되는 타입들
-export interface Database { public: { Tables: { users: { Row: { id: number email: string created_at: string } Insert: { id?: number email: string created_at?: string } Update: { id?: number email?: string created_at?: string } } } }
-}
-✅ 타입 정보는 완벽하게 제공
-✅ CRUD 인터페이스 명확❌ 관계 정보 (FK, 1:N, M:N)
-❌ 비즈니스 규칙
-❌ 인덱스/제약조건
-❌ RLS 정책# Supabase Database Schema ## Types (자동생성)
-[database.ts 내용 포함] ## Relationships
-```sql
--- Foreign Key Relationships
-users (1) ---&gt; (N) orders (user_id)
-orders (1) ---&gt; (N) order_items (order_id)
-products (1) ---&gt; (N) order_items (product_id) users: 본인 데이터만 읽기/수정 가능
-orders: 본인 주문만 접근 가능
-profiles: public 읽기, 본인만 수정
-// 관계 데이터 조회
-const { data } = await supabase .from('users') .select(` *, orders ( *, order_items ( *, products (name, price) ) ) `) .eq('id', userId); 주문 생성시 재고 확인 필수
-사용자는 본인 데이터만 접근 가능 (RLS)
-soft delete 사용 (deleted_at 컬럼) ## 결론
-`database.ts` + **관계 정보** + **비즈니스 규칙** + **RLS 정책**을 함께 제공하면 LLM이 Supabase 특성을 고려한 최적의 코드를 생성할 수 있어요. 특히 Supabase의 `.select()` 문법이나 RLS 고려사항 등은 별도로 명시해주는 것이 좋습니다.
-]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/05.db-가이드.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/05.DB 가이드.md</guid><pubDate>Tue, 26 Aug 2025 15:45:48 GMT</pubDate></item><item><title><![CDATA[06.Clean code 룰]]></title><description><![CDATA[You are an expert software engineer focused on writing clean, maintainable code. Follow these principles rigorously:
-DRY - Eliminate duplication ruthlessly
-KISS - Simplest solution that works
-YAGNI - Build only what's needed now
-SOLID - Apply all five principles consistently
-Boy Scout Rule - Leave code cleaner than found Use intention-revealing names
-Avoid abbreviations except well-known ones (e.g., URL, API)
-Classes: nouns, Methods: verbs, Booleans: is/has/can prefix
-Constants: UPPER_SNAKE_CASE
-No magic numbers - use named constants Single Responsibility - one reason to change
-Maximum 20 lines (prefer under 10)
-Maximum 3 parameters (use objects for more)
-No side effects in pure functions
-Early returns over nested conditions Cyclomatic complexity &lt; 10
-Maximum nesting depth: 3 levels
-Organize by feature, not by type
-Dependencies point inward (Clean Architecture)
-Interfaces over implementations Code should be self-documenting
-Comments explain why, not what
-Update comments with code changes
-Delete commented-out code immediately
-Document public APIs thoroughly Fail fast with clear messages
-Use exceptions over error codes
-Handle errors at appropriate levels
-Never catch generic exceptions
-Log errors with context TDD when possible
-Test behavior, not implementation
-One assertion per test
-Descriptive test names: should_X_when_Y
-AAA pattern: Arrange, Act, Assert
-Maintain test coverage &gt; 80% Profile before optimizing
-Optimize algorithms before micro-optimizations
-Cache expensive operations
-Lazy load when appropriate
-Avoid premature optimization Never trust user input
-Sanitize all inputs
-Use parameterized queries
-Follow principle of least privilege
-Keep dependencies updated
-No secrets in code Atomic commits - one logical change
-Imperative mood commit messages
-Reference issue numbers
-Branch names: type/description
-Rebase feature branches before merging Review for correctness first
-Check edge cases
-Verify naming clarity
-Ensure consistent style
-Suggest improvements constructively Duplicate code (Rule of Three)
-Long methods/classes
-Feature envy
-Data clumps
-Divergent change
-Shotgun surgery
-Before committing, ensure:
-All tests pass
-No linting errors
-No console logs
-No commented code
-No TODOs without tickets
-Performance acceptable
-Security considered
-Documentation updated
-Remember: Clean code reads like well-written prose. Optimize for readability and maintainability over cleverness.]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/06.clean-code-룰.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/06.Clean code 룰.md</guid><pubDate>Tue, 26 Aug 2025 15:42:57 GMT</pubDate></item><item><title><![CDATA[04.기술스택 및 라이브러리 가이드라인]]></title><description><![CDATA[
-always use promise for page.tsx params props.
-use valid picsum.photos stock image for placeholder image use following libraries for specific functionalities:
-date-fns: For efficient date and time handling.
-ts-pattern: For clean and type-safe branching logic.
-@tanstack/react-query: For server state management.
-zustand: For lightweight global state management.
-react-use: For commonly needed React hooks.
-es-toolkit: For robust utility functions.
-lucide-react: For customizable icons.
-zod: For schema validation and data integrity.
-shadcn-ui: For pre-built accessible UI components.
-tailwindcss: For utility-first CSS styling.
-supabase: For a backend-as-a-service solution.
-react-hook-form: For form validation and state management. src
-src/app: Next.js App Routers
-src/components/ui: shadcn-ui components
-src/constants: Common constants
-src/hooks: Common hooks
-src/lib: utility functions
-src/remote: http client
-src/features/[featureName]/components/*: Components for specific feature
-src/features/[featureName]/constants/*
-src/features/[featureName]/hooks/*
-src/features/[featureName]/lib/*
-src/features/[featureName]/api.ts: api fetch functions Rephrase Input: Transform to clear, professional prompt.
-Analyze &amp; Strategize: Identify issues, outline solutions, define output format.
-Develop Solution: "As a senior-level developer, I need to [rephrased prompt]. To accomplish this, I need to:"
-List steps numerically.
-"To resolve these steps, I need the following solutions:"
-List solutions with bullet points. Validate Solution: Review, refine, test against edge cases.
-Evaluate Progress: If incomplete: Pause, inform user, await input.
-If satisfactory: Proceed to final output. Prepare Final Output: ASCII title
-Problem summary and approach
-Step-by-step solution with relevant code snippets
-Format code changes: // ... existing code ... function exampleFunction() { // Modified or new code here } // ... existing code ... Use appropriate formatting
-Describe modifications
-Conclude with potential improvements Simplicity
-Readability
-Maintainability
-Testability
-Reusability
-Functional Paradigm
-Pragmatism Early Returns
-Conditional Classes over ternary
-Descriptive Names
-Constants &gt; Functions
-DRY
-Functional &amp; Immutable
-Minimal Changes
-Pure Functions
-Composition over inheritance Avoid Mutation
-Use Map, Filter, Reduce
-Currying and Partial Application
-Immutability Use TypeScript for type safety.
-Follow the coding standards defined in the ESLint configuration.
-Ensure all components are responsive and accessible.
-Use Tailwind CSS for styling, adhering to the defined color palette.
-When generating code, prioritize TypeScript and React best practices.
-Ensure that any new components are reusable and follow the existing design patterns.
-Minimize the use of AI generated comments, instead use clearly named variables and functions.
-Always validate user inputs and handle errors gracefully.
-Use the existing components and pages as a reference for the new components and pages. Avoid Premature Optimization
-Profile Before Optimizing
-Optimize Judiciously
-Document Optimizations Comment function purpose
-Use JSDoc for JS
-Document "why" not "what" Higher-order functionality first
-Group related functions Use TODO: and FIXME: comments Use appropriate techniques
-Prefer returning errors over exceptions Unit tests for core functionality
-Consider integration and end-to-end tests you must use promise for page.tsx params props. if you need to add new component, please show me the installation instructions. I'll paste it into terminal.
-example
-$ npx shadcn@latest add card
-$ npx shadcn@latest add textarea
-$ npx shadcn@latest add dialog if you need to add new table, please create migration. I'll paste it into supabase.
-do not run supabase locally
-store migration query for .sql file. in /supabase/migrations/ use npm as package manager. 코드를 생성한 후에 utf-8 기준으로 깨지는 한글이 있는지 확인해주세요. 만약 있다면 수정해주세요. You are a senior full-stack developer, one of those rare 10x devs. Your focus: clean, maintainable, high-quality code.
-Apply these principles judiciously, considering project and team needs.]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/04.기술스택-및-라이브러리-가이드라인.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/04.기술스택 및 라이브러리 가이드라인.md</guid><pubDate>Tue, 26 Aug 2025 15:39:53 GMT</pubDate></item><item><title><![CDATA[03.개발스펙]]></title><description><![CDATA[개발 스펙은 개발팀이 기능을 구현하는 데 필요한 모든 기술적 세부 사항을 담은 문서입니다. 이는 단순히 기능 목록을 나열하는 것을 넘어, '어떻게' 구현할지에 대한 명확한 지침을 제공하여 불확실성을 없애고 개발 효율성을 높입니다.
-기능 요약: 구현하려는 기능이 무엇인지 한두 문장으로 간결하게 설명합니다. (예: "사용자가 파일을 업로드하고 관리할 수 있는 기능")
-개발 배경: 왜 이 기능을 개발해야 하는지, 비즈니스적 목표와 사용자 니즈를 명시합니다. (예: "고객 문의 시 첨부 파일이 필요한 경우가 많아 고객센터 운영 효율성 증대를 위함") 세부 기능 목록: 기능의 모든 하위 기능과 동작을 구체적으로 나열합니다. (예: 파일 업로드 버튼, 업로드 상태 표시, 파일 삭제 기능)
-사용자 인터페이스 (UI) 스펙: UI/UX 디자인에 따라 각 화면의 구성 요소, 레이아웃, 버튼의 동작 방식 등을 설명합니다.
-데이터 모델: 기능 구현에 필요한 데이터 구조를 정의합니다. 어떤 데이터를 어떤 형식으로 저장하고 관리할지 명시합니다. 예: User 테이블에 profile_image_url 컬럼 추가 비즈니스 로직: 기능의 핵심적인 로직과 규칙을 설명합니다. (예: "상품 할인율은 최대 50%를 넘지 못한다", "결제 완료 후 재고 수량을 감소시킨다") API 명세: 프론트엔드와 백엔드 간의 통신을 위해 필요한 API 엔드포인트, 요청/응답 데이터 구조, HTTP 메서드 등을 구체적으로 명시합니다. 예: POST /api/v1/products (상품 등록 API) 기술적 제약사항 및 의존성: 기능 구현에 필요한 외부 라이브러리, API, 또는 기술적 제약사항을 기록합니다.
-데이터베이스 스키마 설계: 기능과 관련된 데이터베이스 테이블의 구조, 컬럼, 관계 등을 정의합니다.
-오류 및 예외 처리: 발생 가능한 모든 오류 상황(예: 입력값 유효성 검사 실패, 네트워크 오류)에 대한 처리 방안을 상세히 기술합니다. 성능 요구사항: 응답 시간(Latency), 처리량(Throughput) 등 기능이 만족해야 할 성능 지표를 정의합니다. (예: "결제 요청에 대한 응답 시간은 2초 이내여야 한다")
-보안 스펙: 기능에 필요한 보안 관련 요구사항을 명시합니다. (예: "사용자 비밀번호는 단방향 암호화하여 저장해야 한다", "모든 API 통신은 HTTPS를 사용한다") playground, jest 기반을 이용하여 테스트를 진행합니다.
-테스트 케이스: 기능의 정상 작동 여부를 확인하기 위한 테스트 시나리오를 작성합니다. (예: "유효한 값으로 회원가입 시 정상적으로 가입이 완료되는지 확인", "중복된 아이디로 회원가입 시 오류 메시지가 출력되는지 확인")
-성능 테스트: 정의된 성능 요구사항을 만족하는지 확인하기 위한 테스트 시나리오를 포함할 수 있습니다.
-]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/03.개발스펙.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/03.개발스펙.md</guid><pubDate>Tue, 26 Aug 2025 15:29:09 GMT</pubDate></item><item><title><![CDATA[02.코딩 컨벤션 템플릿]]></title><description><![CDATA[코드의 품질과 유지보수성을 높이고 가독성을 높이기 위해서 아래의 규칙을 따른다.명명 규칙은 코드의 각 요소(변수, 함수, 클래스 등)가 어떤 역할을 하는지 이름을 통해 명확히 전달하는 것을 목표로 합니다.
-공통: 기본적으로 명명규칙 시 용어사전 내 용어로 작성하며 없을 시 보편적인 용어로 작성한다.(우선순위: 용어사전내 용어 &gt; 보편적인용어) 변수(Variable): camelCase 사용이 일반적입니다. (예: userName, totalCount)
-의미를 명확히 담아, 주석 없이도 변수의 역할을 짐작할 수 있도록 해야 합니다.
-Bad Example: const a = 10; (무엇을 의미하는지 알 수 없음)
-Good Example: const userAge = 25; (변수 역할이 명확함) 함수(Function): camelCase 사용이 일반적입니다.
-동사+명사 조합으로 함수의 동작을 표현합니다. (예: getUserProfile, calculateTotalPrice) 클래스(Class): PascalCase 사용이 일반적입니다. (예: UserProfile, ShoppingCart)
-클래스가 나타내는 '객체'나 '개념'을 명사로 표현합니다. 상수(Constant): 모두 대문자로 작성하고 단어 사이를 언더스코어(_)로 연결하는 SNAKE_CASE를 사용합니다. (예: API_KEY, MAX_ITEM_COUNT) 주석은 코드 자체로는 설명하기 어려운 맥락, 복잡한 로직의 이유, 기술적 결정의 배경 등을 기록하는 데 사용됩니다.
-필요한 경우에만 작성: 코드가 스스로 설명하도록 작성하는 것이 최우선입니다.
-파일/모듈 단위 주석: 파일의 최상단에 작성하여 해당 파일의 전반적인 역할과 의존성 등을 설명합니다.
-함수/클래스 단위 주석: JSDoc과 같은 표준화된 포맷을 사용해 함수의 기능, 매개변수, 반환 값 등을 명확히 기록합니다. 이는 자동 문서화 도구와 연동하여 효과적으로 문서를 생성하는 데 도움을 줍니다.
-코드 포맷팅은 개발 환경을 통일시켜 코드의 시각적인 일관성을 유지하는 것입니다. 이를 위해 Prettier 형식을 사용합니다. 탭은 2칸입니다.]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/02.코딩-컨벤션-템플릿.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/02.코딩 컨벤션 템플릿.md</guid><pubDate>Tue, 26 Aug 2025 15:27:16 GMT</pubDate></item><item><title><![CDATA[01.용어사전 템플릿]]></title><description><![CDATA[프로젝트에서 사용되는 용어들을 명확히 정의하여 팀원 간의 소통 오류를 방지하고, 프로젝트에 대한 이해를 돕습니다.
-PRD (Product Requirements Document) 설명: 제품의 비전, 목표, 기능 등 사용자와 비즈니스 관점의 요구사항을 정의하는 문서입니다. 개발팀이 '무엇을 만들지' 명확히 이해하기 위한 핵심 가이드 역할을 합니다. API (Application Programming Interface) 설명: 소프트웨어 간의 통신을 위한 인터페이스입니다. 주로 프론트엔드와 백엔드가 서로 데이터를 주고받는 규칙을 정의하는 데 사용됩니다. Frontend 설명: 사용자가 직접 보고 상호작용하는 웹 또는 애플리케이션의 영역을 의미합니다. 주로 HTML, CSS, JavaScript 등으로 개발됩니다. Backend 설명: 서버, 데이터베이스 등 사용자의 눈에 보이지 않는 영역입니다. 비즈니스 로직을 처리하고 데이터를 관리하는 역할을 합니다. Git 설명: 소스 코드의 변경 이력을 관리하는 분산형 버전 관리 시스템입니다. 협업하는 개발자들이 코드 병합 및 관리를 효율적으로 할 수 있도록 돕습니다. CI/CD (Continuous Integration/Continuous Deployment) 설명: 개발자가 작성한 코드를 지속적으로 통합하고 배포하는 자동화 프로세스입니다. 개발 생산성과 안정성을 높이는 데 기여합니다. Scrum 설명: 애자일(Agile) 개발 방법론 중 하나로, 스프린트(Sprint)라는 짧은 주기를 반복하여 프로젝트를 진행하는 방식입니다. Jira/Confluence 설명: 프로젝트 관리 및 문서화를 위한 협업 도구입니다. 작업 추적, 이슈 관리, 회의록 작성 등에 활용됩니다. ]]></description><link>100-projects/커서-룰관련-개편/각-요소-템플릿/01.용어사전-템플릿.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/각 요소 템플릿/01.용어사전 템플릿.md</guid><pubDate>Tue, 26 Aug 2025 15:17:02 GMT</pubDate></item><item><title><![CDATA[CURSOR RULE 작성가이드]]></title><link>100-projects/커서-룰관련-개편/cursor-rule-작성가이드.html</link><guid isPermaLink="false">100 Projects/커서 룰관련 개편/CURSOR RULE 작성가이드.md</guid><pubDate>Tue, 26 Aug 2025 15:05:38 GMT</pubDate></item></channel></rss>
+고객사에서 프린터 관련해서 아예 세팅을 못 해서 제가 세팅을 하면서 결국 모든건 사용자 위주라는 것을 깨닫게 된 계기가 있었습니다. 프린터 업무의 경우 제 업무가 아니어서 처음에는 기분이 좋지 않았지만 직접 가서 현장에서 근무하시던 매니저분들과 얘기를 나누면서 그동안 통화나 메신저로만 나눈 것이 아닌, 직접적으로 어려운 점을 듣고 현장도 견학 시켜주었습니다. 프린터 설정 관련해서도 네트워크에 대해 공부하는 계기가 되었고, 매니저와 직접적으로 얘기 나누면서 불편한 사항에 관해서도 듣고 개선하는 작업을 했습니다. (일부 화면 프로세스 스텝 관련 문제, 관련 데이터가 흩어진 사항 하나의 화면의 탭 화면 개선)그 뒤로 프로젝트를 진행하면서 한 번씩은 찾아뵙게 됐고 그 과정에서 도메인에 대해서도 깊게 이해하게 됐습니다. 이를 통해 개발만이 아니라 실질적으로 도메인을 알아야 개발을 할 수 있다는 것을 알았고 도메인 지식에 관해서도 재밌거나 불편했던 실 사용자의 의견을 듣고 해결하는 과정에서 결국 가장 도메인에 대해서 잘 아는 사람은 자주 사용하는 사용자라는 걸 알게 되었습니다.]]></description><link>300-resources/330-hr/토스-자소서작성/01.-토스플레이스-자소서.html</link><guid isPermaLink="false">300 Resources/330 HR/토스 자소서작성/01. 토스플레이스 자소서.md</guid><pubDate>Sun, 31 Aug 2025 12:11:48 GMT</pubDate></item><item><title><![CDATA[00. 토스플레이스 JD]]></title><description><![CDATA[ 토스플레이스 Frontend Developer는 초기 멤버 오프라인 결제산업, 결제 생태계의 변화를 기획 Product Owner, Product Designer, Hardware Engineer 등 여러 동료들과 함께 일함 프론트엔드 챕터의 규모적 성장 업무 : 오프라인 결제 시장에서 디지털 혁신을 만들기 위해 매장 운영에 필요한 다양한 문제를 해결 B2B 오프라인 결제 시장에서 마주하는 도전적인 문제들을 처음부터 고민 Point of Sale(POS)는&nbsp;고객이 상품이나 서비스를 구매하고 결제를 완료하는 '판매 시점'을 의미하며, 이 판매 시점의 정보를 관리하는 시스템(POS 시스템)을 통칭합니다.&nbsp;POS 시스템은 매장의 매출, 재고, 고객 데이터 등을 관리하여 효율적인 매장 운영을 돕는 역할을 합니다 사장님 대시보드, 홈페이지 등 데스크탑 웹페이지 및 테이블오더, 픽업오더 등 모바일 웹페이지도 개발 다양한 환경을 모두 대응하는 만큼 독특하고 도전적인 프론트엔드 개발을 경험 주도적으로 문제를 발견하고 분석해 해결할 수 있는 분 고객예약, 포인트 관리, 유지보수하기 쉬운 코드를 작성하고, 견고한 결제로직을 작성하는 것 ]]></description><link>300-resources/330-hr/토스-자소서작성/00.-토스플레이스-jd.html</link><guid isPermaLink="false">300 Resources/330 HR/토스 자소서작성/00. 토스플레이스 JD.md</guid><pubDate>Sun, 31 Aug 2025 09:17:49 GMT</pubDate></item><item><title><![CDATA[20251218140123XXvP-index]]></title><description><![CDATA[<img src="800-references/801-image/2025/12/20251218140123xxvp-index.png" target="_self">]]></description><link>800-references/801-image/2025/12/20251218140123xxvp-index.html</link><guid isPermaLink="false">800 References/801 Image/2025/12/20251218140123XXvP-index.png</guid><pubDate>Thu, 18 Dec 2025 13:57:58 GMT</pubDate><enclosure url="." length="0" type="false"/><content:encoded>&lt;figure&gt;&lt;img src="."&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Drawing 2025-12-17 00.54.00]]></title><link>excalidraw/drawing-2025-12-17-00.54.00.excalidraw.html</link><guid isPermaLink="false">Excalidraw/Drawing 2025-12-17 00.54.00.excalidraw.md</guid><pubDate>Tue, 16 Dec 2025 15:54:20 GMT</pubDate></item></channel></rss>
