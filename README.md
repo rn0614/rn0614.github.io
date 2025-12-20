@@ -68,3 +68,4 @@ npx serve blog
 - 모든 경로는 상대 경로로 작성되어 있어 GitHub Pages에서 정상 작동합니다.
 - `base href="."` 설정이 있어 하위 경로에서도 정상 작동합니다.
 
+

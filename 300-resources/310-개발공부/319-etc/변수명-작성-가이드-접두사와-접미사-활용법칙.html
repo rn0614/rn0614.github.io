@@ -1,0 +1,886 @@
+<!DOCTYPE html> <html lang="en"><head>
+<title>변수명 작성 가이드 접두사와 접미사 활용법칙</title>
+<base href="../../..">
+<meta name="pathname" content="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html">
+<meta name="description" content="posting - 변수명 작성 가이드 접두사와 접미사 활용법칙">
+<meta property="og:title" content="변수명 작성 가이드 접두사와 접미사 활용법칙">
+<meta property="og:description" content="posting - 변수명 작성 가이드 접두사와 접미사 활용법칙">
+<meta property="og:type" content="website">
+<meta property="og:url" content="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html">
+<meta property="og:image" content="undefined">
+<meta charset="UTF-8"><meta property="og:site_name" content="posting"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="site-lib/rss.xml"><script async="" id="webpage-script" src="site-lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-wasm-script" src="site-lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="site-lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="site-lib/media/favicon.png"><link rel="stylesheet" href="site-lib/styles/obsidian.css"><link rel="preload" href="site-lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="site-lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="site-lib/styles/main-styles.css"></noscript><style>body{--line-width:min(60em, 100%);--line-width-adaptive:min(40em, 100%);--file-line-width:70em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-vertical-spacing:1.3em;--sidebar-margin:12px}:root{background-color:#202124}.sidebar{height:100%;font-size:14px;z-index:10;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));position:relative;overflow:hidden;overflow:clip;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}#left-sidebar{left:0}#right-sidebar{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}.sidebar.floating{position:absolute}.sidebar .leaf-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .leaf-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}#left-sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}#right-sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar #left-sidebar-content,.sidebar #right-sidebar-content{contain:none!important;container-type:normal!important;animation:none!important}.sidebar:has(.leaf-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:calc(2.3em + 2 * var(--sidebar-margin));width:var(--sidebar-width);padding:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}#left-sidebar .sidebar-topbar{left:0;flex-direction:row;border-top-right-radius:var(--radius-l)}#right-sidebar .sidebar-topbar{right:0;flex-direction:row-reverse;border-top-left-radius:var(--radius-l)}#left-sidebar .topbar-content{margin-right:calc(2.3em + var(--sidebar-margin));flex-direction:row}#right-sidebar .topbar-content{margin-left:calc(2.3em + var(--sidebar-margin));flex-direction:row-reverse}.topbar-content{overflow:hidden visible;overflow:clip visible;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:2px!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}#left-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}#right-sidebar .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.feature-title{margin-left:1px;text-transform:uppercase;letter-spacing:.06em;margin-top:.75em;margin-bottom:.75em}.feature-header{display:flex;align-items:center;padding-top:0;font-size:1em;padding-left:0}body.floating-sidebars .sidebar{position:absolute}body{transition:background-color var(--color-fade-speed) ease-in-out}#navbar:not(:empty){display:flex;align-items:center;justify-content:space-between;padding:.5em 1em;width:100%}#main{display:flex;flex-direction:column;height:100%;width:100%;align-items:stretch;justify-content:center}#main-horizontal{display:flex;flex-direction:row;flex-grow:1;width:100%;align-items:stretch;justify-content:center}#center-content{flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0!important;transition:opacity .2s ease-in-out;pointer-events:none}#center-content>.obsidian-document{padding-left:2em;padding-right:1em;margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}body #center-content>.obsidian-document>.markdown-preview-sizer{padding-bottom:80vh;width:100%;max-width:var(--line-width);flex-basis:var(--line-width);transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document>div{width:100%!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}#center-content>.obsidian-document:not([data-type=markdown]).embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}#center-content>.obsidian-document:not([data-type=markdown]).embed>*{max-width:100%;max-height:100%;object-fit:contain}:not(h1,h2,h3,h4,h5,h6,li):has(> :is(.math,table)){overflow-x:auto!important}#center-content>.obsidian-document:not([data-type=markdown]){overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.obsidian-document[data-type=attachment]{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;width:100%}.obsidian-document[data-type=attachment]>*{outline:0;border:none;box-shadow:none}.obsidian-document[data-type=attachment] :is(img){max-width:90%;max-height:90%;object-fit:contain}.obsidian-document[data-type=attachment]>:is(audio){width:100%;max-width:min(90%,var(--line-width))}.obsidian-document[data-type=attachment]>:is(embed,iframe,video){width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}.canvas-wrapper>:is(.header,.footer){z-index:100;position:absolute;display:flex;justify-content:center;flex-direction:column;width:100%;align-items:center}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){let e=document.querySelectorAll("link[itemprop='include']");for(const t of e){let e=t.getAttribute("href");try{let o="";if(e.startsWith("https:")||e.startsWith("http:")||"file:"!=window.location.protocol){const n=await fetch(e);if(!n.ok){console.log("Could not include file: "+e),t?.remove();continue}o=await n.text()}else{const t=document.getElementById(btoa(encodeURI(e)));if(t){const e=JSON.parse(decodeURI(atob(t.getAttribute("value")??"")));o=e?.data??""}}let n=document.createRange().createContextualFragment(o);t.before(n),t.remove(),console.log("Included text: "+o),console.log("Included file: "+e)}catch(o){t?.remove(),console.log("Could not include file: "+e,o);continue}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script")));!function e(n){let l=o[n],c=n+1;l?(l&&"true"!=l.getAttribute("loaded")||n<o.length&&e(c),n<o.length&&l.addEventListener("load",(()=>e(c)))):n<o.length?e(c):t()}(0)}</script></head><body class="publish css-settings-manager styled-scrollbars show-inline-title show-ribbon is-focused"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="parsed-feature-container" style="display: contents;"><link itemprop="include" href="site-lib/html/custom-head-content-content.html"></div><div id="main"><div id="navbar"></div><div id="main-horizontal"><div id="left-content" class="leaf" style="--sidebar-width: var(--sidebar-width-left);"><div id="left-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><div id="search-container"><div id="search-wrapper"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div aria-label="Clear search" id="search-clear-button"></div></div></div></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="left-sidebar-content" class="leaf-content"><link itemprop="include" href="site-lib/html/file-tree-content.html"></div></div><script defer="">let ls = document.querySelector("#left-sidebar"); ls.classList.toggle("is-collapsed", window.innerWidth < 768); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div></div><div id="center-content" class="leaf"><div class="obsidian-document markdown-preview-view markdown-rendered node-insert-event allow-fold-headings allow-fold-lists show-indentation-guide show-properties is-readable-line-width" data-type="markdown"><style id="MJX-CHTML-styles">mjx-container[jax=CHTML]{line-height:0}mjx-container [space="1"]{margin-left:.111em}mjx-container [space="2"]{margin-left:.167em}mjx-container [space="3"]{margin-left:.222em}mjx-container [space="4"]{margin-left:.278em}mjx-container [space="5"]{margin-left:.333em}mjx-container [rspace="1"]{margin-right:.111em}mjx-container [rspace="2"]{margin-right:.167em}mjx-container [rspace="3"]{margin-right:.222em}mjx-container [rspace="4"]{margin-right:.278em}mjx-container [rspace="5"]{margin-right:.333em}mjx-container [size="s"]{font-size:70.7%}mjx-container [size=ss]{font-size:50%}mjx-container [size=Tn]{font-size:60%}mjx-container [size=sm]{font-size:85%}mjx-container [size=lg]{font-size:120%}mjx-container [size=Lg]{font-size:144%}mjx-container [size=LG]{font-size:173%}mjx-container [size=hg]{font-size:207%}mjx-container [size=HG]{font-size:249%}mjx-container [width=full]{width:100%}mjx-box{display:inline-block}mjx-block{display:block}mjx-itable{display:inline-table}mjx-row{display:table-row}mjx-row>*{display:table-cell}mjx-mtext{display:inline-block}mjx-mstyle{display:inline-block}mjx-merror{display:inline-block;color:red;background-color:#ff0}mjx-mphantom{visibility:hidden}mjx-assistive-mml{top:0;left:0;clip:rect(1px,1px,1px,1px);user-select:none;position:absolute!important;padding:1px 0 0!important;border:0!important;display:block!important;width:auto!important;overflow:hidden!important}mjx-assistive-mml[display=block]{width:100%!important}mjx-math{display:inline-block;text-align:left;line-height:0;text-indent:0;font-style:normal;font-weight:400;font-size:100%;font-size-adjust:none;letter-spacing:normal;border-collapse:collapse;overflow-wrap:normal;word-spacing:normal;white-space:nowrap;direction:ltr;padding:1px 0}mjx-container[jax=CHTML][display=true]{display:block;text-align:center;margin:1em 0}mjx-container[jax=CHTML][display=true][width=full]{display:flex}mjx-container[jax=CHTML][display=true] mjx-math{padding:0}mjx-container[jax=CHTML][justify=left]{text-align:left}mjx-container[jax=CHTML][justify=right]{text-align:right}mjx-texatom{display:inline-block;text-align:left}mjx-mi{display:inline-block;text-align:left}mjx-c{display:inline-block}mjx-utext{display:inline-block;padding:.75em 0 .2em}mjx-mo{display:inline-block;text-align:left}mjx-stretchy-h{display:inline-table;width:100%}mjx-stretchy-h>*{display:table-cell;width:0}mjx-stretchy-h>*>mjx-c{display:inline-block;transform:scaleX(1)}mjx-stretchy-h>*>mjx-c::before{display:inline-block;width:initial}mjx-stretchy-h>mjx-ext{overflow:clip visible;width:100%}mjx-stretchy-h>mjx-ext>mjx-c::before{transform:scaleX(500)}mjx-stretchy-h>mjx-ext>mjx-c{width:0}mjx-stretchy-h>mjx-beg>mjx-c{margin-right:-.1em}mjx-stretchy-h>mjx-end>mjx-c{margin-left:-.1em}mjx-stretchy-v{display:inline-block}mjx-stretchy-v>*{display:block}mjx-stretchy-v>mjx-beg{height:0}mjx-stretchy-v>mjx-end>mjx-c{display:block}mjx-stretchy-v>*>mjx-c{transform:scaleY(1);transform-origin:left center;overflow:hidden}mjx-stretchy-v>mjx-ext{display:block;height:100%;box-sizing:border-box;border:0 solid transparent;overflow:visible clip}mjx-stretchy-v>mjx-ext>mjx-c::before{width:initial;box-sizing:border-box}mjx-stretchy-v>mjx-ext>mjx-c{transform:scaleY(500) translateY(.075em);overflow:visible}mjx-mark{display:inline-block;height:0}mjx-msub{display:inline-block;text-align:left}mjx-c::before{display:block;width:0}.MJX-TEX{font-family:MJXZERO,MJXTEX}.TEX-B{font-family:MJXZERO,MJXTEX-B}.TEX-I{font-family:MJXZERO,MJXTEX-I}.TEX-MI{font-family:MJXZERO,MJXTEX-MI}.TEX-BI{font-family:MJXZERO,MJXTEX-BI}.TEX-S1{font-family:MJXZERO,MJXTEX-S1}.TEX-S2{font-family:MJXZERO,MJXTEX-S2}.TEX-S3{font-family:MJXZERO,MJXTEX-S3}.TEX-S4{font-family:MJXZERO,MJXTEX-S4}.TEX-A{font-family:MJXZERO,MJXTEX-A}.TEX-C{font-family:MJXZERO,MJXTEX-C}.TEX-CB{font-family:MJXZERO,MJXTEX-CB}.TEX-FR{font-family:MJXZERO,MJXTEX-FR}.TEX-FRB{font-family:MJXZERO,MJXTEX-FRB}.TEX-SS{font-family:MJXZERO,MJXTEX-SS}.TEX-SSB{font-family:MJXZERO,MJXTEX-SSB}.TEX-SSI{font-family:MJXZERO,MJXTEX-SSI}.TEX-SC{font-family:MJXZERO,MJXTEX-SC}.TEX-T{font-family:MJXZERO,MJXTEX-T}.TEX-V{font-family:MJXZERO,MJXTEX-V}.TEX-VB{font-family:MJXZERO,MJXTEX-VB}mjx-stretchy-h mjx-c,mjx-stretchy-v mjx-c{font-family:MJXZERO,MJXTEX-S1,MJXTEX-S4,MJXTEX,MJXTEX-A!important}@font-face{font-family:MJXZERO;src:url("site-lib/fonts/mathjax_zero.woff") format("woff")}@font-face{font-family:MJXTEX;src:url("site-lib/fonts/mathjax_main-regular.woff") format("woff")}@font-face{font-family:MJXTEX-B;src:url("site-lib/fonts/mathjax_main-bold.woff") format("woff")}@font-face{font-family:MJXTEX-I;src:url("site-lib/fonts/mathjax_math-italic.woff") format("woff")}@font-face{font-family:MJXTEX-MI;src:url("site-lib/fonts/mathjax_main-italic.woff") format("woff")}@font-face{font-family:MJXTEX-BI;src:url("site-lib/fonts/mathjax_math-bolditalic.woff") format("woff")}@font-face{font-family:MJXTEX-S1;src:url("site-lib/fonts/mathjax_size1-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S2;src:url("site-lib/fonts/mathjax_size2-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S3;src:url("site-lib/fonts/mathjax_size3-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S4;src:url("site-lib/fonts/mathjax_size4-regular.woff") format("woff")}@font-face{font-family:MJXTEX-A;src:url("site-lib/fonts/mathjax_ams-regular.woff") format("woff")}@font-face{font-family:MJXTEX-C;src:url("site-lib/fonts/mathjax_calligraphic-regular.woff") format("woff")}@font-face{font-family:MJXTEX-CB;src:url("site-lib/fonts/mathjax_calligraphic-bold.woff") format("woff")}@font-face{font-family:MJXTEX-FR;src:url("site-lib/fonts/mathjax_fraktur-regular.woff") format("woff")}@font-face{font-family:MJXTEX-FRB;src:url("site-lib/fonts/mathjax_fraktur-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SS;src:url("site-lib/fonts/mathjax_sansserif-regular.woff") format("woff")}@font-face{font-family:MJXTEX-SSB;src:url("site-lib/fonts/mathjax_sansserif-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SSI;src:url("site-lib/fonts/mathjax_sansserif-italic.woff") format("woff")}@font-face{font-family:MJXTEX-SC;src:url("site-lib/fonts/mathjax_script-regular.woff") format("woff")}@font-face{font-family:MJXTEX-T;src:url("site-lib/fonts/mathjax_typewriter-regular.woff") format("woff")}@font-face{font-family:MJXTEX-V;src:url("site-lib/fonts/mathjax_vector-regular.woff") format("woff")}@font-face{font-family:MJXTEX-VB;src:url("site-lib/fonts/mathjax_vector-bold.woff") format("woff")}mjx-c.mjx-c1D45B.TEX-I::before{padding:.442em .6em .011em 0;content:"n"}mjx-c.mjx-c1D452.TEX-I::before{padding:.442em .466em .011em 0;content:"e"}mjx-c.mjx-c1D464.TEX-I::before{padding:.443em .716em .011em 0;content:"w"}mjx-c.mjx-c1D43C.TEX-I::before{padding:.683em .504em 0 0;content:"I"}mjx-c.mjx-c1D451.TEX-I::before{padding:.694em .52em .01em 0;content:"d"}mjx-c.mjx-c2033::before{padding:.56em .55em 0 0;content:"′′"}mjx-c.mjx-c1D45D.TEX-I::before{padding:.442em .503em .194em 0;content:"p"}mjx-c.mjx-c1D44E.TEX-I::before{padding:.441em .529em .01em 0;content:"a"}mjx-c.mjx-c1D461.TEX-I::before{padding:.626em .361em .011em 0;content:"t"}mjx-c.mjx-c210E.TEX-I::before{padding:.694em .576em .011em 0;content:"h"}mjx-c.mjx-c3A::before{padding:.43em .278em 0 0;content:":"}mjx-c.mjx-c2E::before{padding:.12em .278em 0 0;content:"."}mjx-c.mjx-c1D453.TEX-I::before{padding:.705em .55em .205em 0;content:"f"}mjx-c.mjx-c1D456.TEX-I::before{padding:.661em .345em .011em 0;content:"i"}mjx-c.mjx-c1D459.TEX-I::before{padding:.694em .298em .011em 0;content:"l"}mjx-c.mjx-c1D465.TEX-I::before{padding:.442em .572em .011em 0;content:"x"}mjx-c.mjx-c1D450.TEX-I::before{padding:.442em .433em .011em 0;content:"c"}mjx-c.mjx-c1D45F.TEX-I::before{padding:.442em .451em .011em 0;content:"r"}mjx-c.mjx-c1D462.TEX-I::before{padding:.442em .572em .011em 0;content:"u"}mjx-c.mjx-c1D45A.TEX-I::before{padding:.442em .878em .011em 0;content:"m"}mjx-c.mjx-c1D44F.TEX-I::before{padding:.694em .429em .011em 0;content:"b"}</style><pre class="frontmatter language-yaml" style="display: none;"><code class="language-yaml is-loaded"><span class="token key atrule">id</span><span class="token punctuation">:</span> BDozuFA6XGEl1Sz
+<span class="token key atrule">path</span><span class="token punctuation">:</span> 100 PARA/140 Resources/이전데이터/변수명 작성 가이드 접두사와 접미사 활용법칙.md
+<span class="token key atrule">title</span><span class="token punctuation">:</span> 변수명 작성 가이드 접두사와 접미사 활용법칙
+<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">""</span>
+<span class="token key atrule">socialImage</span><span class="token punctuation">:</span> <span class="token string">""</span>
+<span class="token key atrule">tags</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> 문제해결
+  <span class="token punctuation">-</span> 개발환경
+  <span class="token punctuation">-</span> 클린코드
+<span class="token key atrule">domains</span><span class="token punctuation">:</span> <span class="token string">""</span>
+<span class="token key atrule">created</span><span class="token punctuation">:</span> <span class="token datetime number">2025-08-26 21:55:57</span>
+<span class="token key atrule">updated</span><span class="token punctuation">:</span> <span class="token datetime number">2025-08-26 21:55:57</span>
+<span class="token key atrule">CODE</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> Distill
+  <span class="token punctuation">-</span> Express
+<span class="token key atrule">publish</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre><div class="markdown-preview-sizer markdown-preview-section"><div class="header"><h1 class="page-title heading inline-title" id="변수명_작성_가이드_접두사와_접미사_활용법칙_0">변수명 작성 가이드 접두사와 접미사 활용법칙</h1><div class="data-bar"></div></div><div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div><div class="el-h2"><h2 data-heading="개요" dir="auto" class="heading" id="개요_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>개요</h2></div><div class="el-p"><p dir="auto">개발에서 명확하고 일관성 있는 변수명은 코드의 가독성과 유지보수성을 크게 향상시킨다. 이때 변수명에 대해서 제대로 작성되지 않으면 유지보수가 매우 어렵다. 이를 위해서는 꼭 팀 내부적으로 결정해야하는접두사와 접미사들이 있다. 꼭 팀 내부적으로 결정하거나 최근에는 cursor rule이나 system.md로 만들어서 ai들에게도 공유가 필요하다.</p></div><div class="el-h2"><h2 data-heading="1. Boolean 값을 나타내는 접두사" dir="auto" class="heading" id="1._Boolean_값을_나타내는_접두사_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>1. Boolean 값을 나타내는 접두사</h2></div><div class="el-p"><p dir="auto">Boolean 변수는 true/false 값을 가지므로, 질문 형태의 접두사를 사용하여 직관적으로 표현합니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">접두사</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>is</code></td>
+<td dir="ltr">상태나 속성을 나타낼 때</td>
+<td dir="ltr"><code>isLoading</code>, <code>isVisible</code>, <code>isActive</code>, <code>isValidated</code>, <code>isAuthenticated</code></td>
+<td dir="ltr">가장 일반적인 Boolean 접두사</td>
+</tr>
+<tr>
+<td dir="ltr"><code>has</code></td>
+<td dir="ltr">소유나 포함 관계를 나타낼 때</td>
+<td dir="ltr"><code>hasPermission</code>, <code>hasDiscount</code>, <code>hasChildren</code>, <code>hasError</code>, <code>hasNextPage</code></td>
+<td dir="ltr">무언가를 가지고 있는지 표현</td>
+</tr>
+<tr>
+<td dir="ltr"><code>can</code></td>
+<td dir="ltr">능력이나 권한을 나타낼 때</td>
+<td dir="ltr"><code>canEdit</code>, <code>canDelete</code>, <code>canAccess</code>, <code>canSubmit</code>, <code>canRefresh</code></td>
+<td dir="ltr">할 수 있는지 없는지를 표현</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="Boolean 접두사 사용 예시" dir="auto" class="heading" id="Boolean_접두사_사용_예시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Boolean 접두사 사용 예시</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// 상태 관리</span>
+<span class="token keyword">const</span> isLoading <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> isFormValid <span class="token operator">=</span> <span class="token function">checkFormValidation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> hasUnsavedChanges <span class="token operator">=</span> <span class="token function">checkForChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> canSubmitForm <span class="token operator">=</span> isFormValid <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>hasUnsavedChanges<span class="token punctuation">;</span>
+
+<span class="token comment">// 권한 체크</span>
+<span class="token keyword">const</span> canViewProfile <span class="token operator">=</span> user<span class="token punctuation">.</span><span class="token property-access">permissions</span><span class="token punctuation">.</span><span class="token method function property-access">includes</span><span class="token punctuation">(</span><span class="token string">'view_profile'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-h2"><h2 data-heading="2. 데이터 조작 함수의 접두사" dir="auto" class="heading" id="2._데이터_조작_함수의_접두사_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2. 데이터 조작 함수의 접두사</h2></div><div class="el-p"><p dir="auto">데이터를 다루는 함수들은 그 동작 방식과 특성에 따라 접두사를 구분하여 사용합니다.</p></div><div class="el-h3"><h3 data-heading="데이터 가져오기 (Retrieval)" dir="auto" class="heading" id="데이터_가져오기_(Retrieval)_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>데이터 가져오기 (Retrieval)</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">접두사</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">상세 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>get</code></td>
+<td dir="ltr">이미 존재하는 데이터를 즉시 반환</td>
+<td dir="ltr"><code>getUserData()</code>, <code>getStoredValue()</code>, <code>getCurrentTime()</code></td>
+<td dir="ltr">동기적으로 즉시 사용 가능한 데이터</td>
+</tr>
+<tr>
+<td dir="ltr"><code>fetch</code></td>
+<td dir="ltr">외부 API나 원격 서버에서 데이터 요청</td>
+<td dir="ltr"><code>fetchUserProfile()</code>, <code>fetchProducts()</code>, <code>fetchWeatherData()</code></td>
+<td dir="ltr">비동기적으로 네트워크 통신이 필요한 경우</td>
+</tr>
+<tr>
+<td dir="ltr"><code>load</code></td>
+<td dir="ltr">화면 렌더링이나 초기화와 함께 데이터 로딩</td>
+<td dir="ltr"><code>loadDashboard()</code>, <code>loadUserInterface()</code>, <code>loadPageContent()</code></td>
+<td dir="ltr">UI 변경을 동반하는 데이터 로딩</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="데이터 수정하기 (Modification)" dir="auto" class="heading" id="데이터_수정하기_(Modification)_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>데이터 수정하기 (Modification)</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">접두사</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">상세 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>set</code></td>
+<td dir="ltr">값을 설정하거나 교체</td>
+<td dir="ltr"><code>setUser()</code>, <code>setConfiguration()</code>, <code>setTheme()</code></td>
+<td dir="ltr">완전히 새로운 값으로 덮어쓰기</td>
+</tr>
+<tr>
+<td dir="ltr"><code>update</code></td>
+<td dir="ltr">기존 값의 일부를 수정</td>
+<td dir="ltr"><code>updateProfile()</code>, <code>updateStatus()</code>, <code>updatePassword()</code></td>
+<td dir="ltr">부분적인 변경사항 적용</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="데이터 추가/제거 (Addition/Removal)" dir="auto" class="heading" id="데이터_추가/제거_(Addition/Removal)_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>데이터 추가/제거 (Addition/Removal)</h3></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">접두사</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">상세 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>add</code></td>
+<td dir="ltr">새로운 데이터 추가</td>
+<td dir="ltr"><code>addUser()</code>, <code>addToCart()</code>, <code>addComment()</code></td>
+<td dir="ltr">기존에 없던 새로운 항목 추가</td>
+</tr>
+<tr>
+<td dir="ltr"><code>remove</code></td>
+<td dir="ltr">데이터 제거</td>
+<td dir="ltr"><code>removeUser()</code>, <code>removeFromCart()</code></td>
+<td dir="ltr">특정 항목을 찾아서 제거</td>
+</tr>
+<tr>
+<td dir="ltr"><code>delete</code></td>
+<td dir="ltr">데이터 완전 삭제</td>
+<td dir="ltr"><code>deleteAccount()</code>, <code>deleteFile()</code></td>
+<td dir="ltr">영구적인 삭제 작업</td>
+</tr>
+<tr>
+<td dir="ltr"><code>clear</code></td>
+<td dir="ltr">전체 데이터 비우기</td>
+<td dir="ltr"><code>clearCache()</code>, <code>clearForm()</code>, <code>clearHistory()</code></td>
+<td dir="ltr">모든 데이터를 한번에 제거</td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="3. 조건과 필터링을 나타내는 접두사/접미사" dir="auto" class="heading" id="3._조건과_필터링을_나타내는_접두사/접미사_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>3. 조건과 필터링을 나타내는 접두사/접미사</h2></div><div class="el-p"><p dir="auto">데이터를 특정 조건에 따라 필터링하거나 그룹화할 때 사용하는 패턴입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">패턴</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>by</code></td>
+<td dir="ltr">특정 기준으로 그룹화</td>
+<td dir="ltr"><code>productsByCategory</code>, <code>usersByRole</code>, <code>ordersByDate</code>, <code>salesByRegion</code></td>
+<td dir="ltr">기준점을 명확히 표현</td>
+</tr>
+<tr>
+<td dir="ltr"><code>from</code></td>
+<td dir="ltr">특정 출처나 시점부터</td>
+<td dir="ltr"><code>ordersFromLastMonth</code>, <code>usersFromKorea</code>, <code>dataFromAPI</code>, <code>messagesFromToday</code></td>
+<td dir="ltr">시작점이나 출처를 나타냄</td>
+</tr>
+<tr>
+<td dir="ltr"><code>to</code></td>
+<td dir="ltr">특정 대상이나 종점까지</td>
+<td dir="ltr"><code>emailsToAdmin</code>, <code>transferToAccount</code>, <code>redirectToLogin</code></td>
+<td dir="ltr">목적지나 대상을 표현</td>
+</tr>
+<tr>
+<td dir="ltr"><code>above</code></td>
+<td dir="ltr">특정 값보다 큰</td>
+<td dir="ltr"><code>scoresAboveAverage</code>, <code>pricesAbove100</code>, <code>usersAboveAge18</code></td>
+<td dir="ltr">초과 조건</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="필터링 예시" dir="auto" class="heading" id="필터링_예시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>필터링 예시</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// 조건별 데이터 필터링</span>
+<span class="token keyword">const</span> productsByCategory <span class="token operator">=</span> <span class="token function">filterProductsByCategory</span><span class="token punctuation">(</span><span class="token string">'electronics'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> ordersFromLastWeek <span class="token operator">=</span> <span class="token function">getOrdersFromDateRange</span><span class="token punctuation">(</span>lastWeek<span class="token punctuation">,</span> today<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> highValueCustomers <span class="token operator">=</span> <span class="token function">getCustomersWithinSpendingRange</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> recentActiveUsers <span class="token operator">=</span> <span class="token function">getUsersAboveActivityScore</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 복합 조건 예시</span>
+<span class="token keyword">const</span> premiumUsersFromSeoul <span class="token operator">=</span> users
+  <span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token arrow operator">=&gt;</span> user<span class="token punctuation">.</span><span class="token property-access">city</span> <span class="token operator">===</span> <span class="token string">'Seoul'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token arrow operator">=&gt;</span> user<span class="token punctuation">.</span><span class="token property-access">subscriptionType</span> <span class="token operator">===</span> <span class="token string">'premium'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-h2"><h2 data-heading="4. 컬렉션과 자료구조를 나타내는 접미사" dir="auto" class="heading" id="4._컬렉션과_자료구조를_나타내는_접미사_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>4. 컬렉션과 자료구조를 나타내는 접미사</h2></div><div class="el-p"><p dir="auto">데이터의 구조와 타입을 명확하게 표현하는 접미사들입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">접미사</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>Array</code></td>
+<td dir="ltr">배열 구조 강조</td>
+<td dir="ltr"><code>numberArray</code>, <code>stringArray</code>, <code>objectArray</code></td>
+<td dir="ltr">배열임을 명확히 표현</td>
+</tr>
+<tr>
+<td dir="ltr"><code>Map</code></td>
+<td dir="ltr">키-값 쌍의 맵 구조</td>
+<td dir="ltr"><code>userMap</code>, <code>configMap</code>, <code>categoryMap</code></td>
+<td dir="ltr">Map 객체나 딕셔너리</td>
+</tr>
+<tr>
+<td dir="ltr"><code>Set</code></td>
+<td dir="ltr">중복 없는 집합</td>
+<td dir="ltr"><code>uniqueIdsSet</code>, <code>tagSet</code>, <code>permissionSet</code></td>
+<td dir="ltr">Set 객체나 고유값 집합</td>
+</tr>
+<tr>
+<td dir="ltr"><code>Queue</code></td>
+<td dir="ltr">선입선출 구조</td>
+<td dir="ltr"><code>taskQueue</code>, <code>messageQueue</code>, <code>printQueue</code></td>
+<td dir="ltr">큐 자료구조</td>
+</tr>
+<tr>
+<td dir="ltr"><code>Stack</code></td>
+<td dir="ltr">후입선출 구조</td>
+<td dir="ltr"><code>operationStack</code>, <code>navigationStack</code></td>
+<td dir="ltr">스택 자료구조</td>
+</tr>
+<tr>
+<td dir="ltr"><code>Tree</code></td>
+<td dir="ltr">트리 구조</td>
+<td dir="ltr"><code>categoryTree</code>, <code>organizationTree</code>, <code>menuTree</code></td>
+<td dir="ltr">계층적 구조</td>
+</tr>
+<tr>
+<td dir="ltr"><code>Graph</code></td>
+<td dir="ltr">그래프 구조</td>
+<td dir="ltr"><code>relationshipGraph</code>, <code>networkGraph</code></td>
+<td dir="ltr">노드와 엣지로 구성된 그래프</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="컬렉션 접미사 사용 예시" dir="auto" class="heading" id="컬렉션_접미사_사용_예시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>컬렉션 접미사 사용 예시</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// 명확한 자료구조 표현</span>
+<span class="token keyword">const</span> activeUserList <span class="token operator">=</span> users<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token arrow operator">=&gt;</span> user<span class="token punctuation">.</span><span class="token property-access">isActive</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> productCategoryMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">[</span><span class="token string">'electronics'</span><span class="token punctuation">,</span> electronicsProducts<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span><span class="token string">'clothing'</span><span class="token punctuation">,</span> clothingProducts<span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> uniqueTagsSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>allTags<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> taskQueue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> navigationStack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 복잡한 데이터 구조</span>
+<span class="token keyword">const</span> departmentTree <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Company'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Engineering'</span><span class="token punctuation">,</span> <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Marketing'</span><span class="token punctuation">,</span> <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre></div><div class="el-h2"><h2 data-heading="5. 상태와 단계를 나타내는 접미사" dir="auto" class="heading" id="5._상태와_단계를_나타내는_접미사_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>5. 상태와 단계를 나타내는 접미사</h2></div><div class="el-p"><p dir="auto">애플리케이션의 상태나 처리 단계를 표현할 때 사용하는 접미사들입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">접미사</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>Status</code></td>
+<td dir="ltr">현재 상태</td>
+<td dir="ltr"><code>connectionStatus</code>, <code>paymentStatus</code>, <code>orderStatus</code></td>
+<td dir="ltr">현재의 상태 정보</td>
+</tr>
+<tr>
+<td dir="ltr"><code>State</code></td>
+<td dir="ltr">상태 객체</td>
+<td dir="ltr"><code>applicationState</code>, <code>gameState</code>, <code>formState</code></td>
+<td dir="ltr">상태를 관리하는 객체</td>
+</tr>
+<tr>
+<td dir="ltr"><code>Mode</code></td>
+<td dir="ltr">동작 모드</td>
+<td dir="ltr"><code>editMode</code>, <code>viewMode</code>, <code>debugMode</code></td>
+<td dir="ltr">시스템의 동작 방식</td>
+</tr>
+<tr>
+<td dir="ltr"><code>Type</code></td>
+<td dir="ltr">타입이나 종류</td>
+<td dir="ltr"><code>userType</code>, <code>messageType</code>, <code>errorType</code></td>
+<td dir="ltr">분류나 유형</td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="6. 시간과 관련된 접두사/접미사" dir="auto" class="heading" id="6._시간과_관련된_접두사/접미사_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>6. 시간과 관련된 접두사/접미사</h2></div><div class="el-p"><p dir="auto">시간, 날짜, 기간과 관련된 변수명에 사용하는 패턴들입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">패턴</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>start</code></td>
+<td dir="ltr">시작 시점</td>
+<td dir="ltr"><code>startTime</code>, <code>startDate</code>, <code>sessionStart</code></td>
+<td dir="ltr">시작을 나타냄</td>
+</tr>
+<tr>
+<td dir="ltr"><code>end</code></td>
+<td dir="ltr">종료 시점</td>
+<td dir="ltr"><code>endTime</code>, <code>endDate</code>, <code>sessionEnd</code></td>
+<td dir="ltr">종료를 나타냄</td>
+</tr>
+<tr>
+<td dir="ltr"><code>last</code></td>
+<td dir="ltr">마지막 또는 이전</td>
+<td dir="ltr"><code>lastLogin</code>, <code>lastUpdate</code>, <code>lastModified</code></td>
+<td dir="ltr">가장 최근의 과거</td>
+</tr>
+<tr>
+<td dir="ltr"><code>next</code></td>
+<td dir="ltr">다음</td>
+<td dir="ltr"><code>nextUpdate</code>, <code>nextSchedule</code>, <code>nextId</code></td>
+<td dir="ltr">앞으로 올 것</td>
+</tr>
+<tr>
+<td dir="ltr"><code>current</code></td>
+<td dir="ltr">현재</td>
+<td dir="ltr"><code>currentTime</code>, <code>currentUser</code>, <code>currentPage</code></td>
+<td dir="ltr">지금 현재의 상태</td>
+</tr>
+<tr>
+<td dir="ltr"><code>previous</code></td>
+<td dir="ltr">이전</td>
+<td dir="ltr"><code>previousValue</code>, <code>previousPage</code>, <code>previousUser</code></td>
+<td dir="ltr">바로 앞의 상태</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="시간 관련 예시" dir="auto" class="heading" id="시간_관련_예시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>시간 관련 예시</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// 시간 관련 변수들</span>
+<span class="token keyword">const</span> sessionStartTime <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> loginTimeout <span class="token operator">=</span> <span class="token number">30</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">;</span> <span class="token comment">// 30분</span>
+<span class="token keyword">const</span> autoSaveInterval <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">;</span> <span class="token comment">// 5분</span>
+<span class="token keyword">const</span> lastBackupDate <span class="token operator">=</span> <span class="token function">getLastBackupDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> nextScheduledMaintenance <span class="token operator">=</span> <span class="token function">calculateNextMaintenance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 기간 계산</span>
+<span class="token keyword">const</span> sessionDuration <span class="token operator">=</span> <span class="token known-class-name class-name">Date</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> sessionStartTime<span class="token punctuation">;</span>
+<span class="token keyword">const</span> processingDelay <span class="token operator">=</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">;</span> <span class="token comment">// 0-1초 랜덤 지연</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="7. 이벤트와 콜백 함수 네이밍" dir="auto" class="heading" id="7._이벤트와_콜백_함수_네이밍_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>7. 이벤트와 콜백 함수 네이밍</h2></div><div class="el-p"><p dir="auto">사용자 상호작용이나 시스템 이벤트를 처리하는 함수들의 명명 규칙입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">패턴</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>on</code></td>
+<td dir="ltr">이벤트 핸들러</td>
+<td dir="ltr"><code>onClick</code>, <code>onSubmit</code>, <code>onLoad</code>, <code>onError</code></td>
+<td dir="ltr">이벤트가 발생했을 때</td>
+</tr>
+<tr>
+<td dir="ltr"><code>handle</code></td>
+<td dir="ltr">이벤트 처리 함수</td>
+<td dir="ltr"><code>handleClick</code>, <code>handleSubmit</code>, <code>handleError</code></td>
+<td dir="ltr">이벤트를 처리하는 함수</td>
+</tr>
+<tr>
+<td dir="ltr"><code>before</code></td>
+<td dir="ltr">사전 처리</td>
+<td dir="ltr"><code>beforeSubmit</code>, <code>beforeClose</code>, <code>beforeSave</code></td>
+<td dir="ltr">작업 전에 실행</td>
+</tr>
+<tr>
+<td dir="ltr"><code>after</code></td>
+<td dir="ltr">사후 처리</td>
+<td dir="ltr"><code>afterSubmit</code>, <code>afterLoad</code>, <code>afterSave</code></td>
+<td dir="ltr">작업 후에 실행</td>
+</tr>
+<tr>
+<td dir="ltr"><code>when</code></td>
+<td dir="ltr">조건부 실행</td>
+<td dir="ltr"><code>whenReady</code>, <code>whenComplete</code>, <code>whenError</code></td>
+<td dir="ltr">특정 조건일 때</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="이벤트 핸들러 예시" dir="auto" class="heading" id="이벤트_핸들러_예시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>이벤트 핸들러 예시</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// React 컴포넌트의 이벤트 핸들러</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleFormSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  event<span class="token punctuation">.</span><span class="token method function property-access">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">validateForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">onUserLogin</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">userData</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">updateUserState</span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">redirectToProfile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 생명주기 이벤트</span>
+<span class="token keyword">const</span> <span class="token function-variable function">beforePageUnload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">saveUnsavedChanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">afterDataLoad</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">hideLoadingSpinner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">renderUserInterface</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="8. 유틸리티와 헬퍼 함수" dir="auto" class="heading" id="8._유틸리티와_헬퍼_함수_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>8. 유틸리티와 헬퍼 함수</h2></div><div class="el-p"><p dir="auto">재사용 가능한 유틸리티 함수들의 명명 패턴입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">패턴</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>format</code></td>
+<td dir="ltr">데이터 형식 변환</td>
+<td dir="ltr"><code>formatDate</code>, <code>formatCurrency</code>, <code>formatPhoneNumber</code></td>
+<td dir="ltr">표시 형식으로 변환</td>
+</tr>
+<tr>
+<td dir="ltr"><code>parse</code></td>
+<td dir="ltr">문자열을 객체로 변환</td>
+<td dir="ltr"><code>parseJSON</code>, <code>parseDate</code>, <code>parseURL</code></td>
+<td dir="ltr">파싱 작업</td>
+</tr>
+<tr>
+<td dir="ltr"><code>validate</code></td>
+<td dir="ltr">유효성 검사</td>
+<td dir="ltr"><code>validateEmail</code>, <code>validatePassword</code>, <code>validateForm</code></td>
+<td dir="ltr">검증 함수</td>
+</tr>
+<tr>
+<td dir="ltr"><code>convert</code></td>
+<td dir="ltr">단위나 타입 변환</td>
+<td dir="ltr"><code>convertToString</code>, <code>convertCurrency</code>, <code>convertUnit</code></td>
+<td dir="ltr">단위 변환</td>
+</tr>
+<tr>
+<td dir="ltr"><code>build</code></td>
+<td dir="ltr">복잡한 객체 구성</td>
+<td dir="ltr"><code>buildQuery</code>, <code>buildComponent</code>, <code>buildConfiguration</code></td>
+<td dir="ltr">조립이나 구성</td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="9. API와 네트워크 관련 네이밍" dir="auto" class="heading" id="9._API와_네트워크_관련_네이밍_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>9. API와 네트워크 관련 네이밍</h2></div><div class="el-p"><p dir="auto">외부 서비스와의 통신이나 네트워크 작업에 사용하는 패턴들입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">패턴</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>request</code></td>
+<td dir="ltr">요청 보내기</td>
+<td dir="ltr"><code>requestUserData</code>, <code>requestPermission</code></td>
+<td dir="ltr">API 요청</td>
+</tr>
+<tr>
+<td dir="ltr"><code>response</code></td>
+<td dir="ltr">응답 받기</td>
+<td dir="ltr"><code>handleResponse</code>, <code>parseResponse</code></td>
+<td dir="ltr">API 응답 처리</td>
+</tr>
+<tr>
+<td dir="ltr"><code>call</code></td>
+<td dir="ltr">API 호출</td>
+<td dir="ltr"><code>callUserAPI</code>, <code>callPaymentService</code></td>
+<td dir="ltr">서비스 호출</td>
+</tr>
+<tr>
+<td dir="ltr"><code>send</code></td>
+<td dir="ltr">데이터 전송</td>
+<td dir="ltr"><code>sendMessage</code>, <code>sendAnalytics</code></td>
+<td dir="ltr">데이터 송신</td>
+</tr>
+<tr>
+<td dir="ltr"><code>receive</code></td>
+<td dir="ltr">데이터 수신</td>
+<td dir="ltr"><code>receiveMessage</code>, <code>receiveUpdate</code></td>
+<td dir="ltr">데이터 수신</td>
+</tr>
+<tr>
+<td dir="ltr"><code>upload</code></td>
+<td dir="ltr">파일 업로드</td>
+<td dir="ltr"><code>uploadImage</code>, <code>uploadDocument</code></td>
+<td dir="ltr">파일 업로드</td>
+</tr>
+<tr>
+<td dir="ltr"><code>download</code></td>
+<td dir="ltr">파일 다운로드</td>
+<td dir="ltr"><code>downloadFile</code>, <code>downloadReport</code></td>
+<td dir="ltr">파일 다운로드</td>
+</tr>
+<tr>
+<td dir="ltr"><code>sync</code></td>
+<td dir="ltr">동기화</td>
+<td dir="ltr"><code>syncData</code>, <code>syncUserPreferences</code></td>
+<td dir="ltr">데이터 동기화</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="API 관련 예시" dir="auto" class="heading" id="API_관련_예시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>API 관련 예시</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// API 통신 관련 함수들</span>
+<span class="token keyword">const</span> <span class="token function-variable function">requestUserProfile</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">userId</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword control-flow">await</span> api<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/users/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>userId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow">return</span> response<span class="token punctuation">.</span><span class="token property-access">data</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">uploadProfileImage</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">imageFile</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  formData<span class="token punctuation">.</span><span class="token method function property-access">append</span><span class="token punctuation">(</span><span class="token string">'image'</span><span class="token punctuation">,</span> imageFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow">return</span> <span class="token keyword control-flow">await</span> api<span class="token punctuation">.</span><span class="token method function property-access">post</span><span class="token punctuation">(</span><span class="token string">'/upload/profile'</span><span class="token punctuation">,</span> formData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">syncUserPreferences</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> localPrefs <span class="token operator">=</span> <span class="token function">getLocalPreferences</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> serverPrefs <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">requestServerPreferences</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword control-flow">return</span> <span class="token function">mergePreferences</span><span class="token punctuation">(</span>localPrefs<span class="token punctuation">,</span> serverPrefs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="10. 성능과 최적화 관련 네이밍" dir="auto" class="heading" id="10._성능과_최적화_관련_네이밍_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>10. 성능과 최적화 관련 네이밍</h2></div><div class="el-p"><p dir="auto">성능 향상이나 최적화와 관련된 변수명 패턴들입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">패턴</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>cache</code></td>
+<td dir="ltr">캐시 관련</td>
+<td dir="ltr"><code>userCache</code>, <code>imageCache</code>, <code>cacheKey</code></td>
+<td dir="ltr">캐싱 시스템</td>
+</tr>
+<tr>
+<td dir="ltr"><code>buffer</code></td>
+<td dir="ltr">버퍼 관련</td>
+<td dir="ltr"><code>dataBuffer</code>, <code>audioBuffer</code>, <code>writeBuffer</code></td>
+<td dir="ltr">임시 저장소</td>
+</tr>
+<tr>
+<td dir="ltr"><code>pool</code></td>
+<td dir="ltr">객체 풀</td>
+<td dir="ltr"><code>connectionPool</code>, <code>threadPool</code>, <code>objectPool</code></td>
+<td dir="ltr">재사용 가능한 자원들</td>
+</tr>
+<tr>
+<td dir="ltr"><code>lazy</code></td>
+<td dir="ltr">지연 로딩</td>
+<td dir="ltr"><code>lazyLoadImages</code>, <code>lazyInitialization</code></td>
+<td dir="ltr">필요할 때 로딩</td>
+</tr>
+<tr>
+<td dir="ltr"><code>preload</code></td>
+<td dir="ltr">사전 로딩</td>
+<td dir="ltr"><code>preloadAssets</code>, <code>preloadNextPage</code></td>
+<td dir="ltr">미리 로딩</td>
+</tr>
+<tr>
+<td dir="ltr"><code>throttle</code></td>
+<td dir="ltr">실행 제한</td>
+<td dir="ltr"><code>throttledUpdate</code>, <code>throttleApiCalls</code></td>
+<td dir="ltr">실행 빈도 제한</td>
+</tr>
+<tr>
+<td dir="ltr"><code>debounce</code></td>
+<td dir="ltr">실행 지연</td>
+<td dir="ltr"><code>debouncedSearch</code>, <code>debounceInput</code></td>
+<td dir="ltr">연속 실행 방지</td>
+</tr>
+<tr>
+<td dir="ltr"><code>memo</code></td>
+<td dir="ltr">메모이제이션</td>
+<td dir="ltr"><code>memoizedResult</code>, <code>memoizeFunction</code></td>
+<td dir="ltr">결과 캐싱</td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="11. 에러와 예외 처리 네이밍" dir="auto" class="heading" id="11._에러와_예외_처리_네이밍_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>11. 에러와 예외 처리 네이밍</h2></div><div class="el-p"><p dir="auto">오류 처리와 예외 상황을 다루는 변수명 패턴들입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">패턴</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>error</code></td>
+<td dir="ltr">에러 객체</td>
+<td dir="ltr"><code>validationError</code>, <code>networkError</code>, <code>authError</code></td>
+<td dir="ltr">에러 정보</td>
+</tr>
+<tr>
+<td dir="ltr"><code>exception</code></td>
+<td dir="ltr">예외 상황</td>
+<td dir="ltr"><code>handleException</code>, <code>customException</code></td>
+<td dir="ltr">예외 처리</td>
+</tr>
+<tr>
+<td dir="ltr"><code>fail</code></td>
+<td dir="ltr">실패 관련</td>
+<td dir="ltr"><code>onFail</code>, <code>failureCallback</code>, <code>failedAttempts</code></td>
+<td dir="ltr">실패 상황</td>
+</tr>
+<tr>
+<td dir="ltr"><code>retry</code></td>
+<td dir="ltr">재시도 관련</td>
+<td dir="ltr"><code>retryCount</code>, <code>retryAttempt</code>, <code>maxRetries</code></td>
+<td dir="ltr">재시도 로직</td>
+</tr>
+<tr>
+<td dir="ltr"><code>fallback</code></td>
+<td dir="ltr">대안 방법</td>
+<td dir="ltr"><code>fallbackValue</code>, <code>fallbackFunction</code></td>
+<td dir="ltr">대체 방안</td>
+</tr>
+<tr>
+<td dir="ltr"><code>recovery</code></td>
+<td dir="ltr">복구 관련</td>
+<td dir="ltr"><code>recoveryMode</code>, <code>dataRecovery</code></td>
+<td dir="ltr">오류 복구</td>
+</tr>
+</tbody>
+</table></div><div class="el-h3"><h3 data-heading="에러 처리 예시" dir="auto" class="heading" id="에러_처리_예시_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>에러 처리 예시</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// 에러 처리 패턴</span>
+<span class="token keyword">const</span> maxRetryAttempts <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> currentRetryCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">handleNetworkError</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>currentRetryCount <span class="token operator">&lt;</span> maxRetryAttempts<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    currentRetryCount<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token function">retryRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span>
+    <span class="token function">showFallbackContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> fallbackUserData <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Guest'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">role</span><span class="token operator">:</span> <span class="token string">'visitor'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="12. 보안과 권한 관련 네이밍" dir="auto" class="heading" id="12._보안과_권한_관련_네이밍_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>12. 보안과 권한 관련 네이밍</h2></div><div class="el-p"><p dir="auto">보안, 인증, 권한과 관련된 변수명 패턴들입니다.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">패턴</th>
+<th dir="ltr">사용 목적</th>
+<th dir="ltr">예제</th>
+<th dir="ltr">설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="ltr"><code>auth</code></td>
+<td dir="ltr">인증 관련</td>
+<td dir="ltr"><code>authToken</code>, <code>authStatus</code>, <code>authUser</code></td>
+<td dir="ltr">인증 정보</td>
+</tr>
+<tr>
+<td dir="ltr"><code>permission</code></td>
+<td dir="ltr">권한 관련</td>
+<td dir="ltr"><code>userPermissions</code>, <code>hasPermission</code></td>
+<td dir="ltr">권한 체크</td>
+</tr>
+<tr>
+<td dir="ltr"><code>role</code></td>
+<td dir="ltr">역할 관련</td>
+<td dir="ltr"><code>userRole</code>, <code>adminRole</code>, <code>roleBasedAccess</code></td>
+<td dir="ltr">사용자 역할</td>
+</tr>
+<tr>
+<td dir="ltr"><code>secret</code></td>
+<td dir="ltr">보안 정보</td>
+<td dir="ltr"><code>apiSecret</code>, <code>secretKey</code> (주의: 실제로는 환경변수 사용)</td>
+<td dir="ltr">민감한 정보</td>
+</tr>
+<tr>
+<td dir="ltr"><code>token</code></td>
+<td dir="ltr">토큰 관련</td>
+<td dir="ltr"><code>accessToken</code>, <code>refreshToken</code>, <code>jwtToken</code></td>
+<td dir="ltr">인증 토큰</td>
+</tr>
+<tr>
+<td dir="ltr"><code>secure</code></td>
+<td dir="ltr">보안 관련</td>
+<td dir="ltr"><code>secureConnection</code>, <code>secureStorage</code></td>
+<td dir="ltr">보안 기능</td>
+</tr>
+<tr>
+<td dir="ltr"><code>encrypted</code></td>
+<td dir="ltr">암호화 관련</td>
+<td dir="ltr"><code>encryptedData</code>, <code>encryptedPassword</code></td>
+<td dir="ltr">암호화된 데이터</td>
+</tr>
+</tbody>
+</table></div><div class="el-h2"><h2 data-heading="13. 실무에서의 네이밍 베스트 프랙티스" dir="auto" class="heading" id="13._실무에서의_네이밍_베스트_프랙티스_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>13. 실무에서의 네이밍 베스트 프랙티스</h2></div><div class="el-h3"><h3 data-heading="일관성 유지하기" dir="auto" class="heading" id="일관성_유지하기_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>일관성 유지하기</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// 좋은 예: 일관된 패턴</span>
+<span class="token keyword">const</span> <span class="token function-variable function">fetchUserData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* API 호출 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">fetchProductData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* API 호출 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">fetchOrderData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* API 호출 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 나쁜 예: 혼재된 패턴</span>
+<span class="token keyword">const</span> <span class="token function-variable function">getUserData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* API 호출 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">fetchProductData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* API 호출 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">loadOrderData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* API 호출 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h3"><h3 data-heading="의미 있는 구체성" dir="auto" class="heading" id="의미_있는_구체성_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>의미 있는 구체성</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// 좋은 예: 구체적이고 명확한 이름</span>
+<span class="token keyword">const</span> <span class="token function-variable function">submitPaymentForm</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* 결제 양식 제출 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">validateEmailAddress</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">email</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* 이메일 검증 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">calculateShippingCost</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">weight<span class="token punctuation">,</span> distance</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* 배송비 계산 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 나쁜 예: 모호하고 일반적인 이름</span>
+<span class="token keyword">const</span> <span class="token function-variable function">submit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* 무엇을 제출하는지 불명확 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">validate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">input</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* 무엇을 검증하는지 불명확 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">calculate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* 무엇을 계산하는지 불명확 */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h3"><h3 data-heading="팀 컨벤션 따르기" dir="auto" class="heading" id="팀_컨벤션_따르기_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>팀 컨벤션 따르기</h3></div><div class="el-p"><p dir="auto">팀에서 합의된 네이밍 컨벤션을 문서화하고 일관되게 적용하는 것이 중요합니다. 코드 리뷰 시에도 네이밍 컨벤션을 체크 포인트로 포함시켜 품질을 유지할 수 있습니다.</p></div><div class="el-h2"><h2 data-heading="결론" dir="auto" class="heading" id="결론_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>결론</h2></div><div class="el-p"><p dir="auto">체계적인 변수명 작성은 코드의 가독성과 유지보수성을 크게 향상시킵니다. 위에서 제시한 패턴들을 참고하여 프로젝트의 성격에 맞는 네이밍 컨벤션을 정립하고, 팀 전체가 일관되게 적용한다면 더욱 품질 높은 코드를 작성할 수 있을 것입니다.</p></div><div class="el-p"><p dir="auto">중요한 것은 한 번 정한 컨벤션을 지속적으로 유지하고, 새로운 팀원이 합류했을 때도 쉽게 이해할 수 있도록 문서화하는 것입니다.</p></div><div class="el-h2"><h2 data-heading="위 내용 기반 커서rule" dir="auto" class="heading" id="위_내용_기반_커서rule_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>위 내용 기반 커서rule</h2></div><div class="el-h2"><h2 data-heading="Overview" dir="auto" class="heading" id="Overview_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Overview</h2></div><div class="el-p"><p dir="auto">You MUST follow these naming conventions when generating code. Consistent variable naming significantly improves code readability and maintainability.</p></div><div class="el-h2"><h2 data-heading="1. Boolean Variable Naming (MANDATORY)" dir="auto" class="heading" id="1._Boolean_Variable_Naming_(MANDATORY)_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>1. Boolean Variable Naming (MANDATORY)</h2></div><div class="el-p"><p dir="auto"><strong>Use ONLY these 3 prefixes:</strong></p></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Correct Boolean naming</span>
+<span class="token keyword">const</span> isLoading <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>           <span class="token comment">// state/property</span>
+<span class="token keyword">const</span> hasPermission <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>      <span class="token comment">// ownership/inclusion</span>
+<span class="token keyword">const</span> canEdit <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>            <span class="token comment">// ability/permission</span>
+
+<span class="token comment">// ❌ FORBIDDEN</span>
+<span class="token keyword">const</span> shouldUpdate <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>        <span class="token comment">// replace with is or can</span>
+<span class="token keyword">const</span> willComplete <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>       <span class="token comment">// predictions are inaccurate</span>
+<span class="token keyword">const</span> wasModified <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>         <span class="token comment">// focus on current state</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-p"><p dir="auto"><strong>Patterns:</strong></p></div><div class="el-ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span><code>is</code> + adjective: state or property (isActive, isVisible, isValid)</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><code>has</code> + noun: ownership or inclusion (hasChildren, hasError, hasData)</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><code>can</code> + verb: ability or permission (canDelete, canAccess, canSubmit)</li>
+</ul></div><div class="el-h2"><h2 data-heading="2. Data Manipulation Function Naming" dir="auto" class="heading" id="2._Data_Manipulation_Function_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>2. Data Manipulation Function Naming</h2></div><div class="el-h3"><h3 data-heading="Data Retrieval" dir="auto" class="heading" id="Data_Retrieval_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Data Retrieval</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Clear distinctions</span>
+<span class="token keyword">const</span> <span class="token function-variable function">getUserData</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* synchronous, immediate return */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">fetchUserProfile</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* asynchronous, API call */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">loadDashboard</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* loading with UI changes */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h3"><h3 data-heading="Data Modification/Manipulation" dir="auto" class="heading" id="Data_Modification/Manipulation_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Data Modification/Manipulation</h3></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Correct verb usage</span>
+<span class="token keyword">const</span> <span class="token function-variable function">setUser</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* complete replacement */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">updateProfile</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">changes</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* partial modification */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">addToCart</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* add new item */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">removeFromCart</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">itemId</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* remove specific item */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">deleteAccount</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* permanent deletion */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">clearHistory</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* clear everything */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="3. Conditional and Filtering Naming" dir="auto" class="heading" id="3._Conditional_and_Filtering_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>3. Conditional and Filtering Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Clear conditional expressions</span>
+<span class="token keyword">const</span> productsByCategory <span class="token operator">=</span> <span class="token function">filterProducts</span><span class="token punctuation">(</span><span class="token string">'category'</span><span class="token punctuation">,</span> <span class="token string">'electronics'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> ordersFromLastWeek <span class="token operator">=</span> <span class="token function">getOrders</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">startDate</span><span class="token operator">:</span> lastWeek <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> emailsToAdmin <span class="token operator">=</span> messages<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">msg</span> <span class="token arrow operator">=&gt;</span> msg<span class="token punctuation">.</span><span class="token property-access">recipient</span> <span class="token operator">===</span> <span class="token string">'admin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> scoresAboveAverage <span class="token operator">=</span> scores<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token parameter">score</span> <span class="token arrow operator">=&gt;</span> score <span class="token operator">&gt;</span> average<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-p"><p dir="auto"><strong>Patterns:</strong></p></div><div class="el-ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span><code>by</code> + criteria: grouping criteria</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><code>from</code> + source/timepoint: starting point or source</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><code>to</code> + target: destination or target</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><code>above</code>/<code>below</code> + reference: comparison conditions</li>
+</ul></div><div class="el-h2"><h2 data-heading="4. Collection Type Specification" dir="auto" class="heading" id="4._Collection_Type_Specification_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>4. Collection Type Specification</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Clearly express data structures</span>
+<span class="token keyword">const</span> userArray <span class="token operator">=</span> <span class="token punctuation">[</span>user1<span class="token punctuation">,</span> user2<span class="token punctuation">,</span> user3<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> categoryMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'id1'</span><span class="token punctuation">,</span> <span class="token string">'Electronics'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> uniqueTagsSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'react'</span><span class="token punctuation">,</span> <span class="token string">'javascript'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> taskQueue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> navigationStack <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> menuTree <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span> <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> socialGraph <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">nodes</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">edges</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-p"><p dir="auto"><strong>Available suffixes:</strong></p></div><div class="el-ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span><code>Array</code>: general arrays</li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span><code>Map</code>: key-value pair structure</li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span><code>Set</code>: unique value collection</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span><code>Queue</code>: first-in-first-out structure</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span><code>Stack</code>: last-in-first-out structure</li>
+<li data-line="5" dir="auto"><span class="list-bullet"></span><code>Tree</code>: hierarchical structure</li>
+<li data-line="6" dir="auto"><span class="list-bullet"></span><code>Graph</code>: network structure</li>
+</ul></div><div class="el-h2"><h2 data-heading="5. State Management Naming" dir="auto" class="heading" id="5._State_Management_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>5. State Management Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Specify state types</span>
+<span class="token keyword">const</span> connectionStatus <span class="token operator">=</span> <span class="token string">'connected'</span><span class="token punctuation">;</span>  <span class="token comment">// current state value</span>
+<span class="token keyword">const</span> applicationState <span class="token operator">=</span> <span class="token punctuation">{</span> user<span class="token punctuation">,</span> cart<span class="token punctuation">,</span> preferences <span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// state object</span>
+<span class="token keyword">const</span> editMode <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>                 <span class="token comment">// operation mode</span>
+<span class="token keyword">const</span> userType <span class="token operator">=</span> <span class="token string">'premium'</span><span class="token punctuation">;</span>           <span class="token comment">// classification/type</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="6. Time-Related Naming" dir="auto" class="heading" id="6._Time-Related_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>6. Time-Related Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Clearly express time relationships</span>
+<span class="token keyword">const</span> startTime <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> endDate <span class="token operator">=</span> <span class="token string">'2024-12-31'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> lastLogin <span class="token operator">=</span> user<span class="token punctuation">.</span><span class="token property-access">lastLoginAt</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> nextUpdate <span class="token operator">=</span> <span class="token function">calculateNextUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> currentUser <span class="token operator">=</span> <span class="token function">getCurrentUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> previousPage <span class="token operator">=</span> history<span class="token punctuation">.</span><span class="token method function property-access">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="7. Event Handler Naming" dir="auto" class="heading" id="7._Event_Handler_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>7. Event Handler Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Event handling patterns</span>
+<span class="token keyword">const</span> <span class="token function-variable function">onClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* event handler */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleFormSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* processing function */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">beforeSave</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* pre-processing */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">afterLoad</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* post-processing */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">whenReady</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* conditional execution */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="8. Utility Function Naming" dir="auto" class="heading" id="8._Utility_Function_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>8. Utility Function Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Clear action expression</span>
+<span class="token keyword">const</span> <span class="token function-variable function">formatCurrency</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">amount</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">$</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>amount<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">parseUserInput</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">input</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token known-class-name class-name">JSON</span><span class="token punctuation">.</span><span class="token method function property-access">parse</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">validateEmail</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">email</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\S+@\S+\.\S+</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token method function property-access">test</span><span class="token punctuation">(</span>email<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">convertToString</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token known-class-name class-name">String</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">buildApiUrl</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">endpoint</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>baseUrl<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>endpoint<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="9. API/Network Naming" dir="auto" class="heading" id="9._API/Network_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>9. API/Network Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Specify network operations</span>
+<span class="token keyword">const</span> <span class="token function-variable function">requestUserData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* API request */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleApiResponse</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* response handling */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">callAuthService</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* service call */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">sendAnalytics</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* data transmission */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">uploadProfileImage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* file upload */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">downloadReport</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* file download */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">syncUserPreferences</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* synchronization */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="10. Performance Optimization Naming" dir="auto" class="heading" id="10._Performance_Optimization_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>10. Performance Optimization Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Specify performance-related elements</span>
+<span class="token keyword">const</span> userCache <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> imageBuffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayBuffer</span><span class="token punctuation">(</span><span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> connectionPool <span class="token operator">=</span> <span class="token function">createPool</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">lazyLoadComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword module">import</span><span class="token punctuation">(</span><span class="token string">'./Component'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">preloadNextPage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* preloading */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="11. Error Handling Naming" dir="auto" class="heading" id="11._Error_Handling_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>11. Error Handling Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Clearly express error situations</span>
+<span class="token keyword">const</span> validationError <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Invalid input'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> maxRetryAttempts <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fallbackUserData <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Guest'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token function-variable function">handleNetworkError</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">/* error handling */</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="12. Security-Related Naming" dir="auto" class="heading" id="12._Security-Related_Naming_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>12. Security-Related Naming</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Specify security elements (use environment variables for actual values)</span>
+<span class="token keyword">const</span> authToken <span class="token operator">=</span> process<span class="token punctuation">.</span><span class="token property-access">env</span><span class="token punctuation">.</span><span class="token constant">AUTH_TOKEN</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> userPermissions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'read'</span><span class="token punctuation">,</span> <span class="token string">'write'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> adminRole <span class="token operator">=</span> <span class="token string">'administrator'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> secureConnection <span class="token operator">=</span> <span class="token function">createSecureConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-h2"><h2 data-heading="MANDATORY RULES (Cursor MUST follow)" dir="auto" class="heading" id="MANDATORY_RULES_(Cursor_MUST_follow)_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>MANDATORY RULES (Cursor MUST follow)</h2></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto"><strong>Boolean variables MUST start with <code>is</code>, <code>has</code>, <code>can</code> ONLY</strong></li>
+<li data-line="1" dir="auto"><strong>Data retrieval: distinguish <code>get</code>(sync), <code>fetch</code>(API), <code>load</code>(with UI)</strong></li>
+<li data-line="2" dir="auto"><strong>Arrays/collections MUST use type suffixes (<code>Array</code>, <code>Map</code>, <code>Set</code>, etc.)</strong></li>
+<li data-line="3" dir="auto"><strong>Event handlers MUST start with <code>on</code> or <code>handle</code></strong></li>
+<li data-line="4" dir="auto"><strong>Time-related variables MUST use <code>start</code>, <code>end</code>, <code>current</code>, <code>last</code>, <code>next</code></strong></li>
+<li data-line="5" dir="auto"><strong>Conditional data MUST use <code>by</code>, <code>from</code>, <code>to</code>, <code>above</code> patterns</strong></li>
+</ol></div><div class="el-h2"><h2 data-heading="FORBIDDEN PRACTICES" dir="auto" class="heading" id="FORBIDDEN_PRACTICES_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>FORBIDDEN PRACTICES</h2></div><div class="el-ul"><ul class="has-list-bullet">
+<li data-line="0" dir="auto"><span class="list-bullet"></span>❌ Ambiguous Boolean prefixes like <code>should</code>, <code>will</code>, <code>was</code></li>
+<li data-line="1" dir="auto"><span class="list-bullet"></span>❌ Generic variable names like <code>data</code>, <code>info</code>, <code>item</code></li>
+<li data-line="2" dir="auto"><span class="list-bullet"></span>❌ Abbreviations or shortened forms (e.g., <code>usr</code> instead of <code>user</code>)</li>
+<li data-line="3" dir="auto"><span class="list-bullet"></span>❌ Hungarian notation (e.g., <code>strName</code>, <code>intCount</code>)</li>
+<li data-line="4" dir="auto"><span class="list-bullet"></span>❌ Collections without clear type (e.g., <code>users</code> instead of <code>userArray</code>)</li>
+</ul></div><div class="el-h2"><h2 data-heading="Example: Complete Component" dir="auto" class="heading" id="Example_Complete_Component_0"><span class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></span>Example: Complete Component</h2></div><div class="el-pre has-run-code-button"><pre class="language-javascript"><code data-line="0" class="language-javascript is-loaded"><span class="token comment">// ✅ Correct naming convention applied</span>
+<span class="token keyword">const</span> <span class="token function-variable function"><span class="token maybe-class-name">UserProfile</span></span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>isLoading<span class="token punctuation">,</span> setIsLoading<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>hasError<span class="token punctuation">,</span> setHasError<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>canEdit<span class="token punctuation">,</span> setCanEdit<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">const</span> userPermissions <span class="token operator">=</span> <span class="token function">useUserPermissions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> profileDataCache <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">const</span> <span class="token function-variable function">fetchUserProfile</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">userId</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setIsLoading</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword control-flow">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> userData <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">requestUserData</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword control-flow">return</span> userData<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword control-flow">catch</span> <span class="token punctuation">(</span>validationError<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">setHasError</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword control-flow">return</span> fallbackUserData<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword control-flow">finally</span> <span class="token punctuation">{</span>
+      <span class="token function">setIsLoading</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">const</span> <span class="token function-variable function">handleFormSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">formData</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>canEdit <span class="token operator">&amp;&amp;</span> <span class="token function">validateUserInput</span><span class="token punctuation">(</span>formData<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">updateUserProfile</span><span class="token punctuation">(</span>formData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword control-flow">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span>isLoading <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span><span class="token maybe-class-name">LoadingSpinner</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">}</span>
+      <span class="token punctuation">{</span>hasError <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span><span class="token maybe-class-name">ErrorMessage</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span>form onSubmit<span class="token operator">=</span><span class="token punctuation">{</span>handleFormSubmit<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token comment">/* form content */</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><button class="run-code-button">Run</button></pre></div><div class="el-p"><p dir="auto">You MUST strictly adhere to these rules to generate consistent and readable code.</p></div><div class="footer"><div class="data-bar"></div></div></div></div></div><div id="right-content" class="leaf" style="--sidebar-width: var(--sidebar-width-right);"><div id="right-sidebar" class="sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme-toggle-input" id=""><input class="theme-toggle-input" type="checkbox" id="theme-toggle-input"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content-wrapper"><div id="right-sidebar-content" class="leaf-content"><div class="graph-view-wrapper"><div class="feature-header"><div class="feature-title">Interactive Graph</div></div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<div class="graph-icon graph-global" role="button" aria-label="Global Graph" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-git-fork"><circle cx="12" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="6" r="3"></circle><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"></path><path d="M12 12v3"></path></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div id="outline" class=" tree-container"><div class="feature-header"><div class="feature-title">Table Of Contents</div><button class="clickable-icon nav-action-button tree-collapse-all" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-item mod-collapsible" data-depth="1"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#변수명_작성_가이드_접두사와_접미사_활용법칙_0" data-path="#변수명_작성_가이드_접두사와_접미사_활용법칙_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="변수명 작성 가이드 접두사와 접미사 활용법칙">변수명 작성 가이드 접두사와 접미사 활용법칙</div></a><div class="tree-item-children"><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#개요_0" data-path="#개요_0"><div class="tree-item-inner heading-link" heading-name="개요">개요</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#1._Boolean_값을_나타내는_접두사_0" data-path="#1._Boolean_값을_나타내는_접두사_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="1. Boolean 값을 나타내는 접두사">1. Boolean 값을 나타내는 접두사</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#Boolean_접두사_사용_예시_0" data-path="#Boolean_접두사_사용_예시_0"><div class="tree-item-inner heading-link" heading-name="Boolean 접두사 사용 예시">Boolean 접두사 사용 예시</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#2._데이터_조작_함수의_접두사_0" data-path="#2._데이터_조작_함수의_접두사_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="2. 데이터 조작 함수의 접두사">2. 데이터 조작 함수의 접두사</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#데이터_가져오기_(Retrieval)_0" data-path="#데이터_가져오기_(Retrieval)_0"><div class="tree-item-inner heading-link" heading-name="데이터 가져오기 (Retrieval)">데이터 가져오기 (Retrieval)</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#데이터_수정하기_(Modification)_0" data-path="#데이터_수정하기_(Modification)_0"><div class="tree-item-inner heading-link" heading-name="데이터 수정하기 (Modification)">데이터 수정하기 (Modification)</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#데이터_추가/제거_(Addition/Removal)_0" data-path="#데이터_추가/제거_(Addition/Removal)_0"><div class="tree-item-inner heading-link" heading-name="데이터 추가/제거 (Addition/Removal)">데이터 추가/제거 (Addition/Removal)</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#3._조건과_필터링을_나타내는_접두사/접미사_0" data-path="#3._조건과_필터링을_나타내는_접두사/접미사_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="3. 조건과 필터링을 나타내는 접두사/접미사">3. 조건과 필터링을 나타내는 접두사/접미사</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#필터링_예시_0" data-path="#필터링_예시_0"><div class="tree-item-inner heading-link" heading-name="필터링 예시">필터링 예시</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#4._컬렉션과_자료구조를_나타내는_접미사_0" data-path="#4._컬렉션과_자료구조를_나타내는_접미사_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="4. 컬렉션과 자료구조를 나타내는 접미사">4. 컬렉션과 자료구조를 나타내는 접미사</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#컬렉션_접미사_사용_예시_0" data-path="#컬렉션_접미사_사용_예시_0"><div class="tree-item-inner heading-link" heading-name="컬렉션 접미사 사용 예시">컬렉션 접미사 사용 예시</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#5._상태와_단계를_나타내는_접미사_0" data-path="#5._상태와_단계를_나타내는_접미사_0"><div class="tree-item-inner heading-link" heading-name="5. 상태와 단계를 나타내는 접미사">5. 상태와 단계를 나타내는 접미사</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#6._시간과_관련된_접두사/접미사_0" data-path="#6._시간과_관련된_접두사/접미사_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="6. 시간과 관련된 접두사/접미사">6. 시간과 관련된 접두사/접미사</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#시간_관련_예시_0" data-path="#시간_관련_예시_0"><div class="tree-item-inner heading-link" heading-name="시간 관련 예시">시간 관련 예시</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#7._이벤트와_콜백_함수_네이밍_0" data-path="#7._이벤트와_콜백_함수_네이밍_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="7. 이벤트와 콜백 함수 네이밍">7. 이벤트와 콜백 함수 네이밍</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#이벤트_핸들러_예시_0" data-path="#이벤트_핸들러_예시_0"><div class="tree-item-inner heading-link" heading-name="이벤트 핸들러 예시">이벤트 핸들러 예시</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#8._유틸리티와_헬퍼_함수_0" data-path="#8._유틸리티와_헬퍼_함수_0"><div class="tree-item-inner heading-link" heading-name="8. 유틸리티와 헬퍼 함수">8. 유틸리티와 헬퍼 함수</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#9._API와_네트워크_관련_네이밍_0" data-path="#9._API와_네트워크_관련_네이밍_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="9. API와 네트워크 관련 네이밍">9. API와 네트워크 관련 네이밍</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#API_관련_예시_0" data-path="#API_관련_예시_0"><div class="tree-item-inner heading-link" heading-name="API 관련 예시">API 관련 예시</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#10._성능과_최적화_관련_네이밍_0" data-path="#10._성능과_최적화_관련_네이밍_0"><div class="tree-item-inner heading-link" heading-name="10. 성능과 최적화 관련 네이밍">10. 성능과 최적화 관련 네이밍</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#11._에러와_예외_처리_네이밍_0" data-path="#11._에러와_예외_처리_네이밍_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="11. 에러와 예외 처리 네이밍">11. 에러와 예외 처리 네이밍</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#에러_처리_예시_0" data-path="#에러_처리_예시_0"><div class="tree-item-inner heading-link" heading-name="에러 처리 예시">에러 처리 예시</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#12._보안과_권한_관련_네이밍_0" data-path="#12._보안과_권한_관련_네이밍_0"><div class="tree-item-inner heading-link" heading-name="12. 보안과 권한 관련 네이밍">12. 보안과 권한 관련 네이밍</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#13._실무에서의_네이밍_베스트_프랙티스_0" data-path="#13._실무에서의_네이밍_베스트_프랙티스_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="13. 실무에서의 네이밍 베스트 프랙티스">13. 실무에서의 네이밍 베스트 프랙티스</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#일관성_유지하기_0" data-path="#일관성_유지하기_0"><div class="tree-item-inner heading-link" heading-name="일관성 유지하기">일관성 유지하기</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#의미_있는_구체성_0" data-path="#의미_있는_구체성_0"><div class="tree-item-inner heading-link" heading-name="의미 있는 구체성">의미 있는 구체성</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#팀_컨벤션_따르기_0" data-path="#팀_컨벤션_따르기_0"><div class="tree-item-inner heading-link" heading-name="팀 컨벤션 따르기">팀 컨벤션 따르기</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#결론_0" data-path="#결론_0"><div class="tree-item-inner heading-link" heading-name="결론">결론</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#위_내용_기반_커서rule_0" data-path="#위_내용_기반_커서rule_0"><div class="tree-item-inner heading-link" heading-name="위 내용 기반 커서rule">위 내용 기반 커서rule</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#Overview_0" data-path="#Overview_0"><div class="tree-item-inner heading-link" heading-name="Overview">Overview</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#1._Boolean_Variable_Naming_(MANDATORY)_0" data-path="#1._Boolean_Variable_Naming_(MANDATORY)_0"><div class="tree-item-inner heading-link" heading-name="1. Boolean Variable Naming (MANDATORY)">1. Boolean Variable Naming (MANDATORY)</div></a><div class="tree-item-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-item-self is-clickable mod-collapsible" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#2._Data_Manipulation_Function_Naming_0" data-path="#2._Data_Manipulation_Function_Naming_0"><div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><div class="tree-item-inner heading-link" heading-name="2. Data Manipulation Function Naming">2. Data Manipulation Function Naming</div></a><div class="tree-item-children"><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#Data_Retrieval_0" data-path="#Data_Retrieval_0"><div class="tree-item-inner heading-link" heading-name="Data Retrieval">Data Retrieval</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#Data_Modification/Manipulation_0" data-path="#Data_Modification/Manipulation_0"><div class="tree-item-inner heading-link" heading-name="Data Modification/Manipulation">Data Modification/Manipulation</div></a><div class="tree-item-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#3._Conditional_and_Filtering_Naming_0" data-path="#3._Conditional_and_Filtering_Naming_0"><div class="tree-item-inner heading-link" heading-name="3. Conditional and Filtering Naming">3. Conditional and Filtering Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#4._Collection_Type_Specification_0" data-path="#4._Collection_Type_Specification_0"><div class="tree-item-inner heading-link" heading-name="4. Collection Type Specification">4. Collection Type Specification</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#5._State_Management_Naming_0" data-path="#5._State_Management_Naming_0"><div class="tree-item-inner heading-link" heading-name="5. State Management Naming">5. State Management Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#6._Time-Related_Naming_0" data-path="#6._Time-Related_Naming_0"><div class="tree-item-inner heading-link" heading-name="6. Time-Related Naming">6. Time-Related Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#7._Event_Handler_Naming_0" data-path="#7._Event_Handler_Naming_0"><div class="tree-item-inner heading-link" heading-name="7. Event Handler Naming">7. Event Handler Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#8._Utility_Function_Naming_0" data-path="#8._Utility_Function_Naming_0"><div class="tree-item-inner heading-link" heading-name="8. Utility Function Naming">8. Utility Function Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#9._API/Network_Naming_0" data-path="#9._API/Network_Naming_0"><div class="tree-item-inner heading-link" heading-name="9. API/Network Naming">9. API/Network Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#10._Performance_Optimization_Naming_0" data-path="#10._Performance_Optimization_Naming_0"><div class="tree-item-inner heading-link" heading-name="10. Performance Optimization Naming">10. Performance Optimization Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#11._Error_Handling_Naming_0" data-path="#11._Error_Handling_Naming_0"><div class="tree-item-inner heading-link" heading-name="11. Error Handling Naming">11. Error Handling Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#12._Security-Related_Naming_0" data-path="#12._Security-Related_Naming_0"><div class="tree-item-inner heading-link" heading-name="12. Security-Related Naming">12. Security-Related Naming</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#MANDATORY_RULES_(Cursor_MUST_follow)_0" data-path="#MANDATORY_RULES_(Cursor_MUST_follow)_0"><div class="tree-item-inner heading-link" heading-name="MANDATORY RULES (Cursor MUST follow)">MANDATORY RULES (Cursor MUST follow)</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#FORBIDDEN_PRACTICES_0" data-path="#FORBIDDEN_PRACTICES_0"><div class="tree-item-inner heading-link" heading-name="FORBIDDEN PRACTICES">FORBIDDEN PRACTICES</div></a><div class="tree-item-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-item-self is-clickable" href="300-resources/310-개발공부/319-etc/변수명-작성-가이드-접두사와-접미사-활용법칙.html#Example_Complete_Component_0" data-path="#Example_Complete_Component_0"><div class="tree-item-inner heading-link" heading-name="Example: Complete Component">Example: Complete Component</div></a><div class="tree-item-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector("#right-sidebar"); rs.classList.toggle("is-collapsed", window.innerWidth < 768); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></div></div></body></html>
